@@ -1,0 +1,2221 @@
+{
+  "label": "original",
+  "url": "https://www.simonholm.studio/",
+  "capturedAt": "2026-08-05T15:05:59.112Z",
+  "initial": {
+    "url": "https://www.simonholm.studio/",
+    "title": "Simon Holm Larsen - Brand Designer",
+    "activeElement": "body",
+    "scrollY": 0,
+    "bodyTextChars": 427,
+    "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:02 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+    "counts": {
+      "dialogs": 0,
+      "popovers": 0,
+      "canvases": 0,
+      "videos": 10,
+      "buttons": 0,
+      "forms": 0
+    },
+    "htmlHash": "1494153298",
+    "htmlLength": 653165
+  },
+  "discovered": {
+    "interactive": [
+      {
+        "selector": "html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)",
+        "tag": "a",
+        "type": "",
+        "role": "",
+        "href": "https://www.simonholm.studio/",
+        "text": "",
+        "ariaLabel": "",
+        "safeClick": true,
+        "rect": {
+          "x": 9,
+          "y": 9,
+          "width": 56,
+          "height": 43
+        }
+      },
+      {
+        "selector": "body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > a:nth-of-type(1)",
+        "tag": "a",
+        "type": "",
+        "role": "",
+        "href": "https://www.simonholm.studio/",
+        "text": "Featured (05) Featured (05)",
+        "ariaLabel": "",
+        "safeClick": true,
+        "rect": {
+          "x": 223,
+          "y": 9,
+          "width": 284,
+          "height": 14
+        }
+      },
+      {
+        "selector": "body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > a:nth-of-type(2)",
+        "tag": "a",
+        "type": "",
+        "role": "",
+        "href": "https://www.simonholm.studio/work",
+        "text": "Index (05) Index (05)",
+        "ariaLabel": "",
+        "safeClick": true,
+        "rect": {
+          "x": 223,
+          "y": 23,
+          "width": 284,
+          "height": 14
+        }
+      },
+      {
+        "selector": "body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > a:nth-of-type(1)",
+        "tag": "a",
+        "type": "",
+        "role": "",
+        "href": "https://www.simonholm.studio/about",
+        "text": "About About",
+        "ariaLabel": "",
+        "safeClick": true,
+        "rect": {
+          "x": 507,
+          "y": 9,
+          "width": 213,
+          "height": 14
+        }
+      },
+      {
+        "selector": "body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(2) > a:nth-of-type(1)",
+        "tag": "a",
+        "type": "",
+        "role": "",
+        "href": "https://www.simonholm.studio/#",
+        "text": "hello@simonholm.studio",
+        "ariaLabel": "",
+        "safeClick": true,
+        "rect": {
+          "x": 720,
+          "y": 9,
+          "width": 283,
+          "height": 14
+        }
+      },
+      {
+        "selector": "body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(2) > a:nth-of-type(2)",
+        "tag": "a",
+        "type": "",
+        "role": "",
+        "href": "https://www.simonholm.studio/#",
+        "text": "+(45) 2632 0731",
+        "ariaLabel": "",
+        "safeClick": true,
+        "rect": {
+          "x": 720,
+          "y": 23,
+          "width": 283,
+          "height": 14
+        }
+      },
+      {
+        "selector": "div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)",
+        "tag": "a",
+        "type": "",
+        "role": "",
+        "href": "https://www.simonholm.studio/work/birdie",
+        "text": "Birdie",
+        "ariaLabel": "",
+        "safeClick": true,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900
+        }
+      },
+      {
+        "selector": "div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)",
+        "tag": "a",
+        "type": "",
+        "role": "",
+        "href": "https://www.simonholm.studio/work/birdie",
+        "text": "(01)Birdie",
+        "ariaLabel": "",
+        "safeClick": true,
+        "rect": {
+          "x": 9,
+          "y": 248,
+          "width": 691,
+          "height": 430
+        }
+      },
+      {
+        "selector": "div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > a:nth-of-type(1)",
+        "tag": "a",
+        "type": "",
+        "role": "",
+        "href": "https://www.simonholm.studio/work/snuw",
+        "text": "(02)Snuw",
+        "ariaLabel": "",
+        "safeClick": true,
+        "rect": {
+          "x": 701,
+          "y": 248,
+          "width": 691,
+          "height": 430
+        }
+      },
+      {
+        "selector": "div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > a:nth-of-type(1)",
+        "tag": "a",
+        "type": "",
+        "role": "",
+        "href": "https://www.simonholm.studio/work/basic-feather",
+        "text": "(03)Basic Feather",
+        "ariaLabel": "",
+        "safeClick": true,
+        "rect": {
+          "x": 1392,
+          "y": 248,
+          "width": 691,
+          "height": 430
+        }
+      },
+      {
+        "selector": "div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(4) > a:nth-of-type(1)",
+        "tag": "a",
+        "type": "",
+        "role": "",
+        "href": "https://www.simonholm.studio/work/Palette",
+        "text": "(04)Palette",
+        "ariaLabel": "",
+        "safeClick": true,
+        "rect": {
+          "x": 2083,
+          "y": 248,
+          "width": 691,
+          "height": 430
+        }
+      },
+      {
+        "selector": "div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(5) > a:nth-of-type(1)",
+        "tag": "a",
+        "type": "",
+        "role": "",
+        "href": "https://www.simonholm.studio/work/wallhack",
+        "text": "(05)Wallhack",
+        "ariaLabel": "",
+        "safeClick": true,
+        "rect": {
+          "x": 2774,
+          "y": 248,
+          "width": 691,
+          "height": 430
+        }
+      },
+      {
+        "selector": "main:nth-of-type(1) > section:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > a:nth-of-type(1)",
+        "tag": "a",
+        "type": "",
+        "role": "",
+        "href": "https://www.simonholm.studio/#www.linkedin.com/in/simon-holm-larsen-2b764a67",
+        "text": "Linkedin Linkedin",
+        "ariaLabel": "",
+        "safeClick": true,
+        "rect": {
+          "x": 1289,
+          "y": 874,
+          "width": 53,
+          "height": 14
+        }
+      },
+      {
+        "selector": "main:nth-of-type(1) > section:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > a:nth-of-type(2)",
+        "tag": "a",
+        "type": "",
+        "role": "",
+        "href": "https://www.instagram.com/simonholm.studio/",
+        "text": "Instagram Instagram",
+        "ariaLabel": "",
+        "safeClick": false,
+        "rect": {
+          "x": 1369,
+          "y": 874,
+          "width": 62,
+          "height": 14
+        }
+      }
+    ],
+    "canvases": []
+  },
+  "actions": [
+    {
+      "type": "scroll",
+      "target": "middle",
+      "ratio": 0.5,
+      "before": {
+        "url": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:02 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "-1583035571",
+        "htmlLength": 550183
+      },
+      "after": {
+        "url": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:02 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "-1846778863",
+        "htmlLength": 653345
+      },
+      "changed": true,
+      "screenshot": "screenshots/01-scroll-middle-b04a45f075.png"
+    },
+    {
+      "type": "scroll",
+      "target": "bottom",
+      "ratio": 1,
+      "before": {
+        "url": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:02 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "607645740",
+        "htmlLength": 550181
+      },
+      "after": {
+        "url": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:02 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "-2096458162",
+        "htmlLength": 653347
+      },
+      "changed": true,
+      "screenshot": "screenshots/02-scroll-bottom-7297e0cbea.png"
+    },
+    {
+      "type": "hover",
+      "target": "html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)",
+      "selector": "html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)",
+      "meta": {
+        "selector": "html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)",
+        "tag": "a",
+        "type": "",
+        "role": "",
+        "href": "https://www.simonholm.studio/",
+        "text": "",
+        "ariaLabel": "",
+        "safeClick": true,
+        "rect": {
+          "x": 9,
+          "y": 9,
+          "width": 56,
+          "height": 43
+        }
+      },
+      "before": {
+        "url": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:02 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "-19418606",
+        "htmlLength": 520568
+      },
+      "after": {
+        "url": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:02 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "-19418606",
+        "htmlLength": 520568
+      },
+      "changed": false,
+      "screenshot": "",
+      "error": "locator.hover: Timeout 3000ms exceeded.\nCall log:\n  - waiting for locator('html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)').first()\n    - locator resolved to <a href=\"/\" aria-current=\"page\" class=\"nav-logo-link cursor-hover-state w-inline-block w--current\">…</a>\n  - attempting hover action\n    2 × waiting for element to be visible and stable\n      - element is visible and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"nav-logo-wrapper\">…</div> intercepts pointer events\n    - retrying hover action\n    - waiting 20ms\n    2 × waiting for element to be visible and stable\n      - element is visible and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"nav-logo-wrapper\">…</div> intercepts pointer events\n    - retrying hover action\n      - waiting 100ms\n    5 × waiting for element to be visible and stable\n      - element is visible and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"nav-logo-wrapper\">…</div> intercepts pointer events\n    - retrying hover action\n      - waiting 500ms\n"
+    },
+    {
+      "type": "hover",
+      "target": "Featured (05) Featured (05)",
+      "selector": "body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > a:nth-of-type(1)",
+      "meta": {
+        "selector": "body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > a:nth-of-type(1)",
+        "tag": "a",
+        "type": "",
+        "role": "",
+        "href": "https://www.simonholm.studio/",
+        "text": "Featured (05) Featured (05)",
+        "ariaLabel": "",
+        "safeClick": true,
+        "rect": {
+          "x": 223,
+          "y": 9,
+          "width": 284,
+          "height": 14
+        }
+      },
+      "before": {
+        "url": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:03 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "-1040455867",
+        "htmlLength": 653165
+      },
+      "after": {
+        "url": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:03 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "-1040455867",
+        "htmlLength": 653165
+      },
+      "changed": false,
+      "screenshot": "",
+      "error": "locator.hover: Timeout 3000ms exceeded.\nCall log:\n  - waiting for locator('body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > a:nth-of-type(1)').first()\n    - locator resolved to <a href=\"/\" aria-current=\"page\" class=\"menu-link page_link cursor-hover-state w-inline-block w--current\">…</a>\n  - attempting hover action\n    2 × waiting for element to be visible and stable\n      - element is visible and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"work-nav-wrapper\">…</div> intercepts pointer events\n    - retrying hover action\n    - waiting 20ms\n    2 × waiting for element to be visible and stable\n      - element is visible and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"work-nav-wrapper\">…</div> intercepts pointer events\n    - retrying hover action\n      - waiting 100ms\n    5 × waiting for element to be visible and stable\n      - element is visible and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"work-nav-wrapper\">…</div> intercepts pointer events\n    - retrying hover action\n      - waiting 500ms\n"
+    },
+    {
+      "type": "hover",
+      "target": "Index (05) Index (05)",
+      "selector": "body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > a:nth-of-type(2)",
+      "meta": {
+        "selector": "body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > a:nth-of-type(2)",
+        "tag": "a",
+        "type": "",
+        "role": "",
+        "href": "https://www.simonholm.studio/work",
+        "text": "Index (05) Index (05)",
+        "ariaLabel": "",
+        "safeClick": true,
+        "rect": {
+          "x": 223,
+          "y": 23,
+          "width": 284,
+          "height": 14
+        }
+      },
+      "before": {
+        "url": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:03 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "-1777192265",
+        "htmlLength": 530717
+      },
+      "after": {
+        "url": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:03 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "-1118601493",
+        "htmlLength": 633395
+      },
+      "changed": true,
+      "screenshot": "screenshots/05-hover-Index-05-Index-05-37b4291532.png"
+    },
+    {
+      "type": "hover",
+      "target": "About About",
+      "selector": "body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > a:nth-of-type(1)",
+      "meta": {
+        "selector": "body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > a:nth-of-type(1)",
+        "tag": "a",
+        "type": "",
+        "role": "",
+        "href": "https://www.simonholm.studio/about",
+        "text": "About About",
+        "ariaLabel": "",
+        "safeClick": true,
+        "rect": {
+          "x": 507,
+          "y": 9,
+          "width": 213,
+          "height": 14
+        }
+      },
+      "before": {
+        "url": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:03 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "1539163195",
+        "htmlLength": 565856
+      },
+      "after": {
+        "url": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:03 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "205600762",
+        "htmlLength": 648761
+      },
+      "changed": true,
+      "screenshot": "screenshots/06-hover-About-About-2d5ad8a3bb.png"
+    },
+    {
+      "type": "hover",
+      "target": "hello@simonholm.studio",
+      "selector": "body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(2) > a:nth-of-type(1)",
+      "meta": {
+        "selector": "body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(2) > a:nth-of-type(1)",
+        "tag": "a",
+        "type": "",
+        "role": "",
+        "href": "https://www.simonholm.studio/#",
+        "text": "hello@simonholm.studio",
+        "ariaLabel": "",
+        "safeClick": true,
+        "rect": {
+          "x": 720,
+          "y": 9,
+          "width": 283,
+          "height": 14
+        }
+      },
+      "before": {
+        "url": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:03 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "-1295516850",
+        "htmlLength": 460879
+      },
+      "after": {
+        "url": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:03 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "1822780142",
+        "htmlLength": 644645
+      },
+      "changed": true,
+      "screenshot": "screenshots/07-hover-hello-simonholm.studio-bd692821ea.png"
+    },
+    {
+      "type": "hover",
+      "target": "+(45) 2632 0731",
+      "selector": "body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(2) > a:nth-of-type(2)",
+      "meta": {
+        "selector": "body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(2) > a:nth-of-type(2)",
+        "tag": "a",
+        "type": "",
+        "role": "",
+        "href": "https://www.simonholm.studio/#",
+        "text": "+(45) 2632 0731",
+        "ariaLabel": "",
+        "safeClick": true,
+        "rect": {
+          "x": 720,
+          "y": 23,
+          "width": 283,
+          "height": 14
+        }
+      },
+      "before": {
+        "url": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:03 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "1269225397",
+        "htmlLength": 550183
+      },
+      "after": {
+        "url": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:03 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "-1537907172",
+        "htmlLength": 648958
+      },
+      "changed": true,
+      "screenshot": "screenshots/08-hover--45-2632-0731-e4296fd650.png"
+    },
+    {
+      "type": "hover",
+      "target": "Birdie",
+      "selector": "div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)",
+      "meta": {
+        "selector": "div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)",
+        "tag": "a",
+        "type": "",
+        "role": "",
+        "href": "https://www.simonholm.studio/work/birdie",
+        "text": "Birdie",
+        "ariaLabel": "",
+        "safeClick": true,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900
+        }
+      },
+      "before": {
+        "url": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:03 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "481069293",
+        "htmlLength": 653165
+      },
+      "after": {
+        "url": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:03 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "1459119977",
+        "htmlLength": 653347
+      },
+      "changed": true,
+      "screenshot": "screenshots/09-hover-Birdie-7960567bc8.png"
+    },
+    {
+      "type": "hover",
+      "target": "(01)Birdie",
+      "selector": "div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)",
+      "meta": {
+        "selector": "div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)",
+        "tag": "a",
+        "type": "",
+        "role": "",
+        "href": "https://www.simonholm.studio/work/birdie",
+        "text": "(01)Birdie",
+        "ariaLabel": "",
+        "safeClick": true,
+        "rect": {
+          "x": 9,
+          "y": 248,
+          "width": 691,
+          "height": 430
+        }
+      },
+      "before": {
+        "url": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:03 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "433056188",
+        "htmlLength": 570308
+      },
+      "after": {
+        "url": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:03 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "433056188",
+        "htmlLength": 570308
+      },
+      "changed": false,
+      "screenshot": "",
+      "error": "locator.hover: Timeout 3000ms exceeded.\nCall log:\n  - waiting for locator('div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)').first()\n    - locator resolved to <a draggable=\"false\" href=\"/work/birdie\" class=\"slidelink w-inline-block\">…</a>\n  - attempting hover action\n    2 × waiting for element to be visible and stable\n      - element is visible and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"container is-main-slider\">…</div> from <div class=\"main-slider cursor-special-frontpage\">…</div> subtree intercepts pointer events\n    - retrying hover action\n    - waiting 20ms\n    2 × waiting for element to be visible and stable\n      - element is visible and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"container is-main-slider\">…</div> from <div class=\"main-slider cursor-special-frontpage\">…</div> subtree intercepts pointer events\n    - retrying hover action\n      - waiting 100ms\n    5 × waiting for element to be visible and stable\n      - element is visible and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"container is-main-slider\">…</div> from <div class=\"main-slider cursor-special-frontpage\">…</div> subtree intercepts pointer events\n    - retrying hover action\n      - waiting 500ms\n"
+    },
+    {
+      "type": "click",
+      "target": "html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)",
+      "selector": "html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)",
+      "meta": {
+        "selector": "html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)",
+        "tag": "a",
+        "type": "",
+        "role": "",
+        "href": "https://www.simonholm.studio/",
+        "text": "",
+        "ariaLabel": "",
+        "safeClick": true,
+        "rect": {
+          "x": 9,
+          "y": 9,
+          "width": 56,
+          "height": 43
+        }
+      },
+      "before": {
+        "url": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:04 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "-171490290",
+        "htmlLength": 550183
+      },
+      "after": {
+        "url": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:04 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "-171490290",
+        "htmlLength": 550183
+      },
+      "changed": false,
+      "screenshot": "",
+      "error": "locator.click: Timeout 4000ms exceeded.\nCall log:\n  - waiting for locator('html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)').first()\n    - locator resolved to <a href=\"/\" aria-current=\"page\" class=\"nav-logo-link cursor-hover-state w-inline-block w--current\">…</a>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"nav-logo-wrapper\">…</div> intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"nav-logo-wrapper\">…</div> intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    7 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"nav-logo-wrapper\">…</div> intercepts pointer events\n    - retrying click action\n      - waiting 500ms\n"
+    },
+    {
+      "type": "click",
+      "target": "Featured (05) Featured (05)",
+      "selector": "body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > a:nth-of-type(1)",
+      "meta": {
+        "selector": "body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > a:nth-of-type(1)",
+        "tag": "a",
+        "type": "",
+        "role": "",
+        "href": "https://www.simonholm.studio/",
+        "text": "Featured (05) Featured (05)",
+        "ariaLabel": "",
+        "safeClick": true,
+        "rect": {
+          "x": 223,
+          "y": 9,
+          "width": 284,
+          "height": 14
+        }
+      },
+      "before": {
+        "url": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:04 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "1028085325",
+        "htmlLength": 565847
+      },
+      "after": {
+        "url": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:04 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "1028085325",
+        "htmlLength": 565847
+      },
+      "changed": false,
+      "screenshot": "",
+      "error": "locator.click: Timeout 4000ms exceeded.\nCall log:\n  - waiting for locator('body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > a:nth-of-type(1)').first()\n    - locator resolved to <a href=\"/\" aria-current=\"page\" class=\"menu-link page_link cursor-hover-state w-inline-block w--current\">…</a>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"work-nav-wrapper\">…</div> intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"work-nav-wrapper\">…</div> intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    7 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"work-nav-wrapper\">…</div> intercepts pointer events\n    - retrying click action\n      - waiting 500ms\n"
+    },
+    {
+      "type": "click",
+      "target": "Index (05) Index (05)",
+      "selector": "body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > a:nth-of-type(2)",
+      "meta": {
+        "selector": "body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > a:nth-of-type(2)",
+        "tag": "a",
+        "type": "",
+        "role": "",
+        "href": "https://www.simonholm.studio/work",
+        "text": "Index (05) Index (05)",
+        "ariaLabel": "",
+        "safeClick": true,
+        "rect": {
+          "x": 223,
+          "y": 23,
+          "width": 284,
+          "height": 14
+        }
+      },
+      "before": {
+        "url": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:04 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "-698033536",
+        "htmlLength": 460880
+      },
+      "after": {
+        "url": "https://www.simonholm.studio/work",
+        "title": "Simon Holm Larsen - Brand Designer - Work",
+        "activeElement": "a",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:04 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "-1959565905",
+        "htmlLength": 614930
+      },
+      "changed": true,
+      "screenshot": "screenshots/13-click-Index-05-Index-05-30fb135cbc.png"
+    },
+    {
+      "type": "click",
+      "target": "About About",
+      "selector": "body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > a:nth-of-type(1)",
+      "meta": {
+        "selector": "body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > a:nth-of-type(1)",
+        "tag": "a",
+        "type": "",
+        "role": "",
+        "href": "https://www.simonholm.studio/about",
+        "text": "About About",
+        "ariaLabel": "",
+        "safeClick": true,
+        "rect": {
+          "x": 507,
+          "y": 9,
+          "width": 213,
+          "height": 14
+        }
+      },
+      "before": {
+        "url": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:04 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "1084418641",
+        "htmlLength": 484040
+      },
+      "after": {
+        "url": "https://www.simonholm.studio/about",
+        "title": "Simon Holm Larsen - Brand Designer - About",
+        "activeElement": "a",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:04 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "985453480",
+        "htmlLength": 610671
+      },
+      "changed": true,
+      "screenshot": "screenshots/14-click-About-About-a631749cbc.png"
+    },
+    {
+      "type": "click",
+      "target": "hello@simonholm.studio",
+      "selector": "body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(2) > a:nth-of-type(1)",
+      "meta": {
+        "selector": "body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(2) > a:nth-of-type(1)",
+        "tag": "a",
+        "type": "",
+        "role": "",
+        "href": "https://www.simonholm.studio/#",
+        "text": "hello@simonholm.studio",
+        "ariaLabel": "",
+        "safeClick": true,
+        "rect": {
+          "x": 720,
+          "y": 9,
+          "width": 283,
+          "height": 14
+        }
+      },
+      "before": {
+        "url": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:04 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "-888164084",
+        "htmlLength": 530710
+      },
+      "after": {
+        "url": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "activeElement": "a",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:04 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "-1465202469",
+        "htmlLength": 640978
+      },
+      "changed": true,
+      "screenshot": "screenshots/15-click-hello-simonholm.studio-163caa1e64.png"
+    },
+    {
+      "type": "click",
+      "target": "+(45) 2632 0731",
+      "selector": "body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(2) > a:nth-of-type(2)",
+      "meta": {
+        "selector": "body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(2) > a:nth-of-type(2)",
+        "tag": "a",
+        "type": "",
+        "role": "",
+        "href": "https://www.simonholm.studio/#",
+        "text": "+(45) 2632 0731",
+        "ariaLabel": "",
+        "safeClick": true,
+        "rect": {
+          "x": 720,
+          "y": 23,
+          "width": 283,
+          "height": 14
+        }
+      },
+      "before": {
+        "url": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:04 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "-416158467",
+        "htmlLength": 605370
+      },
+      "after": {
+        "url": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "activeElement": "a",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:04 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "-1142062981",
+        "htmlLength": 648598
+      },
+      "changed": true,
+      "screenshot": "screenshots/16-click--45-2632-0731-68b81cdae1.png"
+    },
+    {
+      "type": "click",
+      "target": "Birdie",
+      "selector": "div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)",
+      "meta": {
+        "selector": "div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)",
+        "tag": "a",
+        "type": "",
+        "role": "",
+        "href": "https://www.simonholm.studio/work/birdie",
+        "text": "Birdie",
+        "ariaLabel": "",
+        "safeClick": true,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900
+        }
+      },
+      "before": {
+        "url": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:05 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "932611292",
+        "htmlLength": 512086
+      },
+      "after": {
+        "url": "https://www.simonholm.studio/work/birdie",
+        "title": "Simon Holm Larsen - Brand Designer - Work",
+        "activeElement": "a",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:05 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "158779422",
+        "htmlLength": 637081
+      },
+      "changed": true,
+      "screenshot": "screenshots/17-click-Birdie-2cc172c18a.png"
+    },
+    {
+      "type": "click",
+      "target": "(01)Birdie",
+      "selector": "div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)",
+      "meta": {
+        "selector": "div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)",
+        "tag": "a",
+        "type": "",
+        "role": "",
+        "href": "https://www.simonholm.studio/work/birdie",
+        "text": "(01)Birdie",
+        "ariaLabel": "",
+        "safeClick": true,
+        "rect": {
+          "x": 9,
+          "y": 248,
+          "width": 691,
+          "height": 430
+        }
+      },
+      "before": {
+        "url": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:05 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "1673080092",
+        "htmlLength": 460746
+      },
+      "after": {
+        "url": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:05 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "1673080092",
+        "htmlLength": 460746
+      },
+      "changed": false,
+      "screenshot": "",
+      "error": "locator.click: Timeout 4000ms exceeded.\nCall log:\n  - waiting for locator('div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)').first()\n    - locator resolved to <a draggable=\"false\" href=\"/work/birdie\" class=\"slidelink w-inline-block\">…</a>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"frontpage-loader-container\">…</div> from <div class=\"frontpage-loader\">…</div> subtree intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <div class=\"frontpage-loader-container\">…</div> from <div class=\"frontpage-loader\">…</div> subtree intercepts pointer events\n  2 × retrying click action\n      - waiting 100ms\n      - waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"container is-main-slider\">…</div> from <div class=\"main-slider cursor-special-frontpage\">…</div> subtree intercepts pointer events\n  6 × retrying click action\n      - waiting 500ms\n      - waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"container is-main-slider\">…</div> from <div class=\"main-slider cursor-special-frontpage\">…</div> subtree intercepts pointer events\n  - retrying click action\n    - waiting 500ms\n"
+    },
+    {
+      "type": "click",
+      "target": "(02)Snuw",
+      "selector": "div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > a:nth-of-type(1)",
+      "meta": {
+        "selector": "div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > a:nth-of-type(1)",
+        "tag": "a",
+        "type": "",
+        "role": "",
+        "href": "https://www.simonholm.studio/work/snuw",
+        "text": "(02)Snuw",
+        "ariaLabel": "",
+        "safeClick": true,
+        "rect": {
+          "x": 701,
+          "y": 248,
+          "width": 691,
+          "height": 430
+        }
+      },
+      "before": {
+        "url": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:05 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "1761345872",
+        "htmlLength": 570309
+      },
+      "after": {
+        "url": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:05 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "1761345872",
+        "htmlLength": 570309
+      },
+      "changed": false,
+      "screenshot": "",
+      "error": "locator.click: Timeout 4000ms exceeded.\nCall log:\n  - waiting for locator('div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > a:nth-of-type(1)').first()\n    - locator resolved to <a draggable=\"false\" href=\"/work/snuw\" class=\"slidelink w-inline-block\">…</a>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"container is-main-slider\">…</div> from <div class=\"main-slider cursor-special-frontpage\">…</div> subtree intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"container is-main-slider\">…</div> from <div class=\"main-slider cursor-special-frontpage\">…</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    7 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"container is-main-slider\">…</div> from <div class=\"main-slider cursor-special-frontpage\">…</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 500ms\n"
+    },
+    {
+      "type": "click",
+      "target": "(03)Basic Feather",
+      "selector": "div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > a:nth-of-type(1)",
+      "meta": {
+        "selector": "div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > a:nth-of-type(1)",
+        "tag": "a",
+        "type": "",
+        "role": "",
+        "href": "https://www.simonholm.studio/work/basic-feather",
+        "text": "(03)Basic Feather",
+        "ariaLabel": "",
+        "safeClick": true,
+        "rect": {
+          "x": 1392,
+          "y": 248,
+          "width": 691,
+          "height": 430
+        }
+      },
+      "before": {
+        "url": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:05 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "-763032775",
+        "htmlLength": 502953
+      },
+      "after": {
+        "url": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:05 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "-763032775",
+        "htmlLength": 502953
+      },
+      "changed": false,
+      "screenshot": "",
+      "error": "locator.click: Timeout 4000ms exceeded.\nCall log:\n  - waiting for locator('div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > a:nth-of-type(1)').first()\n    - locator resolved to <a draggable=\"false\" href=\"/work/basic-feather\" class=\"slidelink w-inline-block\">…</a>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"container is-main-slider\">…</div> from <div class=\"main-slider cursor-special-frontpage\">…</div> subtree intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"container is-main-slider\">…</div> from <div class=\"main-slider cursor-special-frontpage\">…</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    7 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"container is-main-slider\">…</div> from <div class=\"main-slider cursor-special-frontpage\">…</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 500ms\n"
+    },
+    {
+      "type": "click",
+      "target": "(04)Palette",
+      "selector": "div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(4) > a:nth-of-type(1)",
+      "meta": {
+        "selector": "div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(4) > a:nth-of-type(1)",
+        "tag": "a",
+        "type": "",
+        "role": "",
+        "href": "https://www.simonholm.studio/work/Palette",
+        "text": "(04)Palette",
+        "ariaLabel": "",
+        "safeClick": true,
+        "rect": {
+          "x": 2083,
+          "y": 248,
+          "width": 691,
+          "height": 430
+        }
+      },
+      "before": {
+        "url": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:05 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "-18705368",
+        "htmlLength": 555496
+      },
+      "after": {
+        "url": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:05 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "-18705368",
+        "htmlLength": 555496
+      },
+      "changed": false,
+      "screenshot": "",
+      "error": "locator.click: Timeout 4000ms exceeded.\nCall log:\n  - waiting for locator('div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(4) > a:nth-of-type(1)').first()\n    - locator resolved to <a draggable=\"false\" href=\"/work/Palette\" class=\"slidelink w-inline-block\">…</a>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"container is-main-slider\">…</div> from <div class=\"main-slider cursor-special-frontpage\">…</div> subtree intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"container is-main-slider\">…</div> from <div class=\"main-slider cursor-special-frontpage\">…</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    7 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"container is-main-slider\">…</div> from <div class=\"main-slider cursor-special-frontpage\">…</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 500ms\n"
+    },
+    {
+      "type": "click",
+      "target": "(05)Wallhack",
+      "selector": "div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(5) > a:nth-of-type(1)",
+      "meta": {
+        "selector": "div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(5) > a:nth-of-type(1)",
+        "tag": "a",
+        "type": "",
+        "role": "",
+        "href": "https://www.simonholm.studio/work/wallhack",
+        "text": "(05)Wallhack",
+        "ariaLabel": "",
+        "safeClick": true,
+        "rect": {
+          "x": 2774,
+          "y": 248,
+          "width": 691,
+          "height": 430
+        }
+      },
+      "before": {
+        "url": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:05 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "-589409378",
+        "htmlLength": 550181
+      },
+      "after": {
+        "url": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 427,
+        "bodyTextStart": "Featured (05) Featured (05) Index (05) Index (05) About About hello@simonholm.studio +(45) 2632 0731 Brand Designer 17:05 (CET) Brand Designer Portfolio ©2026 Simon Holm Larsen ( 100 ) Birdie (0 1 ) (0 2 ) (0 3 ) (0 4 ) (0 5 ) (01)Birdie (02)Snuw (03)Basic Feather (04)Palette (05)Wallhack [←] Prev [←] Prev Next [→] Next [→] ©2026 Linkedin Linkedin Instagram Instagram [Close]",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 10,
+          "buttons": 0,
+          "forms": 0
+        },
+        "htmlHash": "-589409378",
+        "htmlLength": 550181
+      },
+      "changed": false,
+      "screenshot": "",
+      "error": "locator.click: Timeout 4000ms exceeded.\nCall log:\n  - waiting for locator('div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(5) > a:nth-of-type(1)').first()\n    - locator resolved to <a draggable=\"false\" href=\"/work/wallhack\" class=\"slidelink w-inline-block\">…</a>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"container is-main-slider\">…</div> from <div class=\"main-slider cursor-special-frontpage\">…</div> subtree intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"container is-main-slider\">…</div> from <div class=\"main-slider cursor-special-frontpage\">…</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    7 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"container is-main-slider\">…</div> from <div class=\"main-slider cursor-special-frontpage\">…</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 500ms\n"
+    }
+  ],
+  "network": [
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/676fcf55d3480b19b59b09d3_logo-new-14.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/67701fba2c2b1563bdf59578_btn-open-3.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/677022b2174fc6d87af967b6_btn-close-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/6884dd709297eaa43988c9c8_Nav-logo-new-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/676fcf55d3480b19b59b09d3_logo-new-14.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/67701fba2c2b1563bdf59578_btn-open-3.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/677022b2174fc6d87af967b6_btn-close-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/6884dd709297eaa43988c9c8_Nav-logo-new-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/676fcf55d3480b19b59b09d3_logo-new-14.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/67701fba2c2b1563bdf59578_btn-open-3.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/677022b2174fc6d87af967b6_btn-close-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/6884dd709297eaa43988c9c8_Nav-logo-new-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/676fcf55d3480b19b59b09d3_logo-new-14.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/67701fba2c2b1563bdf59578_btn-open-3.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/677022b2174fc6d87af967b6_btn-close-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/6884dd709297eaa43988c9c8_Nav-logo-new-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/676fcf55d3480b19b59b09d3_logo-new-14.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/67701fba2c2b1563bdf59578_btn-open-3.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/677022b2174fc6d87af967b6_btn-close-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/6884dd709297eaa43988c9c8_Nav-logo-new-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/676fcf55d3480b19b59b09d3_logo-new-14.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/67701fba2c2b1563bdf59578_btn-open-3.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/677022b2174fc6d87af967b6_btn-close-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/6884dd709297eaa43988c9c8_Nav-logo-new-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://www.simonholm.studio/work",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/676fcf55d3480b19b59b09d3_logo-new-14.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/67701fba2c2b1563bdf59578_btn-open-3.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/677022b2174fc6d87af967b6_btn-close-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/6884dd709297eaa43988c9c8_Nav-logo-new-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://www.simonholm.studio/about",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/676fcf55d3480b19b59b09d3_logo-new-14.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/67701fba2c2b1563bdf59578_btn-open-3.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/677022b2174fc6d87af967b6_btn-close-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/6884dd709297eaa43988c9c8_Nav-logo-new-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://www.simonholm.studio/",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/676fcf55d3480b19b59b09d3_logo-new-14.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/67701fba2c2b1563bdf59578_btn-open-3.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/677022b2174fc6d87af967b6_btn-close-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/6884dd709297eaa43988c9c8_Nav-logo-new-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://www.simonholm.studio/",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/676fcf55d3480b19b59b09d3_logo-new-14.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/67701fba2c2b1563bdf59578_btn-open-3.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/677022b2174fc6d87af967b6_btn-close-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/6884dd709297eaa43988c9c8_Nav-logo-new-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://www.simonholm.studio/work/birdie",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/676fcf55d3480b19b59b09d3_logo-new-14.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/67701fba2c2b1563bdf59578_btn-open-3.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/677022b2174fc6d87af967b6_btn-close-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/6884dd709297eaa43988c9c8_Nav-logo-new-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/676fcf55d3480b19b59b09d3_logo-new-14.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/67701fba2c2b1563bdf59578_btn-open-3.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/677022b2174fc6d87af967b6_btn-close-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/6884dd709297eaa43988c9c8_Nav-logo-new-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/676fcf55d3480b19b59b09d3_logo-new-14.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/67701fba2c2b1563bdf59578_btn-open-3.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/677022b2174fc6d87af967b6_btn-close-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/6884dd709297eaa43988c9c8_Nav-logo-new-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/676fcf55d3480b19b59b09d3_logo-new-14.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/67701fba2c2b1563bdf59578_btn-open-3.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/677022b2174fc6d87af967b6_btn-close-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/6884dd709297eaa43988c9c8_Nav-logo-new-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://www.simonholm.studio/work",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/676fcf55d3480b19b59b09d3_logo-new-14.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/67701fba2c2b1563bdf59578_btn-open-3.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/677022b2174fc6d87af967b6_btn-close-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/6884dd709297eaa43988c9c8_Nav-logo-new-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://www.simonholm.studio/about",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/676fcf55d3480b19b59b09d3_logo-new-14.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/67701fba2c2b1563bdf59578_btn-open-3.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/677022b2174fc6d87af967b6_btn-close-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/6884dd709297eaa43988c9c8_Nav-logo-new-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://www.simonholm.studio/",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/676fcf55d3480b19b59b09d3_logo-new-14.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/67701fba2c2b1563bdf59578_btn-open-3.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/677022b2174fc6d87af967b6_btn-close-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/6884dd709297eaa43988c9c8_Nav-logo-new-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://www.simonholm.studio/",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/676fcf55d3480b19b59b09d3_logo-new-14.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/67701fba2c2b1563bdf59578_btn-open-3.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/677022b2174fc6d87af967b6_btn-close-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/6884dd709297eaa43988c9c8_Nav-logo-new-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://www.simonholm.studio/work/birdie",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/676fcf55d3480b19b59b09d3_logo-new-14.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/67701fba2c2b1563bdf59578_btn-open-3.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/677022b2174fc6d87af967b6_btn-close-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/6884dd709297eaa43988c9c8_Nav-logo-new-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/676fcf55d3480b19b59b09d3_logo-new-14.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/67701fba2c2b1563bdf59578_btn-open-3.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/677022b2174fc6d87af967b6_btn-close-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/6884dd709297eaa43988c9c8_Nav-logo-new-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/676fcf55d3480b19b59b09d3_logo-new-14.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/67701fba2c2b1563bdf59578_btn-open-3.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/677022b2174fc6d87af967b6_btn-close-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/6884dd709297eaa43988c9c8_Nav-logo-new-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/676fcf55d3480b19b59b09d3_logo-new-14.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/67701fba2c2b1563bdf59578_btn-open-3.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/677022b2174fc6d87af967b6_btn-close-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/6884dd709297eaa43988c9c8_Nav-logo-new-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/676fcf55d3480b19b59b09d3_logo-new-14.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/67701fba2c2b1563bdf59578_btn-open-3.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/677022b2174fc6d87af967b6_btn-close-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/6884dd709297eaa43988c9c8_Nav-logo-new-2.json",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "xhr"
+    }
+  ],
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Container with ID 'footer-logo' not found.",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Container with ID 'footer-logo' not found.",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Container with ID 'footer-logo' not found.",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Container with ID 'footer-logo' not found.",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Container with ID 'footer-logo' not found.",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Container with ID 'footer-logo' not found.",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Container with ID 'footer-logo' not found.",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Container with ID 'footer-logo' not found.",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Container with ID 'footer-logo' not found.",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Container with ID 'footer-logo' not found.",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Container with ID 'footer-logo' not found.",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Container with ID 'footer-logo' not found.",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Container with ID 'footer-logo' not found.",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Container with ID 'footer-logo' not found.",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Container with ID 'footer-logo' not found.",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Container with ID 'footer-logo' not found.",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Container with ID 'footer-logo' not found.",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Container with ID 'footer-logo' not found.",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Container with ID 'footer-logo' not found.",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Container with ID 'footer-logo' not found.",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Container with ID 'footer-logo' not found.",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Container with ID 'footer-logo' not found.",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Container with ID 'footer-logo' not found."
+  ],
+  "findings": [
+    "14 visible interactive candidates discovered",
+    "0 visible canvas targets discovered",
+    "12/22 actions changed DOM, URL, scroll, or visible overlay counts"
+  ]
+}

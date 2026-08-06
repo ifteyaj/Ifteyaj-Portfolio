@@ -1,0 +1,1718 @@
+<!DOCTYPE html>
+<!-- Clone of simonholm.studio — faithful recreation -->
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Simon Holm Larsen - Brand Designer</title>
+  <meta name="description"
+    content="A digital-first brand designer specializing in strategic visual communication and story-driven brand identities." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon"
+    href="assets/images/cdn.prod.website-files.com/6949508af718bcfd496bee6d_SH-fav-32x32-4e700a8662.png"
+    type="image/png" />
+  <!-- Self-hosted fonts -->
+  <link rel="stylesheet" href="assets/fonts/fonts.css" />
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="assets/css/unpkg.com/swiper-bundle.min-0a18714d8e.css" />
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/Observer.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/CustomEase.min.js"></script>
+  <!-- Lenis smooth scroll -->
+  http://localhost:3000/work/wallhack
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+  <style>
+    /* ── ROOT TOKENS (verbatim from recon rootVariables) ── */
+    :root {
+      --black: #1a1a1a;
+      --lightblack: #212121;
+      --darkgrey: #272727;
+      --white: white;
+      --grey: #a3a3a3;
+      --mid-grey: #7a7771;
+      --naturalgrey: #a8a59c;
+      --offwhite: #f8f3ed;
+      --border-white: #ffffff4d;
+      --transparent: transparent;
+      --main-type: Ppneuemontrealtt, sans-serif;
+      --main-weight: 500;
+      --main-weight-big: 400;
+      --page-margin: .7rem;
+      --page-top-margin: .7rem;
+      --small-discriptor-text: .9rem;
+      --small-discriptor-line: 120%;
+      --small-discriptor-space: .025rem;
+      --small-nav-text: 1.05rem;
+      --small-number: .8rem;
+      --small-menu-number-space: .06rem;
+      --small-text-block-devider: .15rem;
+      --big-text: 10.8rem;
+      --big-text-space: -.35rem;
+      --big-text-line: 80%;
+      --mobile-bix-text: 2.6rem;
+      --mobile-big-text-space: -.02rem;
+      --header-left-space: 4.5rem;
+      --mobile-full-height: 100dvh;
+      --section-break: 160px;
+      --mid-section-break: 100px;
+      --x-small-section-break: 15px;
+      --color: white;
+      --main-dark: black;
+      --main-light: white;
+    }
+
+    /* ── GLOBAL RESET ── */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: calc(0.80vw + 0.20833333333333331vh);
+      overflow-x: hidden;
+      cursor: none !important;
+      height: 100%;
+    }
+
+    @media (max-width: 1024px) and (min-width: 768px) {
+      html {
+        font-size: calc(1.5vw + 0.20833333333333331vh);
+      }
+    }
+
+    @media (max-width: 767px) {
+      html {
+        font-size: calc(3.4vw + 0.20833333333333331vh);
+      }
+    }
+
+    * {
+      cursor: none !important;
+      text-rendering: optimizeLegibility;
+    }
+
+    body {
+      margin: 0;
+      background-color: var(--black);
+      color: var(--white);
+      font-family: var(--main-type);
+      font-weight: var(--main-weight);
+      font-size: var(--small-discriptor-text);
+      -webkit-font-smoothing: antialiased;
+      overscroll-behavior: none;
+      min-height: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      vertical-align: middle;
+      display: inline-block;
+      border: 0;
+      user-select: none;
+    }
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4 {
+      margin: 0;
+    }
+
+    ::selection {
+      background: transparent;
+      color: var(--white);
+    }
+
+    /* ── LENIS ── */
+    html.lenis,
+    html.lenis body {
+      height: auto;
+    }
+
+    .lenis.lenis-smooth {
+      scroll-behavior: auto !important;
+    }
+
+    .lenis.lenis-stopped {
+      overflow: hidden;
+    }
+
+    ::-webkit-scrollbar {
+      width: 1px;
+    }
+
+    ::-webkit-scrollbar-track,
+    ::-webkit-scrollbar-thumb {
+      background: transparent;
+    }
+
+    /* ── PAGE WRAPPER / OVERLAY ── */
+    .page-wrapper {
+      width: 100%;
+      position: relative;
+    }
+
+    .overlay {
+      z-index: 999;
+      background-color: var(--lightblack);
+      width: 100vw;
+      height: 100dvh;
+      position: fixed;
+      inset: auto 0% -100%;
+      display: block;
+    }
+
+    .page-content {
+      z-index: 0;
+      width: 100%;
+      position: relative;
+    }
+
+    /* ── NAVBAR ── */
+    .navbar {
+      z-index: 997;
+      background-color: transparent;
+      width: 100vw;
+      height: 90px;
+      position: fixed;
+      inset: 0% 0% auto;
+      display: block;
+    }
+
+    .nav-bar {
+      z-index: 998;
+      padding-top: var(--page-top-margin);
+      padding-right: var(--page-margin);
+      padding-left: var(--page-margin);
+      font-size: var(--small-nav-text);
+      letter-spacing: var(--small-discriptor-space);
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 100vw;
+      height: auto;
+      font-weight: 500;
+      display: flex;
+      position: relative;
+      inset: 0;
+    }
+
+    .nav-logo-wrapper {
+      flex: 0 0 auto;
+    }
+
+    .nav-logo {
+      z-index: 998;
+      width: 4.2rem;
+      height: 4.2rem;
+      margin-top: -1rem;
+      margin-left: auto;
+      position: relative;
+      top: 0;
+    }
+
+    .work-menu-section {
+      flex: 1;
+      display: flex;
+      align-items: flex-start;
+      padding-left: 1rem;
+    }
+
+    .work-nav-wrapper {
+      display: flex;
+      gap: .5rem;
+      align-items: flex-start;
+    }
+
+    .information-work-section {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+      margin-left: auto;
+    }
+
+    .about-nav-wrapper,
+    .contact-nav-wrapper,
+    .job-nav-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .job-nav-wrapper {
+      display: none;
+    }
+
+    .nav-clock-wrapper {
+      margin-left: 2rem;
+    }
+
+    .nav-clock-container {
+      display: flex;
+      align-items: center;
+      gap: .3rem;
+    }
+
+    .nav-clock-dot {
+      width: .35rem;
+      height: .35rem;
+      background-color: var(--white);
+      border-radius: 50%;
+      display: inline-block;
+      transform: translateY(250%);
+    }
+
+    .nav-clock {
+      font-size: var(--small-discriptor-text);
+      line-height: var(--small-discriptor-line);
+      font-weight: var(--main-weight);
+      letter-spacing: var(--small-discriptor-space);
+      height: 1.05rem;
+      transform: translateY(100%);
+    }
+
+    .nav-clock-infomation {
+      font-size: var(--small-discriptor-text);
+      color: var(--grey);
+      transform: translateY(100%);
+    }
+
+    /* ── MENU LINKS (dual-text hover) ── */
+    .menu-link {
+      height: 1.05rem;
+      line-height: 1.05;
+      display: block;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .menu-link.page_link {
+      display: inline-block;
+    }
+
+    .menu-text {
+      display: flex;
+      align-items: center;
+    }
+
+    .menu-text.first-menu-link {
+      justify-content: flex-start;
+      align-items: center;
+      width: auto;
+      height: 1.05rem;
+      margin-top: .05rem;
+      padding-left: .25rem;
+      padding-right: .25rem;
+      display: flex;
+      overflow: hidden;
+      transform: translateY(100%);
+    }
+
+    .menu-text.second-menu-link {
+      text-transform: uppercase;
+      justify-content: flex-start;
+      align-items: center;
+      width: auto;
+      height: 1.2rem;
+      padding-left: .25rem;
+      padding-right: .25rem;
+      display: flex;
+    }
+
+    .menu-text.first-menu-link-social,
+    .menu-text.second-menu-link-social {
+      display: flex;
+      align-items: center;
+      padding-left: .25rem;
+      padding-right: .25rem;
+      height: 1.05rem;
+      overflow: hidden;
+    }
+
+    .menu-text.first-menu-link-social {
+      transform: translateY(100%);
+    }
+
+    .menu-big-text {
+      font-size: var(--small-discriptor-text);
+      line-height: var(--small-discriptor-line);
+      font-weight: var(--main-weight);
+      display: inline-block;
+      position: relative;
+      white-space: nowrap;
+    }
+
+    .menu-small-text {
+      margin-bottom: 0;
+      margin-left: var(--small-text-block-devider);
+      font-size: var(--small-number);
+      line-height: var(--small-discriptor-line);
+      font-weight: var(--main-weight);
+      letter-spacing: var(--small-menu-number-space);
+      display: inline-block;
+      position: relative;
+    }
+
+    .contact-link {
+      display: inline-block;
+    }
+
+    .menu-contact-text {
+      display: flex;
+      align-items: center;
+      padding: 0 .25rem;
+    }
+
+    /* ── FRONTPAGE LOADER ── */
+    .frontpage-loader {
+      z-index: 999;
+      padding: var(--page-top-margin) var(--page-margin);
+      background-color: var(--lightblack);
+      width: 100vw;
+      height: 100vh;
+      display: block;
+      position: fixed;
+      inset: 0%;
+    }
+
+    .frontpage-loader-container {
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: relative;
+    }
+
+    .logo-loader-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .frontpage-logo-loader {
+      width: 4.2rem;
+      height: 4.2rem;
+    }
+
+    .loader-headline-right {
+      position: absolute;
+      top: var(--page-top-margin);
+      right: var(--page-margin);
+      text-align: right;
+    }
+
+    .loader-headline-portflio {
+      position: absolute;
+      bottom: 2.8rem;
+      left: var(--page-margin);
+    }
+
+    .loader-headline-copyright {
+      position: absolute;
+      bottom: 2.8rem;
+      right: var(--page-margin);
+    }
+
+    .loader-headline-left {
+      position: absolute;
+      bottom: var(--page-margin);
+      left: var(--page-margin);
+    }
+
+    .loader-header-one {
+      overflow: hidden;
+    }
+
+    .loader-header-one.text-aling-right {
+      text-align: right;
+    }
+
+    .loader-header-two,
+    .loader-header-three {
+      overflow: hidden;
+    }
+
+    .loader-header {
+      font-family: var(--main-type);
+      font-size: var(--small-discriptor-text);
+      font-weight: var(--main-weight);
+      letter-spacing: var(--small-discriptor-space);
+      position: relative;
+      transform: translateY(100%);
+    }
+
+    .loader-header.grey-header {
+      color: var(--grey);
+    }
+
+    .loader-header.text-aling-right {
+      text-align: right;
+    }
+
+    .loader-header-2 {
+      font-family: var(--main-type);
+      font-size: var(--small-discriptor-text);
+      font-weight: var(--main-weight);
+      transform: translateY(100%);
+    }
+
+    .frontpage-loader-counter {
+      position: absolute;
+      bottom: 2.8rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: baseline;
+      gap: .1rem;
+      font-family: var(--main-type);
+      font-size: var(--small-discriptor-text);
+      font-weight: var(--main-weight);
+    }
+
+    .frontpage-counter-content {
+      transform: translateY(100%);
+    }
+
+    .frontpage-counter-number {
+      transform: translateY(100%);
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ── SECTION / HERO ── */
+    .section.is-hero {
+      z-index: 2;
+      align-items: center;
+      display: block;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .container.is-hero {
+      padding: var(--page-margin);
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-end;
+      height: auto;
+      min-height: 100vh;
+      display: flex;
+      position: relative;
+    }
+
+    .main-wrapper {
+      background-color: var(--black);
+      color: var(--white);
+      font-family: var(--main-type);
+    }
+
+    /* ── MAIN SLIDER ── */
+    .main-slider {
+      z-index: 4;
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      inset: 0%;
+      overflow: visible;
+    }
+
+    .main-slider_wrap {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .main-slider_list {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    .main-slider_item {
+      width: 100%;
+      height: 100%;
+      display: none;
+      position: absolute;
+      inset: 0%;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .main-slider_item.active {
+      display: block;
+      pointer-events: initial;
+    }
+
+    .main-slider-link {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .main-slider_card {
+      width: 100%;
+      height: 100%;
+    }
+
+    .main-slider_img-wrap {
+      z-index: 1;
+      background-color: var(--black);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      inset: 0%;
+      overflow: hidden;
+      top: 25vh;
+    }
+
+    .main-slider_img {
+      z-index: 1;
+      background-color: var(--black);
+      opacity: .9;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      transition: opacity .6s cubic-bezier(.215, .61, .355, 1);
+      position: absolute;
+      inset: 0%;
+    }
+
+    .main-slider_img.cursor-special-frontpage {
+      opacity: .8;
+    }
+
+    .video-cover {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .video-cover video {
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .container.is-main-slider {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      padding: 0 var(--page-margin);
+    }
+
+    .main-slider_title-wrap {
+      text-align: left;
+      width: 100%;
+      height: 13rem;
+      margin-bottom: 2.8rem;
+      position: relative;
+      inset: auto auto 0% 0%;
+      overflow: hidden;
+    }
+
+    .main-slider_title {
+      padding-left: var(--header-left-space);
+      font-family: var(--main-type);
+      color: var(--white);
+      font-size: var(--big-text);
+      line-height: var(--big-text-line);
+      font-weight: var(--main-weight-big);
+      letter-spacing: var(--big-text-space);
+      align-items: center;
+      height: 13rem;
+      display: flex;
+      position: relative;
+      bottom: -100%;
+    }
+
+    /* ── SLIDER TOGGLE NAV ── */
+    .slider-toggle-nav {
+      z-index: 99;
+      width: 100%;
+      height: 2.8rem;
+      position: absolute;
+      inset: auto 0% 15.7rem 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .slider-nav-border {
+      border-top: 1px solid var(--border-white);
+      border-bottom: 1px solid var(--border-white);
+      width: 0;
+      height: 2.8rem;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    .circle-btn {
+      position: absolute;
+    }
+
+    .circle-btn.btn-fullscreen-global.container-arrows {
+      right: var(--page-margin);
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      gap: .5rem;
+      align-items: center;
+    }
+
+    .circle-minimize {
+      position: absolute;
+      left: var(--page-margin);
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .circle-minimize-btn {
+      z-index: 999;
+      width: 1.65rem;
+      height: 1.65rem;
+      margin: auto;
+      position: relative;
+      clip-path: inset(100% 0% 0% 0%);
+      border: 1px solid var(--border-white);
+      border-radius: 50%;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .circle-scale-btn {
+      width: 1.65rem;
+      height: 1.65rem;
+      border: 1px solid var(--border-white);
+      border-radius: 50%;
+      position: relative;
+    }
+
+    /* ── NUMBER NAVIGATION ── */
+    .number-wrapper {
+      justify-content: flex-start;
+      align-self: auto;
+      align-items: flex-end;
+      height: 25px;
+      display: block;
+      position: absolute;
+      bottom: 5.3rem;
+      left: var(--page-margin);
+      z-index: 20;
+    }
+
+    .numbers {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .numbers_wrap {
+      height: 25px;
+      font-family: var(--main-type);
+      position: relative;
+      overflow: hidden;
+      clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+    }
+
+    .numbers_list {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      height: 100%;
+      font-family: var(--main-type);
+      font-weight: 500;
+      transition: transform .8s cubic-bezier(.645, .045, .355, 1) 1s;
+      display: flex;
+    }
+
+    .numbers_item {
+      flex: none;
+      justify-content: center;
+      align-items: flex-end;
+      height: 100%;
+      display: flex;
+      font-size: var(--small-number);
+      letter-spacing: var(--small-number-space, .07rem);
+      color: var(--grey);
+    }
+
+    .numbers_item.active .numbers_text {
+      color: var(--white);
+    }
+
+    .number_static {
+      font-size: var(--small-number);
+      color: var(--grey);
+    }
+
+    .numbers_text {
+      font-size: var(--small-number);
+    }
+
+    /* ── SMALL SLIDER SCROLL (bottom strip) ── */
+    .small-slider-scroll {
+      position: absolute;
+      bottom: 2.8rem;
+      left: 0;
+      right: 0;
+      z-index: 20;
+      overflow: hidden;
+      height: 2.8rem;
+    }
+
+    .small-scroll-container {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .slider_wrap {
+      opacity: 0;
+      pointer-events: none;
+      width: 100%;
+    }
+
+    .slider_wrap.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .slider_list {
+      align-items: flex-start;
+      width: 100%;
+      height: auto;
+      display: flex;
+      transform: translate(0%);
+    }
+
+    .slider_item {
+      flex: none;
+      width: 48vw;
+      height: auto;
+      display: flex;
+      clip-path: inset(100% 0% 0% 0%);
+    }
+
+    .slidelink {
+      display: block;
+      width: 100%;
+    }
+
+    .slider_link {
+      position: relative;
+    }
+
+    .slider_photo {
+      object-fit: cover;
+      width: 100%;
+      height: 28vw;
+      display: block;
+    }
+
+    .small-slider-text-container {
+      clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+      display: flex;
+      align-items: center;
+      gap: .3rem;
+      padding: .3rem .5rem;
+      font-size: var(--small-discriptor-text);
+      font-weight: var(--main-weight);
+    }
+
+    .small-slider-number {
+      display: flex;
+    }
+
+    .text-link {
+      font-size: var(--small-discriptor-text);
+      font-weight: var(--main-weight);
+    }
+
+    .number-link-small {
+      font-size: var(--small-number);
+    }
+
+    /* ── PREV / NEXT BUTTONS ── */
+    .prev-btn-wrapper,
+    .next-btn-wrapper {
+      position: absolute;
+      top: 0;
+      z-index: 998;
+      width: 5rem;
+      height: 5rem;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      bottom: 0;
+    }
+
+    .prev-btn-wrapper {
+      left: var(--page-margin);
+    }
+
+    .next-btn-wrapper {
+      right: var(--page-margin);
+      left: auto;
+    }
+
+    .btn-prevslide,
+    .btn-nextslide {
+      cursor: pointer;
+      background-color: transparent;
+      border-radius: 300em;
+      justify-content: center;
+      align-items: center;
+      width: 5rem;
+      height: 5rem;
+      display: flex;
+    }
+
+    /* ── SLIDER FOOTER ── */
+    .slider-footer {
+      z-index: 15;
+      padding-right: var(--page-margin);
+      padding-bottom: .9rem;
+      padding-left: var(--page-margin);
+      font-size: var(--small-discriptor-text);
+      border-top: none !important;
+      border-radius: 1px;
+      align-items: flex-end;
+      width: 100vw;
+      height: 2.8rem;
+      display: flex;
+      position: absolute;
+      inset: auto 0% 0%;
+      transition: border-top-color .2s ease-in-out;
+    }
+
+    .slider-footer-wrapper {
+      flex: 1;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .slider-footer-information {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .slider-footer-text {
+      font-size: var(--small-discriptor-text);
+      line-height: var(--small-discriptor-line);
+      font-weight: var(--main-weight);
+      transform: translateY(100%);
+    }
+
+    .slider-footer-social-wrapper {
+      margin-left: auto;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .social-link-container {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-end;
+    }
+
+    .social-link {
+      font-size: var(--small-discriptor-text);
+    }
+
+    .slider-footer-border {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 1px;
+      width: 0;
+      background-color: var(--border-white);
+    }
+
+    /* ── CUSTOM CURSOR ── */
+    .custom-cursor {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      pointer-events: none !important;
+      z-index: 1000;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .custom-cursor-dot {
+      pointer-events: none !important;
+      border: 1px solid var(--white);
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    .custom-cursor-dot-case {
+      pointer-events: none !important;
+      border: 1px solid var(--white);
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      position: absolute;
+      opacity: 0;
+    }
+
+    .close-text {
+      position: absolute;
+      white-space: nowrap;
+      opacity: 0;
+      font-size: .7rem;
+    }
+
+    .cursor-text {
+      font-family: var(--main-type);
+      font-size: .65rem;
+    }
+
+    /* ── MISC INIT STATES ── */
+    .slider-footer {
+      border: none !important;
+    }
+
+    .main-slider_img-wrap {
+      top: 25vh;
+    }
+
+    .slider-nav-border {
+      width: 0;
+    }
+
+    .slider-footer-border {
+      width: 0;
+    }
+
+    .numbers_wrap {
+      clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+    }
+
+    .main-slider_title {
+      bottom: -100%;
+    }
+
+    .first-menu-link {
+      transform: translateY(100%);
+    }
+
+    .first-menu-link-social {
+      transform: translateY(100%);
+    }
+
+    .slider-footer-text {
+      transform: translateY(100%);
+    }
+
+    /* ── SPAN TEXT TRANSITIONS ── */
+    .word-break {
+      position: relative;
+      overflow: hidden;
+      display: inline-block;
+    }
+
+    .span-text-tran {
+      transform: translateY(calc(100% + 5px));
+      padding-bottom: 0.1rem;
+      display: inline-block;
+    }
+
+    .span-text-tran::after {
+      content: "\00A0";
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+    .span-text-tran:last-child::after {
+      content: "";
+    }
+  </style>
+</head>
+
+<body class="body">
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar w-nav" role="banner">
+    <div class="nav-bar">
+      <div class="nav-logo-wrapper">
+        <a href="#" class="nav-logo-link w-inline-block">
+          <div id="Nav-logo" class="nav-logo"></div>
+        </a>
+      </div>
+      <div class="work-menu-section">
+        <div class="work-nav-wrapper">
+          <a href="#" class="menu-link page_link w-inline-block">
+            <div class="menu-text first-menu-link">
+              <p class="menu-big-text">Featured</p>
+              <p class="menu-small-text">(05)</p>
+            </div>
+            <div class="menu-text second-menu-link">
+              <p class="menu-big-text">Featured</p>
+              <p class="menu-small-text">(05)</p>
+            </div>
+          </a>
+          <a href="#" class="menu-link page_link w-inline-block">
+            <div class="menu-text first-menu-link">
+              <p class="menu-big-text">Index</p>
+              <p class="menu-small-text">(05)</p>
+            </div>
+            <div class="menu-text second-menu-link">
+              <p class="menu-big-text">Index</p>
+              <p class="menu-small-text">(05)</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="information-work-section">
+        <div class="about-nav-wrapper">
+          <a href="#" class="menu-link page_link w-inline-block">
+            <div class="menu-text first-menu-link">
+              <p class="menu-big-text">About</p>
+            </div>
+            <div class="menu-text second-menu-link">
+              <p class="menu-big-text">About</p>
+            </div>
+          </a>
+        </div>
+        <div class="contact-nav-wrapper">
+          <a href="#" class="contact-link page_link w-inline-block">
+            <div class="menu-contact-text first-menu-link">
+              <p class="menu-big-text">hello@simonholm.studio</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="nav-clock-wrapper">
+        <div class="nav-clock-container">
+          <div class="nav-clocl-dot-wrapper">
+            <div class="nav-clock-dot"></div>
+          </div>
+          <div class="nav-clock"></div>
+          <div class="nav-clock-infomation">(CET)</div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── LOADER ── -->
+  <div class="frontpage-loader">
+    <div class="frontpage-loader-container">
+      <div class="logo-loader-wrapper">
+        <div id="frontpage-logo-loader" class="frontpage-logo-loader"></div>
+      </div>
+      <div class="loader-headline-right">
+        <div class="loader-header-one text-aling-right">
+          <h3 class="loader-header text-aling-right">Brand Designer</h3>
+        </div>
+        <div class="loader-header-two text-aling-right">
+          <h3 class="loader-header-2 text-aling-right"></h3>
+        </div>
+      </div>
+      <div class="loader-headline-portflio">
+        <div class="loader-header-one">
+          <h3 class="loader-header grey-header">Portfolio</h3>
+        </div>
+      </div>
+      <div class="loader-headline-copyright">
+        <div class="loader-header-one text-aling-right">
+          <h3 class="loader-header grey-header text-aling-right">©2026</h3>
+        </div>
+      </div>
+      <div class="loader-headline-left">
+        <div class="loader-header-one">
+          <h3 class="loader-header">Simon Holm Larsen</h3>
+        </div>
+        <div class="loader-header-two">
+          <h3 class="loader-header-2"></h3>
+        </div>
+      </div>
+      <div class="frontpage-loader-counter">
+        <div class="frontpage-counter-content">(</div>
+        <div class="frontpage-counter-number">0</div>
+        <div class="frontpage-counter-content">)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── BARBA OVERLAY ── -->
+  <div class="overlay"></div>
+
+  <!-- ── MAIN PAGE ── -->
+  <div class="page-content">
+    <div class="page-wrapper">
+      <main id="smooth-content" class="main-wrapper">
+        <section class="section is-hero">
+          <div class="container is-hero">
+
+            <!-- Slider toggle nav bar -->
+            <div class="slider-toggle-nav">
+              <div class="slider-nav-border"></div>
+              <div class="circle-btn btn-fullscreen-global container-arrows">
+                <div id="circle-scale-btn" class="circle-scale-btn"></div>
+              </div>
+              <div class="circle-minimize">
+                <div class="minimizetool">
+                  <div id="circle-minimize-btn" class="circle-minimize-btn"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Main fullscreen slider -->
+            <div class="main-slider">
+              <div class="main-slider_wrap">
+                <div class="main-slider_list">
+
+                  <!-- Slide 1: Birdie -->
+                  <div class="main-slider_item active" data-index="0">
+                    <a href="#" class="main-slider-link">
+                      <div class="main-slider_card">
+                        <div class="container is-main-slider">
+                          <div class="main-slider_title-wrap">
+                            <p class="main-slider_title">Birdie</p>
+                          </div>
+                        </div>
+                        <div class="main-slider_img-wrap">
+                          <img
+                            src="assets/images/cdn.prod.website-files.com/68f9e088802b5ec348dac431_b-packagning-mood-4-aa82382502.webp"
+                            alt="Birdie" class="main-slider_img" />
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- Slide 2: Snuw -->
+                  <div class="main-slider_item" data-index="1">
+                    <a href="#" class="main-slider-link">
+                      <div class="main-slider_card">
+                        <div class="container is-main-slider">
+                          <div class="main-slider_title-wrap">
+                            <p class="main-slider_title">Snuw</p>
+                          </div>
+                        </div>
+                        <div class="main-slider_img-wrap">
+                          <img
+                            src="assets/images/cdn.prod.website-files.com/69760d69248c608aadbfd085_snuw-hero-2-8615ce32d8.webp"
+                            alt="Snuw" class="main-slider_img" />
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- Slide 3: Basic Feather -->
+                  <div class="main-slider_item" data-index="2">
+                    <a href="#" class="main-slider-link">
+                      <div class="main-slider_card">
+                        <div class="container is-main-slider">
+                          <div class="main-slider_title-wrap">
+                            <p class="main-slider_title">Basic Feather</p>
+                          </div>
+                        </div>
+                        <div class="main-slider_img-wrap">
+                          <img
+                            src="assets/images/cdn.prod.website-files.com/68a571c2f9d051f5356560c1_BF-Hero-a22b8eceda.webp"
+                            alt="Basic Feather" class="main-slider_img" />
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- Slide 4: Palette -->
+                  <div class="main-slider_item" data-index="3">
+                    <a href="#" class="main-slider-link">
+                      <div class="main-slider_card">
+                        <div class="container is-main-slider">
+                          <div class="main-slider_title-wrap">
+                            <p class="main-slider_title">Palette</p>
+                          </div>
+                        </div>
+                        <div class="main-slider_img-wrap">
+                          <img
+                            src="assets/images/cdn.prod.website-files.com/692b4e4dea92dbe6d39293f2_p-index-1-8d0925ef8e.webp"
+                            alt="Palette" class="main-slider_img" />
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- Slide 5: Wallhack (video) -->
+                  <div class="main-slider_item" data-index="4">
+                    <a href="#" class="main-slider-link">
+                      <div class="main-slider_card">
+                        <div class="container is-main-slider">
+                          <div class="main-slider_title-wrap">
+                            <p class="main-slider_title">Wallhack</p>
+                          </div>
+                        </div>
+                        <div class="main-slider_img-wrap">
+                          <div class="video-cover">
+                            <video muted autoplay playsinline loop
+                              poster="assets/images/assets.simonholml.com/WH-Hero.mp4-948b45452d.webp">
+                              <source src="assets/media/assets.simonholml.com/WH-Hero-4a1fbfe374.mp4" type="video/mp4">
+                            </video>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                </div><!-- /main-slider_list -->
+              </div><!-- /main-slider_wrap -->
+            </div><!-- /main-slider -->
+
+            <!-- Number nav -->
+            <div class="number-wrapper">
+              <div class="numbers">
+                <div class="numbers_wrap">
+                  <div class="numbers_list">
+                    <div class="numbers_item active">
+                      <p class="number_static">(0</p>
+                      <p class="numbers_text">1</p>
+                      <p class="number_static">)</p>
+                    </div>
+                    <div class="numbers_item">
+                      <p class="number_static">(0</p>
+                      <p class="numbers_text">2</p>
+                      <p class="number_static">)</p>
+                    </div>
+                    <div class="numbers_item">
+                      <p class="number_static">(0</p>
+                      <p class="numbers_text">3</p>
+                      <p class="number_static">)</p>
+                    </div>
+                    <div class="numbers_item">
+                      <p class="number_static">(0</p>
+                      <p class="numbers_text">4</p>
+                      <p class="number_static">)</p>
+                    </div>
+                    <div class="numbers_item">
+                      <p class="number_static">(0</p>
+                      <p class="numbers_text">5</p>
+                      <p class="number_static">)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Small bottom slider strip -->
+            <div class="small-slider-scroll">
+              <div class="small-scroll-container">
+                <div class="slider_wrap show">
+                  <div class="slider_list">
+                    <div class="slider_item" data-index="0">
+                      <a draggable="false" href="#" class="slidelink">
+                        <div class="slider_link">
+                          <img
+                            src="assets/images/cdn.prod.website-files.com/68f9e088802b5ec348dac431_b-packagning-mood-4-aa82382502.webp"
+                            alt="Birdie" class="slider_photo" />
+                        </div>
+                        <div class="small-slider-text-container">
+                          <div class="small-slider-number">
+                            <div class="text-link number-link-small">(0</div>
+                            <div class="text-link number-link-small">1</div>
+                            <div class="text-link number-link-small">)</div>
+                          </div>
+                          <div class="text-link">Birdie</div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="slider_item" data-index="1">
+                      <a draggable="false" href="#" class="slidelink">
+                        <div class="slider_link">
+                          <img
+                            src="assets/images/cdn.prod.website-files.com/69760d69248c608aadbfd085_snuw-hero-2-8615ce32d8.webp"
+                            alt="Snuw" class="slider_photo" />
+                        </div>
+                        <div class="small-slider-text-container">
+                          <div class="small-slider-number">
+                            <div class="text-link number-link-small">(0</div>
+                            <div class="text-link number-link-small">2</div>
+                            <div class="text-link number-link-small">)</div>
+                          </div>
+                          <div class="text-link">Snuw</div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="slider_item" data-index="2">
+                      <a draggable="false" href="#" class="slidelink">
+                        <div class="slider_link">
+                          <img
+                            src="assets/images/cdn.prod.website-files.com/68a571c2f9d051f5356560c1_BF-Hero-a22b8eceda.webp"
+                            alt="Basic Feather" class="slider_photo" />
+                        </div>
+                        <div class="small-slider-text-container">
+                          <div class="small-slider-number">
+                            <div class="text-link number-link-small">(0</div>
+                            <div class="text-link number-link-small">3</div>
+                            <div class="text-link number-link-small">)</div>
+                          </div>
+                          <div class="text-link">Basic Feather</div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="slider_item" data-index="3">
+                      <a draggable="false" href="#" class="slidelink">
+                        <div class="slider_link">
+                          <img
+                            src="assets/images/cdn.prod.website-files.com/692b4e4dea92dbe6d39293f2_p-index-1-8d0925ef8e.webp"
+                            alt="Palette" class="slider_photo" />
+                        </div>
+                        <div class="small-slider-text-container">
+                          <div class="small-slider-number">
+                            <div class="text-link number-link-small">(0</div>
+                            <div class="text-link number-link-small">4</div>
+                            <div class="text-link number-link-small">)</div>
+                          </div>
+                          <div class="text-link">Palette</div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="slider_item" data-index="4">
+                      <a draggable="false" href="#" class="slidelink">
+                        <div class="slider_link">
+                          <img src="assets/images/assets.simonholml.com/WH-Hero.mp4-948b45452d.webp" alt="Wallhack"
+                            class="slider_photo" />
+                        </div>
+                        <div class="small-slider-text-container">
+                          <div class="small-slider-number">
+                            <div class="text-link number-link-small">(0</div>
+                            <div class="text-link number-link-small">5</div>
+                            <div class="text-link number-link-small">)</div>
+                          </div>
+                          <div class="text-link">Wallhack</div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Prev / Next buttons -->
+            <div class="prev-btn-wrapper">
+              <div class="btn-prevslide">
+                <div class="menu-link">
+                  <div class="menu-text first-menu-link slider-nav-text">
+                    <p class="menu-big-text">[←] Prev</p>
+                  </div>
+                  <div class="menu-text second-menu-link">
+                    <p class="menu-big-text">[←] Prev</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="next-btn-wrapper">
+              <div class="btn-nextslide">
+                <div class="menu-link">
+                  <div class="menu-text first-menu-link slider-nav-text">
+                    <p class="menu-big-text">Next [→]</p>
+                  </div>
+                  <div class="menu-text second-menu-link">
+                    <p class="menu-big-text">Next [→]</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /container is-hero -->
+
+          <!-- Slider footer -->
+          <div class="slider-footer">
+            <div class="slider-footer-wrapper">
+              <div class="slider-footer-information">
+                <p class="slider-footer-text">©2026</p>
+              </div>
+            </div>
+            <div class="slider-footer-social-wrapper">
+              <div class="social-link-container">
+                <a href="#" target="_blank" class="menu-link w-inline-block">
+                  <div class="menu-text first-menu-link-social">
+                    <p class="menu-big-text social-link">Linkedin</p>
+                  </div>
+                  <div class="menu-text second-menu-link-social">
+                    <p class="menu-big-text social-link">Linkedin</p>
+                  </div>
+                </a>
+                <a href="https://www.instagram.com/simonholm.studio/" target="_blank" class="menu-link w-inline-block">
+                  <div class="menu-text first-menu-link-social">
+                    <p class="menu-big-text social-link">Instagram</p>
+                  </div>
+                  <div class="menu-text second-menu-link-social">
+                    <p class="menu-big-text social-link">Instagram</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="slider-footer-border"></div>
+          </div>
+
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <!-- ── CUSTOM CURSOR ── -->
+  <div class="custom-cursor" id="custom-cursor">
+    <div class="close-text">
+      <div class="close-text-p cursor-text">[Close]</div>
+    </div>
+    <div class="custom-cursor-dot"></div>
+    <div class="custom-cursor-dot-case"></div>
+  </div>
+
+  <script>
+    // ── GSAP CUSTOM EASES (from live site inline script) ──
+    CustomEase.create("Pagtrans", ".645,.045,.355,1");
+    CustomEase.create("texttshow", "0.35,0.15,0.35,1");
+    CustomEase.create("linedraw", ".65,.05,.36,1");
+    CustomEase.create("hoverout", ".23,1,.32,1");
+    CustomEase.create("hoverin", ".65,.05,.36,1");
+    CustomEase.create("slowoutfade", "1,0,1,.93");
+    CustomEase.create("fastinfade", "0,.89,.63,1");
+
+    // ── LENIS SMOOTH SCROLL ──
+    const lenis = new Lenis({ lerp: 0.1, smoothWheel: true });
+    window.lenis = lenis;
+    function lenisRAF(time) { lenis.raf(time); requestAnimationFrame(lenisRAF); }
+    requestAnimationFrame(lenisRAF);
+
+    // ── CET CLOCK ──
+    function updateCETClock() {
+      const cetTime = new Date().toLocaleString("en-US", {
+        timeZone: "Europe/Berlin", hour12: false,
+        hour: "2-digit", minute: "2-digit"
+      });
+      const el = document.querySelector(".nav-clock");
+      if (el) el.textContent = cetTime;
+    }
+    updateCETClock();
+    setInterval(updateCETClock, 1000);
+
+    // ── SLIDER STATE ──
+    const SLIDE_COUNT = 5;
+    let currentSlide = 0;
+    let isAnimating = false;
+
+    const items = document.querySelectorAll(".main-slider_item");
+    const numberItems = document.querySelectorAll(".numbers_item");
+    const bottomItems = document.querySelectorAll(".slider_item");
+    const numbersList = document.querySelector(".numbers_list");
+    const ITEM_H = 25; // px — height of one numbers_item
+
+    function goToSlide(next) {
+      if (isAnimating || next === currentSlide) return;
+      isAnimating = true;
+
+      const prev = currentSlide;
+      currentSlide = next;
+
+      // Swap active slide
+      items[prev].classList.remove("active");
+      items[next].classList.add("active");
+
+      // Title animation
+      const prevTitle = items[prev].querySelector(".main-slider_title");
+      const nextTitle = items[next].querySelector(".main-slider_title");
+      gsap.set(nextTitle, { bottom: "-100%" });
+      gsap.to(prevTitle, { bottom: "100%", duration: 0.8, ease: "Pagtrans" });
+      gsap.to(nextTitle, { bottom: "0", duration: 1.2, ease: "texttshow", delay: 0.1 });
+
+      // Image wrap enter from below
+      const nextImgWrap = items[next].querySelector(".main-slider_img-wrap");
+      gsap.fromTo(nextImgWrap,
+        { top: "15vh" },
+        { top: "0vh", duration: 1.2, ease: "Pagtrans" }
+      );
+
+      // Number scroll
+      gsap.to(numbersList, {
+        y: -next * ITEM_H,
+        duration: 0.8,
+        ease: "Pagtrans",
+        delay: 0
+      });
+      numberItems.forEach((n, i) => n.classList.toggle("active", i === next));
+
+      // Bottom strip active
+      bottomItems.forEach((b, i) => {
+        b.style.opacity = i === next ? "1" : "0.45";
+      });
+
+      setTimeout(() => { isAnimating = false; }, 1300);
+    }
+
+    // Arrow click navigation
+    document.querySelector(".btn-nextslide")?.addEventListener("click", () => {
+      goToSlide((currentSlide + 1) % SLIDE_COUNT);
+    });
+    document.querySelector(".btn-prevslide")?.addEventListener("click", () => {
+      goToSlide((currentSlide - 1 + SLIDE_COUNT) % SLIDE_COUNT);
+    });
+
+    // Bottom strip click
+    bottomItems.forEach((item, i) => {
+      item.querySelector("a")?.addEventListener("click", (e) => {
+        e.preventDefault();
+        goToSlide(i);
+      });
+    });
+
+    // Wheel / keyboard navigation
+    let wheelCooldown = false;
+    window.addEventListener("wheel", (e) => {
+      if (wheelCooldown || isAnimating) return;
+      wheelCooldown = true;
+      setTimeout(() => { wheelCooldown = false; }, 900);
+      if (e.deltaY > 0) goToSlide((currentSlide + 1) % SLIDE_COUNT);
+      else goToSlide((currentSlide - 1 + SLIDE_COUNT) % SLIDE_COUNT);
+    }, { passive: true });
+
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowRight" || e.key === "ArrowDown") goToSlide((currentSlide + 1) % SLIDE_COUNT);
+      if (e.key === "ArrowLeft" || e.key === "ArrowUp") goToSlide((currentSlide - 1 + SLIDE_COUNT) % SLIDE_COUNT);
+    });
+
+    // ── NAV MENU LINK HOVER (dual-text slide) ──
+    function initLinkAnimations() {
+      document.querySelectorAll(".menu-link").forEach(link => {
+        const first = link.querySelector(".first-menu-link");
+        const second = link.querySelector(".second-menu-link");
+        const firstS = link.querySelector(".first-menu-link-social");
+        const secondS = link.querySelector(".second-menu-link-social");
+
+        link.addEventListener("mouseenter", () => {
+          if (first) gsap.to(first, { y: "-100%", duration: 0.6, ease: "hoverin" });
+          if (second) gsap.to(second, { y: "-100%", duration: 0.6, ease: "hoverin" });
+          if (firstS) gsap.to(firstS, { y: "-100%", duration: 0.6, ease: "hoverin" });
+          if (secondS) gsap.to(secondS, { y: "-100%", duration: 0.6, ease: "hoverin" });
+        });
+        link.addEventListener("mouseleave", () => {
+          if (first) gsap.to(first, { y: "0%", duration: 1, ease: "hoverout" });
+          if (second) gsap.to(second, { y: "0%", duration: 1, ease: "hoverout" });
+          if (firstS) gsap.to(firstS, { y: "0%", duration: 1, ease: "hoverout" });
+          if (secondS) gsap.to(secondS, { y: "0%", duration: 1, ease: "hoverout" });
+        });
+      });
+    }
+
+    // ── CUSTOM CURSOR ──
+    function initCursor() {
+      const cursor = document.getElementById("custom-cursor");
+      const dot = cursor?.querySelector(".custom-cursor-dot");
+      if (!cursor) return;
+
+      let mx = window.innerWidth / 2, my = window.innerHeight / 2;
+      let cx = mx, cy = my;
+
+      document.addEventListener("mousemove", (e) => {
+        mx = e.clientX; my = e.clientY;
+      });
+
+      gsap.ticker.add(() => {
+        cx += (mx - cx) * 0.15;
+        cy += (my - cy) * 0.15;
+        gsap.set(cursor, { x: cx, y: cy });
+      });
+    }
+
+    // ── PAGE LOAD ANIMATION ──
+    function pageLoadStartAnimation() {
+      // Counter 0→100
+      gsap.to(".frontpage-counter-content", { duration: 1.35, y: "0%", ease: "texttshow", delay: 0.5 });
+      gsap.to(".frontpage-counter-number", { duration: 1.35, y: "0%", ease: "texttshow", delay: 0.5 });
+      gsap.to(".frontpage-counter-number", {
+        innerText: 100, duration: 1.7, delay: 1.8,
+        snap: { innerText: 1 },
+        onUpdate() {
+          const el = document.querySelector(".frontpage-counter-number");
+          if (el) el.innerText = Math.ceil(parseFloat(el.innerText) || 0);
+        },
+        onComplete() {
+          gsap.to(".frontpage-counter-content", { duration: 1.5, y: "-100%", ease: "texttshow", delay: 0.15 });
+          gsap.to(".frontpage-counter-number", { duration: 1.5, y: "-100%", ease: "texttshow", delay: 0.15 });
+        }
+      });
+
+      // Loader headers in
+      gsap.to(".loader-header", { duration: 1.35, y: "0%", ease: "texttshow", delay: 0.5 });
+      gsap.to(".loader-header-2", { duration: 1.35, y: "0%", ease: "texttshow", delay: 0.6 });
+
+      // Loader headers out
+      gsap.to(".loader-header", { duration: 1.5, y: "-100%", ease: "texttshow", delay: 3.6 });
+      gsap.to(".loader-header-2", { duration: 1.5, y: "-100%", ease: "texttshow", delay: 3.6 });
+
+      // Loader slide up and hide
+      gsap.to(".frontpage-loader", {
+        duration: 1.35, y: "-100%", ease: "Pagtrans", delay: 4.3,
+        onComplete() {
+          const loader = document.querySelector(".frontpage-loader");
+          if (loader) loader.style.display = "none";
+        }
+      });
+
+      // UI elements reveal (post-loader)
+      const D = 5.4;
+      gsap.to(".main-slider_img-wrap", { top: "0vh", duration: 1.35, ease: "Pagtrans", delay: 4.3 });
+      gsap.to(".slider-nav-border", { width: "100%", duration: 1.5, ease: "linedraw", delay: 4.4 });
+      gsap.to(".slider-footer-border", { width: "100vw", duration: 1.5, ease: "linedraw", delay: 4.8 });
+      gsap.to(".circle-minimize-btn", { clipPath: "inset(0% 0% 0% 0%)", duration: 1, ease: "texttshow", delay: D });
+      gsap.to(".first-menu-link", { y: "0%", duration: 1, ease: "texttshow", delay: D });
+      gsap.to(".first-menu-link-social", { y: "0%", duration: 1, ease: "texttshow", delay: D });
+      gsap.to(".slider-footer-text", { y: "0%", duration: 1, ease: "texttshow", delay: D });
+      gsap.to(".nav-clock-dot", { y: "0%", duration: 1, ease: "texttshow", delay: D });
+      gsap.to(".nav-clock", { y: "0%", duration: 1, ease: "texttshow", delay: D });
+      gsap.to(".nav-clock-infomation", { y: "0%", duration: 1, ease: "texttshow", delay: D });
+      gsap.to(".numbers_wrap", { clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 1, ease: "texttshow", delay: D });
+      gsap.to(".main-slider_title", { bottom: "0", duration: 1.8, ease: "texttshow", delay: 4.8 });
+
+      // Animate bottom slider items in
+      document.querySelectorAll(".slider_item").forEach((item, i) => {
+        gsap.to(item, {
+          clipPath: "inset(0% 0% 0% 0%)", duration: 1.4, ease: "texttshow",
+          delay: D + i * 0.08
+        });
+      });
+      document.querySelectorAll(".small-slider-text-container").forEach((el, i) => {
+        gsap.to(el, {
+          clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+          duration: 1, ease: "texttshow",
+          delay: D + 0.2 + i * 0.08
+        });
+      });
+    }
+
+    // ── INIT ON DOM READY ──
+    document.addEventListener("DOMContentLoaded", () => {
+      initCursor();
+      initLinkAnimations();
+      pageLoadStartAnimation();
+
+      // Set initial bottom strip opacities
+      bottomItems.forEach((b, i) => { b.style.opacity = i === 0 ? "1" : "0.45"; });
+
+      // Autoplay Wallhack video
+      const vids = document.querySelectorAll(".main-slider_img-wrap video");
+      vids.forEach(v => { v.muted = true; v.play?.().catch(() => { }); });
+    });
+  </script>
+</body>
+
+</html>

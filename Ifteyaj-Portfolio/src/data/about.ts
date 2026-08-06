@@ -1,0 +1,63 @@
+export const about = {
+  heroName: "Ifteyaj",
+  heroTagline: "Take a deep dive into my life of layers & Shapes",
+  intro:
+    "A digital-first brand designer specializing in strategic visual communication and story-driven brand identities.",
+  bioHeading: "About",
+  bio: [
+    "Hello, I'm Ifteyaj, a Dhaka-based brand designer creating story-driven, digital-first identities.",
+    "My background is rooted in web development and digital design, and that combination still shapes how I think today. It gives me a practical understanding of how a brand needs to live, move, and perform in a constantly evolving digital world.",
+    "I believe the era of fixed, one-directional branding is long gone. Where brands once expressed themselves through a handful of static touchpoints, they now need the freedom to adapt and evolve without losing themselves.",
+    "A brand can be strategic, expressive, quiet, loud, emotional or simply helpful, depending entirely on the moment and the audience.",
+    "That's why I'm drawn to identities built around a strong core, supported by a flexible brand universe that can shift, adapt, and feel as personal as the people they speak to.",
+    "I love collaborating with people and brands who are curious, thoughtful, and ready to challenge what exists, to build brands that grow, adapt, and stay relevant over time.",
+  ],
+  principles: [
+    {
+      heading: "Principle",
+      body: "Room to discover and play: A strong process leaves space for a little chaos, where we pause, question what we know, and try new directions. Insight and experience guide the work, but some of the best ideas appear when we don't force the path, and trust where the process is going with an open mind and allow ourselves to play a little.",
+    },
+    {
+      heading: "Principle",
+      body: "Work is a partnership: The work shouldn't feel like a dramatic \"big reveal\" at the end of the process. We align early, talk openly, and build things together as we go. The best results come from shared ownership and ongoing conversation to create solutions that connect with your audience, build pride internally, and feel right in everyday use.",
+    },
+    {
+      heading: "Principle",
+      body: "Let's be kind, but honest: Great work grows in a space where openness feels safe, where feedback is thoughtful, direct, and grounded. When people can speak freely, trust becomes a natural part of the process.",
+    },
+  ],
+  reachout:
+    "Feel free to reach out to discuss your project:",
+  clients: [
+    "Birdie",
+    "Wallhack",
+    "Palette",
+    "Snuw",
+    "Basic Feather",
+    "Baseborn",
+    "Maersk",
+    "Carlsberg",
+    "Nordea",
+    "Novo Nordisk",
+    "Astralis",
+    "BoConcept",
+    "Arla",
+    "SAS",
+    "Velux",
+    "Dinesen",
+    "Coca-Cola",
+    "Zero Carbon Shipping",
+  ],
+  recognition: [
+    { year: "2025", title: "Gold Creative Circle", project: "Craft / Website Design - CURB CPH" },
+    { year: "2025", title: "Gold Lovie Award", project: "Aesthetic - CURB CPH" },
+    { year: "2025", title: "Shortlist Creative Circle", project: "Corporate Identity - Heim" },
+    { year: "2024", title: "Webby Awards Nominee", project: "Cultural Blog - Pirate Wires" },
+    { year: "2024", title: "Shortlist Creative Circle", project: "Experimental / Digital - Baseborn Studio" },
+    { year: "2024", title: "Shortlist Creative Circle", project: "Small Business Identity - Palette" },
+    { year: "2024", title: "Shortlist Creative Circle", project: "Small Business Identity - SNUW" },
+    { year: "2023", title: "Silver Creative Circle", project: "Editorial - Brask Studio" },
+    { year: "2023", title: "Shortlist Creative Circle", project: "Small Business Identity - Canairi®" },
+    { year: "2021", title: "Red Dot Award Winner", project: "Corporate Identity - Moove Group" },
+  ],
+};

@@ -1,0 +1,2868 @@
+{
+  "label": "original",
+  "url": "https://www.simonholm.studio/",
+  "capturedAt": "2026-08-05T15:01:40.239Z",
+  "console": {
+    "errors": [
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 404 ()",
+        "viewport": 1440
+      },
+      {
+        "type": "error",
+        "text": "Container with ID 'footer-logo' not found.",
+        "viewport": 1440
+      },
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 404 ()",
+        "viewport": 768
+      },
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 404 ()",
+        "viewport": 768
+      },
+      {
+        "type": "error",
+        "text": "Container with ID 'footer-logo' not found.",
+        "viewport": 768
+      },
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 404 ()",
+        "viewport": 390
+      },
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 404 ()",
+        "viewport": 390
+      },
+      {
+        "type": "error",
+        "text": "Container with ID 'footer-logo' not found.",
+        "viewport": 390
+      }
+    ],
+    "warnings": [],
+    "pageErrors": [
+      {
+        "message": "frontpageLoader is not defined",
+        "viewport": 1440
+      },
+      {
+        "message": "frontpageLoader is not defined",
+        "viewport": 768
+      },
+      {
+        "message": "frontpageLoader is not defined",
+        "viewport": 390
+      }
+    ]
+  },
+  "captures": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "screenshot": "screenshots/original-1440.png",
+      "signals": {
+        "href": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "lang": "en",
+        "bodyTextChars": 427,
+        "scrollHeight": 900,
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "h1": [],
+        "headings": [
+          {
+            "tag": "h3",
+            "text": "Brand Designer"
+          },
+          {
+            "tag": "h3",
+            "text": ""
+          },
+          {
+            "tag": "h3",
+            "text": "Portfolio"
+          },
+          {
+            "tag": "h3",
+            "text": "©2026"
+          },
+          {
+            "tag": "h3",
+            "text": "Simon Holm Larsen"
+          },
+          {
+            "tag": "h3",
+            "text": ""
+          }
+        ],
+        "metaDescription": "A digital-first brand designer specializing in strategic visual communication and story-driven brand identities.",
+        "counts": {
+          "links": 20,
+          "images": 20,
+          "video": 10,
+          "canvas": 0,
+          "sections": 2,
+          "forms": 0,
+          "buttons": 0,
+          "inputs": 0,
+          "interactive": 20,
+          "scripts": 19,
+          "stylesheets": 3
+        },
+        "frameworks": {
+          "react": false,
+          "next": false,
+          "vue": false,
+          "nuxt": false,
+          "svelte": false,
+          "astro": false,
+          "three": false,
+          "gsap": true,
+          "lenis": true
+        },
+        "scripts": [
+          "https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js",
+          "https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6649cbdf19aa7125580e2ccb",
+          "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/js/webflow.schunk.36b8fb49256177c8.js",
+          "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/js/webflow.fa0f9520.d1f461cb4bd4f842.js",
+          "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js",
+          "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/Observer.min.js",
+          "https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js",
+          "https://unpkg.com/@barba/core",
+          "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/CustomEase.min.js",
+          "https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js",
+          "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js",
+          "https://unpkg.com/swiper/swiper-bundle.min.js",
+          "https://assets.simonholml.com/Portfolio/jsfiles2/lenis-scroll.js",
+          "https://assets.simonholml.com/Portfolio/jsfiles2/Frontpageslider-8.js",
+          "https://assets.simonholml.com/Portfolio/jsfiles2/Pagetheme.js",
+          "https://assets.simonholml.com/Portfolio/jsfiles2/Customcursor.js",
+          "https://assets.simonholml.com/Portfolio/jsfiles2/btn.js",
+          "https://assets.simonholml.com/Portfolio/jsfiles2/videolazyload.js",
+          "https://assets.simonholml.com/Portfolio/jsfiles2/Lottie-animation.js"
+        ],
+        "stylesheets": [
+          "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/css/simonholm-portfolio-v2.webflow.shared.08125b3d8.css",
+          "https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic",
+          "https://unpkg.com/swiper/swiper-bundle.min.css"
+        ],
+        "sections": [
+          {
+            "tag": "main",
+            "id": "smooth-content",
+            "className": "main-wrapper",
+            "text": "Birdie Your browser doesn't support HTML5 video tag. Snuw Your browser doesn't support HTML5 video tag. Basic Feather Your browser doesn't support HTML5 video tag. Palette Your browser doesn't support HTML5 video tag. Wallhack Your browser ",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 900
+            },
+            "style": {
+              "display": "block",
+              "position": "static",
+              "backgroundColor": "rgb(26, 26, 26)",
+              "color": "rgb(255, 255, 255)",
+              "fontFamily": "Ppneuemontrealtt, sans-serif",
+              "fontSize": "14.4px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "className": "section is-hero",
+            "text": "Birdie Your browser doesn't support HTML5 video tag. Snuw Your browser doesn't support HTML5 video tag. Basic Feather Your browser doesn't support HTML5 video tag. Palette Your browser doesn't support HTML5 video tag. Wallhack Your browser ",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 900
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(255, 255, 255)",
+              "fontFamily": "Ppneuemontrealtt, sans-serif",
+              "fontSize": "14.4px"
+            }
+          }
+        ],
+        "cssVariables": [
+          [
+            "--black",
+            "#1a1a1a"
+          ],
+          [
+            "--white",
+            "white"
+          ],
+          [
+            "--page-margin",
+            ".7rem"
+          ],
+          [
+            "--mobile-full-height",
+            "100dvh"
+          ],
+          [
+            "--small-discriptor-text",
+            ".9rem"
+          ],
+          [
+            "--main-type",
+            "Ppneuemontrealtt, sans-serif"
+          ],
+          [
+            "--small-discriptor-line",
+            "120%"
+          ],
+          [
+            "--main-weight",
+            "500"
+          ],
+          [
+            "--small-discriptor-space",
+            ".025rem"
+          ],
+          [
+            "--header-left-space",
+            "4.5rem"
+          ],
+          [
+            "--big-text",
+            "10.8rem"
+          ],
+          [
+            "--main-weight-big",
+            "400"
+          ],
+          [
+            "--big-text-space",
+            "-.35rem"
+          ],
+          [
+            "--mobile-bix-text",
+            "2.6rem"
+          ],
+          [
+            "--mobile-big-text-space",
+            "-.02rem"
+          ],
+          [
+            "--grey",
+            "#a3a3a3"
+          ],
+          [
+            "--body-copy",
+            "1rem"
+          ],
+          [
+            "--body-copy-space",
+            ".04rem"
+          ],
+          [
+            "--case-section-top-margin",
+            ".8rem"
+          ],
+          [
+            "--content-page-top-margin",
+            "12rem"
+          ],
+          [
+            "--top-header-margin-top",
+            "6rem"
+          ],
+          [
+            "--transparent",
+            "transparent"
+          ],
+          [
+            "--lightblack",
+            "#212121"
+          ],
+          [
+            "--small-number-margin-left",
+            ".3rem"
+          ],
+          [
+            "--page-top-margin",
+            ".7rem"
+          ],
+          [
+            "--mid-grey",
+            "#7a7771"
+          ],
+          [
+            "--small-nav-text",
+            "1.05rem"
+          ],
+          [
+            "--small-text-block-devider",
+            ".15rem"
+          ],
+          [
+            "--small-number",
+            ".8rem"
+          ],
+          [
+            "--small-menu-number-space",
+            ".06rem"
+          ],
+          [
+            "--border-white",
+            "#ffffff4d"
+          ],
+          [
+            "--small-number-space",
+            ".07rem"
+          ],
+          [
+            "--big-text-line",
+            "80%"
+          ],
+          [
+            "--big-high-text-line",
+            "82%"
+          ],
+          [
+            "--top-header-margin-bottom",
+            "2.6rem"
+          ],
+          [
+            "--big-number-bottom-margin",
+            ".8rem"
+          ],
+          [
+            "--big-number",
+            "6.4rem"
+          ],
+          [
+            "--normal-text-line",
+            "86%"
+          ],
+          [
+            "--big-number-space",
+            "-.15rem"
+          ],
+          [
+            "--small-high-text",
+            "1.8rem"
+          ],
+          [
+            "--mid-text-line",
+            "92%"
+          ],
+          [
+            "--mid-high-text-space",
+            "0rem"
+          ],
+          [
+            "--big-high-text",
+            "4.5rem"
+          ],
+          [
+            "--big-high-text-line<deleted|variable-d9623bbe-2242-d684-63c3-a9805ad5520c>",
+            "4rem"
+          ],
+          [
+            "--mid-high-text",
+            "3.2rem"
+          ],
+          [
+            "--mid-high-text-line",
+            "3.2rem"
+          ],
+          [
+            "--body-copy-line",
+            "1.4rem"
+          ],
+          [
+            "--row-margin",
+            "1rem"
+          ],
+          [
+            "--btn-icon-text",
+            "1.4rem"
+          ],
+          [
+            "--white-transparent",
+            "var(--transparent)"
+          ],
+          [
+            "--naturalgrey",
+            "#a8a59c"
+          ],
+          [
+            "--offwhite",
+            "#f8f3ed"
+          ],
+          [
+            "--section-break",
+            "160px"
+          ],
+          [
+            "--small-high-text-line",
+            "2.6rem"
+          ],
+          [
+            "--mid-section-break",
+            "100px"
+          ],
+          [
+            "--x-small-section-break",
+            "15px"
+          ],
+          [
+            "--big-header-lh",
+            "100rem"
+          ],
+          [
+            "--main-type-big",
+            "\"Nhaasgroteskdsw 02 55 Rg\""
+          ],
+          [
+            "--btn-icon-text-line",
+            "0"
+          ],
+          [
+            "--color",
+            "white"
+          ],
+          [
+            "--darkgrey",
+            "#272727"
+          ],
+          [
+            "--text-gray",
+            "var(--BgHue), 30%, 90%"
+          ],
+          [
+            "--blend-mode",
+            "plus-lighter"
+          ],
+          [
+            "--text-gray",
+            "var(--BgHue), 25%, 90%"
+          ],
+          [
+            "--blend-mode",
+            "plus-lighter"
+          ],
+          [
+            "--text-gray",
+            "var(--BgHue), 35%, 17%"
+          ],
+          [
+            "--LightModeBlack",
+            "var(--BgHue), 8%, 20%"
+          ],
+          [
+            "--blend-mode",
+            "none"
+          ],
+          [
+            "--text-gray",
+            "var(--BgHue), 25%, 17%"
+          ],
+          [
+            "--LightModeBlack",
+            "var(--BgHue), 5%, 20%"
+          ],
+          [
+            "--blend-mode",
+            "none"
+          ],
+          [
+            "--text-opacity",
+            "0.45"
+          ],
+          [
+            "--text-opacity",
+            "0.45"
+          ],
+          [
+            "--main-dark",
+            "black"
+          ],
+          [
+            "--main-light",
+            "white"
+          ]
+        ],
+        "rootVariables": [
+          [
+            "--black",
+            "#1a1a1a"
+          ],
+          [
+            "--white",
+            "white"
+          ],
+          [
+            "--page-margin",
+            ".7rem"
+          ],
+          [
+            "--mobile-full-height",
+            "100dvh"
+          ],
+          [
+            "--small-discriptor-text",
+            ".9rem"
+          ],
+          [
+            "--main-type",
+            "Ppneuemontrealtt, sans-serif"
+          ],
+          [
+            "--small-discriptor-line",
+            "120%"
+          ],
+          [
+            "--main-weight",
+            "500"
+          ],
+          [
+            "--small-discriptor-space",
+            ".025rem"
+          ],
+          [
+            "--header-left-space",
+            "4.5rem"
+          ],
+          [
+            "--big-text",
+            "10.8rem"
+          ],
+          [
+            "--main-weight-big",
+            "400"
+          ],
+          [
+            "--big-text-space",
+            "-.35rem"
+          ],
+          [
+            "--mobile-bix-text",
+            "2.6rem"
+          ],
+          [
+            "--mobile-big-text-space",
+            "-.02rem"
+          ],
+          [
+            "--grey",
+            "#a3a3a3"
+          ],
+          [
+            "--body-copy",
+            "1rem"
+          ],
+          [
+            "--body-copy-space",
+            ".04rem"
+          ],
+          [
+            "--case-section-top-margin",
+            ".8rem"
+          ],
+          [
+            "--content-page-top-margin",
+            "12rem"
+          ],
+          [
+            "--top-header-margin-top",
+            "6rem"
+          ],
+          [
+            "--transparent",
+            "transparent"
+          ],
+          [
+            "--lightblack",
+            "#212121"
+          ],
+          [
+            "--small-number-margin-left",
+            ".3rem"
+          ],
+          [
+            "--page-top-margin",
+            ".7rem"
+          ],
+          [
+            "--mid-grey",
+            "#7a7771"
+          ],
+          [
+            "--small-nav-text",
+            "1.05rem"
+          ],
+          [
+            "--small-text-block-devider",
+            ".15rem"
+          ],
+          [
+            "--small-number",
+            ".8rem"
+          ],
+          [
+            "--small-menu-number-space",
+            ".06rem"
+          ],
+          [
+            "--border-white",
+            "#ffffff4d"
+          ],
+          [
+            "--small-number-space",
+            ".07rem"
+          ],
+          [
+            "--big-text-line",
+            "80%"
+          ],
+          [
+            "--big-high-text-line",
+            "82%"
+          ],
+          [
+            "--top-header-margin-bottom",
+            "2.6rem"
+          ],
+          [
+            "--big-number-bottom-margin",
+            ".8rem"
+          ],
+          [
+            "--big-number",
+            "6.4rem"
+          ],
+          [
+            "--normal-text-line",
+            "86%"
+          ],
+          [
+            "--big-number-space",
+            "-.15rem"
+          ],
+          [
+            "--small-high-text",
+            "1.8rem"
+          ],
+          [
+            "--mid-text-line",
+            "92%"
+          ],
+          [
+            "--mid-high-text-space",
+            "0rem"
+          ],
+          [
+            "--big-high-text",
+            "4.5rem"
+          ],
+          [
+            "--big-high-text-line<deleted|variable-d9623bbe-2242-d684-63c3-a9805ad5520c>",
+            "4rem"
+          ],
+          [
+            "--mid-high-text",
+            "3.2rem"
+          ],
+          [
+            "--mid-high-text-line",
+            "3.2rem"
+          ],
+          [
+            "--body-copy-line",
+            "1.4rem"
+          ],
+          [
+            "--row-margin",
+            "1rem"
+          ],
+          [
+            "--btn-icon-text",
+            "1.4rem"
+          ],
+          [
+            "--white-transparent",
+            "transparent"
+          ],
+          [
+            "--naturalgrey",
+            "#a8a59c"
+          ],
+          [
+            "--offwhite",
+            "#f8f3ed"
+          ],
+          [
+            "--section-break",
+            "160px"
+          ],
+          [
+            "--small-high-text-line",
+            "2.6rem"
+          ],
+          [
+            "--mid-section-break",
+            "100px"
+          ],
+          [
+            "--x-small-section-break",
+            "15px"
+          ],
+          [
+            "--big-header-lh",
+            "100rem"
+          ],
+          [
+            "--main-type-big",
+            "\"Nhaasgroteskdsw 02 55 Rg\""
+          ],
+          [
+            "--btn-icon-text-line",
+            "0"
+          ],
+          [
+            "--color",
+            "white"
+          ],
+          [
+            "--darkgrey",
+            "#272727"
+          ],
+          [
+            "--main-dark",
+            "black"
+          ],
+          [
+            "--main-light",
+            "white"
+          ]
+        ],
+        "palette": {
+          "body": {
+            "backgroundColor": "rgb(26, 26, 26)",
+            "color": "rgb(255, 255, 255)",
+            "borderColor": "rgb(255, 255, 255)",
+            "fontFamily": "Ppneuemontrealtt, sans-serif",
+            "backgroundImage": ""
+          },
+          "header": null,
+          "nav": null,
+          "main": {
+            "backgroundColor": "rgb(26, 26, 26)",
+            "color": "rgb(255, 255, 255)",
+            "borderColor": "rgb(255, 255, 255)",
+            "fontFamily": "Ppneuemontrealtt, sans-serif",
+            "backgroundImage": ""
+          },
+          "footer": null,
+          "buttons": []
+        },
+        "motion": {
+          "htmlScrollBehavior": "auto",
+          "scrollSnapRules": 0,
+          "smoothScrollRules": 2,
+          "stickyOrFixedCount": 6
+        },
+        "fonts": [
+          "webflow-icons",
+          "Ppneuemontrealtt",
+          "Ppneuemontrealtt",
+          "PT Serif",
+          "PT Serif",
+          "PT Serif",
+          "PT Serif",
+          "PT Serif",
+          "PT Serif",
+          "PT Serif",
+          "PT Serif",
+          "PT Serif",
+          "PT Serif",
+          "PT Serif",
+          "PT Serif",
+          "PT Serif",
+          "PT Serif",
+          "PT Serif",
+          "PT Serif"
+        ],
+        "fontFaces": [
+          {
+            "family": "webflow-icons",
+            "weight": "normal",
+            "style": "normal",
+            "srcUrls": [
+              "data:application/x-font-ttf;charset=utf-8;base64,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"
+            ],
+            "cssText": "@font-face { font-family: webflow-icons; src: url(\"data:application/x-font-ttf;charset=utf-8;base64,AAEAAAALAIAAAwAwT1MvMg8SBiUAAAC8AAAAYGNtYXDpP+a4AAABHAAAAFxnYXNwAAAAEAAAAXgAAAAIZ2x5ZmhS2XEAAAGAAAADHGhlYWQTFw3HAAAEnAAAADZoaGVhCXYFgQAABNQAAAAkaG10eCe4A1oAAAT4AAAAMGxvY2EDtALGAAAFKAAAABptYXhwABAAPgAABUQAAAAgbmFtZSoCsMsAAAVkAAABznBvc3QAAwAAAAAHNAAAACAAAwP4AZAABQAAApkCzAAAAI8CmQLMAAAB6wAzAQkAAAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAAAAAAAABAAADpAwPA/8AAQAPAAEAAAAABAAAAAAAAAAAAAAAgAAAAAAADAAAAAwAAABwAAQADAAAAHAADAAEAAAAcAAQAQAAAAAwACAACAAQAAQAg5gPpA//9//8AAAAAACDmAOkA//3//wAB/+MaBBcIAAMAAQAAAAAAAAAAAAAAAAABAAH//wAPAAEAAAAAAAAAAAACAAA3OQEAAAAAAQAAAAAAAAAAAAIAADc5AQAAAAABAAAAAAAAAAAAAgAANzkBAAAAAAEBIAAAAyADgAAFAAAJAQcJARcDIP5AQAGA/oBAAcABwED+gP6AQAABAOAAAALgA4AABQAAEwEXCQEH4AHAQP6AAYBAAcABwED+gP6AQAAAAwDAAOADQALAAA8AHwAvAAABISIGHQEUFjMhMjY9ATQmByEiBh0BFBYzITI2PQE0JgchIgYdARQWMyEyNj0BNCYDIP3ADRMTDQJADRMTDf3ADRMTDQJADRMTDf3ADRMTDQJADRMTAsATDSANExMNIA0TwBMNIA0TEw0gDRPAEw0gDRMTDSANEwAAAAABAJ0AtAOBApUABQAACQIHCQEDJP7r/upcAXEBcgKU/usBFVz+fAGEAAAAAAL//f+9BAMDwwAEAAkAABcBJwEXAwE3AQdpA5ps/GZsbAOabPxmbEMDmmz8ZmwDmvxmbAOabAAAAgAA/8AEAAPAAB0AOwAABSInLgEnJjU0Nz4BNzYzMTIXHgEXFhUUBw4BBwYjNTI3PgE3NjU0Jy4BJyYjMSIHDgEHBhUUFx4BFxYzAgBqXV6LKCgoKIteXWpqXV6LKCgoKIteXWpVSktvICEhIG9LSlVVSktvICEhIG9LSlVAKCiLXl1qal1eiygoKCiLXl1qal1eiygoZiEgb0tKVVVKS28gISEgb0tKVVVKS28gIQABAAABwAIAA8AAEgAAEzQ3PgE3NjMxFSIHDgEHBhUxIwAoKIteXWpVSktvICFmAcBqXV6LKChmISBvS0pVAAAAAgAA/8AFtgPAADIAOgAAARYXHgEXFhUUBw4BBwYHIxUhIicuAScmNTQ3PgE3NjMxOAExNDc+ATc2MzIXHgEXFhcVATMJATMVMzUEjD83NlAXFxYXTjU1PQL8kz01Nk8XFxcXTzY1PSIjd1BQWlJJSXInJw3+mdv+2/7c25MCUQYcHFg5OUA/ODlXHBwIAhcXTzY1PTw1Nk8XF1tQUHcjIhwcYUNDTgL+3QFt/pOTkwABAAAAAQAAmM7nP18PPPUACwQAAAAAANciZKUAAAAA1yJkpf/9/70FtgPDAAAACAACAAAAAAAAAAEAAAPA/8AAAAW3//3//QW2AAEAAAAAAAAAAAAAAAAAAAAMBAAAAAAAAAAAAAAAAgAAAAQAASAEAADgBAAAwAQAAJ0EAP/9BAAAAAQAAAAFtwAAAAAAAAAKABQAHgAyAEYAjACiAL4BFgE2AY4AAAABAAAADAA8AAMAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAADgCuAAEAAAAAAAEADQAAAAEAAAAAAAIABwCWAAEAAAAAAAMADQBIAAEAAAAAAAQADQCrAAEAAAAAAAUACwAnAAEAAAAAAAYADQBvAAEAAAAAAAoAGgDSAAMAAQQJAAEAGgANAAMAAQQJAAIADgCdAAMAAQQJAAMAGgBVAAMAAQQJAAQAGgC4AAMAAQQJAAUAFgAyAAMAAQQJAAYAGgB8AAMAAQQJAAoANADsd2ViZmxvdy1pY29ucwB3AGUAYgBmAGwAbwB3AC0AaQBjAG8AbgBzVmVyc2lvbiAxLjAAVgBlAHIAcwBpAG8AbgAgADEALgAwd2ViZmxvdy1pY29ucwB3AGUAYgBmAGwAbwB3AC0AaQBjAG8AbgBzd2ViZmxvdy1pY29ucwB3AGUAYgBmAGwAbwB3AC0AaQBjAG8AbgBzUmVndWxhcgBSAGUAZwB1AGwAYQByd2ViZmxvdy1pY29ucwB3AGUAYgBmAGwAbwB3AC0AaQBjAG8AbgBzRm9udCBnZW5lcmF0ZWQgYnkgSWNvTW9vbi4ARgBvAG4AdAAgAGcAZQBuAGUAcgBhAHQAZQBkACAAYgB5ACAASQBjAG8ATQBvAG8AbgAuAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==\") format(\"truetype\"); font-weight: normal; font-style: normal; }",
+            "sheetHref": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/css/simonholm-portfolio-v2.webflow.shared.08125b3d8.css"
+          },
+          {
+            "family": "Ppneuemontrealtt",
+            "weight": "500",
+            "style": "normal",
+            "srcUrls": [
+              "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/66b77166a8c1bb478d55f70a_PPNeueMontrealTT-Medium.woff2"
+            ],
+            "cssText": "@font-face { font-family: Ppneuemontrealtt; src: url(\"https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/66b77166a8c1bb478d55f70a_PPNeueMontrealTT-Medium.woff2\") format(\"woff2\"); font-weight: 500; font-style: normal; font-display: swap; }",
+            "sheetHref": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/css/simonholm-portfolio-v2.webflow.shared.08125b3d8.css"
+          },
+          {
+            "family": "Ppneuemontrealtt",
+            "weight": "400",
+            "style": "normal",
+            "srcUrls": [
+              "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/66b77166786b3123910cd33e_PPNeueMontrealTT-Regular.woff2"
+            ],
+            "cssText": "@font-face { font-family: Ppneuemontrealtt; src: url(\"https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/66b77166786b3123910cd33e_PPNeueMontrealTT-Regular.woff2\") format(\"woff2\"); font-weight: 400; font-style: normal; font-display: swap; }",
+            "sheetHref": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/css/simonholm-portfolio-v2.webflow.shared.08125b3d8.css"
+          }
+        ],
+        "resources": {
+          "images": [
+            "https://www.simonholm.studio/.webp",
+            "https://assets.simonholml.com/Portfolio/Case/Wallhack/WH-Hero.mp4.webp",
+            "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/68f9e088802b5ec348dac431_b-packagning-mood-4.webp",
+            "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/69760d69248c608aadbfd085_snuw-hero-2.webp",
+            "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/68a571c2f9d051f5356560c1_BF-Hero.webp",
+            "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/692b4e4dea92dbe6d39293f2_p-index-1.webp",
+            "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/6949508af718bcfd496bee6d_SH-fav-32x32.png"
+          ],
+          "fonts": [
+            "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/66b77166a8c1bb478d55f70a_PPNeueMontrealTT-Medium.woff2",
+            "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/66b77166786b3123910cd33e_PPNeueMontrealTT-Regular.woff2"
+          ],
+          "media": [
+            "https://assets.simonholml.com/Portfolio/Case/Wallhack/WH-Hero.mp4"
+          ]
+        },
+        "images": [
+          {
+            "src": "https://www.simonholm.studio/.webp",
+            "srcset": "",
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/68f9e088802b5ec348dac431_b-packagning-mood-4.webp",
+            "srcset": "",
+            "alt": "Birdie",
+            "width": 2520,
+            "height": 1418
+          },
+          {
+            "src": "https://www.simonholm.studio/.webp",
+            "srcset": "",
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/69760d69248c608aadbfd085_snuw-hero-2.webp",
+            "srcset": "",
+            "alt": "Snuw",
+            "width": 2500,
+            "height": 1303
+          },
+          {
+            "src": "https://www.simonholm.studio/.webp",
+            "srcset": "",
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/68a571c2f9d051f5356560c1_BF-Hero.webp",
+            "srcset": "",
+            "alt": "Basic Feather",
+            "width": 4380,
+            "height": 2465
+          },
+          {
+            "src": "https://www.simonholm.studio/.webp",
+            "srcset": "",
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/692b4e4dea92dbe6d39293f2_p-index-1.webp",
+            "srcset": "",
+            "alt": "Palette",
+            "width": 1600,
+            "height": 1000
+          },
+          {
+            "src": "https://assets.simonholml.com/Portfolio/Case/Wallhack/WH-Hero.mp4.webp",
+            "srcset": "",
+            "alt": "",
+            "width": 1920,
+            "height": 1080
+          },
+          {
+            "src": "https://www.simonholm.studio/",
+            "srcset": "",
+            "alt": "Wallhack",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "https://www.simonholm.studio/.webp",
+            "srcset": "",
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/68f9e088802b5ec348dac431_b-packagning-mood-4.webp",
+            "srcset": "",
+            "alt": "Birdie",
+            "width": 2520,
+            "height": 1418
+          },
+          {
+            "src": "https://www.simonholm.studio/.webp",
+            "srcset": "",
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/69760d69248c608aadbfd085_snuw-hero-2.webp",
+            "srcset": "",
+            "alt": "Snuw",
+            "width": 2500,
+            "height": 1303
+          },
+          {
+            "src": "https://www.simonholm.studio/.webp",
+            "srcset": "",
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/68a571c2f9d051f5356560c1_BF-Hero.webp",
+            "srcset": "",
+            "alt": "Basic Feather",
+            "width": 4380,
+            "height": 2465
+          },
+          {
+            "src": "https://www.simonholm.studio/.webp",
+            "srcset": "",
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/692b4e4dea92dbe6d39293f2_p-index-1.webp",
+            "srcset": "",
+            "alt": "Palette",
+            "width": 1600,
+            "height": 1000
+          },
+          {
+            "src": "https://assets.simonholml.com/Portfolio/Case/Wallhack/WH-Hero.mp4.webp",
+            "srcset": "",
+            "alt": "",
+            "width": 1920,
+            "height": 1080
+          },
+          {
+            "src": "https://www.simonholm.studio/",
+            "srcset": "",
+            "alt": "Wallhack",
+            "width": 0,
+            "height": 0
+          }
+        ],
+        "canvases": []
+      }
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "screenshot": "screenshots/original-768.png",
+      "signals": {
+        "href": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "lang": "en",
+        "bodyTextChars": 411,
+        "scrollHeight": 900,
+        "viewport": {
+          "width": 768,
+          "height": 900
+        },
+        "h1": [],
+        "headings": [
+          {
+            "tag": "h3",
+            "text": "Brand Designer"
+          },
+          {
+            "tag": "h3",
+            "text": ""
+          },
+          {
+            "tag": "h3",
+            "text": "Portfolio"
+          },
+          {
+            "tag": "h3",
+            "text": "©2026"
+          },
+          {
+            "tag": "h3",
+            "text": "Simon Holm Larsen"
+          },
+          {
+            "tag": "h3",
+            "text": ""
+          }
+        ],
+        "metaDescription": "A digital-first brand designer specializing in strategic visual communication and story-driven brand identities.",
+        "counts": {
+          "links": 20,
+          "images": 20,
+          "video": 10,
+          "canvas": 0,
+          "sections": 2,
+          "forms": 0,
+          "buttons": 0,
+          "inputs": 0,
+          "interactive": 20,
+          "scripts": 19,
+          "stylesheets": 3
+        },
+        "frameworks": {
+          "react": false,
+          "next": false,
+          "vue": false,
+          "nuxt": false,
+          "svelte": false,
+          "astro": false,
+          "three": false,
+          "gsap": true,
+          "lenis": true
+        },
+        "scripts": [
+          "https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js",
+          "https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6649cbdf19aa7125580e2ccb",
+          "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/js/webflow.schunk.36b8fb49256177c8.js",
+          "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/js/webflow.fa0f9520.d1f461cb4bd4f842.js",
+          "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js",
+          "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/Observer.min.js",
+          "https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js",
+          "https://unpkg.com/@barba/core",
+          "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/CustomEase.min.js",
+          "https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js",
+          "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js",
+          "https://unpkg.com/swiper/swiper-bundle.min.js",
+          "https://assets.simonholml.com/Portfolio/jsfiles2/lenis-scroll.js",
+          "https://assets.simonholml.com/Portfolio/jsfiles2/Frontpageslider-8.js",
+          "https://assets.simonholml.com/Portfolio/jsfiles2/Pagetheme.js",
+          "https://assets.simonholml.com/Portfolio/jsfiles2/Customcursor.js",
+          "https://assets.simonholml.com/Portfolio/jsfiles2/btn.js",
+          "https://assets.simonholml.com/Portfolio/jsfiles2/videolazyload.js",
+          "https://assets.simonholml.com/Portfolio/jsfiles2/Lottie-animation.js"
+        ],
+        "stylesheets": [
+          "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/css/simonholm-portfolio-v2.webflow.shared.08125b3d8.css",
+          "https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic",
+          "https://unpkg.com/swiper/swiper-bundle.min.css"
+        ],
+        "sections": [
+          {
+            "tag": "main",
+            "id": "smooth-content",
+            "className": "main-wrapper",
+            "text": "Birdie Your browser doesn't support HTML5 video tag. Snuw Your browser doesn't support HTML5 video tag. Basic Feather Your browser doesn't support HTML5 video tag. Palette Your browser doesn't support HTML5 video tag. Wallhack Your browser ",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 768,
+              "height": 900
+            },
+            "style": {
+              "display": "block",
+              "position": "static",
+              "backgroundColor": "rgb(26, 26, 26)",
+              "color": "rgb(255, 255, 255)",
+              "fontFamily": "Ppneuemontrealtt, sans-serif",
+              "fontSize": "8.29653px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "className": "section is-hero",
+            "text": "Birdie Your browser doesn't support HTML5 video tag. Snuw Your browser doesn't support HTML5 video tag. Basic Feather Your browser doesn't support HTML5 video tag. Palette Your browser doesn't support HTML5 video tag. Wallhack Your browser ",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 768,
+              "height": 900
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(255, 255, 255)",
+              "fontFamily": "Ppneuemontrealtt, sans-serif",
+              "fontSize": "8.29653px"
+            }
+          }
+        ],
+        "cssVariables": [
+          [
+            "--black",
+            "#1a1a1a"
+          ],
+          [
+            "--white",
+            "white"
+          ],
+          [
+            "--page-margin",
+            ".7rem"
+          ],
+          [
+            "--mobile-full-height",
+            "100dvh"
+          ],
+          [
+            "--small-discriptor-text",
+            ".9rem"
+          ],
+          [
+            "--main-type",
+            "Ppneuemontrealtt, sans-serif"
+          ],
+          [
+            "--small-discriptor-line",
+            "120%"
+          ],
+          [
+            "--main-weight",
+            "500"
+          ],
+          [
+            "--small-discriptor-space",
+            ".025rem"
+          ],
+          [
+            "--header-left-space",
+            "4.5rem"
+          ],
+          [
+            "--big-text",
+            "10.8rem"
+          ],
+          [
+            "--main-weight-big",
+            "400"
+          ],
+          [
+            "--big-text-space",
+            "-.35rem"
+          ],
+          [
+            "--mobile-bix-text",
+            "2.6rem"
+          ],
+          [
+            "--mobile-big-text-space",
+            "-.02rem"
+          ],
+          [
+            "--grey",
+            "#a3a3a3"
+          ],
+          [
+            "--body-copy",
+            "1rem"
+          ],
+          [
+            "--body-copy-space",
+            ".04rem"
+          ],
+          [
+            "--case-section-top-margin",
+            ".8rem"
+          ],
+          [
+            "--content-page-top-margin",
+            "12rem"
+          ],
+          [
+            "--top-header-margin-top",
+            "6rem"
+          ],
+          [
+            "--transparent",
+            "transparent"
+          ],
+          [
+            "--lightblack",
+            "#212121"
+          ],
+          [
+            "--small-number-margin-left",
+            ".3rem"
+          ],
+          [
+            "--page-top-margin",
+            ".7rem"
+          ],
+          [
+            "--mid-grey",
+            "#7a7771"
+          ],
+          [
+            "--small-nav-text",
+            "1.05rem"
+          ],
+          [
+            "--small-text-block-devider",
+            ".15rem"
+          ],
+          [
+            "--small-number",
+            ".8rem"
+          ],
+          [
+            "--small-menu-number-space",
+            ".06rem"
+          ],
+          [
+            "--border-white",
+            "#ffffff4d"
+          ],
+          [
+            "--small-number-space",
+            ".07rem"
+          ],
+          [
+            "--big-text-line",
+            "80%"
+          ],
+          [
+            "--big-high-text-line",
+            "82%"
+          ],
+          [
+            "--top-header-margin-bottom",
+            "2.6rem"
+          ],
+          [
+            "--big-number-bottom-margin",
+            ".8rem"
+          ],
+          [
+            "--big-number",
+            "6.4rem"
+          ],
+          [
+            "--normal-text-line",
+            "86%"
+          ],
+          [
+            "--big-number-space",
+            "-.15rem"
+          ],
+          [
+            "--small-high-text",
+            "1.8rem"
+          ],
+          [
+            "--mid-text-line",
+            "92%"
+          ],
+          [
+            "--mid-high-text-space",
+            "0rem"
+          ],
+          [
+            "--big-high-text",
+            "4.5rem"
+          ],
+          [
+            "--big-high-text-line<deleted|variable-d9623bbe-2242-d684-63c3-a9805ad5520c>",
+            "4rem"
+          ],
+          [
+            "--mid-high-text",
+            "3.2rem"
+          ],
+          [
+            "--mid-high-text-line",
+            "3.2rem"
+          ],
+          [
+            "--body-copy-line",
+            "1.4rem"
+          ],
+          [
+            "--row-margin",
+            "1rem"
+          ],
+          [
+            "--btn-icon-text",
+            "1.4rem"
+          ],
+          [
+            "--white-transparent",
+            "var(--transparent)"
+          ],
+          [
+            "--naturalgrey",
+            "#a8a59c"
+          ],
+          [
+            "--offwhite",
+            "#f8f3ed"
+          ],
+          [
+            "--section-break",
+            "160px"
+          ],
+          [
+            "--small-high-text-line",
+            "2.6rem"
+          ],
+          [
+            "--mid-section-break",
+            "100px"
+          ],
+          [
+            "--x-small-section-break",
+            "15px"
+          ],
+          [
+            "--big-header-lh",
+            "100rem"
+          ],
+          [
+            "--main-type-big",
+            "\"Nhaasgroteskdsw 02 55 Rg\""
+          ],
+          [
+            "--btn-icon-text-line",
+            "0"
+          ],
+          [
+            "--color",
+            "white"
+          ],
+          [
+            "--darkgrey",
+            "#272727"
+          ],
+          [
+            "--text-gray",
+            "var(--BgHue), 30%, 90%"
+          ],
+          [
+            "--blend-mode",
+            "plus-lighter"
+          ],
+          [
+            "--text-gray",
+            "var(--BgHue), 25%, 90%"
+          ],
+          [
+            "--blend-mode",
+            "plus-lighter"
+          ],
+          [
+            "--text-gray",
+            "var(--BgHue), 35%, 17%"
+          ],
+          [
+            "--LightModeBlack",
+            "var(--BgHue), 8%, 20%"
+          ],
+          [
+            "--blend-mode",
+            "none"
+          ],
+          [
+            "--text-gray",
+            "var(--BgHue), 25%, 17%"
+          ],
+          [
+            "--LightModeBlack",
+            "var(--BgHue), 5%, 20%"
+          ],
+          [
+            "--blend-mode",
+            "none"
+          ],
+          [
+            "--text-opacity",
+            "0.45"
+          ],
+          [
+            "--text-opacity",
+            "0.45"
+          ],
+          [
+            "--main-dark",
+            "black"
+          ],
+          [
+            "--main-light",
+            "white"
+          ]
+        ],
+        "rootVariables": [
+          [
+            "--black",
+            "#1a1a1a"
+          ],
+          [
+            "--white",
+            "white"
+          ],
+          [
+            "--page-margin",
+            ".7rem"
+          ],
+          [
+            "--mobile-full-height",
+            "100dvh"
+          ],
+          [
+            "--small-discriptor-text",
+            ".9rem"
+          ],
+          [
+            "--main-type",
+            "Ppneuemontrealtt, sans-serif"
+          ],
+          [
+            "--small-discriptor-line",
+            "120%"
+          ],
+          [
+            "--main-weight",
+            "500"
+          ],
+          [
+            "--small-discriptor-space",
+            ".025rem"
+          ],
+          [
+            "--header-left-space",
+            "4.5rem"
+          ],
+          [
+            "--big-text",
+            "10.8rem"
+          ],
+          [
+            "--main-weight-big",
+            "400"
+          ],
+          [
+            "--big-text-space",
+            "-.35rem"
+          ],
+          [
+            "--mobile-bix-text",
+            "2.6rem"
+          ],
+          [
+            "--mobile-big-text-space",
+            "-.02rem"
+          ],
+          [
+            "--grey",
+            "#a3a3a3"
+          ],
+          [
+            "--body-copy",
+            "1rem"
+          ],
+          [
+            "--body-copy-space",
+            ".04rem"
+          ],
+          [
+            "--case-section-top-margin",
+            ".8rem"
+          ],
+          [
+            "--content-page-top-margin",
+            "12rem"
+          ],
+          [
+            "--top-header-margin-top",
+            "6rem"
+          ],
+          [
+            "--transparent",
+            "transparent"
+          ],
+          [
+            "--lightblack",
+            "#212121"
+          ],
+          [
+            "--small-number-margin-left",
+            ".3rem"
+          ],
+          [
+            "--page-top-margin",
+            ".7rem"
+          ],
+          [
+            "--mid-grey",
+            "#7a7771"
+          ],
+          [
+            "--small-nav-text",
+            "1.05rem"
+          ],
+          [
+            "--small-text-block-devider",
+            ".15rem"
+          ],
+          [
+            "--small-number",
+            ".8rem"
+          ],
+          [
+            "--small-menu-number-space",
+            ".06rem"
+          ],
+          [
+            "--border-white",
+            "#ffffff4d"
+          ],
+          [
+            "--small-number-space",
+            ".07rem"
+          ],
+          [
+            "--big-text-line",
+            "80%"
+          ],
+          [
+            "--big-high-text-line",
+            "82%"
+          ],
+          [
+            "--top-header-margin-bottom",
+            "2.6rem"
+          ],
+          [
+            "--big-number-bottom-margin",
+            ".8rem"
+          ],
+          [
+            "--big-number",
+            "6.4rem"
+          ],
+          [
+            "--normal-text-line",
+            "86%"
+          ],
+          [
+            "--big-number-space",
+            "-.15rem"
+          ],
+          [
+            "--small-high-text",
+            "1.8rem"
+          ],
+          [
+            "--mid-text-line",
+            "92%"
+          ],
+          [
+            "--mid-high-text-space",
+            "0rem"
+          ],
+          [
+            "--big-high-text",
+            "4.5rem"
+          ],
+          [
+            "--big-high-text-line<deleted|variable-d9623bbe-2242-d684-63c3-a9805ad5520c>",
+            "4rem"
+          ],
+          [
+            "--mid-high-text",
+            "3.2rem"
+          ],
+          [
+            "--mid-high-text-line",
+            "3.2rem"
+          ],
+          [
+            "--body-copy-line",
+            "1.4rem"
+          ],
+          [
+            "--row-margin",
+            "1rem"
+          ],
+          [
+            "--btn-icon-text",
+            "1.4rem"
+          ],
+          [
+            "--white-transparent",
+            "transparent"
+          ],
+          [
+            "--naturalgrey",
+            "#a8a59c"
+          ],
+          [
+            "--offwhite",
+            "#f8f3ed"
+          ],
+          [
+            "--section-break",
+            "160px"
+          ],
+          [
+            "--small-high-text-line",
+            "2.6rem"
+          ],
+          [
+            "--mid-section-break",
+            "100px"
+          ],
+          [
+            "--x-small-section-break",
+            "15px"
+          ],
+          [
+            "--big-header-lh",
+            "100rem"
+          ],
+          [
+            "--main-type-big",
+            "\"Nhaasgroteskdsw 02 55 Rg\""
+          ],
+          [
+            "--btn-icon-text-line",
+            "0"
+          ],
+          [
+            "--color",
+            "white"
+          ],
+          [
+            "--darkgrey",
+            "#272727"
+          ],
+          [
+            "--main-dark",
+            "black"
+          ],
+          [
+            "--main-light",
+            "white"
+          ]
+        ],
+        "palette": {
+          "body": {
+            "backgroundColor": "rgb(26, 26, 26)",
+            "color": "rgb(255, 255, 255)",
+            "borderColor": "rgb(255, 255, 255)",
+            "fontFamily": "Ppneuemontrealtt, sans-serif",
+            "backgroundImage": ""
+          },
+          "header": null,
+          "nav": null,
+          "main": {
+            "backgroundColor": "rgb(26, 26, 26)",
+            "color": "rgb(255, 255, 255)",
+            "borderColor": "rgb(255, 255, 255)",
+            "fontFamily": "Ppneuemontrealtt, sans-serif",
+            "backgroundImage": ""
+          },
+          "footer": null,
+          "buttons": []
+        },
+        "motion": {
+          "htmlScrollBehavior": "auto",
+          "scrollSnapRules": 0,
+          "smoothScrollRules": 2,
+          "stickyOrFixedCount": 6
+        },
+        "fonts": [
+          "webflow-icons",
+          "Ppneuemontrealtt",
+          "Ppneuemontrealtt",
+          "PT Serif",
+          "PT Serif",
+          "PT Serif",
+          "PT Serif",
+          "PT Serif",
+          "PT Serif",
+          "PT Serif",
+          "PT Serif",
+          "PT Serif",
+          "PT Serif",
+          "PT Serif",
+          "PT Serif",
+          "PT Serif",
+          "PT Serif",
+          "PT Serif",
+          "PT Serif"
+        ],
+        "fontFaces": [
+          {
+            "family": "webflow-icons",
+            "weight": "normal",
+            "style": "normal",
+            "srcUrls": [
+              "data:application/x-font-ttf;charset=utf-8;base64,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"
+            ],
+            "cssText": "@font-face { font-family: webflow-icons; src: url(\"data:application/x-font-ttf;charset=utf-8;base64,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\") format(\"truetype\"); font-weight: normal; font-style: normal; }",
+            "sheetHref": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/css/simonholm-portfolio-v2.webflow.shared.08125b3d8.css"
+          },
+          {
+            "family": "Ppneuemontrealtt",
+            "weight": "500",
+            "style": "normal",
+            "srcUrls": [
+              "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/66b77166a8c1bb478d55f70a_PPNeueMontrealTT-Medium.woff2"
+            ],
+            "cssText": "@font-face { font-family: Ppneuemontrealtt; src: url(\"https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/66b77166a8c1bb478d55f70a_PPNeueMontrealTT-Medium.woff2\") format(\"woff2\"); font-weight: 500; font-style: normal; font-display: swap; }",
+            "sheetHref": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/css/simonholm-portfolio-v2.webflow.shared.08125b3d8.css"
+          },
+          {
+            "family": "Ppneuemontrealtt",
+            "weight": "400",
+            "style": "normal",
+            "srcUrls": [
+              "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/66b77166786b3123910cd33e_PPNeueMontrealTT-Regular.woff2"
+            ],
+            "cssText": "@font-face { font-family: Ppneuemontrealtt; src: url(\"https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/66b77166786b3123910cd33e_PPNeueMontrealTT-Regular.woff2\") format(\"woff2\"); font-weight: 400; font-style: normal; font-display: swap; }",
+            "sheetHref": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/css/simonholm-portfolio-v2.webflow.shared.08125b3d8.css"
+          }
+        ],
+        "resources": {
+          "images": [
+            "https://www.simonholm.studio/.webp",
+            "https://assets.simonholml.com/Portfolio/Case/Wallhack/WH-Hero.mp4.webp",
+            "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/692b4e4dea92dbe6d39293f2_p-index-1.webp",
+            "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/68a571c2f9d051f5356560c1_BF-Hero.webp",
+            "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/68f9e088802b5ec348dac431_b-packagning-mood-4.webp",
+            "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/69760d69248c608aadbfd085_snuw-hero-2.webp",
+            "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/6949508af718bcfd496bee6d_SH-fav-32x32.png"
+          ],
+          "fonts": [
+            "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/66b77166a8c1bb478d55f70a_PPNeueMontrealTT-Medium.woff2",
+            "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/66b77166786b3123910cd33e_PPNeueMontrealTT-Regular.woff2"
+          ],
+          "media": [
+            "https://assets.simonholml.com/Portfolio/Case/Wallhack/WH-Hero.mp4"
+          ]
+        },
+        "images": [
+          {
+            "src": "https://www.simonholm.studio/.webp",
+            "srcset": "",
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/68f9e088802b5ec348dac431_b-packagning-mood-4.webp",
+            "srcset": "",
+            "alt": "Birdie",
+            "width": 2520,
+            "height": 1418
+          },
+          {
+            "src": "https://www.simonholm.studio/.webp",
+            "srcset": "",
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/69760d69248c608aadbfd085_snuw-hero-2.webp",
+            "srcset": "",
+            "alt": "Snuw",
+            "width": 2500,
+            "height": 1303
+          },
+          {
+            "src": "https://www.simonholm.studio/.webp",
+            "srcset": "",
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/68a571c2f9d051f5356560c1_BF-Hero.webp",
+            "srcset": "",
+            "alt": "Basic Feather",
+            "width": 4380,
+            "height": 2465
+          },
+          {
+            "src": "https://www.simonholm.studio/.webp",
+            "srcset": "",
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/692b4e4dea92dbe6d39293f2_p-index-1.webp",
+            "srcset": "",
+            "alt": "Palette",
+            "width": 1600,
+            "height": 1000
+          },
+          {
+            "src": "https://assets.simonholml.com/Portfolio/Case/Wallhack/WH-Hero.mp4.webp",
+            "srcset": "",
+            "alt": "",
+            "width": 1920,
+            "height": 1080
+          },
+          {
+            "src": "https://www.simonholm.studio/",
+            "srcset": "",
+            "alt": "Wallhack",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "https://www.simonholm.studio/.webp",
+            "srcset": "",
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/68f9e088802b5ec348dac431_b-packagning-mood-4.webp",
+            "srcset": "",
+            "alt": "Birdie",
+            "width": 2520,
+            "height": 1418
+          },
+          {
+            "src": "https://www.simonholm.studio/.webp",
+            "srcset": "",
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/69760d69248c608aadbfd085_snuw-hero-2.webp",
+            "srcset": "",
+            "alt": "Snuw",
+            "width": 2500,
+            "height": 1303
+          },
+          {
+            "src": "https://www.simonholm.studio/.webp",
+            "srcset": "",
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/68a571c2f9d051f5356560c1_BF-Hero.webp",
+            "srcset": "",
+            "alt": "Basic Feather",
+            "width": 4380,
+            "height": 2465
+          },
+          {
+            "src": "https://www.simonholm.studio/.webp",
+            "srcset": "",
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/692b4e4dea92dbe6d39293f2_p-index-1.webp",
+            "srcset": "",
+            "alt": "Palette",
+            "width": 1600,
+            "height": 1000
+          },
+          {
+            "src": "https://assets.simonholml.com/Portfolio/Case/Wallhack/WH-Hero.mp4.webp",
+            "srcset": "",
+            "alt": "",
+            "width": 1920,
+            "height": 1080
+          },
+          {
+            "src": "https://www.simonholm.studio/",
+            "srcset": "",
+            "alt": "Wallhack",
+            "width": 0,
+            "height": 0
+          }
+        ],
+        "canvases": []
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "screenshot": "screenshots/original-390.png",
+      "signals": {
+        "href": "https://www.simonholm.studio/",
+        "title": "Simon Holm Larsen - Brand Designer",
+        "lang": "en",
+        "bodyTextChars": 261,
+        "scrollHeight": 900,
+        "viewport": {
+          "width": 390,
+          "height": 900
+        },
+        "h1": [],
+        "headings": [
+          {
+            "tag": "h3",
+            "text": "Brand Designer"
+          },
+          {
+            "tag": "h3",
+            "text": ""
+          },
+          {
+            "tag": "h3",
+            "text": "Portfolio"
+          },
+          {
+            "tag": "h3",
+            "text": "©2026"
+          },
+          {
+            "tag": "h3",
+            "text": "Simon Holm Larsen"
+          },
+          {
+            "tag": "h3",
+            "text": ""
+          }
+        ],
+        "metaDescription": "A digital-first brand designer specializing in strategic visual communication and story-driven brand identities.",
+        "counts": {
+          "links": 20,
+          "images": 20,
+          "video": 10,
+          "canvas": 0,
+          "sections": 2,
+          "forms": 0,
+          "buttons": 0,
+          "inputs": 0,
+          "interactive": 20,
+          "scripts": 19,
+          "stylesheets": 3
+        },
+        "frameworks": {
+          "react": false,
+          "next": false,
+          "vue": false,
+          "nuxt": false,
+          "svelte": false,
+          "astro": false,
+          "three": false,
+          "gsap": true,
+          "lenis": true
+        },
+        "scripts": [
+          "https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js",
+          "https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6649cbdf19aa7125580e2ccb",
+          "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/js/webflow.schunk.36b8fb49256177c8.js",
+          "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/js/webflow.fa0f9520.d1f461cb4bd4f842.js",
+          "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js",
+          "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/Observer.min.js",
+          "https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js",
+          "https://unpkg.com/@barba/core",
+          "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/CustomEase.min.js",
+          "https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js",
+          "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js",
+          "https://unpkg.com/swiper/swiper-bundle.min.js",
+          "https://assets.simonholml.com/Portfolio/jsfiles2/lenis-scroll.js",
+          "https://assets.simonholml.com/Portfolio/jsfiles2/Frontpageslider-8.js",
+          "https://assets.simonholml.com/Portfolio/jsfiles2/Pagetheme.js",
+          "https://assets.simonholml.com/Portfolio/jsfiles2/Customcursor.js",
+          "https://assets.simonholml.com/Portfolio/jsfiles2/btn.js",
+          "https://assets.simonholml.com/Portfolio/jsfiles2/videolazyload.js",
+          "https://assets.simonholml.com/Portfolio/jsfiles2/Lottie-animation.js"
+        ],
+        "stylesheets": [
+          "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/css/simonholm-portfolio-v2.webflow.shared.08125b3d8.css",
+          "https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic",
+          "https://unpkg.com/swiper/swiper-bundle.min.css"
+        ],
+        "sections": [
+          {
+            "tag": "main",
+            "id": "smooth-content",
+            "className": "main-wrapper",
+            "text": "Birdie Your browser doesn't support HTML5 video tag. Snuw Your browser doesn't support HTML5 video tag. Basic Feather Your browser doesn't support HTML5 video tag. Palette Your browser doesn't support HTML5 video tag. Wallhack Your browser ",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 900
+            },
+            "style": {
+              "display": "block",
+              "position": "static",
+              "backgroundColor": "rgb(26, 26, 26)",
+              "color": "rgb(255, 255, 255)",
+              "fontFamily": "Ppneuemontrealtt, sans-serif",
+              "fontSize": "9.37424px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "className": "section is-hero",
+            "text": "Birdie Your browser doesn't support HTML5 video tag. Snuw Your browser doesn't support HTML5 video tag. Basic Feather Your browser doesn't support HTML5 video tag. Palette Your browser doesn't support HTML5 video tag. Wallhack Your browser ",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 900
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(255, 255, 255)",
+              "fontFamily": "Ppneuemontrealtt, sans-serif",
+              "fontSize": "9.37424px"
+            }
+          }
+        ],
+        "cssVariables": [
+          [
+            "--black",
+            "#1a1a1a"
+          ],
+          [
+            "--white",
+            "white"
+          ],
+          [
+            "--page-margin",
+            ".7rem"
+          ],
+          [
+            "--mobile-full-height",
+            "100dvh"
+          ],
+          [
+            "--small-discriptor-text",
+            ".9rem"
+          ],
+          [
+            "--main-type",
+            "Ppneuemontrealtt, sans-serif"
+          ],
+          [
+            "--small-discriptor-line",
+            "120%"
+          ],
+          [
+            "--main-weight",
+            "500"
+          ],
+          [
+            "--small-discriptor-space",
+            ".025rem"
+          ],
+          [
+            "--header-left-space",
+            "4.5rem"
+          ],
+          [
+            "--big-text",
+            "10.8rem"
+          ],
+          [
+            "--main-weight-big",
+            "400"
+          ],
+          [
+            "--big-text-space",
+            "-.35rem"
+          ],
+          [
+            "--mobile-bix-text",
+            "2.6rem"
+          ],
+          [
+            "--mobile-big-text-space",
+            "-.02rem"
+          ],
+          [
+            "--grey",
+            "#a3a3a3"
+          ],
+          [
+            "--body-copy",
+            "1rem"
+          ],
+          [
+            "--body-copy-space",
+            ".04rem"
+          ],
+          [
+            "--case-section-top-margin",
+            ".8rem"
+          ],
+          [
+            "--content-page-top-margin",
+            "12rem"
+          ],
+          [
+            "--top-header-margin-top",
+            "6rem"
+          ],
+          [
+            "--transparent",
+            "transparent"
+          ],
+          [
+            "--lightblack",
+            "#212121"
+          ],
+          [
+            "--small-number-margin-left",
+            ".3rem"
+          ],
+          [
+            "--page-top-margin",
+            ".7rem"
+          ],
+          [
+            "--mid-grey",
+            "#7a7771"
+          ],
+          [
+            "--small-nav-text",
+            "1.05rem"
+          ],
+          [
+            "--small-text-block-devider",
+            ".15rem"
+          ],
+          [
+            "--small-number",
+            ".8rem"
+          ],
+          [
+            "--small-menu-number-space",
+            ".06rem"
+          ],
+          [
+            "--border-white",
+            "#ffffff4d"
+          ],
+          [
+            "--small-number-space",
+            ".07rem"
+          ],
+          [
+            "--big-text-line",
+            "80%"
+          ],
+          [
+            "--big-high-text-line",
+            "82%"
+          ],
+          [
+            "--top-header-margin-bottom",
+            "2.6rem"
+          ],
+          [
+            "--big-number-bottom-margin",
+            ".8rem"
+          ],
+          [
+            "--big-number",
+            "6.4rem"
+          ],
+          [
+            "--normal-text-line",
+            "86%"
+          ],
+          [
+            "--big-number-space",
+            "-.15rem"
+          ],
+          [
+            "--small-high-text",
+            "1.8rem"
+          ],
+          [
+            "--mid-text-line",
+            "92%"
+          ],
+          [
+            "--mid-high-text-space",
+            "0rem"
+          ],
+          [
+            "--big-high-text",
+            "4.5rem"
+          ],
+          [
+            "--big-high-text-line<deleted|variable-d9623bbe-2242-d684-63c3-a9805ad5520c>",
+            "4rem"
+          ],
+          [
+            "--mid-high-text",
+            "3.2rem"
+          ],
+          [
+            "--mid-high-text-line",
+            "3.2rem"
+          ],
+          [
+            "--body-copy-line",
+            "1.4rem"
+          ],
+          [
+            "--row-margin",
+            "1rem"
+          ],
+          [
+            "--btn-icon-text",
+            "1.4rem"
+          ],
+          [
+            "--white-transparent",
+            "var(--transparent)"
+          ],
+          [
+            "--naturalgrey",
+            "#a8a59c"
+          ],
+          [
+            "--offwhite",
+            "#f8f3ed"
+          ],
+          [
+            "--section-break",
+            "160px"
+          ],
+          [
+            "--small-high-text-line",
+            "2.6rem"
+          ],
+          [
+            "--mid-section-break",
+            "100px"
+          ],
+          [
+            "--x-small-section-break",
+            "15px"
+          ],
+          [
+            "--big-header-lh",
+            "100rem"
+          ],
+          [
+            "--main-type-big",
+            "\"Nhaasgroteskdsw 02 55 Rg\""
+          ],
+          [
+            "--btn-icon-text-line",
+            "0"
+          ],
+          [
+            "--color",
+            "white"
+          ],
+          [
+            "--darkgrey",
+            "#272727"
+          ],
+          [
+            "--text-gray",
+            "var(--BgHue), 30%, 90%"
+          ],
+          [
+            "--blend-mode",
+            "plus-lighter"
+          ],
+          [
+            "--text-gray",
+            "var(--BgHue), 25%, 90%"
+          ],
+          [
+            "--blend-mode",
+            "plus-lighter"
+          ],
+          [
+            "--text-gray",
+            "var(--BgHue), 35%, 17%"
+          ],
+          [
+            "--LightModeBlack",
+            "var(--BgHue), 8%, 20%"
+          ],
+          [
+            "--blend-mode",
+            "none"
+          ],
+          [
+            "--text-gray",
+            "var(--BgHue), 25%, 17%"
+          ],
+          [
+            "--LightModeBlack",
+            "var(--BgHue), 5%, 20%"
+          ],
+          [
+            "--blend-mode",
+            "none"
+          ],
+          [
+            "--text-opacity",
+            "0.45"
+          ],
+          [
+            "--text-opacity",
+            "0.45"
+          ],
+          [
+            "--main-dark",
+            "black"
+          ],
+          [
+            "--main-light",
+            "white"
+          ]
+        ],
+        "rootVariables": [
+          [
+            "--black",
+            "#1a1a1a"
+          ],
+          [
+            "--white",
+            "white"
+          ],
+          [
+            "--page-margin",
+            ".7rem"
+          ],
+          [
+            "--mobile-full-height",
+            "100dvh"
+          ],
+          [
+            "--small-discriptor-text",
+            ".9rem"
+          ],
+          [
+            "--main-type",
+            "Ppneuemontrealtt, sans-serif"
+          ],
+          [
+            "--small-discriptor-line",
+            "120%"
+          ],
+          [
+            "--main-weight",
+            "500"
+          ],
+          [
+            "--small-discriptor-space",
+            ".025rem"
+          ],
+          [
+            "--header-left-space",
+            "4.5rem"
+          ],
+          [
+            "--big-text",
+            "10.8rem"
+          ],
+          [
+            "--main-weight-big",
+            "400"
+          ],
+          [
+            "--big-text-space",
+            "-.35rem"
+          ],
+          [
+            "--mobile-bix-text",
+            "2.6rem"
+          ],
+          [
+            "--mobile-big-text-space",
+            "-.02rem"
+          ],
+          [
+            "--grey",
+            "#a3a3a3"
+          ],
+          [
+            "--body-copy",
+            "1rem"
+          ],
+          [
+            "--body-copy-space",
+            ".04rem"
+          ],
+          [
+            "--case-section-top-margin",
+            ".8rem"
+          ],
+          [
+            "--content-page-top-margin",
+            "12rem"
+          ],
+          [
+            "--top-header-margin-top",
+            "6rem"
+          ],
+          [
+            "--transparent",
+            "transparent"
+          ],
+          [
+            "--lightblack",
+            "#212121"
+          ],
+          [
+            "--small-number-margin-left",
+            ".3rem"
+          ],
+          [
+            "--page-top-margin",
+            ".7rem"
+          ],
+          [
+            "--mid-grey",
+            "#7a7771"
+          ],
+          [
+            "--small-nav-text",
+            "1.05rem"
+          ],
+          [
+            "--small-text-block-devider",
+            ".15rem"
+          ],
+          [
+            "--small-number",
+            ".8rem"
+          ],
+          [
+            "--small-menu-number-space",
+            ".06rem"
+          ],
+          [
+            "--border-white",
+            "#ffffff4d"
+          ],
+          [
+            "--small-number-space",
+            ".07rem"
+          ],
+          [
+            "--big-text-line",
+            "80%"
+          ],
+          [
+            "--big-high-text-line",
+            "82%"
+          ],
+          [
+            "--top-header-margin-bottom",
+            "2.6rem"
+          ],
+          [
+            "--big-number-bottom-margin",
+            ".8rem"
+          ],
+          [
+            "--big-number",
+            "6.4rem"
+          ],
+          [
+            "--normal-text-line",
+            "86%"
+          ],
+          [
+            "--big-number-space",
+            "-.15rem"
+          ],
+          [
+            "--small-high-text",
+            "1.8rem"
+          ],
+          [
+            "--mid-text-line",
+            "92%"
+          ],
+          [
+            "--mid-high-text-space",
+            "0rem"
+          ],
+          [
+            "--big-high-text",
+            "4.5rem"
+          ],
+          [
+            "--big-high-text-line<deleted|variable-d9623bbe-2242-d684-63c3-a9805ad5520c>",
+            "4rem"
+          ],
+          [
+            "--mid-high-text",
+            "3.2rem"
+          ],
+          [
+            "--mid-high-text-line",
+            "3.2rem"
+          ],
+          [
+            "--body-copy-line",
+            "1.4rem"
+          ],
+          [
+            "--row-margin",
+            "1rem"
+          ],
+          [
+            "--btn-icon-text",
+            "1.4rem"
+          ],
+          [
+            "--white-transparent",
+            "transparent"
+          ],
+          [
+            "--naturalgrey",
+            "#a8a59c"
+          ],
+          [
+            "--offwhite",
+            "#f8f3ed"
+          ],
+          [
+            "--section-break",
+            "160px"
+          ],
+          [
+            "--small-high-text-line",
+            "2.6rem"
+          ],
+          [
+            "--mid-section-break",
+            "100px"
+          ],
+          [
+            "--x-small-section-break",
+            "15px"
+          ],
+          [
+            "--big-header-lh",
+            "100rem"
+          ],
+          [
+            "--main-type-big",
+            "\"Nhaasgroteskdsw 02 55 Rg\""
+          ],
+          [
+            "--btn-icon-text-line",
+            "0"
+          ],
+          [
+            "--color",
+            "white"
+          ],
+          [
+            "--darkgrey",
+            "#272727"
+          ],
+          [
+            "--main-dark",
+            "black"
+          ],
+          [
+            "--main-light",
+            "white"
+          ]
+        ],
+        "palette": {
+          "body": {
+            "backgroundColor": "rgb(26, 26, 26)",
+            "color": "rgb(255, 255, 255)",
+            "borderColor": "rgb(255, 255, 255)",
+            "fontFamily": "Ppneuemontrealtt, sans-serif",
+            "backgroundImage": ""
+          },
+          "header": null,
+          "nav": null,
+          "main": {
+            "backgroundColor": "rgb(26, 26, 26)",
+            "color": "rgb(255, 255, 255)",
+            "borderColor": "rgb(255, 255, 255)",
+            "fontFamily": "Ppneuemontrealtt, sans-serif",
+            "backgroundImage": ""
+          },
+          "footer": null,
+          "buttons": []
+        },
+        "motion": {
+          "htmlScrollBehavior": "auto",
+          "scrollSnapRules": 0,
+          "smoothScrollRules": 2,
+          "stickyOrFixedCount": 6
+        },
+        "fonts": [
+          "webflow-icons",
+          "Ppneuemontrealtt",
+          "Ppneuemontrealtt",
+          "PT Serif",
+          "PT Serif",
+          "PT Serif",
+          "PT Serif",
+          "PT Serif",
+          "PT Serif",
+          "PT Serif",
+          "PT Serif",
+          "PT Serif",
+          "PT Serif",
+          "PT Serif",
+          "PT Serif",
+          "PT Serif",
+          "PT Serif",
+          "PT Serif",
+          "PT Serif"
+        ],
+        "fontFaces": [
+          {
+            "family": "webflow-icons",
+            "weight": "normal",
+            "style": "normal",
+            "srcUrls": [
+              "data:application/x-font-ttf;charset=utf-8;base64,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"
+            ],
+            "cssText": "@font-face { font-family: webflow-icons; src: url(\"data:application/x-font-ttf;charset=utf-8;base64,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\") format(\"truetype\"); font-weight: normal; font-style: normal; }",
+            "sheetHref": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/css/simonholm-portfolio-v2.webflow.shared.08125b3d8.css"
+          },
+          {
+            "family": "Ppneuemontrealtt",
+            "weight": "500",
+            "style": "normal",
+            "srcUrls": [
+              "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/66b77166a8c1bb478d55f70a_PPNeueMontrealTT-Medium.woff2"
+            ],
+            "cssText": "@font-face { font-family: Ppneuemontrealtt; src: url(\"https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/66b77166a8c1bb478d55f70a_PPNeueMontrealTT-Medium.woff2\") format(\"woff2\"); font-weight: 500; font-style: normal; font-display: swap; }",
+            "sheetHref": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/css/simonholm-portfolio-v2.webflow.shared.08125b3d8.css"
+          },
+          {
+            "family": "Ppneuemontrealtt",
+            "weight": "400",
+            "style": "normal",
+            "srcUrls": [
+              "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/66b77166786b3123910cd33e_PPNeueMontrealTT-Regular.woff2"
+            ],
+            "cssText": "@font-face { font-family: Ppneuemontrealtt; src: url(\"https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/66b77166786b3123910cd33e_PPNeueMontrealTT-Regular.woff2\") format(\"woff2\"); font-weight: 400; font-style: normal; font-display: swap; }",
+            "sheetHref": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/css/simonholm-portfolio-v2.webflow.shared.08125b3d8.css"
+          }
+        ],
+        "resources": {
+          "images": [
+            "https://www.simonholm.studio/.webp",
+            "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/68f9e088802b5ec348dac431_b-packagning-mood-4.webp",
+            "https://assets.simonholml.com/Portfolio/Case/Wallhack/WH-Hero.mp4.webp",
+            "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/68a571c2f9d051f5356560c1_BF-Hero.webp",
+            "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/69760d69248c608aadbfd085_snuw-hero-2.webp",
+            "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/692b4e4dea92dbe6d39293f2_p-index-1.webp",
+            "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/6949508af718bcfd496bee6d_SH-fav-32x32.png"
+          ],
+          "fonts": [
+            "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/66b77166a8c1bb478d55f70a_PPNeueMontrealTT-Medium.woff2",
+            "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/66b77166786b3123910cd33e_PPNeueMontrealTT-Regular.woff2"
+          ],
+          "media": [
+            "https://assets.simonholml.com/Portfolio/Case/Wallhack/WH-Hero.mp4"
+          ]
+        },
+        "images": [
+          {
+            "src": "https://www.simonholm.studio/.webp",
+            "srcset": "",
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/68f9e088802b5ec348dac431_b-packagning-mood-4.webp",
+            "srcset": "",
+            "alt": "Birdie",
+            "width": 2520,
+            "height": 1418
+          },
+          {
+            "src": "https://www.simonholm.studio/.webp",
+            "srcset": "",
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/69760d69248c608aadbfd085_snuw-hero-2.webp",
+            "srcset": "",
+            "alt": "Snuw",
+            "width": 2500,
+            "height": 1303
+          },
+          {
+            "src": "https://www.simonholm.studio/.webp",
+            "srcset": "",
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/68a571c2f9d051f5356560c1_BF-Hero.webp",
+            "srcset": "",
+            "alt": "Basic Feather",
+            "width": 4380,
+            "height": 2465
+          },
+          {
+            "src": "https://www.simonholm.studio/.webp",
+            "srcset": "",
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/692b4e4dea92dbe6d39293f2_p-index-1.webp",
+            "srcset": "",
+            "alt": "Palette",
+            "width": 1600,
+            "height": 1000
+          },
+          {
+            "src": "https://assets.simonholml.com/Portfolio/Case/Wallhack/WH-Hero.mp4.webp",
+            "srcset": "",
+            "alt": "",
+            "width": 1920,
+            "height": 1080
+          },
+          {
+            "src": "https://www.simonholm.studio/",
+            "srcset": "",
+            "alt": "Wallhack",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "https://www.simonholm.studio/.webp",
+            "srcset": "",
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/68f9e088802b5ec348dac431_b-packagning-mood-4.webp",
+            "srcset": "",
+            "alt": "Birdie",
+            "width": 2520,
+            "height": 1418
+          },
+          {
+            "src": "https://www.simonholm.studio/.webp",
+            "srcset": "",
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/69760d69248c608aadbfd085_snuw-hero-2.webp",
+            "srcset": "",
+            "alt": "Snuw",
+            "width": 2500,
+            "height": 1303
+          },
+          {
+            "src": "https://www.simonholm.studio/.webp",
+            "srcset": "",
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/68a571c2f9d051f5356560c1_BF-Hero.webp",
+            "srcset": "",
+            "alt": "Basic Feather",
+            "width": 4380,
+            "height": 2465
+          },
+          {
+            "src": "https://www.simonholm.studio/.webp",
+            "srcset": "",
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/692b4e4dea92dbe6d39293f2_p-index-1.webp",
+            "srcset": "",
+            "alt": "Palette",
+            "width": 1600,
+            "height": 1000
+          },
+          {
+            "src": "https://assets.simonholml.com/Portfolio/Case/Wallhack/WH-Hero.mp4.webp",
+            "srcset": "",
+            "alt": "",
+            "width": 1920,
+            "height": 1080
+          },
+          {
+            "src": "https://www.simonholm.studio/",
+            "srcset": "",
+            "alt": "Wallhack",
+            "width": 0,
+            "height": 0
+          }
+        ],
+        "canvases": []
+      }
+    }
+  ]
+}

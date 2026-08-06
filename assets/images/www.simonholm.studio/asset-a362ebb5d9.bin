@@ -1,0 +1,2260 @@
+<!DOCTYPE html><!-- This site was created in Webflow. https://webflow.com --><!-- Last Published: Sun Mar 01 2026 09:07:18 GMT+0000 (Coordinated Universal Time) --><html data-wf-domain="www.simonholm.studio" data-wf-page="6649cbdf19aa7125580e2dcd" data-wf-site="6649cbdf19aa7125580e2ccb" lang="en"><head><meta charset="utf-8"/><link href="https://cdn.prod.website-files.com" rel="preconnect" crossorigin="anonymous"/><title>Simon Holm Larsen - Brand Designer</title><meta content="A digital-first brand designer specializing in strategic visual communication and story-driven brand identities." name="description"/><meta content="Simon Holm Larsen - Brand Designer" property="og:title"/><meta content="A digital-first brand designer specializing in strategic visual communication and story-driven brand identities." property="og:description"/><meta content="Simon Holm Larsen - Brand Designer" name="twitter:title"/><meta content="A digital-first brand designer specializing in strategic visual communication and story-driven brand identities." name="twitter:description"/><meta property="og:type" content="website"/><meta content="summary_large_image" name="twitter:card"/><meta content="width=device-width, initial-scale=1" name="viewport"/><meta content="Webflow" name="generator"/><link href="https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/css/simonholm-portfolio-v2.webflow.shared.08125b3d8.css" rel="stylesheet" type="text/css" integrity="sha384-CBJbPYhRETNmwJuiUExInBB9W4ln39V9VjxvMut/Uc6KmZ1h5RLdTjNG5ioHPhdq" crossorigin="anonymous"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous"/><script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script><script type="text/javascript">WebFont.load({  google: {    families: ["PT Serif:400,400italic,700,700italic"]  }});</script><script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script><link href="https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/6949508af718bcfd496bee6d_SH-fav-32x32.png" rel="shortcut icon" type="image/x-icon"/><link href="https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/6949506e19135a7a855edb1b_SH-fav-256x256.png" rel="apple-touch-icon"/><style>
+
+
+
+  .w--current {
+    pointer-events: none;
+}
+
+a.w--current {
+    pointer-events: none;
+}
+
+.slider_list {
+   contain: style; 
+  will-change: transform;
+  transform: translateZ(0); /* Force GPU layer */
+
+}
+
+
+  html {  font-size: calc(0.80vw + 0.20833333333333331vh);
+  overflow-x: hidden;
+cursor:none!important
+  
+  }
+  
+  /* Tablet (768px to 1024px wide) */
+@media (max-width: 1024px) and (min-width: 768px) {
+  html {  font-size: calc(1.5vw + 0.20833333333333331vh);}
+}
+
+/* Mobile (below 768px wide) */
+@media (max-width: 767px) {
+  html {  font-size: calc(3.4vw + 0.20833333333333331vh);}
+}
+  *{
+    cursor:none!important
+}
+  
+  .span-text-tran::after {
+    content: "\00A0"; /* Adds a space after each word */
+    display: inline-block;
+}
+
+.span-text-tran:last-child::after {
+    content: ""; /* Remove the space after the last word */
+}
+
+.span-text-tran::after {
+    white-space: nowrap; /* Prevent the pseudo-space from breaking onto a new line */
+}
+  
+
+
+  
+  
+  .headline-word::after {
+    content: "\00A0"; /* Adds a space after each word */
+    display: inline-block;
+}
+
+.headline-word:last-child::after {
+    content: ""; /* Remove the space after the last word */
+}
+
+.headline-word::after {
+    white-space: nowrap; /* Prevent the pseudo-space from breaking onto a new line */
+}
+  .custom-cursor-dot-case {
+    pointer-events: none ! Important;
+    border: 1px solid #ffffff;
+}
+  
+.swiper-slide{
+ white-space: nowrap; 
+  }
+  
+  .swiper-slide{
+    flex-shrink:1 !Important;
+}
+ /* width */
+::-webkit-scrollbar {
+width:1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow:transparent;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:transparent;
+
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+  .swiper-wrapper {
+    transition-timing-function: cubic-bezier(.645,.045,.355,1);  /* Custom easing */
+}
+  .case-full-info-wrapper{
+        overscroll-behavior-y: contain;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll!Important;
+    will-change: transform;
+    overflow-x: hidden;
+
+  }
+
+body {
+    -webkit-font-smoothing: antialiased;
+  	-moz-font-smoothing: antialiased;
+  	-o-font-smoothing: antialiased;
+  	-ms-font-smoothing: antialiased;
+}
+  
+* {
+    text-rendering: optimizeLegibility;
+}
+
+  
+
+    .with-transition {
+           transition-duration:1.2s;
+        }
+  
+
+.main-slider_item.w-dyn-item {
+    pointer-events: none;
+}
+
+.main-slider_item.w-dyn-item.active {
+    pointer-events: initial;
+}
+  .numbers_list{
+  transition-duration: 0.8s;
+    transition-delay: 1s;
+    transition-timing-function:cubic-bezier(.645,.045,.355,1);
+  }
+
+  .video-cover{
+     width: 100%;
+    height: 100%;
+      object-fit: cover;
+  }
+
+    .video-cover video {
+    object-fit: cover;
+     position: absolute;
+      margin:auto;
+      object-fit: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+  }
+   
+.con-fixed{
+	position: fixed;
+}
+
+.slider-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.35); /* Set your initial border color */
+  transition: border-top-color 0.2s ease-in-out;
+}
+
+.slider-footer.transparent-border {
+  border-top-color: rgba(255, 255, 255, 0);
+}
+  .about-lottie-symbol-loop{
+  transform: translateY(125%);
+  }
+  .loader-header{
+transform: translateY(100%);
+
+}
+   .loader-header-2{
+transform: translateY(100%);
+
+}
+  
+   .slider-nav-text{
+transform: translateY(100%);
+
+}
+  
+  .footer-text{
+  transform: translateY(100%);
+  }
+  
+  
+  
+  
+  .loader-header-overlay{
+transform: translateY(-100%);
+
+}
+  
+  .main-slider_img-wrap{
+  top:25vh;
+  }
+  
+  
+  
+  .slider-nav-border {
+            width: 0;
+  }
+  
+    .breaker-border {
+            width: 0;
+  }
+  
+  .br-first-tran{
+  width:0%;
+  }
+  
+    .breaker-border.no-tran {
+            width: 100vw !Important;
+  }
+  
+  
+  .breaker-border-hide {
+            width: 0;
+  }
+    
+  .slider-footer-border {
+            width: 0;
+  }
+  .slider_item{
+    clip-path: inset(100% 0% 0% 0%);
+}
+  .circle-minimize-btn{
+clip-path: inset(100% 0% 0% 0%);
+
+  }
+  
+  
+ 
+  
+  .small-slider-text-container{
+ clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+}
+  .numbers_wrap{
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+
+}
+  
+  
+  .plus-btn-container{
+  transform: rotate(-180deg);
+   
+  }
+  
+  .btn-icon-close{
+  transform: rotate(-135deg);
+  
+  }
+  
+  .word-break{
+     position: relative; /* Ensure it can contain absolute-positioned children */
+  overflow: hidden;  
+     display: inline-block;
+
+
+}
+  .no-text-tran .span-text-tran{
+  transform: translateY(0%) !Important;
+  }
+  
+  .small-case-discriptor-text{
+transform: translateY(115%);
+
+
+}
+  .span-text-tran{
+transform: translateY(calc(100% + 5px));
+    padding-bottom:0.1rem;
+
+}
+  
+  .case-big-discription-header .span-text-tran{
+ padding-bottom:0.3rem !important;
+}
+  
+  .case-number-tran{
+transform: translateY(115%);
+
+}
+  
+    .rm-btn-close{
+transform: translateY(115%);
+
+}
+.case-index-text{
+  transform: translateY(115%);
+
+}
+  
+ .full-case-number{
+   transform: translateY(115%);
+  }
+  
+.case-index-text-hide{
+  transform: translateY(100%);
+
+}
+  
+ .btn-tran{
+   transform: translateY(100%);
+  }
+  
+  .case-img-tran{
+   clip-path: inset(100% 0% 0% 0%);
+}
+    .case-index-content{
+    clip-path: inset(100% 0% 0% 0%);
+
+}
+ 
+   
+    .case-index-content-hide{
+    clip-path: inset(100% 0% 0% 0%);
+
+}
+  
+  .footer-case-item{
+    clip-path: inset(100% 0% 0% 0%);
+  }
+ 
+.main-slider_title{
+bottom:-100%;
+  }
+  .case-full-info-section{
+transform: translateX(100%);
+}
+    .first-menu-link{
+transform: translateY(100%);
+}
+  .slider-footer-text{
+  transform: translateY(100%);
+  }
+      .first-menu-link-social{
+transform: translateY(100%);
+}
+  
+      .nav-clock{
+transform: translateY(100%);
+}
+        .nav-clock-infomation{
+transform: translateY(100%);
+}
+  
+        .nav-clock-dot{
+transform: translateY(250%);
+}
+
+  .slider-footer{
+  border:none !Important;
+  }
+  .page-content.con-fixed{
+	position: fixed;
+}
+
+  .frontpage-loader-border{
+  left:-100vw;
+  }
+  .frontpage-loader-border-overlay{
+  left:-100vw;
+  }
+ 
+  .frontpage-counter-content{
+  transform: translateY(100%);
+  }
+.frontpage-counter-number{
+  transform: translateY(100%);
+  }
+  
+   .frontpage-counter-content-overlay{
+  transform: translateY(100%);
+  }
+.frontpage-counter-number-overlay{
+  transform: translateY(100%);
+  }
+  
+  .headline-word{
+ transform: translateY(135%);
+}
+
+ .header-headline-number{
+ transform: translateY(175%);
+}
+
+ .header-discriptor-text-1{
+ transform: translateY(100%);
+}
+  
+   .header-discriptor-text-2{
+ transform: translateY(100%);
+}
+
+  
+     .footer-link-text{
+ transform: translateY(100%);
+}
+
+
+
+    .index-case-img{
+ transform: translateY(25%);
+}
+  
+     .index-case-vid{
+ transform: translateY(25%);
+}
+
+
+.custom-cursor {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 30px;
+      height: 30px;
+     
+      border-radius: 50%;
+      pointer-events: none !Important; /* Prevent it from blocking interactions */
+      z-index: 1000;
+      transform: translate(-50%, -50%);
+  
+    }
+  .custom-cursor-dot{
+  pointer-events: none !Important;
+     border: 1px solid #ffffff;
+  }
+  
+
+
+body.color-theme.warm {
+    --text-gray: var(--BgHue), 30%, 90%; /* Warmer gray */
+    --blend-mode: plus-lighter;
+}
+
+body.color-theme.cold {
+    --text-gray: var(--BgHue), 25%, 90%; /* Cooler gray */
+    --blend-mode: plus-lighter;
+}
+
+body.light-theme.warm {
+    --text-gray: var(--BgHue), 35%, 17%; /* Warmer gray */
+    --LightModeBlack: var(--BgHue), 8%, 20%;
+    --blend-mode: none;
+}
+
+body.light-theme.cold {
+    --text-gray: var(--BgHue), 25%, 17%; /* Cooler gray */
+    --LightModeBlack: var(--BgHue), 5%, 20%;
+    --blend-mode: none;
+}
+  body.color-theme{
+--text-opacity:0.45;
+}
+  
+    body.light-theme{
+--text-opacity:0.45;
+}
+
+
+/* Light theme specific styles */
+body.light-theme .menu-big-text,
+body.light-theme .menu-small-text,
+body.light-theme .nav-clock-infomation,
+body.light-theme .nav-clock,
+body.light-theme .header-headline,
+body.light-theme .case-high-header,
+body.light-theme .case-toolbox-discriptor-text,
+body.light-theme .full-case-disriptor-content .full-case-discription-text,
+body.light-theme .credit-category,
+body.light-theme .full-case-credit-header {
+    color: hsla(var(--LightModeBlack), 1) !important;
+}
+
+body.light-theme .nav-clock-dot {
+    background: hsla(var(--LightModeBlack), 1) !important;
+}
+
+body.light-theme .nav-logo SVG path {
+    fill: hsla(var(--LightModeBlack), 1) !important;
+}
+
+
+
+body.light-theme .btn-icon-rm{
+color: var(--BgColor) !Important;
+}
+
+
+body.color-theme  .btn-rm-container{
+background:hsla(var(--text-gray), 0.44)!Important;
+   mix-blend-mode: var(--blend-mode);
+}
+
+body.light-theme .btn-rm-container{
+background:hsla(var(--text-gray), 0.30)!Important;
+  mix-blend-mode: var(--blend-mode);
+}
+  
+
+/* Text color application */
+body.color-theme .footer-logo SVG path {
+    fill: hsla(var(--text-gray), var(--text-opacity)) !important;
+    mix-blend-mode: var(--blend-mode);
+}
+
+body.color-theme .full-case-number,
+body.color-theme .case-high-discriptor,
+body.color-theme .rm-text-link,
+body.color-theme .btn-rm-container,
+body.light-theme .btn-rm-container,
+body.color-theme .small-case-discriptor,
+body.color-theme .full-case-disriptor-content .small-case-discriptor-text,
+body.color-theme .case-index-text-container .full-case-discription-text,
+body.color-theme .credit-info,
+body.color-theme .full-case-section-one .small-case-discriptor .small-case-discriptor-text,
+body.color-theme .full-case-section-two .small-case-discriptor .small-case-discriptor-text,
+body.color-theme .full-case-disriptor-number .small-case-discriptor-text,
+body.color-theme .full-case-disriptor-numberr .small-case-discriptor-text,
+body.color-theme .full-case-credit-number-header,
+body.color-theme .credit-agency,
+body.color-theme .full-case-credit-number,
+body.color-theme .case-high-text,
+body.color-theme .full-case-disriptor-content .full-case-discription-text,
+body.color-theme .full-case-disriptor-type .full-case-discription-text,
+body.color-theme .case-toolbox-header-text,
+body.color-theme .case-toolbox-number-text,
+body.color-theme .case-high-header-container,
+body.color-theme .case-split-discriptor,
+body.color-theme .case-big-discription-header,
+body.color-theme .footer-link-text,
+body.color-theme .footer-second-link-text,
+body.color-theme .footer-text,
+body.light-theme .footer-text {
+    color: hsla(var(--text-gray), var(--text-opacity)) !important;
+    mix-blend-mode: var(--blend-mode);
+}
+
+/* Background colors */
+body.light-theme .case-full-info-container,
+body.light-theme .case-full-item-container,
+body.light-theme .people-credit-list-container,
+body.color-theme .case-full-info-container,
+body.color-theme .case-full-item-container,
+body.color-theme .people-credit-list-container {
+    background: var(--BgColor) !important;
+}
+
+/* Borders */
+body.light-theme .breaker-border.top-border,
+body.light-theme .breaker-border.bottom-border,
+body.light-theme .case-end-border,
+body.light-theme .breaker-border,
+body.light-theme .breaker-border-full-case {
+    border-bottom-color: rgba(0, 0, 0, 0.18) !important;
+}
+
+
+
+</style>
+</head><body data-barba="wrapper" class="body"><div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav"><div class="nav-bar"><div class="nav-logo-wrapper"><a href="/" aria-current="page" class="nav-logo-link cursor-hover-state w-inline-block w--current"><div id="Nav-logo" class="nav-logo"></div></a></div><div class="work-menu-section"><div class="work-nav-wrapper"><a href="/" aria-current="page" class="menu-link page_link cursor-hover-state w-inline-block w--current"><div class="menu-text first-menu-link cursor-hover-state"><p class="menu-big-text">Featured</p><p class="menu-small-text">(05)</p></div><div class="menu-text second-menu-link cursor-hover-state"><p class="menu-big-text">Featured<br/></p><p class="menu-small-text">(05)</p></div></a><a href="/work" class="menu-link page_link cursor-hover-state w-inline-block"><div class="menu-text first-menu-link cursor-hover-state"><p class="menu-big-text">Index</p><p class="menu-small-text">(05)</p></div><div class="menu-text second-menu-link cursor-hover-state"><p class="menu-big-text">Index</p><p class="menu-small-text">(05)</p></div></a></div></div><div class="information-work-section"><div class="about-nav-wrapper"><a href="/about" class="menu-link page_link cursor-hover-state w-inline-block"><div class="menu-text first-menu-link cursor-hover-state"><p class="menu-big-text">About<br/></p></div><div class="menu-text second-menu-link cursor-hover-state"><p class="menu-big-text">About<br/></p></div></a></div><div class="contact-nav-wrapper"><a href="#" class="contact-link page_link w-inline-block"><div class="menu-contact-text first-menu-link"><p class="menu-big-text">hello@simonholm.studio</p></div></a><a href="#" class="contact-link page_link w-inline-block"><div class="menu-contact-text first-menu-link"><p class="menu-big-text">+(45) 2632 0731</p></div></a></div><div class="job-nav-wrapper"><a href="#" class="contact-link page_link hide-link w-inline-block"><div class="menu-contact-text first-menu-link"><p class="menu-big-text">Designer:</p></div></a><a href="#" class="menu-link page_link cursor-hover-state hide-link w-inline-block"><div class="menu-text first-menu-link cursor-hover-state"><p class="menu-big-text">Brand Designer</p></div><div class="menu-text second-menu-link cursor-hover-state"><p class="menu-big-text">Brand Designer</p></div></a><p class="menu-big-text job-text">Brand Designer</p></div></div><div class="nav-clock-wrapper"><div class="nav-clock-container"><div class="nav-clocl-dot-wrapper"><div class="nav-clock-dot"></div></div><div class="nav-clock"></div><div class="nav-clock-infomation">(CET)</div></div></div></div></div><div class="frontpage-loader"><div class="frontpage-loader-container"><div class="logo-loader-wrapper"><div id="frontpage-logo-loader" class="frontpage-logo-loader"></div></div><div class="loader-headline-right"><div class="loader-header-one text-aling-right"><h3 class="loader-header text-aling-right">Brand Designer</h3></div><div class="loader-header-two text-aling-right"><h3 class="loader-header-2 text-aling-right"></h3></div></div><div class="loader-headline-portflio"><div class="loader-header-one"><h3 class="loader-header grey-header">Portfolio</h3></div></div><div class="loader-headline-copyright"><div class="loader-header-one text-aling-right"><h3 class="loader-header grey-header text-aling-right">©2026</h3></div></div><div class="loader-headline-left"><div class="loader-header-one"><h3 class="loader-header">Simon Holm Larsen</h3></div><div class="loader-header-two"><h3 class="loader-header-2"></h3></div></div><div class="frontpage-loader-counter"><div class="frontpage-counter-content">(</div><div class="frontpage-counter-number">0</div><div class="frontpage-counter-content">)</div></div></div></div><div class="overlay"></div><div data-barba-namespace="home" data-barba="container" class="page-content"><div id="smooth-wrapper" class="page-wrapper"><div class="global-styles"><div class="html w-embed"><style>
+
+/* Main Variables */
+:root {
+  --main-dark: black;
+  --main-light: white;
+}
+
+/* Global Styles */
+::selection {
+	background: transparent;
+  color: var(--main-light);
+  text-shadow: none;
+}
+img::selection, svg::selection {
+	background: transparent;
+}
+
+/* Link color inherits from parent font color  */
+a {
+	color: inherit;
+}
+
+/* Project CSS */
+body {
+    overscroll-behavior-y: none;
+		overscroll-behavior-x: none;
+}
+
+img {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.hero_arrow,
+.nav_item.current {
+	pointer-events: none;
+}
+
+.slider_wrap {
+	opacity: 0;
+  pointer-events: none;
+}
+.slider_wrap.show {
+	opacity: 1;
+  pointer-events: auto;
+}
+</style></div></div><main id="smooth-content" class="main-wrapper"><section class="section is-hero"><div class="container is-hero cursor-special-frontpage"><div class="slider-toggle-nav"><div class="slider-nav-border"></div><div class="circle-btn btn-fullscreen-global container-arrows"><div id="circle-scale-btn" class="circle-scale-btn"></div></div><div class="circle-minimize"><div class="minimizetool"><div id="circle-minimize-btn" class="circle-minimize-btn"></div></div></div></div><div class="main-slider cursor-special-frontpage"><div class="main-slider_wrap cursor-special-frontpage w-dyn-list"><div role="list" class="main-slider_list cursor-special-frontpage w-dyn-items"><div role="listitem" class="main-slider_item cursor-special-frontpage w-dyn-item"><a href="/work/birdie" class="main-slider-link cursor-special-frontpage w-inline-block"><div class="main-slider_card cursor-special-frontpage"><div class="container is-main-slider"><div class="main-slider_title-wrap"><p draggable="false" class="main-slider_title">Birdie</p></div></div><div class="main-slider_img-wrap cursor-special-frontpage"><div class="main-slider_img main-slider_video cursor-special-frontpage w-condition-invisible w-embed"><div class="video-cover">  <video style=" position: absolute; z-index:10 !Important;" poster=".webp" width="100%" muted autoplay playsinline loop data-object-fit="cover">  
+    <source src="" type="video/webm">
+    <source src="" type="video/mp4">    Your browser doesn't support HTML5 video tag.  
+  </video>
+ <img class="video-cover" style=" position: absolute; z-index:5 !Important;" src=".webp">
+</div></div><img src="https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/68f9e088802b5ec348dac431_b-packagning-mood-4.webp" loading="lazy" alt="Birdie" class="main-slider_img cursor-special-frontpage"/></div></div></a></div><div role="listitem" class="main-slider_item cursor-special-frontpage w-dyn-item"><a href="/work/snuw" class="main-slider-link cursor-special-frontpage w-inline-block"><div class="main-slider_card cursor-special-frontpage"><div class="container is-main-slider"><div class="main-slider_title-wrap"><p draggable="false" class="main-slider_title">Snuw</p></div></div><div class="main-slider_img-wrap cursor-special-frontpage"><div class="main-slider_img main-slider_video cursor-special-frontpage w-condition-invisible w-embed"><div class="video-cover">  <video style=" position: absolute; z-index:10 !Important;" poster=".webp" width="100%" muted autoplay playsinline loop data-object-fit="cover">  
+    <source src="" type="video/webm">
+    <source src="" type="video/mp4">    Your browser doesn't support HTML5 video tag.  
+  </video>
+ <img class="video-cover" style=" position: absolute; z-index:5 !Important;" src=".webp">
+</div></div><img src="https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/69760d69248c608aadbfd085_snuw-hero-2.webp" loading="lazy" alt="Snuw" class="main-slider_img cursor-special-frontpage"/></div></div></a></div><div role="listitem" class="main-slider_item cursor-special-frontpage w-dyn-item"><a href="/work/basic-feather" class="main-slider-link cursor-special-frontpage w-inline-block"><div class="main-slider_card cursor-special-frontpage"><div class="container is-main-slider"><div class="main-slider_title-wrap"><p draggable="false" class="main-slider_title">Basic Feather</p></div></div><div class="main-slider_img-wrap cursor-special-frontpage"><div class="main-slider_img main-slider_video cursor-special-frontpage w-condition-invisible w-embed"><div class="video-cover">  <video style=" position: absolute; z-index:10 !Important;" poster=".webp" width="100%" muted autoplay playsinline loop data-object-fit="cover">  
+    <source src="" type="video/webm">
+    <source src="" type="video/mp4">    Your browser doesn't support HTML5 video tag.  
+  </video>
+ <img class="video-cover" style=" position: absolute; z-index:5 !Important;" src=".webp">
+</div></div><img src="https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/68a571c2f9d051f5356560c1_BF-Hero.webp" loading="lazy" alt="Basic Feather" class="main-slider_img cursor-special-frontpage"/></div></div></a></div><div role="listitem" class="main-slider_item cursor-special-frontpage w-dyn-item"><a href="/work/Palette" class="main-slider-link cursor-special-frontpage w-inline-block"><div class="main-slider_card cursor-special-frontpage"><div class="container is-main-slider"><div class="main-slider_title-wrap"><p draggable="false" class="main-slider_title">Palette</p></div></div><div class="main-slider_img-wrap cursor-special-frontpage"><div class="main-slider_img main-slider_video cursor-special-frontpage w-condition-invisible w-embed"><div class="video-cover">  <video style=" position: absolute; z-index:10 !Important;" poster=".webp" width="100%" muted autoplay playsinline loop data-object-fit="cover">  
+    <source src="" type="video/webm">
+    <source src="" type="video/mp4">    Your browser doesn't support HTML5 video tag.  
+  </video>
+ <img class="video-cover" style=" position: absolute; z-index:5 !Important;" src=".webp">
+</div></div><img src="https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/692b4e4dea92dbe6d39293f2_p-index-1.webp" loading="lazy" alt="Palette" class="main-slider_img cursor-special-frontpage"/></div></div></a></div><div role="listitem" class="main-slider_item cursor-special-frontpage w-dyn-item"><a href="/work/wallhack" class="main-slider-link cursor-special-frontpage w-inline-block"><div class="main-slider_card cursor-special-frontpage"><div class="container is-main-slider"><div class="main-slider_title-wrap"><p draggable="false" class="main-slider_title">Wallhack</p></div></div><div class="main-slider_img-wrap cursor-special-frontpage"><div class="main-slider_img main-slider_video cursor-special-frontpage w-embed"><div class="video-cover">  <video style=" position: absolute; z-index:10 !Important;" poster="https://assets.simonholml.com/Portfolio/Case/Wallhack/WH-Hero.mp4.webp" width="100%" muted autoplay playsinline loop data-object-fit="cover">  
+    <source src="" type="video/webm">
+    <source src="https://assets.simonholml.com/Portfolio/Case/Wallhack/WH-Hero.mp4" type="video/mp4">    Your browser doesn't support HTML5 video tag.  
+  </video>
+ <img class="video-cover" style=" position: absolute; z-index:5 !Important;" src="https://assets.simonholml.com/Portfolio/Case/Wallhack/WH-Hero.mp4.webp">
+</div></div><img src="" loading="lazy" alt="Wallhack" class="main-slider_img cursor-special-frontpage w-condition-invisible w-dyn-bind-empty"/></div></div></a></div></div></div></div><div class="number-wrapper"><div class="numbers"><div class="numbers_wrap w-dyn-list"><div role="list" class="numbers_list w-dyn-items"><div role="listitem" class="numbers_item w-dyn-item"><p class="number_static">(0</p><p class="numbers_text">1</p><p class="number_static">)<br/></p></div><div role="listitem" class="numbers_item w-dyn-item"><p class="number_static">(0</p><p class="numbers_text">2</p><p class="number_static">)<br/></p></div><div role="listitem" class="numbers_item w-dyn-item"><p class="number_static">(0</p><p class="numbers_text">3</p><p class="number_static">)<br/></p></div><div role="listitem" class="numbers_item w-dyn-item"><p class="number_static">(0</p><p class="numbers_text">4</p><p class="number_static">)<br/></p></div><div role="listitem" class="numbers_item w-dyn-item"><p class="number_static">(0</p><p class="numbers_text">5</p><p class="number_static">)<br/></p></div></div></div></div></div><div class="small-slider-scroll"><div class="small-scroll-container"><div class="slider_wrap"><div class="slider_wrap w-dyn-list"><div role="list" class="slider_list w-dyn-items"><div role="listitem" class="slider_item w-dyn-item"><a draggable="false" href="/work/birdie" class="slidelink w-inline-block"><div class="slider_link"><div class="slider_photo w-condition-invisible w-embed"><div class="video-cover" style="width:1920px;">  <video style=" position: absolute; z-index:10 !Important;" poster=".webp" width="100%" muted autoplay playsinline loop data-object-fit="cover">  
+    <source src="" type="video/webm">
+    <source src="" type="video/mp4">    Your browser doesn't support HTML5 video tag.  
+  </video>
+
+ <img class="video-cover" style=" position: absolute; z-index:5 !Important;" src=".webp"></div></div><img src="https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/68f9e088802b5ec348dac431_b-packagning-mood-4.webp" loading="eager" alt="Birdie" class="slider_photo"/></div><div class="small-slider-text-container"><div class="small-slider-number"><div class="text-link number-link-small">(0</div><div class="text-link number-link-small">1</div><div class="text-link number-link-small">)</div></div><div class="text-link">Birdie</div></div></a></div><div role="listitem" class="slider_item w-dyn-item"><a draggable="false" href="/work/snuw" class="slidelink w-inline-block"><div class="slider_link"><div class="slider_photo w-condition-invisible w-embed"><div class="video-cover" style="width:1920px;">  <video style=" position: absolute; z-index:10 !Important;" poster=".webp" width="100%" muted autoplay playsinline loop data-object-fit="cover">  
+    <source src="" type="video/webm">
+    <source src="" type="video/mp4">    Your browser doesn't support HTML5 video tag.  
+  </video>
+
+ <img class="video-cover" style=" position: absolute; z-index:5 !Important;" src=".webp"></div></div><img src="https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/69760d69248c608aadbfd085_snuw-hero-2.webp" loading="eager" alt="Snuw" class="slider_photo"/></div><div class="small-slider-text-container"><div class="small-slider-number"><div class="text-link number-link-small">(0</div><div class="text-link number-link-small">2</div><div class="text-link number-link-small">)</div></div><div class="text-link">Snuw</div></div></a></div><div role="listitem" class="slider_item w-dyn-item"><a draggable="false" href="/work/basic-feather" class="slidelink w-inline-block"><div class="slider_link"><div class="slider_photo w-condition-invisible w-embed"><div class="video-cover" style="width:1920px;">  <video style=" position: absolute; z-index:10 !Important;" poster=".webp" width="100%" muted autoplay playsinline loop data-object-fit="cover">  
+    <source src="" type="video/webm">
+    <source src="" type="video/mp4">    Your browser doesn't support HTML5 video tag.  
+  </video>
+
+ <img class="video-cover" style=" position: absolute; z-index:5 !Important;" src=".webp"></div></div><img src="https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/68a571c2f9d051f5356560c1_BF-Hero.webp" loading="eager" alt="Basic Feather" class="slider_photo"/></div><div class="small-slider-text-container"><div class="small-slider-number"><div class="text-link number-link-small">(0</div><div class="text-link number-link-small">3</div><div class="text-link number-link-small">)</div></div><div class="text-link">Basic Feather</div></div></a></div><div role="listitem" class="slider_item w-dyn-item"><a draggable="false" href="/work/Palette" class="slidelink w-inline-block"><div class="slider_link"><div class="slider_photo w-condition-invisible w-embed"><div class="video-cover" style="width:1920px;">  <video style=" position: absolute; z-index:10 !Important;" poster=".webp" width="100%" muted autoplay playsinline loop data-object-fit="cover">  
+    <source src="" type="video/webm">
+    <source src="" type="video/mp4">    Your browser doesn't support HTML5 video tag.  
+  </video>
+
+ <img class="video-cover" style=" position: absolute; z-index:5 !Important;" src=".webp"></div></div><img src="https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/692b4e4dea92dbe6d39293f2_p-index-1.webp" loading="eager" alt="Palette" class="slider_photo"/></div><div class="small-slider-text-container"><div class="small-slider-number"><div class="text-link number-link-small">(0</div><div class="text-link number-link-small">4</div><div class="text-link number-link-small">)</div></div><div class="text-link">Palette</div></div></a></div><div role="listitem" class="slider_item w-dyn-item"><a draggable="false" href="/work/wallhack" class="slidelink w-inline-block"><div class="slider_link"><div class="slider_photo w-embed"><div class="video-cover" style="width:1920px;">  <video style=" position: absolute; z-index:10 !Important;" poster="https://assets.simonholml.com/Portfolio/Case/Wallhack/WH-Hero.mp4.webp" width="100%" muted autoplay playsinline loop data-object-fit="cover">  
+    <source src="" type="video/webm">
+    <source src="https://assets.simonholml.com/Portfolio/Case/Wallhack/WH-Hero.mp4" type="video/mp4">    Your browser doesn't support HTML5 video tag.  
+  </video>
+
+ <img class="video-cover" style=" position: absolute; z-index:5 !Important;" src="https://assets.simonholml.com/Portfolio/Case/Wallhack/WH-Hero.mp4.webp"></div></div><img src="" loading="eager" alt="Wallhack" class="slider_photo w-condition-invisible w-dyn-bind-empty"/></div><div class="small-slider-text-container"><div class="small-slider-number"><div class="text-link number-link-small">(0</div><div class="text-link number-link-small">5</div><div class="text-link number-link-small">)</div></div><div class="text-link">Wallhack</div></div></a></div></div></div></div></div></div><div class="prev-btn-wrapper"><div class="btn-prevslide"><div class="menu-link cursor-hover-state"><div class="menu-text first-menu-link slider-nav-text cursor-hover-state"><p class="menu-big-text">[←] Prev</p></div><div class="menu-text second-menu-link cursor-hover-state"><p class="menu-big-text">[←] Prev</p></div></div></div></div><div class="next-btn-wrapper"><div class="btn-nextslide"><div class="menu-link cursor-hover-state"><div class="menu-text first-menu-link slider-nav-text cursor-hover-state"><p class="menu-big-text">Next [→]</p></div><div class="menu-text second-menu-link cursor-hover-state"><p class="menu-big-text">Next [→]</p></div></div></div></div></div><div class="slider-footer"><div class="slider-footer-wrapper"><div class="slider-footer-information"><p class="slider-footer-text">©2026</p></div></div><div class="slider-footer-social-wrapper"><div class="social-link-container"><a href="#www.linkedin.com/in/simon-holm-larsen-2b764a67" target="_blank" class="menu-link cursor-hover-state w-inline-block"><div class="menu-text first-menu-link-social cursor-hover-state"><p class="menu-big-text social-link">Linkedin</p></div><div class="menu-text second-menu-link-social cursor-hover-state"><p class="menu-big-text social-link">Linkedin</p></div></a><a href="https://www.instagram.com/simonholm.studio/" target="_blank" class="menu-link cursor-hover-state w-inline-block"><div class="menu-text first-menu-link-social cursor-hover-state"><p class="menu-big-text social-link">Instagram<br/></p></div><div class="menu-text second-menu-link-social cursor-hover-state"><p class="menu-big-text social-link">Instagram<br/></p></div></a></div></div><div class="slider-footer-border"></div></div></section></main></div></div><div class="custom-cursor"><div class="close-text"><div class="close-text-p cursor-text">[Close]</div></div><div class="custom-cursor-dot"></div><div class="custom-cursor-dot-case"></div></div><script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6649cbdf19aa7125580e2ccb" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script><script src="https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/js/webflow.schunk.36b8fb49256177c8.js" type="text/javascript" integrity="sha384-4abIlA5/v7XaW1HMXKBgnUuhnjBYJ/Z9C1OSg4OhmVw9O3QeHJ/qJqFBERCDPv7G" crossorigin="anonymous"></script><script src="https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/js/webflow.fa0f9520.d1f461cb4bd4f842.js" type="text/javascript" integrity="sha384-Edkaf1inAaJZa/Ltn0RfB8dQAvjcRvt/AVyNpkg47PNpHVxPDwtpsd2f3wBYqTRl" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/Observer.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+<script src="https://unpkg.com/@barba/core"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/CustomEase.min.js"></script>
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<script src="https://assets.simonholml.com/Portfolio/jsfiles2/lenis-scroll.js"></script>
+<script src="https://assets.simonholml.com/Portfolio/jsfiles2/Frontpageslider-8.js"></script>
+<script src="https://assets.simonholml.com/Portfolio/jsfiles2/Pagetheme.js"></script>
+<script src=" https://assets.simonholml.com/Portfolio/jsfiles2/Customcursor.js"></script>
+<script src=" https://assets.simonholml.com/Portfolio/jsfiles2/btn.js"></script>
+<script src="https://assets.simonholml.com/Portfolio/jsfiles2/videolazyload.js"></script>
+<script src="https://assets.simonholml.com/Portfolio/jsfiles2/Lottie-animation.js"></script>
+
+<script>
+CustomEase.create("Pagtrans", ".645,.045,.355,1");
+CustomEase.create("texttshow", "0.35,0.15,0.35,1");
+CustomEase.create("linedraw", ".65,.05,.36,1");
+CustomEase.create("hoverout", ".23, 1, .32, 1");
+CustomEase.create("hoverin", ".65,.05,.36,1");
+CustomEase.create("slowoutfade", "1,0,1,.93");
+CustomEase.create("fastinfade", "0,.89,.63,1");
+
+
+
+
+function autoplayMainSliderVideos() {
+  const slider = document.querySelector('.main-slider');
+  if (!slider) return;
+
+  const videos = slider.querySelectorAll('.video-cover video');
+
+  videos.forEach(video => {
+    // Required for autoplay to work reliably
+    video.muted = true;
+    video.playsInline = true;
+    video.autoplay = true;
+
+    // Restart video
+    video.pause();
+    video.currentTime = 0;
+
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        // Retry slightly later (Safari / iOS fix)
+        setTimeout(() => video.play(), 200);
+      });
+    }
+  });
+}
+
+
+
+var swiperInstance; // Store swiper instance globally
+
+function getVW(value) {
+    return window.innerWidth * (value / 100);
+}
+
+function initSwiper() {
+    swiperInstance = new Swiper('.toolbox-swiper-container', {
+        slidesPerView: 'auto',
+        spaceBetween: 0,
+        grabCursor: true,
+        freeMode: true,
+        freeModeMomentum: true,
+        freeModeMomentumRatio: 0.2,
+        freeModeMomentumBounce: false,
+        freeModeSticky: false,
+        resistanceRatio: 0.2,
+        touchRatio: 0.5,
+        speed: 1500,
+        slidesOffsetBefore: getVW(10),
+        slidesOffsetAfter: getVW(10),
+    });
+}
+
+function destroySwiper() {
+    if (swiperInstance && swiperInstance.destroy) {
+        swiperInstance.destroy(true, true);  // Destroy Swiper, remove styles
+        swiperInstance = null;               // Reset the instance
+    }
+}
+
+function updateSwiperOnResize() {
+    // Destroy and reinitialize the swiper on window resize
+    destroySwiper();
+    initSwiper();
+}
+
+// Handle window resize separately
+function setupResizeListener() {
+    window.addEventListener('resize', function() {
+        updateSwiperOnResize();
+    });
+}
+
+
+
+
+// Centralized place to define animations
+const animationDefinitions = {
+    '.footer-case-item': {
+        duration: 1.4,
+        clipPath: 'inset(0% 0% 0% 0%)',
+        ease: 'texttshow',
+        delay: 0
+    },
+    '.breaker-border': {
+        width: '100vw',
+        duration: 1.25,
+        ease: 'linedraw',
+        delay: 0
+    },
+    '.headline-word': {
+        duration: 1.4,
+        y: '0%',
+        ease: 'Pagtrans',
+        stagger: 0.15,  // Stagger each word animation by 0.2 seconds
+        delay: 0
+    },
+    '.full-case-number': {
+        duration: 1.2,
+        y: '0%',
+        ease: 'texttshow',
+        delay: 0.4
+    },
+    '.plus-btn-container': {
+        duration: 0.5,
+        rotation: 0,  // Rotate to 0 degrees
+        ease: 'texttshow',
+        delay: 0.4
+    },
+    '.btn-tran': {
+        duration: 0.5,
+        y: '0%',
+        ease: 'texttshow',
+        delay: 0.4
+    },
+    '.case-index-content': {
+        duration: 1,
+        clipPath: 'inset(0% 0% 0% 0%)',
+        ease: 'texttshow',
+        delay: (index) => 0.10 + index * 0.025
+    },
+    '.case-index-text': {
+        duration: 0.8,
+        y: '0%',
+        ease: 'texttshow',
+        delay: 0.5
+    },
+  '.footer-text': {
+      duration: 0.8,
+      y: '0%',
+      ease: 'texttshow',
+    delay: 0.5
+    },
+  '.footer-link-text': {
+      duration: 0.8,
+      y: '0%',
+      ease: 'texttshow',
+    delay: 0.5
+    }
+};
+
+// Function to apply animations only to elements whose parents are in view
+function animateElementsInView(parent) {
+    Object.keys(animationDefinitions).forEach(selector => {
+        const elements = parent.querySelectorAll(selector); // Only select elements inside the parent
+
+        if (elements.length) {
+            const animationConfig = animationDefinitions[selector];
+
+            // Apply stagger for headline-word elements
+            if (selector === '.headline-word') {
+                gsap.to(elements, { 
+                    ...animationConfig,
+                    stagger: 0.15,  // Apply staggered animation to the entire group of words
+                });
+            } else {
+                // Apply individual animations for other elements
+                elements.forEach((element, index) => {
+                    gsap.to(element, { 
+                        ...animationConfig, 
+                        delay: typeof animationConfig.delay === 'function' ? animationConfig.delay(index) : animationConfig.delay 
+                    });
+                });
+            }
+        }
+    });
+}
+
+
+function initCaseAnimation() {
+  const caseWrapper = document.querySelector('.case-full-info-wrapper');
+  const caseSection = document.querySelector('.case-full-info-section');
+  const caseBtn = document.querySelector('.rm-case-btn');
+
+  if (!caseWrapper || !caseSection) return; // Exit if elements don't exist
+
+  // Open animation
+  function openCase() {
+    setTimeout(() => {
+      setTimeout(() => {
+        animateFullCaseHeaderLines();
+        animateFullCaseTextAllAtOnce();
+      }, 500);
+
+      // Set display block first to make it visible
+      gsap.set(caseWrapper, { display: 'block' });
+
+      // Animate background from transparent to black overlay
+      gsap.to(caseWrapper, {
+        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+        duration: 0.5,
+        ease: 'hoverin',
+      });
+
+      gsap.to('.case-img-tran', {
+        duration: 1.4,
+        clipPath: 'inset(0% 0% 0% 0%)',
+        ease: 'texttshow',
+        delay: 0.2,
+      });
+
+      gsap.to('.br-first-tran', {
+        width: '100%',
+        duration: 1,
+        ease: 'linedraw',
+        delay: 0.2,
+      });
+
+      gsap.to('.case-number-tran', {
+        y: '0%',
+        duration: 0.8,
+        ease: 'texttshow',
+        delay: 0.8,
+      });
+
+      gsap.to('.small-case-discriptor-text', {
+        y: '0%',
+        duration: 0.8,
+        ease: 'texttshow',
+        delay: 0.8,
+      });
+
+      // Animate the content section sliding in from the right
+      gsap.fromTo(caseSection, { x: '100%' }, { x: '0%', duration: 1, ease: 'hoverin' });
+
+      // Stop the main page Lenis scroll
+      if (window.lenis && typeof window.lenis.stop === 'function') {
+        window.lenis.stop();
+      }
+
+      // Initialize and start Lenis for the modal
+      initializeLenisModal();
+      lenisModal.start();
+    }, 200); // Delay to ensure DOM is fully ready
+  }
+
+  // Close animation
+  function closeCase() {
+    gsap.to(caseSection, {
+      x: '100%',
+      duration: 1,
+      ease: 'hoverin',
+    });
+
+    gsap.to(caseWrapper, {
+      backgroundColor: 'rgba(0, 0, 0, 0.0)',
+      duration: 0.5,
+      ease: 'hoverin',
+      delay: 0.5,
+      onComplete: () => {
+        gsap.set(caseWrapper, { display: 'none' });
+        lenisModal.stop(); // Stop Lenis for modal
+        if (window.lenis && typeof window.lenis.start === 'function') {
+          window.lenis.start(); // Restart Lenis for the main page
+        }
+      },
+    });
+
+    caseWrapper.style.overflowY = 'hidden';
+  }
+
+  // Remove any existing event listeners before attaching new ones
+  if (caseBtn) {
+    caseBtn.removeEventListener('click', openCase); // Remove existing listeners
+    caseWrapper.removeEventListener('click', closeCase); // Remove existing listeners
+
+    // Attach event listeners to the buttons
+    caseBtn.addEventListener('click', openCase);
+    caseWrapper.addEventListener('click', closeCase);
+  }
+}
+
+
+function replaceCaseFullInfoWrapper() {
+    // Check for an existing .case-full-info-wrapper outside of .page-wrapper
+    const existingWrapperOutside = document.querySelector('body > .case-full-info-wrapper');
+    
+    // Remove the existing one if it exists
+    if (existingWrapperOutside) {
+        existingWrapperOutside.remove();
+    }
+
+    // Find the new .case-full-info-wrapper inside .page-wrapper
+    const newWrapperInsidePage = document.querySelector('.page-wrapper .case-full-info-wrapper');
+
+    if (newWrapperInsidePage) {
+        // Move the new one outside the .page-wrapper to just after the <body> tag
+        document.body.insertBefore(newWrapperInsidePage, document.body.firstChild);
+    }
+}
+
+  
+// removes transition effect from case hero module
+  
+function removeTransition(elementClass, classToRemove) {
+    const elements = document.getElementsByClassName(elementClass);
+
+    for (let element of elements) {
+        // Remove the class after 1.5 seconds
+        setTimeout(() => {
+            element.classList.remove(classToRemove);
+        }, 1500);
+    }
+}
+  
+  function splitTextIntoWords(selector, tag, wordClass) {
+    const elements = document.querySelectorAll(selector);
+
+    // First observer: Handles splitting the text into word-breaks
+    const splitObserverOptions = {
+        root: null,
+        rootMargin: '500px 0px',
+        threshold: 0,
+    };
+
+    const splitObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !entry.target.classList.contains('text-split')) {
+                elements.forEach(element => {
+                    if (element.classList.contains('text-split')) return;
+
+                    const text = element.innerHTML.replace(/&nbsp;/g, ' ');
+                    const words = text.split(' ');
+
+                    element.innerHTML = '';
+
+                    // Create the word-break spans and add span-text-tran inside each word-break span
+                    words.forEach(word => {
+                        const wordTag = document.createElement(tag);
+                        wordTag.classList.add(wordClass); // Add the word-break class
+                        wordTag.style.display = 'inline-block'; // Inline-block for word wrapping
+                        wordTag.style.overflow = 'hidden'; // Ensure words stay hidden during animation
+
+                        // Create the inner span with .span-text-tran class
+                        const innerSpan = document.createElement('span');
+                        innerSpan.classList.add('span-text-tran');
+                        innerSpan.style.display = 'inline-block';
+                        innerSpan.style.transform = 'translateY(100%)'; // Initially off-screen
+                        innerSpan.innerHTML = word;
+
+                        // Append the inner span to the word-break span
+                        wordTag.appendChild(innerSpan);
+                        element.appendChild(wordTag);
+                        element.appendChild(document.createTextNode(' ')); // Add space between words
+                    });
+
+                    element.classList.add('text-split');
+
+                    // Skip animation for specific elements
+                    if (element.closest('.full-case-header') || element.closest('.full-case-text')) {
+                        return;
+                    }
+
+                    // Ensure the browser renders before starting animations
+                    requestAnimationFrame(() => {
+                        observeForAnimation(element);
+                    });
+                });
+
+                observer.unobserve(entry.target);
+            }
+        });
+    }, splitObserverOptions);
+
+    elements.forEach(element => {
+        splitObserver.observe(element);
+    });
+}
+
+// Observer to handle triggering animations
+function observeForAnimation(element) {
+    const animationObserverOptions = {
+        root: null,
+        rootMargin: '0px 0px -5% 0px',
+        threshold: 0.10,
+    };
+
+    const animationObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateWordBreak(entry.target); // Animate .span-text-tran inside word-break
+                observer.unobserve(entry.target);
+            }
+        });
+    }, animationObserverOptions);
+
+    animationObserver.observe(element);
+}
+
+// Function to animate word-break spans
+function animateWordBreak(element) {
+    const wordBreaks = element.querySelectorAll('.word-break'); // Target word-break spans
+    let currentLineTop = null;
+    let lineGroup = [];
+    const lineOffsets = new Set();
+
+    // Group words by lines based on vertical position
+    wordBreaks.forEach(wordBreak => {
+        const wordTop = wordBreak.offsetTop;
+        lineOffsets.add(wordTop);
+
+        if (currentLineTop === null || wordTop === currentLineTop) {
+            lineGroup.push(wordBreak);
+            currentLineTop = wordTop;
+        } else {
+            animateLine(lineGroup);
+            lineGroup = [wordBreak];
+            currentLineTop = wordTop;
+        }
+    });
+
+    if (lineGroup.length > 0) {
+        animateLine(lineGroup);
+    }
+}
+
+// Function to animate a line group
+function animateLine(lineGroup) {
+    const baseDelay = 0.08;
+
+    lineGroup.forEach((wordBreak, wordIndex) => {
+        const spanTextTran = wordBreak.querySelector('.span-text-tran');
+        const delay = baseDelay + wordIndex * 0.015;
+
+        // Temporarily adjust padding to prevent clipping
+        wordBreak.style.paddingBottom = '5px'; // Add padding during animation
+
+        gsap.to(spanTextTran, {
+            duration: 0.75,
+            y: '0%',
+            ease: 'texttshow',
+            delay: delay,
+            onComplete: () => {
+                // Remove animation properties and ensure layout stability
+               
+                wordBreak.style.paddingBottom = '5px'; // Reset padding after animation
+            }
+        });
+    });
+}
+
+// Function to manually animate .span-text-tran for .full-case-header
+function animateFullCaseHeaderLines() {
+    const elements = document.querySelectorAll('.full-case-header .span-text-tran');
+    elements.forEach((span, index) => {
+        gsap.to(span, {
+            duration: 0.75,
+            y: '0%',
+            ease: 'texttshow',
+            delay: index * 0.02,
+        });
+    });
+}
+
+// Function to animate all .span-text-tran for .full-case-text
+function animateFullCaseTextAllAtOnce() {
+    const elements = document.querySelectorAll('.full-case-text .span-text-tran');
+    gsap.to(elements, {
+        duration: 0.75,
+        y: '0%',
+        ease: 'texttshow',
+        stagger: 0,
+        delay: 0.3,
+    });
+}
+  
+
+
+
+  
+// scroll animation for background and images
+  
+ // Ensure GSAP's ScrollTrigger plugin is registered
+gsap.registerPlugin(ScrollTrigger);
+
+// Function to animate background position on scroll for any class or element
+function animateBackgroundOnScroll(selector) {
+  const bgElements = document.querySelectorAll(selector);
+
+  if (bgElements.length > 0) {
+    bgElements.forEach((element) => {
+      // Create a GSAP timeline for each background element
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: element,
+          start: 'top bottom', // When the top of the element hits the bottom of the viewport
+          end: 'bottom top',   // When the bottom of the element hits the top of the viewport
+          scrub: true,         // Smooth scrolling effect
+          onUpdate: (self) => {
+            // Calculate scroll progress and adjust background position
+            const scrollProgress = self.progress; 
+            const yPos = scrollProgress * 100; // Adjust the background position
+            element.style.backgroundPosition = `center ${yPos}%`; // Simulates fixed
+          }
+        }
+      });
+    });
+  }
+}
+  
+// Function to animate transform (move up) on scroll for any element
+function animateTransformOnScroll(selector, movement = 200) {
+  const elements = document.querySelectorAll(selector);
+
+  if (elements.length > 0) {
+    elements.forEach((element) => {
+      // Create a GSAP timeline for each element
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: element,
+          start: 'top bottom', // When the top of the element hits the bottom of the viewport
+          end: 'bottom top',   // When the bottom of the element hits the top of the viewport
+          scrub: true,         // Smooth scrolling effect
+          onUpdate: (self) => {
+            // Calculate scroll progress and apply negative transform based on progress
+            const scrollProgress = self.progress;
+            const translateY = -scrollProgress * movement; // Move up as the user scrolls down
+            element.style.transform = `translateY(${translateY}px)`; // Apply vertical movement
+          }
+        }
+      });
+    });
+  }
+}
+
+  
+  // split headline
+  
+function splitAllHeaderHeadlines() {
+    const headers = document.querySelectorAll('.header-headline');
+    headers.forEach(header => {
+        const text = header.innerHTML.trim();
+        const words = text.split(' ').map(word => `<span class="headline-word">${word}</span>`).join(' ');
+        header.innerHTML = words;  // Replace the original text with the wrapped words
+    });
+}
+ // Barba.js page transitions
+function BarbaPageTransitions() {
+    const baseDelay = 0.5;  // Base delay of 0.5 seconds for specific elements
+    const parentClasses = ['.case-container', '.text-header', '.footer','.footer-info-wrapper', '.footer-text-container'];  // Only include necessary parent classes
+
+    // Function to check if a parent element is in view (partially in view with a 100px buffer)
+    function isInView(element) {
+        const rect = element.getBoundingClientRect();
+        const buffer = 100;  // Allow elements within 100px of the viewport to animate
+        const inView = (rect.top < window.innerHeight + buffer && rect.bottom > -buffer); // 100px buffer added
+        return inView;
+    }
+
+    // Function to animate elements only if their parent is in view
+    function animateIfInView() {
+        parentClasses.forEach(parentClass => {
+            const containers = document.querySelectorAll(parentClass);
+
+            containers.forEach((container, containerIndex) => {
+                if (isInView(container) && !container.classList.contains('animated')) {
+                    container.classList.add('animated');  // Mark as animated to prevent repeat animations
+
+                    // Animate case-index-content elements with base delay
+                    const contents = container.querySelectorAll('.case-index-content');
+                    if (contents.length) {
+                        contents.forEach((content, index) => {
+                            gsap.to(content, {
+                                duration: 1,
+                                clipPath: 'inset(0% 0% 0% 0%)',
+                                ease: 'texttshow',  // Match easing to scroll function
+                                delay: baseDelay + (0.10 + index * 0.025)  // Correct delay calculation
+                            });
+                        });
+                    }
+
+                    // Animate case-index-text elements with base delay
+                    const texts = container.querySelectorAll('.case-index-text');
+                    if (texts.length) {
+                        texts.forEach((text, index) => {
+                            gsap.to(text, {
+                                duration: 0.8,
+                                y: '0%',
+                                ease: 'texttshow',  // Match easing to scroll function
+                                delay: 0.5 + baseDelay   // Correct delay calculation
+                            });
+                        });
+                    }
+
+                    // Animate headline-word elements without base delay
+                    const words = container.querySelectorAll('.headline-word');
+                    gsap.to(words, {
+                        duration: 1.2,
+                        y: '0%',
+                        ease: 'texttshow',  // Same easing
+                        stagger: 0.15,  // Same stagger
+                        delay: 0 + containerIndex * 0.2  // No baseDelay
+                    });
+
+
+   // Animate header headline number without base delay
+                    gsap.to(container.querySelectorAll('.footer-text'), {
+                        duration: 0.8,
+                        y: '0%',
+                      ease: 'texttshow'  
+                    });
+
+
+                    // Animate full case number without base delay
+                    gsap.to(container.querySelectorAll('.full-case-number'), {
+                        duration: 0.65,
+                        y: '0%',
+                        ease: 'texttshow',
+                        delay: 0.5 + containerIndex * 0.2  // No baseDelay
+                    });
+
+  gsap.to('.about-lottie-symbol-loop', {
+    duration: 1.2,
+    y: '0%',
+    ease: 'texttshow',
+    delay: 0.45
+  });
+
+ gsap.registerPlugin(ScrollTrigger);
+                  
+// Animate opacity when scrolling around 280vh
+gsap.to(".about-hero-image", {
+  scrollTrigger: {
+    trigger: ".about-hero-image", // Trigger the animation based on the document scroll
+    start: () => `${window.innerHeight * 0.2}px`, // Dynamically calculate 280vh
+    end: () => `${window.innerHeight * 1.2}px`, // Dynamically calculate 300vh
+    scrub: true,
+    markers: false, 
+      ease: "Pagtrans",// Optional: Add markers for debugging
+  },
+  opacity: 0,
+});
+                  
+
+               // Animate header headline number without base delay
+                    gsap.to(container.querySelectorAll('.header-headline-number'), {
+                        duration: 1.2,
+                        y: '0%',
+                        ease: 'Pagtrans',
+                        delay: 0 + containerIndex * 0.2  // No baseDelay
+                    });
+
+                    // Animate breaker border without base delay
+                    gsap.to(container.querySelectorAll('.breaker-border'), {
+                        width: '100vw',
+                        duration: 1,
+                        ease: 'linedraw',
+                        delay: 0.2 + containerIndex * 0.2  // No baseDelay
+                    });
+                }
+            });
+        });
+    }
+
+    // Function to play videos when they are in view
+    function playVideosInView() {
+        const videos = document.querySelectorAll('.video-lazy-load');
+        videos.forEach(videoElement => {
+            if (isInView(videoElement) && !videoElement.classList.contains('video-playing')) {
+                const video = videoElement.querySelector('video');
+                if (video) {
+                    // Check if video has sources loaded before trying to play
+                    const hasSource = video.src || 
+                                     (video.querySelector('source') && video.querySelector('source').src) ||
+                                     videoElement.dataset.loaded === 'true';
+                    
+                    if (hasSource) {
+                        // Ensure mobile autoplay requirements
+                        video.muted = true;
+                        video.playsInline = true;
+                        
+                        const playPromise = video.play();
+                        if (playPromise && typeof playPromise.then === 'function') {
+                            playPromise
+                                .then(() => {
+                                    videoElement.classList.add('video-playing');
+                                })
+                                .catch(() => {
+                                    // Autoplay blocked - this is normal on some devices
+                                });
+                        } else {
+                            videoElement.classList.add('video-playing');
+                        }
+                    }
+                    // If no source, the lazy loader will handle it when it loads
+                }
+            }
+        });
+    }
+
+    // Call the animation function after Barba.js transition
+    animateIfInView();
+
+    // Call the function to play videos in view after transition
+    playVideosInView();
+}
+
+  
+  
+  
+function updateCETClock() {
+    const cetTime = new Date().toLocaleString("en-US", {
+      timeZone: "Europe/Berlin",
+      hour12: false,
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+    document.querySelector(".nav-clock").textContent = cetTime;
+  }
+
+  function startClock() {
+    updateCETClock(); // Initial call to display clock immediately
+    setInterval(updateCETClock, 1000); // Update the clock every second
+  }
+
+function initLinkAnimations() {
+  // For Menu Links
+  const menuLinks = document.querySelectorAll('.menu-link');
+  menuLinks.forEach(link => {
+    const firstMenuLink = link.querySelector('.first-menu-link');
+    const secondMenuLink = link.querySelector('.second-menu-link');
+    const firstMenuLinkSocial = link.querySelector('.first-menu-link-social');
+    const secondMenuLinkSocial = link.querySelector('.second-menu-link-social');
+
+    link.addEventListener('mouseenter', () => {
+      gsap.to(firstMenuLink, {
+        y: '-100%', 
+        duration: 0.6,
+        ease: "hoverin"
+      });
+
+      gsap.to(secondMenuLink, {
+        y: '-100%', 
+        duration: 0.6,
+        ease: "hoverin"
+      });
+
+      gsap.to(firstMenuLinkSocial, {
+        y: '-100%', 
+        duration: 0.6,
+        ease: "hoverin"
+      });
+
+      gsap.to(secondMenuLinkSocial, {
+        y: '-100%', 
+        duration: 0.6,
+        ease: "hoverin"
+      });
+    });
+
+    link.addEventListener('mouseleave', () => {
+      gsap.to(firstMenuLink, {
+        y: '0%',
+        duration: 1,
+        ease: "hoverout"
+      });
+
+      gsap.to(secondMenuLink, {
+        y: '0%',
+        duration: 1,
+        ease: "hoverout"
+      });
+
+      gsap.to(firstMenuLinkSocial, {
+        y: '0%',
+        duration: 1,
+        ease: "hoverout"
+      });
+
+      gsap.to(secondMenuLinkSocial, {
+        y: '0%',
+        duration: 1,
+        ease: "hoverout"
+      });
+    });
+  });
+
+  // For Button Links
+  const btnLinks = document.querySelectorAll('.btn-container');
+  btnLinks.forEach(link => {
+    const firstBtnLink = link.querySelector('.first-btn-link');
+    const plusBtn = link.querySelector('.plus-btn-container');
+     const closeBtn = link.querySelector('.btn-icon-close');
+    const secondBtnLink = link.querySelector('.second-btn-link');
+
+    link.addEventListener('mouseenter', () => {
+      gsap.to(firstBtnLink, {
+        y: '-100%', 
+        duration: 0.6,
+        ease: "hoverin"
+      });
+
+      gsap.to(secondBtnLink, {
+        y: '-100%', 
+        duration: 0.6,
+        ease: "hoverin"
+      });
+       gsap.to(plusBtn, { 
+       rotation: -180,
+          duration: 0.6,
+        ease: "hoverin"
+      });
+       gsap.to(closeBtn, { 
+       rotation: -135,
+          duration: 0.6,
+        ease: "hoverin"
+      });
+      
+    });
+    
+        
+
+    link.addEventListener('mouseleave', () => {
+      gsap.to(firstBtnLink, {
+        y: '0%',
+        duration: 1,
+        ease: "hoverout"
+      });
+
+      gsap.to(secondBtnLink, {
+        y: '0%',
+        duration: 1,
+        ease: "hoverout"
+      });
+      gsap.to(plusBtn, {
+        rotation: 0, 
+        duration: 1,
+        ease: "hoverout"
+      });
+       gsap.to(closeBtn, {
+        rotation: 45, 
+        duration: 1,
+        ease: "hoverout"
+      });
+    });
+  });
+}
+  
+  
+function BarbaSliderAnimation() {
+  gsap.to('.main-slider_img-wrap', {
+    top: '0vh',
+    duration: 0.1,
+    ease: 'Pagtrans',
+    delay: 0
+  });
+  
+  gsap.to('.frontpage-counter-content', {
+    duration: 1.35,
+    y: '0%',
+    ease: 'texttshow',
+    delay: 0
+  });
+  
+  gsap.to('.frontpage-counter-number', {
+    duration: 1.35,
+    y: '0%',
+    ease: 'texttshow',
+    delay: 0.1
+  });
+
+  gsap.to('.frontpage-counter-number', {
+    innerText: 100,
+    duration: 1.7,
+    delay: 0.75,
+    snap: { innerText: 1 },
+    onUpdate: function() {
+      const counterElement = document.querySelector('.frontpage-counter-number');
+      counterElement.innerText = Math.ceil(counterElement.innerText);
+    },
+    onComplete: function() {
+      gsap.to('.frontpage-counter-content', {
+        duration: 1.50,
+        y: '-100%',
+        ease: 'texttshow',
+        delay: 0.1
+      });
+
+      gsap.to('.frontpage-counter-number', {
+        duration: 1.50,
+        y: '-100%',
+        ease: 'texttshow',
+        delay: 0.1
+      });
+    }
+  });
+
+  gsap.to('.slider-nav-border', {
+    duration: 1.5,
+    width: '100%',
+    ease: 'linedraw',
+    delay: 0
+  });
+
+  gsap.to('.slider-footer-border', {
+    duration: 1.5,
+    width: '100vw',
+    ease: 'linedraw',
+    delay: 0.1
+  });
+
+  gsap.to('.circle-minimize-btn', {
+    duration: 1,
+    clipPath: 'inset(0% 0% 0% 0%)',
+    ease: 'texttshow',
+    delay: 0.55
+  });
+ gsap.to('.first-menu-link', {
+    duration: 1,
+    y: '0%',
+    ease: 'texttshow',
+    delay: 0.55
+  });
+
+  
+
+  gsap.to('.first-menu-link-social', {
+    duration: 1,
+    y: '0%',
+    ease: 'texttshow',
+    delay: 0.5
+  });
+
+  gsap.to('.slider-footer-text', {
+    duration: 1,
+    y: '0%',
+    ease: 'texttshow',
+    delay: 0.5
+  });
+
+
+
+  gsap.to('.numbers_wrap', {
+    duration: 1,
+    clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+    ease: 'texttshow',
+    delay: 0
+  });
+
+  gsap.to('.main-slider_title', {
+    duration: 1.8,
+    bottom: '0',
+    ease: 'texttshow',
+    delay: 0
+  });
+}
+  
+  
+function pageLoadStartAnimation() {
+  gsap.to('.main-slider_img-wrap', {
+    top: '0vh',
+    duration: 1.35,
+    ease: 'Pagtrans',
+    delay: 4.3
+  });
+  
+  gsap.to('.frontpage-counter-content', {
+    duration: 1.35,
+    y: '0%',
+    ease: 'texttshow',
+    delay: 0.5
+  });
+  
+  gsap.to('.frontpage-counter-number', {
+    duration: 1.35,
+    y: '0%',
+    ease: 'texttshow',
+    delay: 0.5
+  });
+
+  gsap.to('.frontpage-counter-number', {
+    innerText: 100,
+    duration: 1.7,
+    delay: 1.8,
+    snap: { innerText: 1 },
+    onUpdate: function() {
+      const counterElement = document.querySelector('.frontpage-counter-number');
+      counterElement.innerText = Math.ceil(counterElement.innerText);
+    },
+    onComplete: function() {
+      gsap.to('.frontpage-counter-content', {
+        duration: 1.50,
+        y: '-100%',
+        ease: 'texttshow',
+        delay: 0.15
+      });
+
+      gsap.to('.frontpage-counter-number', {
+        duration: 1.50,
+        y: '-100%',
+        ease: 'texttshow',
+        delay: 0.15
+      });
+    }
+  });
+
+  gsap.to('.slider-nav-border', {
+    duration: 1.5,
+    width: '100%',
+    ease: 'linedraw',
+    delay: 4.4
+  });
+
+  gsap.to('.slider-footer-border', {
+    duration: 1.5,
+    width: '100vw',
+    ease: 'linedraw',
+    delay: 4.8
+  });
+
+  gsap.to('.circle-minimize-btn', {
+    duration: 1,
+    clipPath: 'inset(0% 0% 0% 0%)',
+    ease: 'texttshow',
+    delay: 5.4
+  });
+
+  gsap.to('.first-menu-link', {
+    duration: 1,
+    y: '0%',
+    ease: 'texttshow',
+    delay: 5.4
+  });
+
+  gsap.to('.first-menu-link-social', {
+    duration: 1,
+    y: '0%',
+    ease: 'texttshow',
+    delay: 5.4
+  });
+
+  gsap.to('.slider-footer-text', {
+    duration: 1,
+    y: '0%',
+    ease: 'texttshow',
+    delay: 5.4
+  });
+
+  gsap.to('.nav-clock-dot', {
+    duration: 1,
+    y: '0%',
+    ease: 'texttshow',
+    delay: 5.4
+  });
+
+  gsap.to('.nav-clock', {
+    duration: 1,
+    y: '0%',
+    ease: 'texttshow',
+    delay: 5.4
+  });
+
+  gsap.to('.nav-clock-infomation', {
+    duration: 1,
+    y: '0%',
+    ease: 'texttshow',
+    delay: 5.4
+  });
+
+  gsap.to('.numbers_wrap', {
+    duration: 1,
+    clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+    ease: 'texttshow',
+    delay: 5.4
+  });
+
+  gsap.to('.main-slider_title', {
+    duration: 1.8,
+    bottom: '0',
+    ease: 'texttshow',
+    delay: 4.8
+  });
+}
+
+
+// Animation for page loader
+
+function pageLoader() {
+ 
+
+  // Animate header in
+        gsap.to('.loader-header', {
+            duration: 1.35,
+            y: '0%',
+            ease: 'texttshow',
+            delay: 0.5
+        });
+  gsap.to('.loader-header-2', {
+            duration: 1.35,
+            y: '0%',
+            ease: 'texttshow',
+            delay: 0.6
+        });
+
+ gsap.to('.loader-header', {
+            duration: 1.50,
+            y: '-100%',
+            ease: 'texttshow',
+            delay: 3.6
+        });
+  gsap.to('.loader-header-2', {
+            duration: 1.50,
+            y: '-100%',
+            ease: 'texttshow',
+            delay: 3.6
+        });
+
+
+      
+
+    // Animate frontpage-loader out
+    gsap.to('.frontpage-loader', {
+        duration: 1.35,
+        y: '-100%',
+        ease: 'Pagtrans',
+        delay: 4.3, // Delay after all headers
+        onComplete: () => {
+            frontpageLoader.style.display = 'none'; // Hide loader after animation
+        }
+    });
+  }
+
+// Lottie functions moved to Lottie-animation.js
+
+  
+  
+    //Function init calls
+  
+  
+  function sharedInit() {
+initLenisScrollToTop();
+
+     initializeLenis();
+     initLinkAnimations();
+     autoplayMainSliderVideos();
+
+       if (document.querySelector('.swiper-wrapper')) {
+    setupResizeListener();
+     }
+   
+
+    if (document.querySelector('.toolbox-swiper-container')) {
+      
+      setTimeout(() => {
+       destroySwiper();
+      }, 100);
+      
+      setTimeout(() => {
+      initSwiper();
+      }, 300);
+
+      }
+
+if (document.querySelector('.rm-case-btn')) {
+   setTimeout(() => {
+  initCaseAnimation();
+       }, 300);
+}
+
+    if (document.querySelector('.main-slider')) {
+    initializeSlider();
+animateSliderNavText()
+     }
+
+   
+    
+    if (document.querySelector('.video-lazy-load')) {
+    initializeVideoLazyLoad();
+       }
+    
+   if (document.querySelector('.case-full-info-wrapper')) {
+    replaceCaseFullInfoWrapper();
+        }
+    
+       if (document.querySelector('.case-img-hero-container')) {
+    removeTransition('case-img-hero-container', 'with-transition');
+          }
+    
+      if (document.querySelector('.case-bg-img')) {
+    animateBackgroundOnScroll('.case-bg-img');
+        }
+    
+   
+    
+       if (document.querySelector('.case-high-header')) {
+    splitTextIntoWords('.case-high-header', 'span', 'word-break');
+            }
+    
+       if (document.querySelector('.case-high-text')) {
+    splitTextIntoWords('.case-high-text', 'span', 'word-break');
+            }
+    
+      if (document.querySelector('.case-split-discriptor')) {
+    splitTextIntoWords('.case-split-discriptor', 'span', 'word-break');
+          }
+    
+     if (document.querySelector('.case-big-discription-text')) {
+    splitTextIntoWords('.case-big-discription-text', 'span', 'word-break');
+          }
+    
+     
+     if (document.querySelector('.case-text-split-tran')) {
+    splitTextIntoWords('.case-text-split-tran', 'span', 'word-break');
+          }
+    
+    
+}
+
+// Functions specific to Barba.js transitions
+function initForBarba() {
+   
+    sharedInit(); // Call the shared functions
+
+    
+}
+
+// Functions specific to document load
+function initForLoad() {
+   if (document.querySelector('.case-theme')) {
+updateTheme(document);
+         }
+initializeCustomCursor();
+ initializeCaseReadMoreCursorToggle();
+initializeSpecialCursorFrontpage();
+
+ if (document.querySelector('.header-headline')) {
+    splitAllHeaderHeadlines();
+        }
+    pageLoadStartAnimation();
+  
+  if (document.querySelector('.frontpage-loader')) {
+    pageLoader();
+     }
+  
+    startClock();
+    initializePageLoadLottieAnimations();
+    sharedInit(); // Call the shared functions
+}
+
+  
+// Reset Webflow function
+function resetWebflow(data) {
+  let parser = new DOMParser();
+  let dom = parser.parseFromString(data.next.html, "text/html");
+  let webflowPageId = $(dom).find("html").attr("data-wf-page");
+  $("html").attr("data-wf-page", webflowPageId);
+
+  // Reinitialize Webflow
+  if (window.Webflow) {
+    window.Webflow.destroy(); // Clean up existing Webflow interactions
+    window.Webflow.ready();   // Reinitialize Webflow ready scripts
+    window.Webflow.require("ix2").init(); // Reinitialize IX2 interactions
+  }
+}  
+  
+
+
+barba.init({
+  preventRunning: true,
+  transitions: [
+    {
+      name: "opacity-transition",
+
+      beforeLeave(data) {
+        // Debug: log before destroy
+        console.log('[Barba beforeLeave] Destroy slider, html classes:', document.documentElement.classList.toString());
+
+        // Destroy slider before transition (if it exists) - MUST happen first
+        // Frontpageslider-6
+        if (typeof window.__frontpageSliderDestroy === 'function') {
+          try {
+            window.__frontpageSliderDestroy();
+            console.log('[Barba beforeLeave] Slider destroyed (v6)');
+          } catch (e) {
+            console.warn('[Barba beforeLeave] Slider destroy error (v6):', e);
+          }
+        }
+        
+        // Frontpageslider-2
+        if (typeof window.__frontpageSlider2Destroy === 'function') {
+          try {
+            window.__frontpageSlider2Destroy();
+            console.log('[Barba beforeLeave] Slider destroyed (v2)');
+          } catch (e) {
+            console.warn('[Barba beforeLeave] Slider destroy error (v2):', e);
+          }
+        }
+
+        // Force remove lenis-stopped immediately after slider destroy
+        document.documentElement.classList.remove('lenis-stopped');
+
+        // Stop Lenis before transition
+        if (window.lenis && typeof window.lenis.stop === 'function') {
+          window.lenis.stop();
+          console.log('[Barba beforeLeave] Lenis stopped');
+        }
+
+        // Lower the zIndex of the current container to make it disappear behind the overlay
+        return gsap.set(data.current.container, {
+          zIndex: 0 // Set zIndex to a low value to move behind the overlay
+        });
+      },
+
+      leave(data) {
+
+        // Animate the current container out (without opacity change)
+        const animateOutCurrent = gsap.fromTo(
+          data.current.container,
+          { y: 0 },
+          { y: -150, ease: "Pagtrans", duration: 1 }
+        );
+
+        // Animate the overlay
+        const animateOverlay = gsap.fromTo(
+          ".overlay",
+          { yPercent: 0 },
+          { yPercent: -100, ease: "Pagtrans", duration: 0.8, onComplete: function() {
+            // Hide the current container when overlay animation completes
+            gsap.set(data.current.container, { display: 'none' });
+          }}
+        );
+
+        return Promise.all([animateOutCurrent, animateOverlay]);
+      },
+
+      enter(data) {
+
+        // Set the next container to be fixed during the transition
+        $(data.next.container).addClass("con-fixed");
+       
+         ;
+         if (document.querySelector('.case-img-hero-container')) {
+    animateTransformOnScroll('.case-img-hero-container', 200);
+        }
+  initializeSpecialCursorFrontpage();
+        initializeCaseReadMoreCursorToggle();
+           if (document.querySelector('.case-theme')) {
+  updateTheme(data.next.container);
+         }
+
+         if (document.querySelector('.header-headline')) {
+    splitAllHeaderHeadlines();
+        }
+initializeCustomCursor();
+         if (document.querySelector('.main-slider')) {
+              setTimeout(() => {
+  BarbaSliderAnimation();
+                 }, 2);
+  }
+            setTimeout(() => {
+              
+       BarbaPageTransitions();
+                  initializeBarbaLottieAnimations();
+    }, 100); 
+        
+
+        const tl = new gsap.timeline({
+          onComplete: function () {
+            updateCurrentClass();
+            updatePage();
+          }
+        });
+
+        // Animate the overlay out of the screen
+        tl.to(".overlay", {
+          yPercent: -205,
+          ease: "Pagtrans",
+          duration: 1
+        });
+
+        // Animate the next container in
+        tl.fromTo(data.next.container, {
+          y: 150,
+          zIndex: 3
+        }, {
+          y: 0,
+          duration: 1,
+          ease: "pagein"
+        }, "-=1");
+
+        // Additional animations
+        gsap.to('.frontpage-loader-border-overlay', {
+          left: '0vw',
+          duration: 0.8,
+          ease: 'linedraw'
+        });
+
+        gsap.to('.frontpage-loader-border-overlay', {
+          opacity: 0,
+          duration: 1.25,
+          ease: 'linedraw',
+          delay: 1.3
+        });
+
+        // Return the timeline and wait for a slight delay before resolving the transition
+        return tl.then(() => {
+          return new Promise((resolve) => {
+            gsap.delayedCall(0.2, () => {
+              resolve();
+            });
+          });
+        });
+      },
+
+      afterEnter(data) {
+        // Force remove lenis-stopped IMMEDIATELY (before anything else)
+        document.documentElement.classList.remove('lenis-stopped');
+        console.log('[Barba afterEnter] Removed lenis-stopped immediately, html classes:', document.documentElement.classList.toString());
+
+        // Ensure slider cleanup is complete (extra safety for both slider versions)
+        // This ensures any lingering observers/RAF loops are killed before Lenis starts
+        if (typeof window.__frontpageSliderDestroy === 'function') {
+          try {
+            window.__frontpageSliderDestroy();
+            console.log('[Barba afterEnter] Extra slider cleanup called (v6)');
+          } catch (e) {
+            console.warn('[Barba afterEnter] Extra slider cleanup error (v6):', e);
+          }
+        }
+        
+        if (typeof window.__frontpageSlider2Destroy === 'function') {
+          try {
+            window.__frontpageSlider2Destroy();
+            console.log('[Barba afterEnter] Extra slider cleanup called (v2)');
+          } catch (e) {
+            console.warn('[Barba afterEnter] Extra slider cleanup error (v2):', e);
+          }
+        }
+
+        // Remove class again after cleanup
+        document.documentElement.classList.remove('lenis-stopped');
+
+        // Debug: check RAF status
+        if (window.__lenisRafId) {
+          console.log('[Barba afterEnter] RAF already running, id:', window.__lenisRafId);
+        } else {
+          console.log('[Barba afterEnter] No RAF running, will start');
+        }
+
+        // Re-bind Lenis runtime (re-attach handlers, restart RAF, reconnect ScrollTrigger)
+        bindLenisRuntime();
+
+        // Remove lenis-stopped class again after bind (double safety)
+        document.documentElement.classList.remove('lenis-stopped');
+
+        // Start Lenis FIRST, then reinitialize other components
+        // This ensures Lenis is active before slider creates its Observer
+        if (window.lenis && typeof window.lenis.start === 'function') {
+          // Start Lenis immediately (don't wait for timeout)
+          window.lenis.start();
+          document.documentElement.classList.remove('lenis-stopped');
+          console.log('[Barba afterEnter] Lenis started immediately, html classes:', document.documentElement.classList.toString());
+          
+          // Also ensure it's removed after a delay (safety net)
+          setTimeout(() => {
+            document.documentElement.classList.remove('lenis-stopped');
+            console.log('[Barba afterEnter] Final class check, html classes:', document.documentElement.classList.toString());
+          }, 800);
+        } else {
+          // If Lenis doesn't exist or start fails, still remove the class
+          setTimeout(() => {
+            document.documentElement.classList.remove('lenis-stopped');
+            console.log('[Barba afterEnter] Lenis not available, forced class removal');
+          }, 800);
+        }
+
+    setTimeout(() => {
+  initializeLottieAnimation({
+      containerId: 'footer-logo',
+      animationPath: 'https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/677aa94d40c2dd9299a1b7a9_footer-logo.json',
+      autoplay: false,
+      delay: 0,
+      inViewTrigger: true, // Trigger animation when footer is in view
+      resetAfter: 0,
+    });
+  }, 200); 
+        // Reinitialize Barba-related content
+         initForBarba();
+   
+         // Ensure scroll-to-top button is attached (safety net with delay for DOM readiness)
+         setTimeout(() => {
+           initLenisScrollToTop();
+         }, 200);
+   
+         resetWebflow(data);
+
+        // Hide the overlay after the transition
+        $(".overlay").addClass("hideoverlay");
+        $(data.next.container).removeClass("con-fixed");
+
+        // Reset frontpage loader border overlay after a short delay
+        gsap.delayedCall(0.5, () => {
+          gsap.set('.frontpage-loader-border-overlay', {
+            left: '-100vw',
+            opacity: 1
+          });
+        });
+      }
+    }
+  ]
+});
+
+
+
+// Initial slider setup
+$(document).ready(function () {
+initForLoad();
+  
+         setTimeout(() => {
+  initializeLottieAnimation({
+      containerId: 'footer-logo',
+      animationPath: 'https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/677aa94d40c2dd9299a1b7a9_footer-logo.json',
+      autoplay: false,
+      delay: 0,
+      inViewTrigger: true, // Trigger animation when footer is in view
+      resetAfter: 0,
+    });
+  }, 200); 
+ 
+    setTimeout(() => {
+       if (document.querySelector('.case-section')) {
+       BarbaPageTransitions();
+   initializeBarbaLottieAnimations();
+  }
+
+   if (document.querySelector('.about-hero-wrapper')) {
+       BarbaPageTransitions();
+   initializeBarbaLottieAnimations();
+  }
+
+ if (document.querySelector('.case-item-section')) {
+       BarbaPageTransitions();
+   initializeBarbaLottieAnimations();
+  }
+               
+    }, 4600); 
+        
+
+
+});
+
+    
+</script></body></html>

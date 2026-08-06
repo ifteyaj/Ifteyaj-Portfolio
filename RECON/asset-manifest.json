@@ -1,0 +1,161 @@
+{
+  "url": "https://www.simonholm.studio/",
+  "capturedVia": "browser-network+recon",
+  "total": 19,
+  "ok": 18,
+  "error": 1,
+  "fontsCss": "fonts/fonts.css",
+  "assets": [
+    {
+      "url": "https://www.simonholm.studio/.webp",
+      "kind": "image",
+      "via": "network",
+      "status": "error",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/css/simonholm-portfolio-v2.webflow.shared.08125b3d8.css",
+      "kind": "stylesheet",
+      "via": "network",
+      "status": "ok",
+      "bytes": 204788,
+      "localPath": "css/cdn.prod.website-files.com/simonholm-portfolio-v2.webflow.shared.08125b3d8-83b0623f93.css"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/692b4e4dea92dbe6d39293f2_p-index-1.webp",
+      "kind": "image",
+      "via": "network",
+      "status": "ok",
+      "bytes": 253978,
+      "localPath": "images/cdn.prod.website-files.com/692b4e4dea92dbe6d39293f2_p-index-1-8d0925ef8e.webp"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/66b77166786b3123910cd33e_PPNeueMontrealTT-Regular.woff2",
+      "kind": "font",
+      "via": "network",
+      "status": "ok",
+      "bytes": 29388,
+      "localPath": "fonts/cdn.prod.website-files.com/66b77166786b3123910cd33e_PPNeueMontrealTT-Regular-0667958c24.woff2"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/68f9e088802b5ec348dac431_b-packagning-mood-4.webp",
+      "kind": "image",
+      "via": "network",
+      "status": "ok",
+      "bytes": 732828,
+      "localPath": "images/cdn.prod.website-files.com/68f9e088802b5ec348dac431_b-packagning-mood-4-aa82382502.webp"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/69760d69248c608aadbfd085_snuw-hero-2.webp",
+      "kind": "image",
+      "via": "network",
+      "status": "ok",
+      "bytes": 1146098,
+      "localPath": "images/cdn.prod.website-files.com/69760d69248c608aadbfd085_snuw-hero-2-8615ce32d8.webp"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2dd6/68a571c2f9d051f5356560c1_BF-Hero.webp",
+      "kind": "image",
+      "via": "network",
+      "status": "ok",
+      "bytes": 416932,
+      "localPath": "images/cdn.prod.website-files.com/68a571c2f9d051f5356560c1_BF-Hero-a22b8eceda.webp"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/66b77166a8c1bb478d55f70a_PPNeueMontrealTT-Medium.woff2",
+      "kind": "font",
+      "via": "network",
+      "status": "ok",
+      "bytes": 31252,
+      "localPath": "fonts/cdn.prod.website-files.com/66b77166a8c1bb478d55f70a_PPNeueMontrealTT-Medium-0f19e8affb.woff2"
+    },
+    {
+      "url": "https://unpkg.com/swiper/swiper-bundle.min.css",
+      "kind": "stylesheet",
+      "via": "network",
+      "status": "ok",
+      "bytes": 14610,
+      "localPath": "css/unpkg.com/swiper-bundle.min-0a18714d8e.css"
+    },
+    {
+      "url": "https://unpkg.com/swiper@14.0.7/swiper-bundle.min.css",
+      "kind": "stylesheet",
+      "via": "network",
+      "status": "ok",
+      "bytes": 14610,
+      "localPath": "css/unpkg.com/swiper-bundle.min-3797bbd255.css"
+    },
+    {
+      "url": "https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic",
+      "kind": "stylesheet",
+      "via": "network",
+      "status": "ok",
+      "bytes": 5604,
+      "localPath": "css/fonts.googleapis.com/css-fcdd4e7957.bin"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/ptserif/v19/EJRQQgYoZZY2vCFuvAFT9gaQZynfoOFC-I0.woff2",
+      "kind": "font",
+      "via": "network",
+      "status": "ok",
+      "bytes": 14152,
+      "localPath": "fonts/fonts.gstatic.com/EJRQQgYoZZY2vCFuvAFT9gaQZynfoOFC-I0-c4bb8a4f77.woff2"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/ptserif/v19/EJRTQgYoZZY2vCFuvAFT_r21cgT9rcs.woff2",
+      "kind": "font",
+      "via": "network",
+      "status": "ok",
+      "bytes": 14236,
+      "localPath": "fonts/fonts.gstatic.com/EJRTQgYoZZY2vCFuvAFT_r21cgT9rcs-3f2b7cf88c.woff2"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/ptserif/v19/EJRVQgYoZZY2vCFuvAFWzr-_dSb_.woff2",
+      "kind": "font",
+      "via": "network",
+      "status": "ok",
+      "bytes": 13400,
+      "localPath": "fonts/fonts.gstatic.com/EJRVQgYoZZY2vCFuvAFWzr-_dSb_-19f8c355bf.woff2"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/ptserif/v19/EJRSQgYoZZY2vCFuvAnt66qSVyvVp8NA.woff2",
+      "kind": "font",
+      "via": "network",
+      "status": "ok",
+      "bytes": 13540,
+      "localPath": "fonts/fonts.gstatic.com/EJRSQgYoZZY2vCFuvAnt66qSVyvVp8NA-4e293c0ca6.woff2"
+    },
+    {
+      "url": "https://assets.simonholml.com/Portfolio/Case/Wallhack/WH-Hero.mp4",
+      "kind": "media",
+      "via": "network",
+      "status": "ok",
+      "bytes": 1289916,
+      "localPath": "media/assets.simonholml.com/WH-Hero-4a1fbfe374.mp4"
+    },
+    {
+      "url": "https://assets.simonholml.com/Portfolio/Case/Wallhack/WH-Hero.mp4.webp",
+      "kind": "image",
+      "via": "network",
+      "status": "ok",
+      "bytes": 55702,
+      "localPath": "images/assets.simonholml.com/WH-Hero.mp4-948b45452d.webp"
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6649cbdf19aa7125580e2ccb/6949508af718bcfd496bee6d_SH-fav-32x32.png",
+      "kind": "image",
+      "via": "network",
+      "status": "ok",
+      "bytes": 432,
+      "localPath": "images/cdn.prod.website-files.com/6949508af718bcfd496bee6d_SH-fav-32x32-4e700a8662.png"
+    },
+    {
+      "url": "https://www.simonholm.studio/",
+      "kind": "image",
+      "via": "recon",
+      "status": "ok",
+      "bytes": 81383,
+      "localPath": "images/www.simonholm.studio/asset-a362ebb5d9.bin"
+    }
+  ]
+}
