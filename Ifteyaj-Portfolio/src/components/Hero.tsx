@@ -6,40 +6,40 @@ import { projects } from "@/data/projects";
 import { siteConfig } from "@/data/site";
 
 interface HeroProps {
-  fullscreen: boolean;
-  onToggleFullscreen: () => void;
+  gridView: boolean;
+  onToggleGridView: () => void;
 }
 
-export default function Hero({ fullscreen, onToggleFullscreen }: HeroProps) {
+export default function Hero({ gridView, onToggleGridView }: HeroProps) {
   return (
     <section className="section is-hero">
       <div className="container is-hero">
         <div className="slider-toggle-nav">
           <div className="slider-nav-border" />
-          <div className="circle-btn container-arrows">
+          <div className="circle-btn container-arrows" aria-label="trail{link}">
             <button
               type="button"
               className="circle-scale-btn"
-              aria-label="Toggle fullscreen"
-              onClick={onToggleFullscreen}
+              aria-label={gridView ? "Switch to slider view" : "Switch to grid view"}
+              onClick={onToggleGridView}
             >
-              {fullscreen ? (
+              {gridView ? (
                 <LottiePlayer src="/lottie/btn-close.json" loop={false} autoplay={false} />
               ) : (
                 <LottiePlayer src="/lottie/btn-open.json" loop={false} autoplay={false} />
               )}
             </button>
           </div>
-          <div className="circle-minimize">
-            <div className="minimizetool">
-              <button
-                type="button"
-                className="circle-minimize-btn"
-                aria-label="Exit fullscreen"
-                onClick={onToggleFullscreen}
-              />
-            </div>
+        <div className="circle-minimize" aria-label="trail{link}">
+          <div className="minimizetool">
+            <button
+              type="button"
+              className="circle-minimize-btn"
+              aria-label="Exit grid view"
+              onClick={onToggleGridView}
+            />
           </div>
+        </div>
         </div>
 
         <div className="main-slider">

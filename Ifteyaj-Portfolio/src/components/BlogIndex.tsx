@@ -1,0 +1,110 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
+import Lenis from "lenis";
+import { gsap, registerEases } from "@/lib/gsap";
+import Navbar from "@/components/Navbar";
+import CustomCursor from "@/components/CustomCursor";
+import SiteFooter from "@/components/SiteFooter";
+import { blogPosts } from "@/data/blog";
+
+export default function BlogIndex() {
+  const rootRef = useRef<HTMLDivElement>(null);
+  const [revealed, setRevealed] = useState(false);
+
+  useEffect(() => {
+    const root = rootRef.current;
+    if (!root) return;
+
+    registerEases();
+    const qs = <T extends Element = HTMLElement>(sel: string): T[] =>
+      Array.from(root.querySelectorAll<T>(sel));
+
+    const lenis = new Lenis({ lerp: 0.1, smoothWheel: true });
+    let rafId: number;
+    const raf = (time: number) => {
+      lenis.raf(time);
+      rafId = requestAnimationFrame(raf);
+    };
+    rafId = requestAnimationFrame(raf);
+
+    qs<HTMLElement>(".menu-link").forEach((link) => {
+      const first = link.querySelector<HTMLElement>(".first-menu-link");
+      const second = link.querySelector<HTMLElement>(".second-menu-link");
+      link.addEventListener("mouseenter", () => {
+        if (first) gsap.to(first, { y: "-100%", duration: 0.6, ease: "hoverin" });
+        if (second) gsap.to(second, { y: "-100%", duration: 0.6, ease: "hoverin" });
+      });
+      link.addEventListener("mouseleave", () => {
+        if (first) gsap.to(first, { y: "0%", duration: 1, ease: "hoverout" });
+        if (second) gsap.to(second, { y: "0%", duration: 1, ease: "hoverout" });
+      });
+    });
+
+    gsap.fromTo(
+      ".moodboard-title",
+      { y: 120 },
+      { y: 0, duration: 1.4, ease: "texttshow", delay: 0.1 }
+    );
+    gsap.fromTo(
+      ".moodboard-sub",
+      { y: 40, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.9, ease: "texttshow", delay: 0.6 }
+    );
+    gsap.fromTo(
+      ".moodboard-pin",
+      { y: 60, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.9, ease: "texttshow", stagger: 0.06, delay: 0.8 }
+    );
+    gsap.fromTo(
+      ".case-footer-block",
+      { y: 80, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1, ease: "texttshow", delay: 1.2 }
+    );
+
+    gsap.to(".first-menu-link", { y: "0%", duration: 1, ease: "texttshow", delay: 0.3 });
+
+    setTimeout(() => {
+      setRevealed(true);
+      gsap.to(".nav-clock-dot", { y: "0%", duration: 1, ease: "texttshow" });
+      gsap.to(".nav-clock", { y: "0%", duration: 1, ease: "texttshow" });
+      gsap.to(".nav-clock-infomation", { y: "0%", duration: 1, ease: "texttshow" });
+    }, 600);
+
+    return () => {
+      cancelAnimationFrame(rafId);
+      lenis.destroy();
+    };
+  }, []);
+
+  return (
+    <div ref={rootRef} className="moodboard-page">
+      <Navbar revealed={revealed} />
+      <CustomCursor />
+
+      <main className="moodboard-main">
+        <header className="moodboard-header">
+          <h1 className="moodboard-title">Blog</h1>
+        </header>
+
+        <div className="moodboard-grid">
+          {blogPosts.map((pin, i) => (
+            <Link key={pin.slug} href={`/blog/${pin.slug}`} className="moodboard-pin">
+              <div className={`moodboard-pin-media moodboard-pin-media--${(i % 5) + 1}`}>
+                <img src={pin.image} alt={pin.title} className="moodboard-pin-img" loading="lazy" />
+              </div>
+              <div className="moodboard-pin-body">
+                <span className="moodboard-pin-tag">{pin.tag}</span>
+                <h3 className="moodboard-pin-title">{pin.title}</h3>
+                <p className="moodboard-pin-desc">{pin.description}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        <SiteFooter />
+      </main>
+    </div>
+  );
+}

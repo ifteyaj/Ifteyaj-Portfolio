@@ -1,4 +1,3 @@
-import LottiePlayer from "@/components/ui/Lottie";
 import { siteConfig } from "@/data/site";
 
 export default function Loader() {
@@ -6,7 +5,8 @@ export default function Loader() {
     <div className="frontpage-loader" aria-hidden="true">
       <div className="frontpage-loader-container">
         <div className="logo-loader-wrapper">
-          <LottiePlayer src="/lottie/logo-loader.json" className="frontpage-logo-loader" />
+          <img src="/nav-favicon.svg" alt="" className="frontpage-logo-loader" />
+          <img src="/nav-logo-primary.svg" alt="" className="frontpage-logo-primary" />
         </div>
         <div className="loader-headline-right">
           <div className="loader-header-one text-aling-right">
@@ -35,9 +35,9 @@ export default function Loader() {
           </div>
         </div>
         <div className="frontpage-loader-counter">
-          <div className="frontpage-counter-content">(</div>
+          <div className="frontpage-counter-content">[</div>
           <div className="frontpage-counter-number">0</div>
-          <div className="frontpage-counter-content">)</div>
+          <div className="frontpage-counter-content">]</div>
         </div>
       </div>
     </div>

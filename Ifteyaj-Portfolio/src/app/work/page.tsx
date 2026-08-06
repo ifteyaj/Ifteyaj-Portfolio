@@ -1,7 +1,7 @@
 import WorkIndex from "@/components/WorkIndex";
 
 export const metadata = {
-  title: "Index — Ifteyaj",
+  title: "All Works — Ifteyaj",
 };
 
 export default function WorkPage() {

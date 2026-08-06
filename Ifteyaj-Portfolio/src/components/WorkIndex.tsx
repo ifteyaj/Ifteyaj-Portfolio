@@ -5,10 +5,9 @@ import Link from "next/link";
 import Lenis from "lenis";
 import { gsap, registerEases } from "@/lib/gsap";
 import Navbar from "@/components/Navbar";
-import LottiePlayer from "@/components/ui/Lottie";
 import CustomCursor from "@/components/CustomCursor";
+import SiteFooter from "@/components/SiteFooter";
 import { projects } from "@/data/projects";
-import { siteConfig } from "@/data/site";
 
 export default function WorkIndex() {
   const rootRef = useRef<HTMLDivElement>(null);
@@ -62,22 +61,17 @@ export default function WorkIndex() {
       { y: 0, duration: 1.4, ease: "texttshow", delay: 0.1 }
     );
     gsap.fromTo(
-      ".index-arrow",
-      { opacity: 0 },
-      { opacity: 1, duration: 0.8, ease: "texttshow", delay: 0.6 }
-    );
-    gsap.fromTo(
       ".index-entry",
       { y: 60, opacity: 0 },
       { y: 0, opacity: 1, duration: 0.9, ease: "texttshow", stagger: 0.1, delay: 0.3 }
     );
     gsap.fromTo(
-      ".index-footer-block",
+      ".case-footer-block",
       { y: 80, opacity: 0 },
       { y: 0, opacity: 1, duration: 1, ease: "texttshow", delay: 1.0 }
     );
     gsap.fromTo(
-      ".index-bottom-nav",
+      ".case-bottom-nav",
       { y: 40, opacity: 0 },
       { y: 0, opacity: 1, duration: 0.8, ease: "texttshow", delay: 1.2 }
     );
@@ -107,10 +101,9 @@ export default function WorkIndex() {
       <main className="index-main">
         <header className="index-header">
           <div className="index-page-title">
-            <span className="index-title-text">Index</span>
+            <span className="index-title-text">All Works</span>
             <span className="index-title-count">({String(projects.length).padStart(2, "0")})</span>
           </div>
-          <Link href="/" className="index-arrow">[↓]</Link>
         </header>
 
         <div className="index-entries">
@@ -133,58 +126,43 @@ export default function WorkIndex() {
           ))}
         </div>
 
-        <footer className="index-footer-block">
-          <div className="index-footer-left">
-            <LottiePlayer src="/lottie/nav-logo.json" className="index-footer-logo" />
+        <section className="index-illustrations">
+          <h2 className="index-illustrations-title">Illustrations</h2>
+          <div className="index-illustrations-grid">
+            <div className="index-illustrations-item">
+              <img src="/images/illustration-1.png" alt="Illustration 1" className="index-illustrations-img" loading="lazy" />
+            </div>
+            <div className="index-illustrations-item">
+              <img src="/images/illustration-2.png" alt="Illustration 2" className="index-illustrations-img" loading="lazy" />
+            </div>
+            <div className="index-illustrations-item">
+              <img src="/images/illustration-3.png" alt="Illustration 3" className="index-illustrations-img" loading="lazy" />
+            </div>
+            <div className="index-illustrations-item">
+              <img src="/images/illustration-4.png" alt="Illustration 4" className="index-illustrations-img" loading="lazy" />
+            </div>
           </div>
-          <a href="#" className="index-back-to-top" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}>
-            Back to top [↑]
-          </a>
-        </footer>
+        </section>
 
-        <div className="index-bottom-nav">
-          <div className="index-bottom-col">
-            <Link href="/" className="menu-link">
-              <div className="menu-text first-menu-link"><p className="menu-big-text">Featured ({String(projects.length).padStart(1, "0")})</p></div>
-              <div className="menu-text second-menu-link"><p className="menu-big-text">Featured ({String(projects.length).padStart(1, "0")})</p></div>
-            </Link>
-            <Link href="/work" className="menu-link">
-              <div className="menu-text first-menu-link"><p className="menu-big-text">Index ({String(projects.length).padStart(2, "0")})</p></div>
-              <div className="menu-text second-menu-link"><p className="menu-big-text">Index ({String(projects.length).padStart(2, "0")})</p></div>
-            </Link>
+        <section className="index-illustrations index-portraits">
+          <h2 className="index-illustrations-title">Portrait / Vexel Art</h2>
+          <div className="index-illustrations-grid">
+            <div className="index-illustrations-item">
+              <img src="/images/portrait-1.png" alt="Portrait 1" className="index-illustrations-img" loading="lazy" />
+            </div>
+            <div className="index-illustrations-item">
+              <img src="/images/portrait-2.png" alt="Portrait 2" className="index-illustrations-img" loading="lazy" />
+            </div>
+            <div className="index-illustrations-item">
+              <img src="/images/portrait-3.png" alt="Portrait 3" className="index-illustrations-img" loading="lazy" />
+            </div>
+            <div className="index-illustrations-item">
+              <img src="/images/portrait-4.png" alt="Portrait 4" className="index-illustrations-img" loading="lazy" />
+            </div>
           </div>
-          <div className="index-bottom-col">
-            <Link href="/about" className="menu-link">
-              <div className="menu-text first-menu-link"><p className="menu-big-text">About</p></div>
-              <div className="menu-text second-menu-link"><p className="menu-big-text">About</p></div>
-            </Link>
-          </div>
-          <div className="index-bottom-col">
-            {siteConfig.socials.map((s) => (
-              <a key={s.label} href={s.href} target="_blank" className="menu-link">
-                <div className="menu-text first-menu-link"><p className="menu-big-text">{s.label}</p></div>
-                <div className="menu-text second-menu-link"><p className="menu-big-text">{s.label}</p></div>
-              </a>
-            ))}
-          </div>
-          <div className="index-bottom-col">
-            <a href={`mailto:${siteConfig.email}`} className="menu-link">
-              <div className="menu-text first-menu-link"><p className="menu-big-text">{siteConfig.email}</p></div>
-              <div className="menu-text second-menu-link"><p className="menu-big-text">{siteConfig.email}</p></div>
-            </a>
-            <a href={`tel:${siteConfig.phone}`} className="menu-link">
-              <div className="menu-text first-menu-link"><p className="menu-big-text">{siteConfig.phone}</p></div>
-              <div className="menu-text second-menu-link"><p className="menu-big-text">{siteConfig.phone}</p></div>
-            </a>
-          </div>
-          <div className="index-bottom-col">
-            <span className="index-bottom-brand">Brand Designer</span>
-            <span className="index-bottom-brand">Vibe Coder</span>
-          </div>
-          <div className="index-bottom-col">
-            <span className="index-bottom-copy">{siteConfig.copyright}</span>
-          </div>
-        </div>
+        </section>
+
+        <SiteFooter />
       </main>
     </div>
   );

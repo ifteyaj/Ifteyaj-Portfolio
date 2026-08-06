@@ -1,5 +1,6 @@
 export const about = {
   heroName: "Ifteyaj",
+  heroImage: "/images/about-hero.webp",
   heroTagline: "Take a deep dive into my life of layers & Shapes",
   intro:
     "A digital-first brand designer specializing in strategic visual communication and story-driven brand identities.",

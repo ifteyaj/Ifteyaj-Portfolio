@@ -1,14 +1,12 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
 import Lenis from "lenis";
 import { gsap, registerEases } from "@/lib/gsap";
 import Navbar from "@/components/Navbar";
 import CustomCursor from "@/components/CustomCursor";
-import LottiePlayer from "@/components/ui/Lottie";
+import SiteFooter from "@/components/SiteFooter";
 import { about } from "@/data/about";
-import { projects } from "@/data/projects";
 import { siteConfig } from "@/data/site";
 
 export default function AboutClient() {
@@ -87,6 +85,9 @@ export default function AboutClient() {
       { y: 0, opacity: 1, duration: 1, ease: "texttshow", stagger: 0.1, delay: 1.9 }
     );
 
+    // Reveal nav/footer link text (first-menu-link starts at translateY(100%) — hidden)
+    gsap.to(".first-menu-link", { y: "0%", duration: 1, ease: "texttshow", delay: 0.3 });
+
     setTimeout(() => {
       setRevealed(true);
       gsap.to(".nav-clock-dot", { y: "0%", duration: 1, ease: "texttshow" });
@@ -105,22 +106,27 @@ export default function AboutClient() {
       <Navbar revealed={revealed} />
       <CustomCursor />
 
-      <main className="about-main">
-        <header className="about-hero">
+      <div className="about-hero">
+        <div className="about-hero-img">
+          <img src={about.heroImage} alt={about.heroName} />
+        </div>
+        <div className="about-hero-content">
           <p className="about-hero-label">Hello, I&apos;m</p>
           <div className="about-hero-name-wrap">
             <h1 className="about-hero-name">{about.heroName}</h1>
           </div>
-          <p className="about-hero-tagline">{about.heroTagline}</p>
-          <div className="about-scroll-hint">
-            <span className="about-scroll-arrow">[↓]</span>
-            <span className="about-scroll-text">Scroll</span>
-          </div>
-        </header>
+        </div>
+      </div>
 
-        <section className="about-intro">
-          <p className="about-intro-text">{about.intro}</p>
-        </section>
+      <div className="about-scroll-hint">
+        <div className="about-scroll-left">
+          <span className="about-scroll-arrow">[↓]</span>
+          <span className="about-scroll-text">Scroll</span>
+        </div>
+        <span className="about-hero-tagline">{about.heroTagline}</span>
+      </div>
+
+      <main className="about-main">
 
         <section className="about-bio">
           <h2 className="about-bio-heading">{about.bioHeading}</h2>
@@ -157,71 +163,7 @@ export default function AboutClient() {
           </div>
         </section>
 
-        <section className="about-recognition about-list-block">
-          <h2 className="about-list-heading">Recognition</h2>
-          <div className="about-recognition-list">
-            {about.recognition.map((item) => (
-              <div key={`${item.year}-${item.title}`} className="about-recognition-item">
-                <span className="about-recognition-year">{item.year}</span>
-                <span className="about-recognition-title">{item.title}</span>
-                <span className="about-recognition-project">{item.project}</span>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <footer className="about-footer-block">
-          <div className="about-footer-left">
-            <LottiePlayer src="/lottie/nav-logo.json" className="about-footer-logo" />
-          </div>
-          <a href="#" className="about-back-to-top" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}>
-            Back to top [↑]
-          </a>
-        </footer>
-
-        <div className="about-bottom-nav">
-          <div className="about-bottom-col">
-            <Link href="/" className="menu-link">
-              <div className="menu-text first-menu-link"><p className="menu-big-text">Featured ({String(projects.length).padStart(1, "0")})</p></div>
-              <div className="menu-text second-menu-link"><p className="menu-big-text">Featured ({String(projects.length).padStart(1, "0")})</p></div>
-            </Link>
-            <Link href="/work" className="menu-link">
-              <div className="menu-text first-menu-link"><p className="menu-big-text">Index ({String(projects.length).padStart(2, "0")})</p></div>
-              <div className="menu-text second-menu-link"><p className="menu-big-text">Index ({String(projects.length).padStart(2, "0")})</p></div>
-            </Link>
-          </div>
-          <div className="about-bottom-col">
-            <Link href="/about" className="menu-link">
-              <div className="menu-text first-menu-link"><p className="menu-big-text">About</p></div>
-              <div className="menu-text second-menu-link"><p className="menu-big-text">About</p></div>
-            </Link>
-          </div>
-          <div className="about-bottom-col">
-            {siteConfig.socials.map((s) => (
-              <a key={s.label} href={s.href} target="_blank" className="menu-link">
-                <div className="menu-text first-menu-link"><p className="menu-big-text">{s.label}</p></div>
-                <div className="menu-text second-menu-link"><p className="menu-big-text">{s.label}</p></div>
-              </a>
-            ))}
-          </div>
-          <div className="about-bottom-col">
-            <a href={`mailto:${siteConfig.email}`} className="menu-link">
-              <div className="menu-text first-menu-link"><p className="menu-big-text">{siteConfig.email}</p></div>
-              <div className="menu-text second-menu-link"><p className="menu-big-text">{siteConfig.email}</p></div>
-            </a>
-            <a href={`tel:${siteConfig.phone}`} className="menu-link">
-              <div className="menu-text first-menu-link"><p className="menu-big-text">{siteConfig.phone}</p></div>
-              <div className="menu-text second-menu-link"><p className="menu-big-text">{siteConfig.phone}</p></div>
-            </a>
-          </div>
-          <div className="about-bottom-col">
-            <span className="about-bottom-brand">Brand Designer</span>
-            <span className="about-bottom-brand">Vibe Coder</span>
-          </div>
-          <div className="about-bottom-col">
-            <span className="about-bottom-copy">{siteConfig.copyright}</span>
-          </div>
-        </div>
+        <SiteFooter />
       </main>
     </div>
   );

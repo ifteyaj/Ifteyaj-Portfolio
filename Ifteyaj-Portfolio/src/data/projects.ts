@@ -176,6 +176,41 @@ export const projects: Project[] = [
       },
     ],
   },
+  {
+    index: 6,
+    slug: "spendo",
+    title: "Spendo",
+    category: "Brand Identity",
+    secondaryCategory: "Fintech",
+    year: "2024",
+    images: ["/images/spendo.webp", "/images/spendo.webp", "/images/spendo.webp", "/images/spendo.webp"],
+    href: "/work/spendo",
+    short:
+      "A modern fintech brand identity built around clarity, trust and seamless digital payments.",
+    client: "Spendo",
+    agency: "Baseborn",
+    industry: "Fintech",
+    role: "Brand Designer",
+    intro: [
+      {
+        body: "Spendo is a digital payments platform that needed a brand as smooth as its transactions. We built an identity around geometric precision, a bold blue palette and a mark that signals forward motion.",
+      },
+    ],
+    sections: [
+      {
+        heading: "Background",
+        body: "Fintech brands often fall into two camps: coldly corporate or aggressively playful. Spendo wanted something in between — a visual language that felt trustworthy and premium, yet approachable and modern.",
+      },
+      {
+        heading: "Concept",
+        body: "The identity is anchored by a stylized 'S' mark — a folded ribbon that conveys fluidity and precision in equal measure. The deep navy and electric blue palette reinforces trust while the geometric typography keeps things sharp and legible across card, screen and print.",
+      },
+      {
+        heading: "Conclusion",
+        body: "The result is a cohesive fintech identity that works effortlessly across physical cards, mobile interfaces and marketing touchpoints — clean, confident and unmistakably Spendo.",
+      },
+    ],
+  },
 ];
 
 export const projectCount = projects.length;

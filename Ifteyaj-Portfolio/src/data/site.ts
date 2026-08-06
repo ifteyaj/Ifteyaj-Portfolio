@@ -17,14 +17,14 @@ export const siteConfig: SiteConfig = {
     },
     {
       label: "Instagram",
-      href: "https://www.instagram.com/",
+      href: "https://instagram.com/_charlieforc/",
     },
   ],
 };
 
 export const navLinks: NavLinkItem[] = [
-  { label: "Featured", count: 5, href: "/" },
-  { label: "Index", count: 5, href: "/work" },
+  { label: "Featured", count: 6, href: "/" },
+  { label: "All Works", count: 6, href: "/work" },
 ];
 
 export const navInfoLinks: NavLinkItem[] = [

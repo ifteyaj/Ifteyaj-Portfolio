@@ -1,19 +1,39 @@
+"use client";
+
+import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
-import LottiePlayer from "@/components/ui/Lottie";
-import LiveClock from "@/components/ui/LiveClock";
 import { navLinks, navInfoLinks, siteConfig } from "@/data/site";
 
 interface NavbarProps {
-  revealed: boolean;
+  revealed?: boolean;
 }
 
-export default function Navbar({ revealed }: NavbarProps) {
+export default function Navbar(_props: NavbarProps) {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = useCallback(() => {
+    setMenuOpen((prev) => !prev);
+  }, []);
+
+  const closeMenu = useCallback(() => {
+    setMenuOpen(false);
+  }, []);
+
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [menuOpen]);
+
   return (
     <nav className="navbar" role="banner">
       <div className="nav-bar">
         <div className="nav-logo-wrapper">
-          <Link href="/" className="nav-logo-link" aria-label="Ifteyaj studio home">
-            <LottiePlayer src="/lottie/nav-logo.json" className="nav-logo" />
+          <Link href="/" className="nav-logo-link" aria-label="Ifteyaj studio home" onClick={closeMenu}>
+            <img src="/nav-logo-primary.svg" alt="Ifteyaj" className="nav-logo" />
           </Link>
         </div>
 
@@ -70,8 +90,68 @@ export default function Navbar({ revealed }: NavbarProps) {
           <span className="menu-big-text brand-designer-sub">Vibe Coder</span>
         </div>
 
-        <div className="nav-clock-wrapper">
-          <LiveClock visible={revealed} label="(BDT)" />
+        <div className="nav-clock-wrapper moodboard-nav-link">
+          <Link href="/moodboard" className="menu-link page_link" onClick={closeMenu}>
+            <div className="menu-text first-menu-link">
+              <p className="menu-big-text">Moodboard</p>
+            </div>
+            <div className="menu-text second-menu-link">
+              <p className="menu-big-text">Moodboard</p>
+            </div>
+          </Link>
+          <Link href="/blog" className="menu-link page_link" onClick={closeMenu}>
+            <div className="menu-text first-menu-link">
+              <p className="menu-big-text">Blog</p>
+            </div>
+            <div className="menu-text second-menu-link">
+              <p className="menu-big-text">Blog</p>
+            </div>
+          </Link>
+        </div>
+
+        <button
+          className={`nav-hamburger ${menuOpen ? "is-open" : ""}`}
+          type="button"
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={menuOpen}
+          onClick={toggleMenu}
+        >
+          <span className="nav-hamburger-line" />
+          <span className="nav-hamburger-line" />
+        </button>
+      </div>
+
+      <div className={`nav-mobile-menu ${menuOpen ? "is-open" : ""}`}>
+        <div className="nav-mobile-inner">
+          <div className="nav-mobile-section">
+            {navLinks.map((link) => (
+              <Link key={link.label} href={link.href} className="nav-mobile-link" onClick={closeMenu}>
+                {link.label} <span className="nav-mobile-count">({link.count?.toString().padStart(2, "0")})</span>
+              </Link>
+            ))}
+          </div>
+          <div className="nav-mobile-section">
+            <Link href="/moodboard" className="nav-mobile-link" onClick={closeMenu}>Moodboard</Link>
+          </div>
+          <div className="nav-mobile-section">
+            <Link href="/blog" className="nav-mobile-link" onClick={closeMenu}>Blog</Link>
+          </div>
+          <div className="nav-mobile-section">
+            <Link href="/about" className="nav-mobile-link" onClick={closeMenu}>About</Link>
+          </div>
+          <div className="nav-mobile-section nav-mobile-contact">
+            <a href={`mailto:${siteConfig.email}`} className="nav-mobile-link">{siteConfig.email}</a>
+            <a href={`tel:${siteConfig.phone}`} className="nav-mobile-link">{siteConfig.phone}</a>
+          </div>
+          <div className="nav-mobile-section nav-mobile-social">
+            {siteConfig.socials.map((s) => (
+              <a key={s.label} href={s.href} target="_blank" className="nav-mobile-link" rel="noopener noreferrer">{s.label}</a>
+            ))}
+          </div>
+          <div className="nav-mobile-meta">
+            <span>Brand Designer</span>
+            <span>Vibe Coder</span>
+          </div>
         </div>
       </div>
     </nav>

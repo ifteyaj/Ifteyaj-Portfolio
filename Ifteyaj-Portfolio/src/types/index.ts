@@ -54,3 +54,27 @@ export interface SiteConfig {
   phone: string;
   socials: SocialItem[];
 }
+
+export interface MoodboardPin {
+  slug: string;
+  title: string;
+  tag: string;
+  image: string;
+  description: string;
+}
+
+export interface BlogPost {
+  slug: string;
+  title: string;
+  tag: string;
+  image: string;
+  description: string;
+}
+
+export interface MoodboardItem {
+  title: string;
+  tag: string;
+  image: string;
+  width: number;
+  height: number;
+}
