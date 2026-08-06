@@ -1045,12 +1045,172 @@
       content: "";
     }
   </style>
+
+  <style>
+    /* ── MOBILE MENU TOGGLE ── */
+    .mobile-menu-toggle {
+      display: none;
+      cursor: pointer;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      width: 44px;
+      height: 44px;
+      padding: 12px;
+      background: #1a1a1a;
+      border-radius: 4px;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+
+    .mobile-menu-toggle:hover {
+      background: #333;
+    }
+
+    .hamburger {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: #fff;
+      position: relative;
+      transition: all 0.3s;
+    }
+
+    .hamburger::before,
+    .hamburger::after {
+      content: "";
+      width: 20px;
+      height: 2px;
+      background: #fff;
+      position: absolute;
+      left: 0;
+      transition: all 0.3s;
+    }
+
+    .hamburger::before {
+      top: -6px;
+    }
+
+    .hamburger::after {
+      top: 6px;
+    }
+
+    .hamburger.active::before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+
+    .hamburger.active::after {
+      top: 0;
+      transform: rotate(-45deg);
+    }
+
+    /* ── MOBILE MENU ── */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #1a1a1a;
+      z-index: 998;
+      padding: 80px 20px 20px;
+      overflow-y: auto;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+    }
+
+    .mobile-menu.open {
+      display: block;
+      transform: translateX(0);
+    }
+
+    .mobile-menu-toggle.active .hamburger {
+      display: block;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 12px 0;
+      border-bottom: 1px solid #333;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.15rem;
+      font-weight: 500;
+      text-align: left;
+    }
+
+    .mobile-menu a:hover {
+      background: #2a2a2a;
+    }
+
+    .mobile-menu .mobile-nav-logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      padding: 0;
+      display: block;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: #fff;
+      font-family: inherit;
+    }
+
+    .mobile-nav-item {
+      padding: 8px 0;
+    }
+
+    .mobile-nav-item a {
+      display: block;
+      padding: 10px 0;
+      border-bottom: 1px solid #333;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .mobile-nav-item a:hover {
+      background: #2a2a2a;
+    }
+
+    @media (max-width: 1024px) and (min-width: 768px) {
+      .mobile-menu-toggle {
+        display: none;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .mobile-menu-toggle {
+        display: flex;
+      }
+      .mobile-menu {
+        transform: translateX(100%);
+      }
+      .mobile-menu.open {
+        transform: translateX(0);
+        display: block;
+      }
+    }
+  </style>
 </head>
 
 <body class="body">
 
   <!-- ── NAVBAR ── -->
   <nav class="navbar w-nav" role="banner">
+    <!-- Mobile menu toggle button -->
+    <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+      <div class="hamburger-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
     <div class="nav-bar">
       <div class="nav-logo-wrapper">
         <a href="#" class="nav-logo-link w-inline-block">
@@ -1110,10 +1270,27 @@
         </div>
       </div>
     </div>
-  </nav>
+   </nav>
 
-  <!-- ── LOADER ── -->
-  <div class="frontpage-loader">
+   <!-- ── MOBILE MENU ── -->
+   <div class="mobile-menu" id="mobile-menu">
+     <div class="mobile-nav-logo">Simon Holm</div>
+     <div class="mobile-nav-item">
+       <a href="#">Featured (05)</a>
+     </div>
+     <div class="mobile-nav-item">
+       <a href="#">Index (05)</a>
+     </div>
+     <div class="mobile-nav-item">
+       <a href="#">About</a>
+     </div>
+     <div class="mobile-nav-item">
+       <a href="#">hello@simonholm.studio</a>
+     </div>
+   </div>
+
+   <!-- ── LOADER ── -->
+   <div class="frontpage-loader">
     <div class="frontpage-loader-container">
       <div class="logo-loader-wrapper">
         <div id="frontpage-logo-loader" class="frontpage-logo-loader"></div>
@@ -1707,6 +1884,28 @@
 
       // Set initial bottom strip opacities
       bottomItems.forEach((b, i) => { b.style.opacity = i === 0 ? "1" : "0.45"; });
+
+      // Mobile menu toggle
+      const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const hamburger = document.querySelector(".hamburger");
+
+      if (mobileMenuToggle && mobileMenu && hamburger) {
+        mobileMenuToggle.addEventListener("click", () => {
+          mobileMenuToggle.classList.toggle("active");
+          hamburger.classList.toggle("active");
+          mobileMenu.classList.toggle("open");
+        });
+        
+        // Close mobile menu when clicking a menu item
+        mobileMenu.querySelectorAll("a").forEach(link => {
+          link.addEventListener("click", () => {
+            mobileMenuToggle.classList.remove("active");
+            hamburger.classList.remove("active");
+            mobileMenu.classList.remove("open");
+          });
+        });
+      }
 
       // Autoplay Wallhack video
       const vids = document.querySelectorAll(".main-slider_img-wrap video");
