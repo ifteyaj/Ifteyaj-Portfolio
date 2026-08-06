@@ -1340,6 +1340,23 @@ html.lenis body {
 .case-back-to-top:hover {
   color: var(--white);
 }
+.case-footer-cta-link {
+  font-family: var(--main-type);
+  font-size: 7rem;
+  font-weight: var(--main-weight-big);
+  line-height: var(--big-text-line);
+  letter-spacing: var(--big-text-space);
+  color: var(--white);
+  display: inline-block;
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+  padding-bottom: 7rem;
+  max-width: 60rem;
+}
+.case-footer-cta-link:hover {
+  color: var(--grey);
+}
 
 /* ── Bottom nav (matches index) ── */
 .case-bottom-nav {

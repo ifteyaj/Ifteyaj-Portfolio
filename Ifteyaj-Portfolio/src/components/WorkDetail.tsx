@@ -161,6 +161,9 @@ export default function WorkDetail({ project }: WorkDetailProps) {
             <Link href="/" className="case-footer-logo-link" aria-label="Home">
               <img src="/monogram.svg" alt="Ifteyaj" className="case-footer-logo" />
             </Link>
+            <a href={`mailto:${siteConfig.email}`} className="case-footer-cta-link">
+              Let's build something great together
+            </a>
             <a href="#" className="case-back-to-top" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}>Back to top [↑]</a>
           </div>
         </footer>
