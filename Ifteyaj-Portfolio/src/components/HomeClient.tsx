@@ -180,14 +180,6 @@ export default function HomeClient() {
       nextItem.classList.add("active");
       prevItem.classList.add("active");
 
-      const prevTitle = prevItem.querySelector<HTMLElement>(".main-slider_title");
-      const nextTitle = nextItem.querySelector<HTMLElement>(".main-slider_title");
-      // Carousel: current name slides out through the TOP of the line, the next
-      // one rises in from the bottom.
-      if (prevTitle) gsap.to(prevTitle, { bottom: "100%", duration: 0.6, ease: "texttshow" });
-      if (nextTitle) gsap.set(nextTitle, { bottom: "-100%" });
-      if (nextTitle) gsap.to(nextTitle, { bottom: "0", duration: 1.2, ease: "texttshow", delay: 0.1 });
-
       const prevImgWrap = prevItem.querySelector<HTMLElement>(".main-slider_img-wrap");
       const nextImgWrap = nextItem.querySelector<HTMLElement>(".main-slider_img-wrap");
       if (prevImgWrap) gsap.set(prevImgWrap, { xPercent: 0 });
@@ -242,21 +234,24 @@ export default function HomeClient() {
 
     // ── Link hover (dual-text) ──
     qs<HTMLElement>(".menu-link").forEach((link) => {
+      // Skip case-bottom-nav links (they use CSS left-to-right effect)
+      if (link.closest(".case-bottom-nav")) return;
+
       const first = link.querySelector<HTMLElement>(".first-menu-link");
       const second = link.querySelector<HTMLElement>(".second-menu-link");
       const firstS = link.querySelector<HTMLElement>(".first-menu-link-social");
       const secondS = link.querySelector<HTMLElement>(".second-menu-link-social");
 
       link.addEventListener("mouseenter", () => {
-        if (first) gsap.to(first, { y: "-100%", duration: 0.6, ease: "hoverin" });
+        if (first) gsap.to(first, { y: "0%", duration: 0.6, ease: "hoverin" });
         if (second) gsap.to(second, { y: "-100%", duration: 0.6, ease: "hoverin" });
-        if (firstS) gsap.to(firstS, { y: "-100%", duration: 0.6, ease: "hoverin" });
+        if (firstS) gsap.to(firstS, { y: "0%", duration: 0.6, ease: "hoverin" });
         if (secondS) gsap.to(secondS, { y: "-100%", duration: 0.6, ease: "hoverin" });
       });
       link.addEventListener("mouseleave", () => {
-        if (first) gsap.to(first, { y: "0%", duration: 1, ease: "hoverout" });
+        if (first) gsap.to(first, { y: "100%", duration: 1, ease: "hoverout" });
         if (second) gsap.to(second, { y: "0%", duration: 1, ease: "hoverout" });
-        if (firstS) gsap.to(firstS, { y: "0%", duration: 1, ease: "hoverout" });
+        if (firstS) gsap.to(firstS, { y: "100%", duration: 1, ease: "hoverout" });
         if (secondS) gsap.to(secondS, { y: "0%", duration: 1, ease: "hoverout" });
       });
     });
@@ -264,11 +259,29 @@ export default function HomeClient() {
     // ── Page load intro ──
     const counterNumber = root.querySelector<HTMLElement>(".frontpage-counter-number");
     const counterContents = root.querySelectorAll<HTMLElement>(".frontpage-counter-content");
-    const loaderHeaders = root.querySelectorAll<HTMLElement>(".loader-header");
-    const loaderHeaders2 = root.querySelectorAll<HTMLElement>(".loader-header-2");
     const loader = root.querySelector<HTMLElement>(".frontpage-loader");
+    const logoWrap = root.querySelector<HTMLElement>(".loader-logo-wrap");
+    const logoOutline = root.querySelector<HTMLElement>(".loader-logo-outline");
 
-    gsap.to(counterNumber, { duration: 1.35, y: "0%", ease: "texttshow", delay: 0.5 });
+    // Logo draw-on animation (outline only)
+    if (logoOutline) {
+      const outlineLength = (logoOutline as unknown as SVGPathElement).getTotalLength?.() || 80000;
+      gsap.set(logoOutline, {
+        strokeDasharray: outlineLength,
+        strokeDashoffset: outlineLength,
+      });
+
+      // Draw outline slowly to match counter timing
+      gsap.to(logoOutline, {
+        strokeDashoffset: 0,
+        duration: 1.7,
+        delay: 1.8,
+        ease: "power1.inOut",
+        onComplete: () => {
+          logoWrap?.classList.add("is-idle");
+        },
+      });
+    }
 
     const counterObj = { value: 0 };
     gsap.to(counterObj, {
@@ -279,20 +292,8 @@ export default function HomeClient() {
       onUpdate: () => {
         if (counterNumber) counterNumber.textContent = String(Math.ceil(counterObj.value));
       },
-      onComplete: () => {
-        gsap.to(counterNumber, { duration: 1.5, y: "-100%", ease: "texttshow", delay: 0.15 });
-        const leftBracket = counterContents[0];
-        const rightBracket = counterContents[1];
-        const edge = window.innerWidth / 2;
-        gsap.to(leftBracket, { duration: 1.5, x: -edge, opacity: 0, ease: "texttshow", delay: 0.15 });
-        gsap.to(rightBracket, { duration: 1.5, x: edge, opacity: 0, ease: "texttshow", delay: 0.15 });
-      },
-    });
 
-    gsap.to(loaderHeaders, { duration: 1.35, y: "0%", ease: "texttshow", delay: 0.5 });
-    gsap.to(loaderHeaders2, { duration: 1.35, y: "0%", ease: "texttshow", delay: 0.6 });
-    gsap.to(loaderHeaders, { duration: 1.5, y: "-100%", ease: "texttshow", delay: 3.6 });
-    gsap.to(loaderHeaders2, { duration: 1.5, y: "-100%", ease: "texttshow", delay: 3.6 });
+    });
 
     gsap.to(loader, {
       duration: 1.35,
@@ -307,11 +308,6 @@ export default function HomeClient() {
 
     // Reveals (post loader)
     const D = 5.4;
-    gsap.fromTo(
-      ".main-slider_img-wrap",
-      { yPercent: 100 },
-      { yPercent: 0, duration: 1.35, ease: "Pagtrans", delay: 4.3 }
-    );
     gsap.to(root.querySelector(".slider-nav-border"), {
       width: "100%",
       duration: 1.5,
@@ -325,19 +321,15 @@ export default function HomeClient() {
       delay: 4.8,
     });
     gsap.to(".circle-minimize-btn", { clipPath: "inset(0% 0% 0% 0%)", duration: 1, ease: "texttshow", delay: D });
-    gsap.to(".first-menu-link", { y: "0%", duration: 1, ease: "texttshow", delay: D });
-    gsap.to(".first-menu-link-social", { y: "0%", duration: 1, ease: "texttshow", delay: D });
-    gsap.to(".slider-footer-text", { y: "0%", duration: 1, ease: "texttshow", delay: D });
-    gsap.to(root.querySelector(".nav-clock-dot"), { y: "0%", duration: 1, ease: "texttshow", delay: D });
-    gsap.to(root.querySelector(".nav-clock"), { y: "0%", duration: 1, ease: "texttshow", delay: D });
-    gsap.to(root.querySelector(".nav-clock-infomation"), { y: "0%", duration: 1, ease: "texttshow", delay: D });
     gsap.to(".numbers_wrap", {
       clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
       duration: 1,
       ease: "texttshow",
       delay: D,
     });
-    gsap.to(".main-slider_title", { bottom: "0", duration: 1.8, ease: "texttshow", delay: 4.8 });
+    // Nav link reveal (first-menu-link starts at translateY(100%) — hidden)
+    // Skip navbar and footer links - they're always visible
+    gsap.to(".first-menu-link:not(.case-bottom-nav .first-menu-link):not(.about-nav-wrapper .first-menu-link):not(.contact-nav-wrapper .first-menu-link):not(.nav-clock-wrapper .first-menu-link):not(.work-nav-wrapper .first-menu-link)", { y: "0%", duration: 1, ease: "texttshow", delay: D });
 
     syncVideos();
 

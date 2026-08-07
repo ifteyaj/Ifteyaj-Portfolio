@@ -37,14 +37,17 @@ export default function BlogDetail({ post }: BlogDetailProps) {
     rafId = requestAnimationFrame(raf);
 
     qs<HTMLElement>(".menu-link").forEach((link) => {
+      // Skip case-bottom-nav links (they use CSS left-to-right effect)
+      if (link.closest(".case-bottom-nav")) return;
+
       const first = link.querySelector<HTMLElement>(".first-menu-link");
       const second = link.querySelector<HTMLElement>(".second-menu-link");
       link.addEventListener("mouseenter", () => {
-        if (first) gsap.to(first, { y: "-100%", duration: 0.6, ease: "hoverin" });
+        if (first) gsap.to(first, { y: "0%", duration: 0.6, ease: "hoverin" });
         if (second) gsap.to(second, { y: "-100%", duration: 0.6, ease: "hoverin" });
       });
       link.addEventListener("mouseleave", () => {
-        if (first) gsap.to(first, { y: "0%", duration: 1, ease: "hoverout" });
+        if (first) gsap.to(first, { y: "100%", duration: 1, ease: "hoverout" });
         if (second) gsap.to(second, { y: "0%", duration: 1, ease: "hoverout" });
       });
     });
@@ -54,7 +57,7 @@ export default function BlogDetail({ post }: BlogDetailProps) {
     gsap.fromTo(".moodboard-related-pin", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "texttshow", stagger: 0.06, delay: 1.0 });
     gsap.fromTo(".case-footer-block", { y: 80, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: "texttshow", delay: 1.2 });
 
-    gsap.to(".first-menu-link", { y: "0%", duration: 1, ease: "texttshow", delay: 0.3 });
+    gsap.to(".first-menu-link:not(.case-bottom-nav .first-menu-link):not(.about-nav-wrapper .first-menu-link):not(.contact-nav-wrapper .first-menu-link):not(.nav-clock-wrapper .first-menu-link):not(.work-nav-wrapper .first-menu-link)", { y: "0%", duration: 1, ease: "texttshow", delay: 0.3 });
 
     setTimeout(() => {
       setRevealed(true);

@@ -43,11 +43,15 @@ export default function Navbar(_props: NavbarProps) {
               <Link key={link.label} href={link.href} className="menu-link page_link">
                 <div className="menu-text first-menu-link">
                   <p className="menu-big-text">{link.label}</p>
-                  <p className="menu-small-text">({link.count?.toString().padStart(2, "0")})</p>
+                  <svg className="nav-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                  </svg>
                 </div>
                 <div className="menu-text second-menu-link">
                   <p className="menu-big-text">{link.label}</p>
-                  <p className="menu-small-text">({link.count?.toString().padStart(2, "0")})</p>
+                  <svg className="nav-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                  </svg>
                 </div>
               </Link>
             ))}
@@ -59,9 +63,15 @@ export default function Navbar(_props: NavbarProps) {
             <Link href="/about" className="menu-link page_link">
               <div className="menu-text first-menu-link">
                 <p className="menu-big-text">{navInfoLinks[0].label}</p>
+                <svg className="nav-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
               </div>
               <div className="menu-text second-menu-link">
                 <p className="menu-big-text">{navInfoLinks[0].label}</p>
+                <svg className="nav-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
               </div>
             </Link>
           </div>
@@ -94,17 +104,29 @@ export default function Navbar(_props: NavbarProps) {
           <Link href="/moodboard" className="menu-link page_link" onClick={closeMenu}>
             <div className="menu-text first-menu-link">
               <p className="menu-big-text">Moodboard</p>
+              <svg className="nav-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+              </svg>
             </div>
             <div className="menu-text second-menu-link">
               <p className="menu-big-text">Moodboard</p>
+              <svg className="nav-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+              </svg>
             </div>
           </Link>
           <Link href="/blog" className="menu-link page_link" onClick={closeMenu}>
             <div className="menu-text first-menu-link">
               <p className="menu-big-text">Blog</p>
+              <svg className="nav-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+              </svg>
             </div>
             <div className="menu-text second-menu-link">
               <p className="menu-big-text">Blog</p>
+              <svg className="nav-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+              </svg>
             </div>
           </Link>
         </div>
@@ -126,18 +148,36 @@ export default function Navbar(_props: NavbarProps) {
           <div className="nav-mobile-section">
             {navLinks.map((link) => (
               <Link key={link.label} href={link.href} className="nav-mobile-link" onClick={closeMenu}>
-                {link.label} <span className="nav-mobile-count">({link.count?.toString().padStart(2, "0")})</span>
+                {link.label}
+                <svg className="nav-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
               </Link>
             ))}
           </div>
           <div className="nav-mobile-section">
-            <Link href="/moodboard" className="nav-mobile-link" onClick={closeMenu}>Moodboard</Link>
+            <Link href="/moodboard" className="nav-mobile-link" onClick={closeMenu}>
+              Moodboard
+              <svg className="nav-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+              </svg>
+            </Link>
           </div>
           <div className="nav-mobile-section">
-            <Link href="/blog" className="nav-mobile-link" onClick={closeMenu}>Blog</Link>
+            <Link href="/blog" className="nav-mobile-link" onClick={closeMenu}>
+              Blog
+              <svg className="nav-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+              </svg>
+            </Link>
           </div>
           <div className="nav-mobile-section">
-            <Link href="/about" className="nav-mobile-link" onClick={closeMenu}>About</Link>
+            <Link href="/about" className="nav-mobile-link" onClick={closeMenu}>
+              About
+              <svg className="nav-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+              </svg>
+            </Link>
           </div>
           <div className="nav-mobile-section nav-mobile-contact">
             <a href={`mailto:${siteConfig.email}`} className="nav-mobile-link">{siteConfig.email}</a>

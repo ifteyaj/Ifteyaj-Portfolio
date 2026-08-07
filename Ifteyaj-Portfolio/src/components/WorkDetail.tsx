@@ -35,14 +35,17 @@ export default function WorkDetail({ project }: WorkDetailProps) {
     rafId = requestAnimationFrame(raf);
 
     qs<HTMLElement>(".menu-link").forEach((link) => {
+      // Skip case-bottom-nav links (they use CSS left-to-right effect)
+      if (link.closest(".case-bottom-nav")) return;
+
       const first = link.querySelector<HTMLElement>(".first-menu-link");
       const second = link.querySelector<HTMLElement>(".second-menu-link");
       link.addEventListener("mouseenter", () => {
-        if (first) gsap.to(first, { y: "-100%", duration: 0.6, ease: "hoverin" });
+        if (first) gsap.to(first, { y: "0%", duration: 0.6, ease: "hoverin" });
         if (second) gsap.to(second, { y: "-100%", duration: 0.6, ease: "hoverin" });
       });
       link.addEventListener("mouseleave", () => {
-        if (first) gsap.to(first, { y: "0%", duration: 1, ease: "hoverout" });
+        if (first) gsap.to(first, { y: "100%", duration: 1, ease: "hoverout" });
         if (second) gsap.to(second, { y: "0%", duration: 1, ease: "hoverout" });
       });
     });
@@ -64,7 +67,7 @@ export default function WorkDetail({ project }: WorkDetailProps) {
     gsap.fromTo(".case-selected-work", { y: 80, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: "texttshow", delay: 1.4 });
     gsap.fromTo(".case-footer-block", { y: 80, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: "texttshow", delay: 1.6 });
 
-    gsap.to(".first-menu-link", { y: "0%", duration: 1, ease: "texttshow", delay: 0.3 });
+    gsap.to(".first-menu-link:not(.case-bottom-nav .first-menu-link):not(.about-nav-wrapper .first-menu-link):not(.contact-nav-wrapper .first-menu-link):not(.nav-clock-wrapper .first-menu-link):not(.work-nav-wrapper .first-menu-link)", { y: "0%", duration: 1, ease: "texttshow", delay: 0.3 });
 
     setTimeout(() => {
       setRevealed(true);
@@ -81,6 +84,11 @@ export default function WorkDetail({ project }: WorkDetailProps) {
 
   const images = project.images ?? [];
 
+  // Find prev/next projects
+  const currentIndex = projects.findIndex((p) => p.slug === project.slug);
+  const prevProject = currentIndex > 0 ? projects[currentIndex - 1] : projects[projects.length - 1];
+  const nextProject = currentIndex < projects.length - 1 ? projects[currentIndex + 1] : projects[0];
+
   return (
     <div ref={rootRef} className="case-page">
       <Navbar revealed={revealed} />
@@ -88,9 +96,31 @@ export default function WorkDetail({ project }: WorkDetailProps) {
 
       <main className="case-main">
         <header className="case-header">
-          <div className="case-title-wrap">
-            <span className="case-hero-index">({String(project.index).padStart(2, "0")})</span>
-            <h1 className="case-title">{project.title}</h1>
+          <div className="case-header-left">
+            <div className="case-title-wrap">
+              <span className="case-hero-index">({String(project.index).padStart(2, "0")})</span>
+              <h1 className="case-title">{project.title}</h1>
+            </div>
+          </div>
+          <div className="case-header-meta">
+            {project.category && (
+              <div className="case-meta-row">
+                <span className="case-meta-label">Category:</span>
+                <span className="case-meta-value">{project.category}</span>
+              </div>
+            )}
+            {project.secondaryCategory && (
+              <div className="case-meta-row">
+                <span className="case-meta-label">Industry:</span>
+                <span className="case-meta-value">{project.secondaryCategory}</span>
+              </div>
+            )}
+            {project.role && (
+              <div className="case-meta-row">
+                <span className="case-meta-label">Role:</span>
+                <span className="case-meta-value">{project.role}</span>
+              </div>
+            )}
           </div>
         </header>
 
@@ -143,7 +173,7 @@ export default function WorkDetail({ project }: WorkDetailProps) {
 
         <div className="case-selected-work">
           <span className="case-selected-arrow">[↓]</span>
-          <h2 className="case-selected-title">Selected Work</h2>
+          <h2 className="case-selected-title">More Works</h2>
           <div className="case-selected-grid">
             {projects.filter((p) => p.slug !== project.slug).slice(0, 2).map((p) => (
               <Link key={p.slug} href={p.href} className="case-selected-item">

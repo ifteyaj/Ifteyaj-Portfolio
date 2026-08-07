@@ -30,6 +30,9 @@ export default function BlogIndex() {
     rafId = requestAnimationFrame(raf);
 
     qs<HTMLElement>(".menu-link").forEach((link) => {
+      // Skip case-bottom-nav links (they use CSS left-to-right effect)
+      if (link.closest(".case-bottom-nav")) return;
+
       const first = link.querySelector<HTMLElement>(".first-menu-link");
       const second = link.querySelector<HTMLElement>(".second-menu-link");
       link.addEventListener("mouseenter", () => {
@@ -63,7 +66,7 @@ export default function BlogIndex() {
       { y: 0, opacity: 1, duration: 1, ease: "texttshow", delay: 1.2 }
     );
 
-    gsap.to(".first-menu-link", { y: "0%", duration: 1, ease: "texttshow", delay: 0.3 });
+    gsap.to(".first-menu-link:not(.case-bottom-nav .first-menu-link):not(.about-nav-wrapper .first-menu-link):not(.contact-nav-wrapper .first-menu-link):not(.nav-clock-wrapper .first-menu-link):not(.work-nav-wrapper .first-menu-link)", { y: "0%", duration: 1, ease: "texttshow", delay: 0.3 });
 
     setTimeout(() => {
       setRevealed(true);

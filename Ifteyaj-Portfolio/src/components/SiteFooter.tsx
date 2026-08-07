@@ -30,12 +30,12 @@ export default function SiteFooter() {
       <div className="case-bottom-nav">
         <div className="case-bottom-col">
           <Link href="/" className="menu-link">
-            <div className="menu-text first-menu-link"><p className="menu-big-text">Featured ({String(count).padStart(1, "0")})</p></div>
-            <div className="menu-text second-menu-link"><p className="menu-big-text">Featured ({String(count).padStart(1, "0")})</p></div>
+            <div className="menu-text first-menu-link"><p className="menu-big-text">Featured</p></div>
+            <div className="menu-text second-menu-link"><p className="menu-big-text">Featured</p></div>
           </Link>
           <Link href="/work" className="menu-link">
-            <div className="menu-text first-menu-link"><p className="menu-big-text">All Works ({String(count).padStart(2, "0")})</p></div>
-            <div className="menu-text second-menu-link"><p className="menu-big-text">All Works ({String(count).padStart(2, "0")})</p></div>
+            <div className="menu-text first-menu-link"><p className="menu-big-text">All Works</p></div>
+            <div className="menu-text second-menu-link"><p className="menu-big-text">All Works</p></div>
           </Link>
         </div>
         <div className="case-bottom-col">

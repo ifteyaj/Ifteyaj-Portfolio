@@ -6,6 +6,7 @@ import { gsap, registerEases } from "@/lib/gsap";
 import Navbar from "@/components/Navbar";
 import CustomCursor from "@/components/CustomCursor";
 import SiteFooter from "@/components/SiteFooter";
+import Testimonials from "@/components/Testimonials";
 import { about } from "@/data/about";
 import { siteConfig } from "@/data/site";
 
@@ -31,14 +32,17 @@ export default function AboutClient() {
 
     // ── Link hover (dual-text) ──
     qs<HTMLElement>(".menu-link").forEach((link) => {
+      // Skip case-bottom-nav links (they use CSS left-to-right effect)
+      if (link.closest(".case-bottom-nav")) return;
+
       const first = link.querySelector<HTMLElement>(".first-menu-link");
       const second = link.querySelector<HTMLElement>(".second-menu-link");
       link.addEventListener("mouseenter", () => {
-        if (first) gsap.to(first, { y: "-100%", duration: 0.6, ease: "hoverin" });
+        if (first) gsap.to(first, { y: "0%", duration: 0.6, ease: "hoverin" });
         if (second) gsap.to(second, { y: "-100%", duration: 0.6, ease: "hoverin" });
       });
       link.addEventListener("mouseleave", () => {
-        if (first) gsap.to(first, { y: "0%", duration: 1, ease: "hoverout" });
+        if (first) gsap.to(first, { y: "100%", duration: 1, ease: "hoverout" });
         if (second) gsap.to(second, { y: "0%", duration: 1, ease: "hoverout" });
       });
     });
@@ -86,7 +90,7 @@ export default function AboutClient() {
     );
 
     // Reveal nav/footer link text (first-menu-link starts at translateY(100%) — hidden)
-    gsap.to(".first-menu-link", { y: "0%", duration: 1, ease: "texttshow", delay: 0.3 });
+    gsap.to(".first-menu-link:not(.case-bottom-nav .first-menu-link):not(.about-nav-wrapper .first-menu-link):not(.contact-nav-wrapper .first-menu-link):not(.nav-clock-wrapper .first-menu-link):not(.work-nav-wrapper .first-menu-link)", { y: "0%", duration: 1, ease: "texttshow", delay: 0.3 });
 
     setTimeout(() => {
       setRevealed(true);
@@ -128,6 +132,10 @@ export default function AboutClient() {
 
       <main className="about-main">
 
+        <section className="about-intro">
+          <p className="about-intro-text">{about.intro}</p>
+        </section>
+
         <section className="about-bio">
           <h2 className="about-bio-heading">{about.bioHeading}</h2>
           <div className="about-bio-body">
@@ -137,12 +145,15 @@ export default function AboutClient() {
           </div>
         </section>
 
-        <section className="about-principles">
-          {about.principles.map((principle, i) => (
-            <div key={i} className="about-principle">
-              <span className="about-principle-num">({String(i + 1).padStart(2, "0")})</span>
-              <h3 className="about-principle-heading">{principle.heading}</h3>
-              <p className="about-principle-body">{principle.body}</p>
+        <section className="about-services">
+          <h2 className="about-services-title">{about.servicesHeading}</h2>
+          {about.services.map((service, i) => (
+            <div key={i} className="about-service">
+              <div className="about-service-left">
+                <span className="about-service-num">({String(i + 1).padStart(2, "0")})</span>
+                <h3 className="about-service-heading">{service.heading}</h3>
+              </div>
+              <p className="about-service-body">{service.body}</p>
             </div>
           ))}
         </section>
@@ -156,12 +167,19 @@ export default function AboutClient() {
 
         <section className="about-clients about-list-block">
           <h2 className="about-list-heading">Client Highlights</h2>
-          <div className="about-client-list">
-            {about.clients.map((client) => (
-              <span key={client} className="about-client-item">{client}</span>
-            ))}
+          <div className="about-client-slider">
+            <div className="about-client-slider-track">
+              {[...about.clients, ...about.clients].map((client, i) => (
+                <span key={`${client}-${i}`} className="about-client-item">{client}</span>
+              ))}
+            </div>
           </div>
         </section>
+
+        <Testimonials
+          heading={about.testimonialsHeading}
+          testimonials={about.testimonials}
+        />
 
         <SiteFooter />
       </main>

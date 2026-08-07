@@ -23,8 +23,8 @@ export const siteConfig: SiteConfig = {
 };
 
 export const navLinks: NavLinkItem[] = [
-  { label: "Featured", count: 6, href: "/" },
-  { label: "All Works", count: 6, href: "/work" },
+  { label: "Featured", count: 5, href: "/" },
+  { label: "All Works", count: 5, href: "/work" },
 ];
 
 export const navInfoLinks: NavLinkItem[] = [

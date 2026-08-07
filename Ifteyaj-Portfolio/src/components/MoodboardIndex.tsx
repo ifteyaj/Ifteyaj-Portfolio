@@ -30,27 +30,35 @@ export default function MoodboardIndex() {
     rafId = requestAnimationFrame(raf);
 
     qs<HTMLElement>(".menu-link").forEach((link) => {
+      // Skip case-bottom-nav links (they use CSS left-to-right effect)
+      if (link.closest(".case-bottom-nav")) return;
+
       const first = link.querySelector<HTMLElement>(".first-menu-link");
       const second = link.querySelector<HTMLElement>(".second-menu-link");
       link.addEventListener("mouseenter", () => {
-        if (first) gsap.to(first, { y: "-100%", duration: 0.6, ease: "hoverin" });
+        if (first) gsap.to(first, { y: "0%", duration: 0.6, ease: "hoverin" });
         if (second) gsap.to(second, { y: "-100%", duration: 0.6, ease: "hoverin" });
       });
       link.addEventListener("mouseleave", () => {
-        if (first) gsap.to(first, { y: "0%", duration: 1, ease: "hoverout" });
+        if (first) gsap.to(first, { y: "100%", duration: 1, ease: "hoverout" });
         if (second) gsap.to(second, { y: "0%", duration: 1, ease: "hoverout" });
       });
     });
 
     gsap.fromTo(
       ".moodboard-title",
-      { y: 120 },
-      { y: 0, duration: 1.4, ease: "texttshow", delay: 0.1 }
+      { x: -120, opacity: 0 },
+      { x: 0, opacity: 1, duration: 1.4, ease: "texttshow", delay: 0.1 }
+    );
+    gsap.fromTo(
+      ".moodboard-header-line",
+      { scaleX: 0 },
+      { scaleX: 1, duration: 1.2, ease: "texttshow", delay: 0.4 }
     );
     gsap.fromTo(
       ".moodboard-sub",
-      { y: 40, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.9, ease: "texttshow", delay: 0.6 }
+      { x: -40, opacity: 0 },
+      { x: 0, opacity: 1, duration: 0.9, ease: "texttshow", delay: 0.6 }
     );
     gsap.fromTo(
       ".justified-gallery",
@@ -63,7 +71,7 @@ export default function MoodboardIndex() {
       { y: 0, opacity: 1, duration: 1, ease: "texttshow", delay: 1.1 }
     );
 
-    gsap.to(".first-menu-link", { y: "0%", duration: 1, ease: "texttshow", delay: 0.3 });
+    gsap.to(".first-menu-link:not(.case-bottom-nav .first-menu-link):not(.about-nav-wrapper .first-menu-link):not(.contact-nav-wrapper .first-menu-link):not(.nav-clock-wrapper .first-menu-link):not(.work-nav-wrapper .first-menu-link)", { y: "0%", duration: 1, ease: "texttshow", delay: 0.3 });
 
     setTimeout(() => {
       setRevealed(true);
@@ -86,6 +94,7 @@ export default function MoodboardIndex() {
       <main className="moodboard-main">
         <header className="moodboard-header">
           <h1 className="moodboard-title">Moodboard</h1>
+          <div className="moodboard-header-line" />
         </header>
 
         <div className="mb-index">

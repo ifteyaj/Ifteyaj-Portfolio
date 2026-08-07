@@ -211,6 +211,41 @@ export const projects: Project[] = [
       },
     ],
   },
+  {
+    index: 7,
+    slug: "riverborn",
+    title: "Riverborn",
+    category: "AI Agency",
+    secondaryCategory: "Voice AI",
+    year: "2025",
+    images: ["/images/riverborn.webp", "/images/riverborn.webp", "/images/riverborn.webp", "/images/riverborn.webp"],
+    href: "/work/riverborn",
+    short:
+      "Voice agents, multi-agent systems, and generative AI products — built by a team shipping its own AI products. We know the difference between a demo and a deployment.",
+    client: "Riverborn",
+    agency: "Riverborn Studio",
+    industry: "AI",
+    role: "AI Product Builder",
+    intro: [
+      {
+        body: "Riverborn is an AI product studio crafting voice agents, multi-agent systems and generative AI experiences. We ship our own AI products, so we know the difference between a demo and a deployment.",
+      },
+    ],
+    sections: [
+      {
+        heading: "Background",
+        body: "The AI category is full of polished demos and empty promises. Riverborn was founded by a team that builds and ships its own AI products — real voice agents, real multi-agent workflows, real generative systems that handle production traffic, not slide decks.",
+      },
+      {
+        heading: "Concept",
+        body: "We designed the identity to feel engineered yet human — the way Riverborn builds. Clean, disciplined typography carries a system grounded in voice and conversation. The brand language treats agents as team members, not demos: precise copy, clear structure, and a visual system that scales from a single voice agent to a full multi-agent architecture.",
+      },
+      {
+        heading: "Conclusion",
+        body: "The result is a studio brand that sounds like it ships. Riverborn's identity mirrors its craft: build voice agents, multi-agent systems and generative products that go from prototype to production — because the team already lives there.",
+      },
+    ],
+  },
 ];
 
 export const projectCount = projects.length;

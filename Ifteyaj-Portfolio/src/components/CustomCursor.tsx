@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
 interface CursorDotTrailProps {
@@ -59,6 +59,11 @@ export default function CustomCursor({
   const velocityRef = useRef({ x: 0, y: 0 });
   const animRef = useRef<number>(undefined);
   const lastTimeRef = useRef(0);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -172,7 +177,7 @@ export default function CustomCursor({
     };
   }, [color, colorInverted, size, borderWidth, spring, friction, trailDuration, transitionSpeed]);
 
-  if (typeof window === "undefined") return null;
+  if (!mounted) return null;
 
   return createPortal(
     <canvas

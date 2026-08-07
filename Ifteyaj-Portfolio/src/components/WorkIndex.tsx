@@ -31,14 +31,17 @@ export default function WorkIndex() {
 
     // ── Link hover (dual-text) ──
     qs<HTMLElement>(".menu-link").forEach((link) => {
+      // Skip case-bottom-nav links (they use CSS left-to-right effect)
+      if (link.closest(".case-bottom-nav")) return;
+
       const first = link.querySelector<HTMLElement>(".first-menu-link");
       const second = link.querySelector<HTMLElement>(".second-menu-link");
       link.addEventListener("mouseenter", () => {
-        if (first) gsap.to(first, { y: "-100%", duration: 0.6, ease: "hoverin" });
+        if (first) gsap.to(first, { y: "0%", duration: 0.6, ease: "hoverin" });
         if (second) gsap.to(second, { y: "-100%", duration: 0.6, ease: "hoverin" });
       });
       link.addEventListener("mouseleave", () => {
-        if (first) gsap.to(first, { y: "0%", duration: 1, ease: "hoverout" });
+        if (first) gsap.to(first, { y: "100%", duration: 1, ease: "hoverout" });
         if (second) gsap.to(second, { y: "0%", duration: 1, ease: "hoverout" });
       });
     });
@@ -54,37 +57,12 @@ export default function WorkIndex() {
       });
     });
 
-    // ── Page intro reveal ──
-    gsap.fromTo(
-      ".index-page-title",
-      { y: 120 },
-      { y: 0, duration: 1.4, ease: "texttshow", delay: 0.1 }
-    );
-    gsap.fromTo(
-      ".index-entry",
-      { y: 60, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.9, ease: "texttshow", stagger: 0.1, delay: 0.3 }
-    );
-    gsap.fromTo(
-      ".case-footer-block",
-      { y: 80, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1, ease: "texttshow", delay: 1.0 }
-    );
-    gsap.fromTo(
-      ".case-bottom-nav",
-      { y: 40, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.8, ease: "texttshow", delay: 1.2 }
-    );
-
     // Nav link reveal (first-menu-link starts at translateY(100%) — hidden)
-    gsap.to(".first-menu-link", { y: "0%", duration: 1, ease: "texttshow", delay: 0.3 });
+    gsap.to(".first-menu-link:not(.case-bottom-nav .first-menu-link):not(.about-nav-wrapper .first-menu-link):not(.contact-nav-wrapper .first-menu-link):not(.nav-clock-wrapper .first-menu-link):not(.work-nav-wrapper .first-menu-link)", { y: "0%", duration: 1, ease: "texttshow", delay: 0.3 });
 
     // Nav clock reveal
     setTimeout(() => {
       setRevealed(true);
-      gsap.to(".nav-clock-dot", { y: "0%", duration: 1, ease: "texttshow" });
-      gsap.to(".nav-clock", { y: "0%", duration: 1, ease: "texttshow" });
-      gsap.to(".nav-clock-infomation", { y: "0%", duration: 1, ease: "texttshow" });
     }, 600);
 
     return () => {
@@ -127,37 +105,58 @@ export default function WorkIndex() {
         </div>
 
         <section className="index-illustrations">
-          <h2 className="index-illustrations-title">Illustrations</h2>
+          <h2 className="index-illustrations-title">
+            Illustrations
+            <span className="index-illustrations-count">(09)</span>
+          </h2>
           <div className="index-illustrations-grid">
             <div className="index-illustrations-item">
-              <img src="/images/illustration-1.png" alt="Illustration 1" className="index-illustrations-img" loading="lazy" />
+              <img src="/images/illustration-1.webp" alt="Illustration 1" className="index-illustrations-img" loading="lazy" />
             </div>
             <div className="index-illustrations-item">
-              <img src="/images/illustration-2.png" alt="Illustration 2" className="index-illustrations-img" loading="lazy" />
+              <img src="/images/illustration-2.webp" alt="Illustration 2" className="index-illustrations-img" loading="lazy" />
             </div>
             <div className="index-illustrations-item">
-              <img src="/images/illustration-3.png" alt="Illustration 3" className="index-illustrations-img" loading="lazy" />
+              <img src="/images/illustration-3.webp" alt="Illustration 3" className="index-illustrations-img" loading="lazy" />
             </div>
             <div className="index-illustrations-item">
-              <img src="/images/illustration-4.png" alt="Illustration 4" className="index-illustrations-img" loading="lazy" />
+              <img src="/images/illustration-4.webp" alt="Illustration 4" className="index-illustrations-img" loading="lazy" />
+            </div>
+            <div className="index-illustrations-item">
+              <img src="/images/illustration-5.webp" alt="Illustration 5" className="index-illustrations-img" loading="lazy" />
+            </div>
+            <div className="index-illustrations-item">
+              <img src="/images/illustration-6.webp" alt="Illustration 6" className="index-illustrations-img" loading="lazy" />
+            </div>
+            <div className="index-illustrations-item">
+              <img src="/images/illustration-7.webp" alt="Illustration 7" className="index-illustrations-img" loading="lazy" />
+            </div>
+            <div className="index-illustrations-item">
+              <img src="/images/illustration-8.webp" alt="Illustration 8" className="index-illustrations-img" loading="lazy" />
+            </div>
+            <div className="index-illustrations-item">
+              <img src="/images/illustration-9.webp" alt="Illustration 9" className="index-illustrations-img" loading="lazy" />
             </div>
           </div>
         </section>
 
         <section className="index-illustrations index-portraits">
-          <h2 className="index-illustrations-title">Portrait / Vexel Art</h2>
+          <h2 className="index-illustrations-title">
+            Portrait / Vexel Art
+            <span className="index-illustrations-count">(04)</span>
+          </h2>
           <div className="index-illustrations-grid">
             <div className="index-illustrations-item">
-              <img src="/images/portrait-1.png" alt="Portrait 1" className="index-illustrations-img" loading="lazy" />
+              <img src="/images/portrait-1.webp" alt="Portrait 1" className="index-illustrations-img" loading="lazy" />
             </div>
             <div className="index-illustrations-item">
-              <img src="/images/portrait-2.png" alt="Portrait 2" className="index-illustrations-img" loading="lazy" />
+              <img src="/images/portrait-2.webp" alt="Portrait 2" className="index-illustrations-img" loading="lazy" />
             </div>
             <div className="index-illustrations-item">
-              <img src="/images/portrait-3.png" alt="Portrait 3" className="index-illustrations-img" loading="lazy" />
+              <img src="/images/portrait-3.webp" alt="Portrait 3" className="index-illustrations-img" loading="lazy" />
             </div>
             <div className="index-illustrations-item">
-              <img src="/images/portrait-4.png" alt="Portrait 4" className="index-illustrations-img" loading="lazy" />
+              <img src="/images/portrait-4.webp" alt="Portrait 4" className="index-illustrations-img" loading="lazy" />
             </div>
           </div>
         </section>

@@ -13,22 +13,28 @@ export const about = {
     "That's why I'm drawn to identities built around a strong core, supported by a flexible brand universe that can shift, adapt, and feel as personal as the people they speak to.",
     "I love collaborating with people and brands who are curious, thoughtful, and ready to challenge what exists, to build brands that grow, adapt, and stay relevant over time.",
   ],
-  principles: [
+  servicesHeading: "Services",
+  services: [
     {
-      heading: "Principle",
-      body: "Room to discover and play: A strong process leaves space for a little chaos, where we pause, question what we know, and try new directions. Insight and experience guide the work, but some of the best ideas appear when we don't force the path, and trust where the process is going with an open mind and allow ourselves to play a little.",
+      heading: "Brand Identity",
+      body: "Crafting unique visual systems that tell your story, from logos and color palettes to typography and brand guidelines that connect with your audience.",
     },
     {
-      heading: "Principle",
-      body: "Work is a partnership: The work shouldn't feel like a dramatic \"big reveal\" at the end of the process. We align early, talk openly, and build things together as we go. The best results come from shared ownership and ongoing conversation to create solutions that connect with your audience, build pride internally, and feel right in everyday use.",
+      heading: "Digital Design",
+      body: "Designing intuitive, visually compelling websites and digital experiences that perform beautifully across every screen and device.",
     },
     {
-      heading: "Principle",
-      body: "Let's be kind, but honest: Great work grows in a space where openness feels safe, where feedback is thoughtful, direct, and grounded. When people can speak freely, trust becomes a natural part of the process.",
+      heading: "Visual Strategy",
+      body: "Building cohesive visual frameworks that align with your business goals and create lasting impact in the digital landscape.",
+    },
+    {
+      heading: "Web Design",
+      body: "Developing responsive, high-performance websites with clean code and modern technologies that bring designs to life and deliver seamless user experiences.",
     },
   ],
   reachout:
     "Feel free to reach out to discuss your project:",
+  reachoutImage: "/images/about-hero.webp",
   clients: [
     "Birdie",
     "Wallhack",
@@ -48,6 +54,34 @@ export const about = {
     "Dinesen",
     "Coca-Cola",
     "Zero Carbon Shipping",
+  ],
+  testimonialsHeading: "What Clients Say",
+  testimonials: [
+    {
+      quote: "Ifteyaj brought a fresh perspective to our brand. The attention to detail and strategic thinking resulted in an identity that truly represents who we are.",
+      name: "Sarah Chen",
+      role: "Founder, Birdie",
+    },
+    {
+      quote: "Working with Ifteyaj was seamless. They understood our vision instantly and delivered a brand that stands out in our industry.",
+      name: "Marcus Webb",
+      role: "CEO, Wallhack",
+    },
+    {
+      quote: "The design process was collaborative and insightful. Our new identity has received incredible feedback from customers and partners alike.",
+      name: "Emma Lindqvist",
+      role: "Marketing Director, Palette",
+    },
+    {
+      quote: "Ifteyaj has a rare ability to balance aesthetics with functionality. The result is a brand that works as hard as it looks good.",
+      name: "David Park",
+      role: "Co-founder, Snuw",
+    },
+    {
+      quote: "A true creative partner. Ifteyaj didn't just design our brand—they helped us discover our voice.",
+      name: "Lisa Andersen",
+      role: "Founder, Basic Feather",
+    },
   ],
   recognition: [
     { year: "2025", title: "Gold Creative Circle", project: "Craft / Website Design - CURB CPH" },
