@@ -196,6 +196,9 @@ a, button, .menu-link, .index-entry, .case-selected-item {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+  .nav-mobile-menu {
+    transition: none !important;
+  }
   .case-gallery-img-wrap img,
   .case-selected-img-wrap img,
   .index-entry-img,
@@ -511,7 +514,7 @@ html.lenis body {
   margin-left: 2rem;
 }
 
-/* ── HAMBURGER BUTTON (hidden on desktop) ── */
+/* ── HAMBURGER BUTTON (shown at tablet/mobile widths) ── */
 .nav-hamburger {
   display: none;
   flex-direction: column;
@@ -550,23 +553,27 @@ html.lenis body {
   z-index: 998;
   overflow-y: auto;
   transform: translateX(100%);
+  visibility: hidden;
   pointer-events: none;
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0s linear 0.4s;
 }
 .nav-mobile-menu.is-open {
   transform: translateX(0);
+  visibility: visible;
   pointer-events: auto;
+  transition-delay: 0s;
 }
 .nav-mobile-inner {
-  padding: 2rem var(--page-margin) 4rem;
+  padding: 2rem var(--page-margin) 1rem;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 0.5rem;
+  min-height: 100%;
 }
 .nav-mobile-section {
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.1rem;
 }
 .nav-mobile-link {
   font-family: var(--main-type);
@@ -579,7 +586,7 @@ html.lenis body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.8rem 0;
+  padding: 0.1rem 0;
   position: relative;
   transition: transform 0.25s ease, color 0.25s ease;
 }
@@ -619,20 +626,31 @@ html.lenis body {
   margin-top: 0.5rem;
 }
 .nav-mobile-meta {
-  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.1rem;
+  font-size: var(--small-discriptor-text);
+  color: var(--grey);
+}
+.nav-mobile-bottom {
+  margin-top: auto;
   padding-top: 1.5rem;
   border-top: 1px solid var(--border-white);
   display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-  font-size: var(--small-discriptor-text);
-  color: var(--grey);
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.nav-mobile-favicon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
 
 /* ── MENU LINKS (dual-text) ── */
 .menu-link {
   height: 1.05rem;
-  line-height: 1.05;
+  line-height: 1.1;
   display: block;
   position: relative;
   overflow: hidden;
@@ -722,6 +740,9 @@ html.lenis body {
 }
 .menu-text.first-menu-link-social {
   transform: translateY(100%);
+}
+.menu-text.second-menu-link-social {
+  transform: translateY(0%);
 }
 .contact-link {
   display: inline-block;
@@ -1824,9 +1845,15 @@ html.lenis body {
   overflow-x: scroll;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
+  overscroll-behavior-inline: none;
   scrollbar-width: none;
   width: 100%;
   align-items: flex-start;
+  cursor: grab;
+}
+.home-grid-track:active {
+  cursor: grabbing;
 }
 .home-grid-track::-webkit-scrollbar {
   display: none;
@@ -1877,7 +1904,7 @@ html.lenis body {
   min-height: 100dvh;
 }
 .about-main {
-  padding: 4rem var(--page-margin) 0;
+  padding: 2rem var(--page-margin) 0;
 }
 
 /* ── Hero ── */
@@ -1979,10 +2006,10 @@ html.lenis body {
 
 /* ── Bio ── */
 .about-bio {
-  margin-top: var(--section-break);
+  margin-top: 2rem;
   display: grid;
-  grid-template-columns: minmax(8rem, 22rem) 1fr;
-  gap: 2rem;
+  grid-template-columns: auto 1fr;
+  gap: 0 1.5rem;
 }
 .about-bio-heading {
   font-family: var(--main-type);
@@ -1990,13 +2017,15 @@ html.lenis body {
   line-height: 1.2;
   font-weight: var(--main-weight-big);
   letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 .about-bio-body {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem 5rem;
-  padding-right: 10%;
-  max-width: 850px;
+  gap: 2rem 3rem;
+  padding-right: 0;
+  max-width: 800px;
+  margin-left: 23.5rem;
 }
 .about-bio-paragraph {
   font-size: var(--body-copy);
@@ -2007,7 +2036,7 @@ html.lenis body {
 
 /* ── Services ── */
 .about-services {
-  margin-top: var(--section-break);
+  margin-top: 1.5rem;
 }
 .about-services-title {
   font-family: var(--main-type);
@@ -2019,8 +2048,8 @@ html.lenis body {
 }
 .about-service {
   display: grid;
-  grid-template-columns: minmax(8rem, 22rem) auto 1fr;
-  gap: 0 12rem;
+  grid-template-columns: auto auto auto;
+  gap: 0 1.5rem;
   padding: 3rem 0;
   border-bottom: 1px solid var(--border-white);
   align-items: start;
@@ -2175,7 +2204,7 @@ html.lenis body {
 }
 .testimonials-slider {
   width: 100%;
-  height: 350px;
+  height: 400px;
   overflow: hidden;
   position: relative;
 }
@@ -2347,7 +2376,7 @@ html.lenis body {
   font-family: var(--main-type);
   font-size: var(--big-text);
   font-weight: var(--main-weight-big);
-  line-height: var(--big-text-line);
+  line-height: 1.1;
   letter-spacing: var(--big-text-space);
   overflow: hidden;
 }
@@ -2448,7 +2477,7 @@ html.lenis body {
 .moodboard-detail-title {
   font-family: var(--main-type);
   font-size: var(--mid-high-text);
-  line-height: var(--big-text-line);
+  line-height: 1.1;
   font-weight: var(--main-weight-big);
   margin: 0.5rem 0 0;
 }
@@ -2549,6 +2578,26 @@ html.lenis body {
   .about-hero-name    { font-size: 6rem; }
   .about-footer-logo  { width: 12rem; height: 12rem; }
 
+  .index-footer-logo   { width: 12rem; height: 12rem; }
+  .about-footer-logo   { width: 12rem; height: 12rem; }
+  .case-footer-logo    { height: 14rem; }
+
+  /* ── Navbar: collapse to hamburger menu on tablet ── */
+  .nav-hamburger       { display: flex; }
+  .work-menu-section,
+  .information-work-section,
+  .brand-designer-text,
+  .nav-clock-wrapper   { display: none; }
+  .nav-clock-wrapper   { margin-left: auto; display: none; }
+  .navbar              { height: auto; }
+  .nav-bar             { min-height: 56px; align-items: center; }
+  .nav-mobile-menu     { top: 56px; display: block; }
+  .nav-logo            { height: 3rem; margin-left: 0; }
+
+  /* ── Hero / headlines that have no tablet override yet ── */
+  .main-slider_title    { font-size: 6rem; letter-spacing: -0.02em; white-space: nowrap; }
+  .moodboard-title      { font-size: 6rem; letter-spacing: -0.02em; }
+
   .about-bio          { grid-template-columns: 1fr; gap: 1.5rem; }
   .about-service    { grid-template-columns: 5rem 1fr; gap: 1.5rem; }
   .about-service-heading { grid-column: 2; grid-row: 1; }
@@ -2559,6 +2608,8 @@ html.lenis body {
   .index-entry-images { grid-template-columns: repeat(3, 1fr); }
 
   .slider-footer-social-wrapper { display: none; }
+
+  .testimonials-slider { height: 540px; }
 }
 
 /* ── MOBILE (≤ 767) ───────────────────────────────────────────────────────── */
@@ -2574,23 +2625,16 @@ html.lenis body {
   }
 
   /* ── NAVBAR ── */
-  .nav-hamburger       { display: flex; }
+  .nav-hamburger       { display: flex !important; }
   .brand-designer-text { display: none; }
-  .nav-clock-wrapper   { margin-left: auto; }
-  .navbar              { height: auto; }
-  .nav-bar             { min-height: 56px; }
-  .nav-logo            { height: 2.8rem; margin-left: 0; }
-
-  /* Hide nav links on mobile - only hamburger visible */
-  .work-menu-section   { display: none; }
-  .information-work-section { display: none; }
   .nav-clock-wrapper   { display: none; }
+  .navbar              { height: auto; }
+  .nav-bar             { min-height: 56px; width: 100%; overflow: visible; }
+  .nav-logo            { height: 2.2rem; margin-left: 0; }
 
-  /* line under nav */
-  .index-page::before,
-  .about-page::before,
-  .page-content::before { top: 56px; }
-
+  /* Keep the compact desktop links out of the phone header; the drawer owns them. */
+  .work-menu-section,
+  .information-work-section { display: none !important; }
   .nav-mobile-menu     { top: 56px; display: block; }
 
   /* ── HERO / SLIDER ── */
@@ -2599,35 +2643,49 @@ html.lenis body {
     letter-spacing: var(--mobile-big-text-space);
     padding-left: 0;
     white-space: normal;
+    height: 100%;
   }
   .main-slider_title-wrap {
-    height: auto;
-    margin-bottom: 2rem;
+    height: 3.5rem;
+    margin-bottom: 3.25rem;
+    overflow: hidden;
   }
   .is-hero .slider-toggle-nav  { display: none; }
+
+  /* Controls row: prev/next with separator lines */
+  .hero-controls {
+    position: absolute;
+    bottom: 7rem;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem var(--page-margin);
+    border-top: 1px solid var(--border-white);
+    border-bottom: 1px solid var(--border-white);
+  }
   .prev-btn-wrapper,
   .next-btn-wrapper    {
     display: flex;
     width: auto;
     height: auto;
-    top: auto;
-    bottom: 4.5rem;
-    z-index: 20;
+    position: static;
+    flex: 0 0 auto;
+    margin: 0;
   }
-  .prev-btn-wrapper    { left: var(--page-margin); }
-  .next-btn-wrapper    { right: var(--page-margin); }
+  .prev-btn-wrapper    { margin-right: auto; }
+  .next-btn-wrapper    { margin-left: auto; }
   .btn-prevslide,
   .btn-nextslide       { width: auto; height: auto; }
+  .btn-prevslide .second-menu-link,
+  .btn-nextslide .second-menu-link { display: none !important; }
   .slider-nav-text .menu-big-text { font-size: 0.7rem; }
 
-  /* Number wrapper positioning */
+  /* Number wrapper — hidden on mobile */
   .number-wrapper {
-    bottom: 7rem;
-    left: var(--page-margin);
-    z-index: 20;
-  }
-  .numbers_item {
-    font-size: 0.65rem;
+    display: none;
   }
 
   /* ── INDEX / WORK PAGE ── */
@@ -2678,15 +2736,19 @@ html.lenis body {
   .case-footer-cta-link {
     font-size: 1.2rem;
   }
+  .case-footer-logo { height: 10rem; }
 
   /* ── ABOUT PAGE ── */
-  .about-main          { padding-top: var(--content-page-top-margin); }
+  .about-main          { padding-top: 3rem; }
   .about-hero          { height: 75dvh; }
   .about-hero-name     { font-size: var(--mobile-bix-text); letter-spacing: var(--mobile-big-text-space); }
+  .testimonials-slider { height: 420px; }
+  .testimonials-quote  { font-size: var(--small-high-text); line-height: 1.5; }
   .about-hero-tagline  { font-size: var(--small-discriptor-text); }
   .about-scroll-hint   { flex-direction: column; gap: 0.3rem; }
   .about-intro-text    { font-size: var(--small-high-text); line-height: var(--small-high-text-line); }
   .about-bio           { grid-template-columns: 1fr; gap: 1.5rem; }
+  .about-bio-body      { margin-left: 0; }
   .about-service     { grid-template-columns: 1fr; gap: 1rem; }
   .about-service-heading,
   .about-service-body { grid-column: 1; }
@@ -2708,7 +2770,7 @@ html.lenis body {
   .moodboard-pin-title   { font-size: 1.1rem; line-height: 1.3; }
   .moodboard-detail-card { grid-template-columns: 1fr; gap: 2rem; }
   .moodboard-detail-info { position: static; top: auto; }
-  .moodboard-detail-title { font-size: var(--mobile-bix-text); line-height: var(--big-text-line); }
+  .moodboard-detail-title { font-size: var(--mobile-bix-text); line-height: 1.1; }
 
   /* ── HOME GRID (horizontal scroll) ── */
   .home-grid-overlay   { padding: var(--content-page-top-margin) 0 2rem; }
@@ -2732,17 +2794,24 @@ html.lenis body {
     height: auto;
     flex-wrap: wrap;
     gap: 0.5rem;
-    padding: 0.6rem var(--page-margin);
+    padding: 0.8rem var(--page-margin);
     z-index: 15;
   }
   .slider-footer-social-wrapper {
     display: flex;
   }
   .social-link-container {
-    gap: 0.8rem;
+    gap: 1rem;
   }
   .social-link {
-    font-size: 0.7rem;
+    font-size: 1rem;
+    color: var(--white);
+    letter-spacing: 0.02em;
+  }
+  .second-menu-link-social { display: none !important; }
+  .menu-text.first-menu-link-social { transform: translateY(0) !important; }
+  .slider-footer-text {
+    color: var(--white);
   }
   .slider-footer-text {
     font-size: 0.7rem;
@@ -2755,6 +2824,9 @@ html.lenis body {
   .index-title-text,
   .index-title-count   { font-size: 2rem; }
   .case-title          { font-size: 2rem; }
+  .case-selected-title { font-size: 2rem; }
+  .index-illustrations-title { font-size: 2rem; }
+  .index-illustrations-count  { font-size: var(--small-number); }
   .about-hero-name     { font-size: 2rem; }
   .moodboard-title     { font-size: 2rem; }
   .moodboard-detail-title { font-size: 2rem; }

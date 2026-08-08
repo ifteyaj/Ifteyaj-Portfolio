@@ -51,6 +51,11 @@ export default function BlogIndex() {
       { y: 0, duration: 1.4, ease: "texttshow", delay: 0.1 }
     );
     gsap.fromTo(
+      ".moodboard-header-line",
+      { scaleX: 0 },
+      { scaleX: 1, duration: 1.2, ease: "texttshow", delay: 0.4 }
+    );
+    gsap.fromTo(
       ".moodboard-sub",
       { y: 40, opacity: 0 },
       { y: 0, opacity: 1, duration: 0.9, ease: "texttshow", delay: 0.6 }
@@ -89,6 +94,7 @@ export default function BlogIndex() {
       <main className="moodboard-main">
         <header className="moodboard-header">
           <h1 className="moodboard-title">Blog</h1>
+          <div className="moodboard-header-line" />
         </header>
 
         <div className="moodboard-grid">

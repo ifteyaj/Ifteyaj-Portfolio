@@ -110,26 +110,28 @@ export default function Hero({ gridView, onToggleGridView }: HeroProps) {
           </div>
         </div>
 
-        <div className="prev-btn-wrapper">
-          <div className="btn-prevslide">
-            <div className="menu-link">
-              <div className="menu-text first-menu-link slider-nav-text">
-                <p className="menu-big-text">[←] Prev</p>
-              </div>
-              <div className="menu-text second-menu-link">
-                <p className="menu-big-text">[←] Prev</p>
+        <div className="hero-controls">
+          <div className="prev-btn-wrapper">
+            <div className="btn-prevslide">
+              <div className="menu-link">
+                <div className="menu-text first-menu-link slider-nav-text">
+                  <p className="menu-big-text">[←] Prev</p>
+                </div>
+                <div className="menu-text second-menu-link">
+                  <p className="menu-big-text">[←] Prev</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="next-btn-wrapper">
-          <div className="btn-nextslide">
-            <div className="menu-link">
-              <div className="menu-text first-menu-link slider-nav-text">
-                <p className="menu-big-text">Next [→]</p>
-              </div>
-              <div className="menu-text second-menu-link">
-                <p className="menu-big-text">Next [→]</p>
+          <div className="next-btn-wrapper">
+            <div className="btn-nextslide">
+              <div className="menu-link">
+                <div className="menu-text first-menu-link slider-nav-text">
+                  <p className="menu-big-text">Next [→]</p>
+                </div>
+                <div className="menu-text second-menu-link">
+                  <p className="menu-big-text">Next [→]</p>
+                </div>
               </div>
             </div>
           </div>

@@ -16,12 +16,18 @@ export default function HomeClient() {
   const [revealed, setRevealed] = useState(false);
   const [gridView, setGridView] = useState(false);
   const transitioning = useRef(false);
+  const gridCloseButtonRef = useRef<HTMLButtonElement>(null);
+  const gridFocusReturnRef = useRef<HTMLElement | null>(null);
 
   const toggleGridView = useCallback(() => {
     if (transitioning.current) return;
     transitioning.current = true;
     const root = rootRef.current;
     if (!root) { transitioning.current = false; return; }
+
+    if (!gridView && document.activeElement instanceof HTMLElement) {
+      gridFocusReturnRef.current = document.activeElement;
+    }
 
     const sliderWrap = root.querySelector<HTMLElement>(".main-slider_wrap");
     const sliderNav = root.querySelector<HTMLElement>(".slider-toggle-nav");
@@ -33,6 +39,31 @@ export default function HomeClient() {
     const gridItems = root.querySelectorAll<HTMLElement>(".home-grid-item");
     const gridToggleNav = root.querySelector<HTMLElement>(".grid-toggle-nav");
     const contentElements = [sliderWrap, sliderNav, numberWrapper, prevBtn, nextBtn, sliderFooter].filter(Boolean) as HTMLElement[];
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (prefersReducedMotion) {
+      if (!gridView) {
+        gsap.set(contentElements, { opacity: 0, y: 0 });
+        gsap.set(gridOverlay, { display: "flex", opacity: 1 });
+        gsap.set(gridItems, { opacity: 1, y: 0 });
+        gsap.set(gridToggleNav, { opacity: 1 });
+        root.classList.add("is-grid-open");
+        setGridView(true);
+        requestAnimationFrame(() => {
+          if (root.classList.contains("is-grid-open")) gridCloseButtonRef.current?.focus();
+        });
+      } else {
+        gsap.set(gridOverlay, { display: "none", opacity: 0 });
+        gsap.set(contentElements, { opacity: 1, y: 0 });
+        root.classList.remove("is-grid-open");
+        setGridView(false);
+        const returnTarget = gridFocusReturnRef.current;
+        gridFocusReturnRef.current = null;
+        if (returnTarget?.isConnected) returnTarget.focus();
+      }
+      transitioning.current = false;
+      return;
+    }
 
     if (!gridView) {
       // → Grid view
@@ -41,6 +72,9 @@ export default function HomeClient() {
           transitioning.current = false;
           setGridView(true);
           root.classList.add("is-grid-open");
+          requestAnimationFrame(() => {
+            if (root.classList.contains("is-grid-open")) gridCloseButtonRef.current?.focus();
+          });
         }
       });
 
@@ -68,6 +102,9 @@ export default function HomeClient() {
           setGridView(false);
           root.classList.remove("is-grid-open");
           gsap.set(gridOverlay, { display: "none" });
+          const returnTarget = gridFocusReturnRef.current;
+          gridFocusReturnRef.current = null;
+          if (returnTarget?.isConnected) returnTarget.focus();
         }
       });
 
@@ -89,18 +126,22 @@ export default function HomeClient() {
     const root = rootRef.current;
     if (!root) return;
 
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     registerEases();
     const qs = <T extends Element = HTMLElement>(sel: string): T[] =>
       Array.from(root.querySelectorAll<T>(sel));
 
     // ── Lenis smooth scroll ──
-    const lenis = new Lenis({ lerp: 0.1, smoothWheel: true });
-    let rafId: number;
+    const lenis = new Lenis({
+      lerp: prefersReducedMotion ? 1 : 0.1,
+      smoothWheel: !prefersReducedMotion,
+    });
+    let rafId: number | null = null;
     const raf = (time: number) => {
       lenis.raf(time);
       rafId = requestAnimationFrame(raf);
     };
-    rafId = requestAnimationFrame(raf);
+    if (!prefersReducedMotion) rafId = requestAnimationFrame(raf);
 
     // ── Grid: smooth horizontal scroll ──
     const gridOverlay = root.querySelector<HTMLElement>(".home-grid-overlay");
@@ -110,43 +151,38 @@ export default function HomeClient() {
     let gridRaf: number | null = null;
 
     const gridAnimate = () => {
-      if (!gridTrack) return;
+      if (!gridTrack) {
+        gridRaf = null;
+        return;
+      }
       gridCurrent += (gridTarget - gridCurrent) * 0.08;
-      if (Math.abs(gridTarget - gridCurrent) < 0.5) gridCurrent = gridTarget;
+      if (Math.abs(gridTarget - gridCurrent) < 0.5) {
+        gridCurrent = gridTarget;
+        gridTrack.scrollLeft = gridCurrent;
+        gridRaf = null;
+        return;
+      }
       gridTrack.scrollLeft = gridCurrent;
       gridRaf = requestAnimationFrame(gridAnimate);
     };
 
     const onGridWheel = (e: WheelEvent) => {
-      if (!gridTrack || !gridOverlay || gridOverlay.style.display === "none") return;
+      if (!gridTrack || !gridOverlay || !root.classList.contains("is-grid-open")) return;
       e.preventDefault();
+      e.stopPropagation();
       const maxScroll = gridTrack.scrollWidth - gridTrack.clientWidth;
       gridTarget = Math.max(0, Math.min(gridTarget + e.deltaY * 1.5, maxScroll));
-      if (!gridRaf) gridRaf = requestAnimationFrame(gridAnimate);
+      if (prefersReducedMotion) {
+        gridCurrent = gridTarget;
+        gridTrack.scrollLeft = gridTarget;
+      } else if (!gridRaf) {
+        gridRaf = requestAnimationFrame(gridAnimate);
+      }
     };
     gridOverlay?.addEventListener("wheel", onGridWheel, { passive: false });
 
-    // ── Touch drag for grid on mobile ──
-    let touchStartX = 0;
-    let touchStartScrollLeft = 0;
-    let isTouchDragging = false;
-
-    const onGridTouchStart = (e: TouchEvent) => {
-      if (!gridTrack || !gridOverlay || gridOverlay.style.display === "none") return;
-      touchStartX = e.touches[0].clientX;
-      touchStartScrollLeft = gridTrack.scrollLeft;
-      isTouchDragging = true;
-    };
-    const onGridTouchMove = (e: TouchEvent) => {
-      if (!isTouchDragging || !gridTrack) return;
-      const dx = e.touches[0].clientX - touchStartX;
-      gridTrack.scrollLeft = touchStartScrollLeft - dx;
-    };
-    const onGridTouchEnd = () => { isTouchDragging = false; };
-
-    gridOverlay?.addEventListener("touchstart", onGridTouchStart, { passive: true });
-    gridOverlay?.addEventListener("touchmove", onGridTouchMove, { passive: true });
-    gridOverlay?.addEventListener("touchend", onGridTouchEnd, { passive: true });
+    // Touch/gesture scrolling is handled natively via overflow-x on the track
+    // (see `.home-grid-track` in globals.css), so we don't intercept touchmove.
 
     // ── Slider state ──
     const items: HTMLElement[] = qs(".main-slider_item");
@@ -169,7 +205,7 @@ export default function HomeClient() {
       });
     };
 
-    function goToSlide(next: number) {
+    function goToSlide(next: number, direction: 1 | -1) {
       if (isAnimating || next === currentSlide) return;
       isAnimating = true;
       const prev = currentSlide;
@@ -178,8 +214,23 @@ export default function HomeClient() {
       const prevItem = items[prev];
       const nextItem = items[next];
 
+      if (prefersReducedMotion) {
+        prevItem.classList.remove("active");
+        nextItem.classList.add("active");
+        prevItem.style.zIndex = "";
+        nextItem.style.zIndex = "";
+        prevItem.querySelector<HTMLElement>(".main-slider_img-wrap")?.style.removeProperty("transform");
+        nextItem.querySelector<HTMLElement>(".main-slider_img-wrap")?.style.removeProperty("transform");
+        numberItems.forEach((n, i) => n.classList.toggle("active", i === next));
+        syncVideos();
+        isAnimating = false;
+        return;
+      }
+
       // Layer BOTH slides so the previous image stays underneath while the next
-      // one slides in from the right — no blank/black area mid-transition.
+      // one slides in — no blank/black area mid-transition. Forward (next)
+      // slides in from the right (right → left), backward (prev) from the left
+      // (left → right).
       nextItem.style.zIndex = "5";
       prevItem.style.zIndex = "4";
       nextItem.classList.add("active");
@@ -197,7 +248,7 @@ export default function HomeClient() {
       if (nextImgWrap) {
         gsap.fromTo(
           nextImgWrap,
-          { xPercent: 100 },
+          { xPercent: direction === -1 ? -100 : 100 },
           { xPercent: 0, duration: 1.1, ease: "Pagtrans" }
         );
       }
@@ -215,10 +266,10 @@ export default function HomeClient() {
     }
 
     function nextSlide() {
-      goToSlide((currentSlide + 1) % items.length);
+      goToSlide((currentSlide + 1) % items.length, 1);
     }
     function prevSlide() {
-      goToSlide((currentSlide - 1 + items.length) % items.length);
+      goToSlide((currentSlide - 1 + items.length) % items.length, -1);
     }
 
     const nextBtn = root.querySelector<HTMLElement>(".btn-nextslide");
@@ -228,22 +279,24 @@ export default function HomeClient() {
 
     let wheelCooldown = false;
     const onWheel = (e: WheelEvent) => {
-      if (wheelCooldown || isAnimating) return;
+      if (root.classList.contains("is-grid-open") || wheelCooldown || isAnimating) return;
       wheelCooldown = true;
       setTimeout(() => {
         wheelCooldown = false;
       }, 900);
-      if (e.deltaY > 0) goToSlide((currentSlide + 1) % items.length);
-      else goToSlide((currentSlide - 1 + items.length) % items.length);
+      if (e.deltaY > 0) nextSlide();
+      else prevSlide();
     };
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "ArrowRight" || e.key === "ArrowDown") goToSlide((currentSlide + 1) % items.length);
-      if (e.key === "ArrowLeft" || e.key === "ArrowUp") goToSlide((currentSlide - 1 + items.length) % items.length);
+      if (root.classList.contains("is-grid-open")) return;
+      if (e.key === "ArrowRight" || e.key === "ArrowDown") nextSlide();
+      if (e.key === "ArrowLeft" || e.key === "ArrowUp") prevSlide();
     };
     window.addEventListener("wheel", onWheel, { passive: true });
     window.addEventListener("keydown", onKey);
 
     // ── Link hover (dual-text) ──
+    const isMobile = window.innerWidth <= 767;
     qs<HTMLElement>(".menu-link").forEach((link) => {
       // Skip case-bottom-nav links (they use CSS left-to-right effect)
       if (link.closest(".case-bottom-nav")) return;
@@ -256,26 +309,39 @@ export default function HomeClient() {
       link.addEventListener("mouseenter", () => {
         if (first) gsap.to(first, { y: "0%", duration: 0.6, ease: "hoverin" });
         if (second) gsap.to(second, { y: "-100%", duration: 0.6, ease: "hoverin" });
-        if (firstS) gsap.to(firstS, { y: "0%", duration: 0.6, ease: "hoverin" });
-        if (secondS) gsap.to(secondS, { y: "-100%", duration: 0.6, ease: "hoverin" });
+        if (!isMobile && firstS) gsap.to(firstS, { y: "0%", duration: 0.6, ease: "hoverin" });
+        if (!isMobile && secondS) gsap.to(secondS, { y: "-100%", duration: 0.6, ease: "hoverin" });
       });
       link.addEventListener("mouseleave", () => {
         if (first) gsap.to(first, { y: "100%", duration: 1, ease: "hoverout" });
         if (second) gsap.to(second, { y: "0%", duration: 1, ease: "hoverout" });
-        if (firstS) gsap.to(firstS, { y: "100%", duration: 1, ease: "hoverout" });
-        if (secondS) gsap.to(secondS, { y: "0%", duration: 1, ease: "hoverout" });
+        if (!isMobile && firstS) gsap.to(firstS, { y: "100%", duration: 1, ease: "hoverout" });
+        if (!isMobile && secondS) gsap.to(secondS, { y: "0%", duration: 1, ease: "hoverout" });
       });
     });
 
     // ── Page load intro ──
     const counterNumber = root.querySelector<HTMLElement>(".frontpage-counter-number");
-    const counterContents = root.querySelectorAll<HTMLElement>(".frontpage-counter-content");
     const loader = root.querySelector<HTMLElement>(".frontpage-loader");
     const logoWrap = root.querySelector<HTMLElement>(".loader-logo-wrap");
     const logoOutline = root.querySelector<HTMLElement>(".loader-logo-outline");
 
-    // Logo draw-on animation (outline only)
-    if (logoOutline) {
+    if (prefersReducedMotion) {
+      if (loader) loader.style.display = "none";
+      requestAnimationFrame(() => setRevealed(true));
+      gsap.set(qs<HTMLElement>(".main-slider_title"), { bottom: "0" });
+      gsap.set(qs<HTMLElement>(".first-menu-link"), { y: "0%" });
+      gsap.set(root.querySelector<HTMLElement>(".circle-minimize-btn"), {
+        clipPath: "inset(0% 0% 0% 0%)",
+      });
+      gsap.set(root.querySelector<HTMLElement>(".numbers_wrap"), {
+        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+      });
+      gsap.set(root.querySelector<HTMLElement>(".slider-nav-border"), { width: "100%" });
+      gsap.set(root.querySelector<HTMLElement>(".slider-footer-border"), { width: "100%" });
+    } else {
+      // Logo draw-on animation (outline only)
+      if (logoOutline) {
       const outlineLength = (logoOutline as unknown as SVGPathElement).getTotalLength?.() || 80000;
       gsap.set(logoOutline, {
         strokeDasharray: outlineLength,
@@ -342,17 +408,15 @@ export default function HomeClient() {
     // Nav link reveal (first-menu-link starts at translateY(100%) — hidden)
     // Skip navbar and footer links - they're always visible
     gsap.to(".first-menu-link:not(.case-bottom-nav .first-menu-link):not(.about-nav-wrapper .first-menu-link):not(.contact-nav-wrapper .first-menu-link):not(.nav-clock-wrapper .first-menu-link):not(.work-nav-wrapper .first-menu-link)", { y: "0%", duration: 1, ease: "texttshow", delay: D });
+    }
 
     syncVideos();
 
     return () => {
-      cancelAnimationFrame(rafId);
+      if (rafId !== null) cancelAnimationFrame(rafId);
       if (gridRaf) cancelAnimationFrame(gridRaf);
       lenis.destroy();
       gridOverlay?.removeEventListener("wheel", onGridWheel);
-      gridOverlay?.removeEventListener("touchstart", onGridTouchStart);
-      gridOverlay?.removeEventListener("touchmove", onGridTouchMove);
-      gridOverlay?.removeEventListener("touchend", onGridTouchEnd);
       window.removeEventListener("wheel", onWheel);
       window.removeEventListener("keydown", onKey);
       nextBtn?.removeEventListener("click", nextSlide);
@@ -380,6 +444,7 @@ export default function HomeClient() {
           <div className="slider-nav-border" />
           <div className="circle-btn container-arrows" aria-label="trail{link}">
             <button
+              ref={gridCloseButtonRef}
               type="button"
               className="circle-scale-btn"
               aria-label="Switch to slider view"

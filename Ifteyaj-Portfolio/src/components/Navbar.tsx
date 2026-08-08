@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
 import { navLinks, navInfoLinks, siteConfig } from "@/data/site";
 
@@ -10,6 +10,10 @@ interface NavbarProps {
 
 export default function Navbar(_props: NavbarProps) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const wasOpenRef = useRef(false);
+  const previousBodyOverflowRef = useRef<string | null>(null);
 
   const toggleMenu = useCallback(() => {
     setMenuOpen((prev) => !prev);
@@ -20,16 +24,64 @@ export default function Navbar(_props: NavbarProps) {
   }, []);
 
   useEffect(() => {
+    const onMenuKeyDown = (event: KeyboardEvent) => {
+      if (!menuOpen) return;
+
+      if (event.key === "Escape") {
+        event.preventDefault();
+        closeMenu();
+        return;
+      }
+
+      if (event.key !== "Tab" || !menuRef.current) return;
+      const focusable = Array.from(
+        menuRef.current.querySelectorAll<HTMLElement>("a[href], button:not([disabled])")
+      );
+      if (focusable.length === 0) return;
+
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+
     if (menuOpen) {
+      if (previousBodyOverflowRef.current === null) {
+        previousBodyOverflowRef.current = document.body.style.overflow;
+      }
       document.body.style.overflow = "hidden";
+      wasOpenRef.current = true;
+      window.addEventListener("keydown", onMenuKeyDown);
+      requestAnimationFrame(() => {
+        menuRef.current?.querySelector<HTMLElement>("a[href], button:not([disabled])")?.focus();
+      });
     } else {
-      document.body.style.overflow = "";
+      if (previousBodyOverflowRef.current !== null) {
+        document.body.style.overflow = previousBodyOverflowRef.current;
+        previousBodyOverflowRef.current = null;
+      }
+      if (wasOpenRef.current) {
+        wasOpenRef.current = false;
+        menuButtonRef.current?.focus();
+      }
     }
-    return () => { document.body.style.overflow = ""; };
-  }, [menuOpen]);
+
+    return () => {
+      if (menuOpen && previousBodyOverflowRef.current !== null) {
+        document.body.style.overflow = previousBodyOverflowRef.current;
+        previousBodyOverflowRef.current = null;
+      }
+      window.removeEventListener("keydown", onMenuKeyDown);
+    };
+  }, [closeMenu, menuOpen]);
 
   return (
-    <nav className="navbar" role="banner">
+    <nav className="navbar" aria-label="Primary navigation">
       <div className="nav-bar">
         <div className="nav-logo-wrapper">
           <Link href="/" className="nav-logo-link" aria-label="Ifteyaj studio home" onClick={closeMenu}>
@@ -132,10 +184,12 @@ export default function Navbar(_props: NavbarProps) {
         </div>
 
         <button
+          ref={menuButtonRef}
           className={`nav-hamburger ${menuOpen ? "is-open" : ""}`}
           type="button"
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
+          aria-controls="mobile-navigation"
           onClick={toggleMenu}
         >
           <span className="nav-hamburger-line" />
@@ -143,7 +197,16 @@ export default function Navbar(_props: NavbarProps) {
         </button>
       </div>
 
-      <div className={`nav-mobile-menu ${menuOpen ? "is-open" : ""}`}>
+      <div
+        ref={menuRef}
+        id="mobile-navigation"
+        className={`nav-mobile-menu ${menuOpen ? "is-open" : ""}`}
+        aria-label="Mobile navigation"
+        aria-hidden={!menuOpen}
+        onClick={(event) => {
+          if (event.currentTarget === event.target) closeMenu();
+        }}
+      >
         <div className="nav-mobile-inner">
           <div className="nav-mobile-section">
             {navLinks.map((link) => (
@@ -188,9 +251,12 @@ export default function Navbar(_props: NavbarProps) {
               <a key={s.label} href={s.href} target="_blank" className="nav-mobile-link" rel="noopener noreferrer">{s.label}</a>
             ))}
           </div>
-          <div className="nav-mobile-meta">
-            <span>Brand Designer</span>
-            <span>Vibe Coder</span>
+          <div className="nav-mobile-bottom">
+            <img src="/favicon.ico" alt="Favicon" className="nav-mobile-favicon" />
+            <div className="nav-mobile-meta">
+              <span>Brand Designer</span>
+              <span>Vibe Coder</span>
+            </div>
           </div>
         </div>
       </div>
