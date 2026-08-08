@@ -69,6 +69,8 @@ export interface BlogPost {
   tag: string;
   image: string;
   description: string;
+  /** Optional long-form paragraphs rendered on the detail page. */
+  body?: string[];
 }
 
 export interface MoodboardItem {

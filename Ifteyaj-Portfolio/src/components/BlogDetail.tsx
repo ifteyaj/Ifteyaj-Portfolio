@@ -55,6 +55,7 @@ export default function BlogDetail({ post }: BlogDetailProps) {
     gsap.fromTo(".moodboard-detail-image", { y: 80, opacity: 0 }, { y: 0, opacity: 1, duration: 1.1, ease: "texttshow", delay: 0.3 });
     gsap.fromTo(".moodboard-detail-info", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.9, ease: "texttshow", delay: 0.7 });
     gsap.fromTo(".moodboard-related-pin", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "texttshow", stagger: 0.06, delay: 1.0 });
+    gsap.fromTo(".blog-content .blog-content-paragraph", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: "texttshow", stagger: 0.08, delay: 0.9 });
     gsap.fromTo(".case-footer-block", { y: 80, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: "texttshow", delay: 1.2 });
 
     gsap.to(".first-menu-link:not(.case-bottom-nav .first-menu-link):not(.about-nav-wrapper .first-menu-link):not(.contact-nav-wrapper .first-menu-link):not(.nav-clock-wrapper .first-menu-link):not(.work-nav-wrapper .first-menu-link)", { y: "0%", duration: 1, ease: "texttshow", delay: 0.3 });
@@ -94,6 +95,18 @@ export default function BlogDetail({ post }: BlogDetailProps) {
             <p className="moodboard-detail-desc">{post.description}</p>
           </div>
         </div>
+
+        <div className="blog-divider" />
+
+        {post.body && post.body.length > 0 && (
+          <section className="blog-content">
+            {post.body.map((paragraph, i) => (
+              <p key={i} className="blog-content-paragraph">
+                {paragraph}
+              </p>
+            ))}
+          </section>
+        )}
 
         <section className="moodboard-related">
           <h2 className="moodboard-related-heading">More from the blog</h2>

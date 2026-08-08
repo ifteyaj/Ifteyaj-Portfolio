@@ -7,8 +7,20 @@ import Navbar from "@/components/Navbar";
 import CustomCursor from "@/components/CustomCursor";
 import SiteFooter from "@/components/SiteFooter";
 import Testimonials from "@/components/Testimonials";
+import { MarqueeLogoScroller } from "@/components/ui/marquee-logo-scroller";
 import { about } from "@/data/about";
 import { siteConfig } from "@/data/site";
+
+const clientLogos = [
+  { src: "https://svgl.app/library/procure.svg", alt: "Procure", gradient: { from: "#668CFF", via: "#0049FF", to: "#003199" } },
+  { src: "https://svgl.app/library/shopify.svg", alt: "Clerk", gradient: { from: "#FFE766", via: "#FFCE00", to: "#B38F00" } },
+  { src: "https://svgl.app/library/blender.svg", alt: "Blender", gradient: { from: "#6690F0", via: "#255BE3", to: "#193B99" } },
+  { src: "https://svgl.app/library/figma.svg", alt: "Figma", gradient: { from: "#C4C2FF", via: "#9896FF", to: "#5B4DCC" } },
+  { src: "https://svgl.app/library/spotify.svg", alt: "Mocha", gradient: { from: "#FF66A1", via: "#FF007A", to: "#B3005A" } },
+  { src: "https://svgl.app/library/lottielab.svg", alt: "Layers", gradient: { from: "#D9FF5A", via: "#AFFF00", to: "#7A9900" } },
+  { src: "https://svgl.app/library/google-cloud.svg", alt: "Google Cloud", gradient: { from: "#8AA7FF", via: "#5F86FF", to: "#3A5ACC" } },
+  { src: "https://svgl.app/library/bing.svg", alt: "Framer", gradient: { from: "#67F0D1", via: "#2AE5B9", to: "#1B8F72" } },
+];
 
 export default function AboutClient() {
   const rootRef = useRef<HTMLDivElement>(null);
@@ -136,6 +148,8 @@ export default function AboutClient() {
           <p className="about-intro-text">{about.intro}</p>
         </section>
 
+        <div className="about-divider" />
+
         <section className="about-bio">
           <h2 className="about-bio-heading">{about.bioHeading}</h2>
           <div className="about-bio-body">
@@ -144,6 +158,8 @@ export default function AboutClient() {
             ))}
           </div>
         </section>
+
+        <div className="about-divider" />
 
         <section className="about-services">
           <h2 className="about-services-title">{about.servicesHeading}</h2>
@@ -167,13 +183,7 @@ export default function AboutClient() {
 
         <section className="about-clients about-list-block">
           <h2 className="about-list-heading">Client Highlights</h2>
-          <div className="about-client-slider">
-            <div className="about-client-slider-track">
-              {[...about.clients, ...about.clients].map((client, i) => (
-                <span key={`${client}-${i}`} className="about-client-item">{client}</span>
-              ))}
-            </div>
-          </div>
+          <MarqueeLogoScroller logos={clientLogos} speed="normal" />
         </section>
 
         <Testimonials

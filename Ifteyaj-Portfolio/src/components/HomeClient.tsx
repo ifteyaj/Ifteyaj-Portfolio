@@ -37,7 +37,11 @@ export default function HomeClient() {
     if (!gridView) {
       // → Grid view
       const tl = gsap.timeline({
-        onComplete: () => { transitioning.current = false; setGridView(true); }
+        onComplete: () => {
+          transitioning.current = false;
+          setGridView(true);
+          root.classList.add("is-grid-open");
+        }
       });
 
       tl.to(contentElements, {
@@ -62,6 +66,7 @@ export default function HomeClient() {
         onComplete: () => {
           transitioning.current = false;
           setGridView(false);
+          root.classList.remove("is-grid-open");
           gsap.set(gridOverlay, { display: "none" });
         }
       });
@@ -179,6 +184,12 @@ export default function HomeClient() {
       prevItem.style.zIndex = "4";
       nextItem.classList.add("active");
       prevItem.classList.add("active");
+
+      const prevTitle = prevItem.querySelector<HTMLElement>(".main-slider_title");
+      const nextTitle = nextItem.querySelector<HTMLElement>(".main-slider_title");
+      if (nextTitle) gsap.set(nextTitle, { bottom: "-100%" });
+      if (prevTitle) gsap.to(prevTitle, { bottom: "100%", duration: 0.8, ease: "Pagtrans" });
+      if (nextTitle) gsap.to(nextTitle, { bottom: "0", duration: 1.2, ease: "texttshow", delay: 0.1 });
 
       const prevImgWrap = prevItem.querySelector<HTMLElement>(".main-slider_img-wrap");
       const nextImgWrap = nextItem.querySelector<HTMLElement>(".main-slider_img-wrap");
@@ -327,6 +338,7 @@ export default function HomeClient() {
       ease: "texttshow",
       delay: D,
     });
+    gsap.to(".main-slider_title", { bottom: "0", duration: 1.8, ease: "texttshow", delay: D });
     // Nav link reveal (first-menu-link starts at translateY(100%) — hidden)
     // Skip navbar and footer links - they're always visible
     gsap.to(".first-menu-link:not(.case-bottom-nav .first-menu-link):not(.about-nav-wrapper .first-menu-link):not(.contact-nav-wrapper .first-menu-link):not(.nav-clock-wrapper .first-menu-link):not(.work-nav-wrapper .first-menu-link)", { y: "0%", duration: 1, ease: "texttshow", delay: D });
@@ -390,10 +402,10 @@ export default function HomeClient() {
         <div className="home-grid-track">
           {projects.map((p) => (
             <Link key={p.slug} href={p.href} className="home-grid-item">
+              <span className="home-grid-label">({String(p.index).padStart(2, "0")}) {p.title}</span>
               <div className="home-grid-img-wrap">
                 <img src={p.images?.[0]} alt={p.title} className="home-grid-img" loading="lazy" />
               </div>
-              <span className="home-grid-label">({String(p.index).padStart(2, "0")}) {p.title}</span>
             </Link>
           ))}
         </div>
