@@ -98,8 +98,8 @@ export default function WorkDetail({ project }: WorkDetailProps) {
         <header className="case-header">
           <div className="case-header-left">
             <div className="case-title-wrap">
-              <span className="case-hero-index">({String(project.index).padStart(2, "0")})</span>
               <h1 className="case-title">{project.title}</h1>
+              <span className="case-hero-index">({String(project.index).padStart(2, "0")})</span>
             </div>
           </div>
           <div className="case-header-meta">

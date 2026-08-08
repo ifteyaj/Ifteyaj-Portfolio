@@ -1454,15 +1454,19 @@ html.lenis body {
   font-weight: var(--main-weight);
 }
 
-/* ── Hero image (first image, full-width) ── */
+/* ── Hero image (first image, fixed-size container) ── */
 .case-hero-img {
   overflow: hidden;
   line-height: 0;
   margin: 0;
+  height: calc(100vh - 16rem);
+  min-height: 28rem;
+  max-height: 46rem;
 }
 .case-hero-img img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
@@ -2708,10 +2712,10 @@ html.lenis body {
   /* ── CASE / WORK DETAIL ── */
   .case-main           { padding-top: var(--content-page-top-margin); }
   .case-title          { font-size: var(--mobile-bix-text); letter-spacing: var(--mobile-big-text-space); }
-  .case-header         { gap: var(--row-margin); min-height: auto; flex-direction: column; }
+  .case-header         { gap: var(--row-margin); min-height: auto; flex-direction: column; align-items: flex-start; }
   .case-header-meta    { min-width: 0; width: 100%; margin-top: var(--row-margin); }
   .case-meta-row       { font-size: 0.7rem; padding: 0.6rem 0; }
-  .case-hero-img img   { height: 50vw; }
+  .case-hero-img       { height: 50vw; min-height: 16rem; max-height: none; }
   .case-desc-section   { grid-template-columns: 1fr; gap: 2rem; }
   .case-desc-text      { font-size: var(--small-high-text); line-height: var(--small-high-text-line); }
   .case-gallery-grid   { gap: 0.8rem; }
@@ -2722,8 +2726,17 @@ html.lenis body {
   .case-selected-title { font-size: var(--mobile-bix-text); letter-spacing: var(--mobile-big-text-space); }
   .case-selected-grid  { grid-template-columns: 1fr; gap: 1.5rem; }
   .case-footer-sh-text { font-size: 6rem; }
-  .case-footer-inner   { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+  .case-footer-inner   { flex-direction: column; align-items: flex-start; gap: 1.5rem; min-height: 0; }
   .case-footer-block   { padding: var(--mid-section-break) 0 var(--page-top-margin); }
+  .case-footer-cta-link {
+    flex: none;
+    width: 100%;
+    max-width: none;
+    font-size: 1.6rem;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    padding-bottom: 0;
+  }
   .case-bottom-nav     { flex-wrap: wrap; gap: 1.5rem; }
   .case-bottom-col     { min-width: 0; }
   .case-prev-next-nav  { padding: var(--mid-section-break) 0; margin-top: var(--mid-section-break); gap: 1.2rem; }
@@ -2733,9 +2746,6 @@ html.lenis body {
   .case-nav-dot        { width: 0.4rem; height: 0.4rem; }
 
   /* ── FOOTER (shared) ── */
-  .case-footer-cta-link {
-    font-size: 1.2rem;
-  }
   .case-footer-logo { height: 10rem; }
 
   /* ── ABOUT PAGE ── */
