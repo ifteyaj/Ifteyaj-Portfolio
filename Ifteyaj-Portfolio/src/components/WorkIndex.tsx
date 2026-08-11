@@ -90,11 +90,9 @@ export default function WorkIndex() {
               <div className="index-entry-info">
                 <span className="index-entry-title">{project.title}</span>
                 <span className="index-entry-cat">{project.category}</span>
-                <span className="index-entry-sub">{project.secondaryCategory}</span>
-                <span className="index-entry-num">({String(project.index).padStart(2, "0")})</span>
               </div>
               <div className="index-entry-images">
-                {project.images?.map((img, i) => (
+                {project.images?.slice(0, 2).map((img, i) => (
                   <div key={i} className="index-entry-img-wrap">
                     <img src={img} alt={`${project.title} ${i + 1}`} className="index-entry-img" loading="lazy" />
                   </div>
@@ -104,11 +102,12 @@ export default function WorkIndex() {
           ))}
         </div>
 
-        <section className="index-illustrations">
-          <h2 className="index-illustrations-title">
-            Illustrations
-            <span className="index-illustrations-count">(09)</span>
-          </h2>
+        <div className="index-illustrations-cols">
+          <section className="index-illustrations">
+            <h2 className="index-illustrations-title">
+              Illustrations
+              <span className="index-illustrations-count">(23)</span>
+            </h2>
           <div className="index-illustrations-grid">
             <div className="index-illustrations-item">
               <img src="/images/illustration-1.webp" alt="Illustration 1" className="index-illustrations-img" loading="lazy" />
@@ -137,14 +136,56 @@ export default function WorkIndex() {
             <div className="index-illustrations-item">
               <img src="/images/illustration-9.webp" alt="Illustration 9" className="index-illustrations-img" loading="lazy" />
             </div>
+            <div className="index-illustrations-item">
+              <img src="/images/illustration-10.webp" alt="Illustration 10" className="index-illustrations-img" loading="lazy" />
+            </div>
+            <div className="index-illustrations-item">
+              <img src="/images/illustration-11.webp" alt="Illustration 11" className="index-illustrations-img" loading="lazy" />
+            </div>
+            <div className="index-illustrations-item">
+              <img src="/images/illustration-12.webp" alt="Illustration 12" className="index-illustrations-img" loading="lazy" />
+            </div>
+            <div className="index-illustrations-item">
+              <img src="/images/illustration-13.webp" alt="Illustration 13" className="index-illustrations-img" loading="lazy" />
+            </div>
+            <div className="index-illustrations-item">
+              <img src="/images/illustration-14.webp" alt="Illustration 14" className="index-illustrations-img" loading="lazy" />
+            </div>
+            <div className="index-illustrations-item">
+              <img src="/images/illustration-15.webp" alt="Illustration 15" className="index-illustrations-img" loading="lazy" />
+            </div>
+            <div className="index-illustrations-item">
+              <img src="/images/illustration-16.webp" alt="Illustration 16" className="index-illustrations-img" loading="lazy" />
+            </div>
+            <div className="index-illustrations-item">
+              <img src="/images/illustration-17.webp" alt="Illustration 17" className="index-illustrations-img" loading="lazy" />
+            </div>
+            <div className="index-illustrations-item">
+              <img src="/images/illustration-18.webp" alt="Illustration 18" className="index-illustrations-img" loading="lazy" />
+            </div>
+            <div className="index-illustrations-item">
+              <img src="/images/illustration-19.webp" alt="Illustration 19" className="index-illustrations-img" loading="lazy" />
+            </div>
+            <div className="index-illustrations-item">
+              <img src="/images/illustration-20.webp" alt="Illustration 20" className="index-illustrations-img" loading="lazy" />
+            </div>
+            <div className="index-illustrations-item">
+              <img src="/images/illustration-21.webp" alt="Illustration 21" className="index-illustrations-img" loading="lazy" />
+            </div>
+            <div className="index-illustrations-item">
+              <img src="/images/illustration-22.webp" alt="Illustration 22" className="index-illustrations-img" loading="lazy" />
+            </div>
+            <div className="index-illustrations-item">
+              <img src="/images/illustration-23.jpg" alt="Illustration 23" className="index-illustrations-img" loading="lazy" />
+            </div>
           </div>
         </section>
 
         <section className="index-illustrations index-portraits">
-          <h2 className="index-illustrations-title">
-            Portrait / Vexel Art
-            <span className="index-illustrations-count">(04)</span>
-          </h2>
+            <h2 className="index-illustrations-title">
+              Portrait / Vexel Art
+              <span className="index-illustrations-count">(06)</span>
+            </h2>
           <div className="index-illustrations-grid">
             <div className="index-illustrations-item">
               <img src="/images/portrait-1.webp" alt="Portrait 1" className="index-illustrations-img" loading="lazy" />
@@ -158,8 +199,15 @@ export default function WorkIndex() {
             <div className="index-illustrations-item">
               <img src="/images/portrait-4.webp" alt="Portrait 4" className="index-illustrations-img" loading="lazy" />
             </div>
+            <div className="index-illustrations-item">
+              <img src="/images/portrait-5.webp" alt="Portrait 5" className="index-illustrations-img" loading="lazy" />
+            </div>
+            <div className="index-illustrations-item">
+              <img src="/images/portrait-6.webp" alt="Portrait 6" className="index-illustrations-img" loading="lazy" />
+            </div>
           </div>
         </section>
+        </div>
 
         <SiteFooter />
       </main>

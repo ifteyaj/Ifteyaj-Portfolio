@@ -145,11 +145,6 @@ export default function WorkDetail({ project }: WorkDetailProps) {
             <img src={images[0]} alt={`${project.title} banner`} loading="lazy" />
           </div>
 
-          <div className="case-block-equal">
-            <div className="case-block-media case-gallery-img-wrap"><img src={images[1 % images.length]} alt={`${project.title} detail`} loading="lazy" /></div>
-            <div className="case-block-media case-gallery-img-wrap"><img src={images[2 % images.length]} alt={`${project.title} detail`} loading="lazy" /></div>
-          </div>
-
           <div className="case-desc-section">
             <div className="case-desc-label">Description</div>
             <div className="case-desc-body">
@@ -157,17 +152,13 @@ export default function WorkDetail({ project }: WorkDetailProps) {
             </div>
           </div>
 
+          <div className="case-block-equal">
+            <div className="case-block-media case-gallery-img-wrap"><img src={images[1 % images.length]} alt={`${project.title} detail`} loading="lazy" /></div>
+            <div className="case-block-media case-gallery-img-wrap"><img src={images[2 % images.length]} alt={`${project.title} detail`} loading="lazy" /></div>
+          </div>
+
           <div className="case-block case-block-feature">
             <img src={images[1 % images.length]} alt={`${project.title} feature`} loading="lazy" />
-          </div>
-
-          <div className="case-block-offset">
-            <div className="case-block-media case-gallery-img-wrap case-block-media-strip"><img src={images[0]} alt={`${project.title} detail`} loading="lazy" /></div>
-            <div className="case-block-media case-gallery-img-wrap case-block-media-portrait"><img src={images[1 % images.length]} alt={`${project.title} detail`} loading="lazy" /></div>
-          </div>
-
-          <div className="case-block case-block-wide">
-            <img src={images[2 % images.length]} alt={`${project.title} wide`} loading="lazy" />
           </div>
         </div>
 

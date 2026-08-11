@@ -238,8 +238,11 @@ export default function HomeClient() {
 
       const prevTitle = prevItem.querySelector<HTMLElement>(".main-slider_title");
       const nextTitle = nextItem.querySelector<HTMLElement>(".main-slider_title");
-      if (nextTitle) gsap.set(nextTitle, { bottom: "-100%" });
-      if (prevTitle) gsap.to(prevTitle, { bottom: "100%", duration: 0.8, ease: "Pagtrans" });
+      // Scroll down (next): text enters bottom → top. Scroll up (prev): top → bottom.
+      const enterFrom = direction === 1 ? -100 : 100;
+      const exitTo = direction === 1 ? 100 : -100;
+      if (nextTitle) gsap.set(nextTitle, { bottom: `${enterFrom}%`, opacity: 1 });
+      if (prevTitle) gsap.to(prevTitle, { bottom: `${exitTo}%`, opacity: 0, duration: 0.6, ease: "Pagtrans" });
       if (nextTitle) gsap.to(nextTitle, { bottom: "0", duration: 1.2, ease: "texttshow", delay: 0.1 });
 
       const prevImgWrap = prevItem.querySelector<HTMLElement>(".main-slider_img-wrap");
@@ -261,6 +264,8 @@ export default function HomeClient() {
         prevItem.classList.remove("active");
         prevItem.style.zIndex = "";
         nextItem.style.zIndex = "";
+        if (prevImgWrap) gsap.set(prevImgWrap, { clearProps: "transform" });
+        if (nextImgWrap) gsap.set(nextImgWrap, { clearProps: "transform" });
         isAnimating = false;
       }, 1250);
     }
@@ -296,27 +301,20 @@ export default function HomeClient() {
     window.addEventListener("keydown", onKey);
 
     // ── Link hover (dual-text) ──
-    const isMobile = window.innerWidth <= 767;
     qs<HTMLElement>(".menu-link").forEach((link) => {
       // Skip case-bottom-nav links (they use CSS left-to-right effect)
       if (link.closest(".case-bottom-nav")) return;
 
       const first = link.querySelector<HTMLElement>(".first-menu-link");
       const second = link.querySelector<HTMLElement>(".second-menu-link");
-      const firstS = link.querySelector<HTMLElement>(".first-menu-link-social");
-      const secondS = link.querySelector<HTMLElement>(".second-menu-link-social");
 
       link.addEventListener("mouseenter", () => {
         if (first) gsap.to(first, { y: "0%", duration: 0.6, ease: "hoverin" });
         if (second) gsap.to(second, { y: "-100%", duration: 0.6, ease: "hoverin" });
-        if (!isMobile && firstS) gsap.to(firstS, { y: "0%", duration: 0.6, ease: "hoverin" });
-        if (!isMobile && secondS) gsap.to(secondS, { y: "-100%", duration: 0.6, ease: "hoverin" });
       });
       link.addEventListener("mouseleave", () => {
         if (first) gsap.to(first, { y: "100%", duration: 1, ease: "hoverout" });
         if (second) gsap.to(second, { y: "0%", duration: 1, ease: "hoverout" });
-        if (!isMobile && firstS) gsap.to(firstS, { y: "100%", duration: 1, ease: "hoverout" });
-        if (!isMobile && secondS) gsap.to(secondS, { y: "0%", duration: 1, ease: "hoverout" });
       });
     });
 
@@ -380,6 +378,20 @@ export default function HomeClient() {
       onComplete: () => {
         if (loader) loader.style.display = "none";
         setRevealed(true);
+        // Force a clean re-rasterization of the hero layers after reveal.
+        // iOS composited the image once at a stale scale; a tiny transform
+        // nudge (then removal) makes the browser re-raster it at full DPR —
+        // the same effect the manual "resize" was producing.
+        requestAnimationFrame(() => {
+          root.querySelectorAll<HTMLElement>(".main-slider_img-wrap").forEach((wrap) => {
+            gsap.set(wrap, { scale: 1.001 });
+          });
+        });
+        requestAnimationFrame(() => {
+          root.querySelectorAll<HTMLElement>(".main-slider_img-wrap").forEach((wrap) => {
+            gsap.set(wrap, { clearProps: "scale, transform" });
+          });
+        });
       },
     });
 
@@ -404,7 +416,7 @@ export default function HomeClient() {
       ease: "texttshow",
       delay: D,
     });
-    gsap.to(".main-slider_title", { bottom: "0", duration: 1.8, ease: "texttshow", delay: D });
+    gsap.to(".main-slider_item.active .main-slider_title", { bottom: "0", duration: 1.8, ease: "texttshow", delay: D });
     // Nav link reveal (first-menu-link starts at translateY(100%) — hidden)
     // Skip navbar and footer links - they're always visible
     gsap.to(".first-menu-link:not(.case-bottom-nav .first-menu-link):not(.about-nav-wrapper .first-menu-link):not(.contact-nav-wrapper .first-menu-link):not(.nav-clock-wrapper .first-menu-link):not(.work-nav-wrapper .first-menu-link)", { y: "0%", duration: 1, ease: "texttshow", delay: D });
