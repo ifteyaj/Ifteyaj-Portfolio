@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Vendored third-party Framer component (minified, external source):
+    "src/lib/framer/**",
   ]),
 ]);
 

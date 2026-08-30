@@ -92,15 +92,17 @@ export default function Navbar(_props: NavbarProps) {
         <div className="work-menu-section">
           <div className="work-nav-wrapper">
             {navLinks.map((link) => (
-              <Link key={link.label} href={link.href} className="menu-link page_link">
+              <Link key={link.label} href={link.href} className="menu-link page_link" onClick={closeMenu}>
                 <div className="menu-text first-menu-link">
                   <p className="menu-big-text">{link.label}</p>
+                  <span className="index-illustrations-count">({link.count})</span>
                   <svg className="nav-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M7 17L17 7M17 7H7M17 7V17"/>
                   </svg>
                 </div>
                 <div className="menu-text second-menu-link">
                   <p className="menu-big-text">{link.label}</p>
+                  <span className="index-illustrations-count">({link.count})</span>
                   <svg className="nav-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M7 17L17 7M17 7H7M17 7V17"/>
                   </svg>
@@ -208,10 +210,10 @@ export default function Navbar(_props: NavbarProps) {
         }}
       >
         <div className="nav-mobile-inner">
-          <div className="nav-mobile-section">
+          <div className="nav-mobile-section nav-mobile-section-work">
             {navLinks.map((link) => (
               <Link key={link.label} href={link.href} className="nav-mobile-link" onClick={closeMenu}>
-                {link.label}
+                {link.label} <span className="index-illustrations-count">({link.count})</span>
                 <svg className="nav-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M7 17L17 7M17 7H7M17 7V17"/>
                 </svg>

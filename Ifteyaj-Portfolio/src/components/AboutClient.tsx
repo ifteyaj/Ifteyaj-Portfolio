@@ -7,8 +7,6 @@ import Navbar from "@/components/Navbar";
 import CustomCursor from "@/components/CustomCursor";
 import SiteFooter from "@/components/SiteFooter";
 import Testimonials from "@/components/Testimonials";
-import { LogoCarousel } from "@/components/ui/logo-carousel";
-import { allLogos } from "@/components/client-logos";
 import { about } from "@/data/about";
 import { siteConfig } from "@/data/site";
 
@@ -171,12 +169,7 @@ export default function AboutClient() {
           </a>
         </section>
 
-        <section className="about-clients about-list-block">
-          <h2 className="about-list-heading">Client Highlights</h2>
-          <div className="flex justify-center">
-            <LogoCarousel columnCount={3} logos={allLogos} />
-          </div>
-        </section>
+        
 
         <Testimonials
           heading={about.testimonialsHeading}

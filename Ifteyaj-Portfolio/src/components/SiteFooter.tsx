@@ -28,7 +28,7 @@ export default function SiteFooter() {
       </footer>
 
       <div className="case-bottom-nav">
-        <div className="case-bottom-col">
+        <div className="case-bottom-col case-bottom-col-nav">
           <Link href="/" className="menu-link">
             <div className="menu-text first-menu-link"><p className="menu-big-text">Featured</p></div>
             <div className="menu-text second-menu-link"><p className="menu-big-text">Featured</p></div>
@@ -38,7 +38,7 @@ export default function SiteFooter() {
             <div className="menu-text second-menu-link"><p className="menu-big-text">All Works</p></div>
           </Link>
         </div>
-        <div className="case-bottom-col">
+        <div className="case-bottom-col case-bottom-col-nav">
           <Link href="/about" className="menu-link">
             <div className="menu-text first-menu-link"><p className="menu-big-text">About</p></div>
             <div className="menu-text second-menu-link"><p className="menu-big-text">About</p></div>
@@ -52,7 +52,7 @@ export default function SiteFooter() {
             </a>
           ))}
         </div>
-        <div className="case-bottom-col">
+        <div className="case-bottom-col case-bottom-col-contact">
           <a href={`mailto:${siteConfig.email}`} className="menu-link">
             <div className="menu-text first-menu-link"><p className="menu-big-text">{siteConfig.email}</p></div>
             <div className="menu-text second-menu-link"><p className="menu-big-text">{siteConfig.email}</p></div>
@@ -62,7 +62,7 @@ export default function SiteFooter() {
             <div className="menu-text second-menu-link"><p className="menu-big-text">{siteConfig.phone}</p></div>
           </a>
         </div>
-        <div className="case-bottom-col">
+        <div className="case-bottom-col case-bottom-col-brand">
           <span className="case-bottom-brand">Brand Designer</span>
           <span className="case-bottom-brand">Vibe Coder</span>
         </div>

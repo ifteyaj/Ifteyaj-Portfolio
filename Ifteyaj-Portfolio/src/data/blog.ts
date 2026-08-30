@@ -5,7 +5,7 @@ export const blogPosts: BlogPost[] = [
     slug: "designer-new-toolbox",
     title: "The Designer's New Toolbox: From Figma to Prompted Interfaces",
     tag: "AI",
-    image: "/images/figma-make-toolbox.png",
+    image: "/images/figma-make-toolbox.webp",
     description:
       "For most of the last decade, a designer's day started in Figma. In 2026, it's just as likely to start in a chat window. The toolbox changed, the job didn't.",
     body: [
@@ -19,7 +19,7 @@ export const blogPosts: BlogPost[] = [
     slug: "vibe-coding-seriously",
     title: "Vibe Coding, Seriously: What Happens When Anyone Can Build",
     tag: "Vibe Coding",
-    image: "/images/Vibe Coding.png",
+    image: "/images/Vibe Coding.webp",
     description:
       "Vibe coding started as a half-joke. In 2026 it's a real category of work and it has pulled a lot of new people into building things.",
     body: [

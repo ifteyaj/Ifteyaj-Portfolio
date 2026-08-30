@@ -2,12 +2,22 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import Lenis from "lenis";
 import { gsap, registerEases } from "@/lib/gsap";
 import Navbar from "@/components/Navbar";
 import CustomCursor from "@/components/CustomCursor";
 import SiteFooter from "@/components/SiteFooter";
 import { projects } from "@/data/projects";
+
+const DragableCarousel = dynamic(() => import("@/lib/framer/DragableCarousel"), { ssr: false });
+
+const PORTRAIT_IMAGES = Array.from({ length: 6 }, (_, i) => ({
+  src: `/images/portrait-${i + 1}.webp`,
+  alt: `Portrait ${i + 1}`,
+}));
+
+const PORTRAIT_SLIDES = PORTRAIT_IMAGES.map((img) => img.src);
 
 export default function WorkIndex() {
   const rootRef = useRef<HTMLDivElement>(null);
@@ -180,34 +190,38 @@ export default function WorkIndex() {
             </div>
           </div>
         </section>
+        </div>
 
         <section className="index-illustrations index-portraits">
             <h2 className="index-illustrations-title">
               Portrait / Vexel Art
               <span className="index-illustrations-count">(06)</span>
             </h2>
-          <div className="index-illustrations-grid">
-            <div className="index-illustrations-item">
-              <img src="/images/portrait-1.webp" alt="Portrait 1" className="index-illustrations-img" loading="lazy" />
-            </div>
-            <div className="index-illustrations-item">
-              <img src="/images/portrait-2.webp" alt="Portrait 2" className="index-illustrations-img" loading="lazy" />
-            </div>
-            <div className="index-illustrations-item">
-              <img src="/images/portrait-3.webp" alt="Portrait 3" className="index-illustrations-img" loading="lazy" />
-            </div>
-            <div className="index-illustrations-item">
-              <img src="/images/portrait-4.webp" alt="Portrait 4" className="index-illustrations-img" loading="lazy" />
-            </div>
-            <div className="index-illustrations-item">
-              <img src="/images/portrait-5.webp" alt="Portrait 5" className="index-illustrations-img" loading="lazy" />
-            </div>
-            <div className="index-illustrations-item">
-              <img src="/images/portrait-6.webp" alt="Portrait 6" className="index-illustrations-img" loading="lazy" />
-            </div>
+          <div className="portraits-carousel-wrapper" style={{ height: '420px' }}>
+            <DragableCarousel
+              images={PORTRAIT_SLIDES}
+              slideWidth={320}
+              slideHeight={400}
+              gap={20}
+              preset="Custom"
+              perspective={1000}
+              rotateY={45}
+              depth={150}
+              activeScale={1}
+              inactiveScale={0.85}
+              inactiveOpacity={0.5}
+              borderRadius={12}
+              objectFit="cover"
+              showArrows={true}
+              arrowColor="rgb(51, 51, 51)"
+              arrowSize={44}
+              showDots={true}
+              dotColor="rgb(255, 255, 255)"
+              dotSize={8}
+              loop={true}
+            />
           </div>
         </section>
-        </div>
 
         <SiteFooter />
       </main>

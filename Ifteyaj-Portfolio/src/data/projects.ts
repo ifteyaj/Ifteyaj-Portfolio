@@ -288,7 +288,7 @@ export const projects: Project[] = [
     category: "Brand Identity",
     secondaryCategory: "Coming Soon",
     year: "2025",
-    images: ["/images/ibaacl-cover.png", "/images/ibaacl-cover.png", "/images/ibaacl-cover.png", "/images/ibaacl-cover.png"],
+    images: ["/images/ibaacl-cover.webp", "/images/ibaacl-cover.webp", "/images/ibaacl-cover.webp", "/images/ibaacl-cover.webp"],
     href: "/work/ibaacl",
     short:
       "A new identity project in the works — built around clarity, structure and a modern, forward-thinking mark.",
@@ -323,7 +323,7 @@ export const projects: Project[] = [
     category: "Brand Identity",
     secondaryCategory: "Coming Soon",
     year: "2025",
-    images: ["/images/nr-cover.png", "/images/nr-cover.png", "/images/nr-cover.png", "/images/nr-cover.png"],
+    images: ["/images/nr-cover.webp", "/images/nr-cover.webp", "/images/nr-cover.webp", "/images/nr-cover.webp"],
     href: "/work/nr",
     short:
       "A new identity project in the works — built around clarity, structure and a modern, forward-thinking mark.",

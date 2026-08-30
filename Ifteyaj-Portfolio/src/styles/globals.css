@@ -576,6 +576,9 @@ html.lenis body {
   flex-direction: column;
   gap: 0.1rem;
 }
+.nav-mobile-section-work {
+  margin-bottom: 0.5rem;
+}
 .nav-mobile-link {
   font-family: var(--main-type);
   font-size: 1.4rem;
@@ -1335,9 +1338,6 @@ html.lenis body {
 
 /* ══ ILLUSTRATIONS SECTION ════════════════════════════════════════════════════ */
 .index-illustrations-cols {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
   margin-top: var(--mid-section-break);
   padding-top: 1.5rem;
   border-top: 1px solid var(--border-white);
@@ -1364,16 +1364,13 @@ html.lenis body {
   color: var(--grey);
 }
 .index-illustrations-grid {
-  columns: 3;
+  columns: 6;
   column-gap: 0.5rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding: 0.5rem;
 }
 .index-illustrations-item {
-  display: inline-block;
-  width: 100%;
-  margin-bottom: 0.5rem;
   break-inside: avoid;
+  margin-bottom: 0.5rem;
   overflow: hidden;
   line-height: 0;
 }
@@ -1389,13 +1386,52 @@ html.lenis body {
   filter: saturate(1);
 }
 .index-portraits {
-  margin-top: 0;
-  padding-top: 0;
-  border-top: none;
+  margin-top: var(--mid-section-break);
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-white);
 }
+
 .index-portraits .index-illustrations-grid {
   columns: 3;
 }
+
+/* ── DragableCarousel portrait section ── */
+.portraits-carousel-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 10rem auto 0;
+  padding: 0;
+  position: relative;
+  z-index: 10;
+}
+
+.portraits-carousel-wrapper > div {
+  width: 100%;
+  height: 420px;
+}
+
+@media (max-width: 1024px) {
+  .portraits-carousel-wrapper {
+    max-width: 100%;
+    padding: 0 0.5rem;
+  }
+
+  .portraits-carousel-wrapper > div {
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .portraits-carousel-wrapper {
+    padding: 0 1rem;
+  }
+
+  .portraits-carousel-wrapper > div {
+    height: 300px;
+  }
+}
+
+/* ── Case / Footer ── */
 
 /* ══ WORK DETAIL / CASE PAGE ═════════════════════════════════════════════════ */
 .case-page {
@@ -1726,6 +1762,14 @@ html.lenis body {
   color: var(--grey);
   letter-spacing: var(--small-discriptor-space);
   align-self: flex-start;
+  margin-left: auto;
+  padding: 0.25rem;
+}
+
+@media (max-width: 1024px) {
+  .case-back-to-top {
+    font-size: 0.7rem;
+  }
 }
 .case-back-to-top:hover {
   color: var(--white);
@@ -2084,6 +2128,8 @@ html.lenis body {
   font-weight: var(--main-weight-big);
   color: var(--green);
   white-space: nowrap;
+  margin-left: 0;
+  text-align: left;
 }
 .about-service-body {
   grid-column: 2;
@@ -2699,17 +2745,16 @@ html.lenis body {
   .index-entries       { grid-template-columns: 1fr; column-gap: 0; }
   .index-title-text,
   .index-title-count   { font-size: var(--mobile-bix-text); letter-spacing: var(--mobile-big-text-space); }
-  .index-entry-info    { flex-wrap: wrap; gap: 0.2rem; }
-  .index-entry-title   { min-width: auto; width: 100%; }
+  .index-entry-info    { flex-wrap: nowrap; gap: 0.5rem; align-items: baseline; }
+  .index-entry-title   { min-width: 0; flex: 1; }
   .index-entry-cat      { flex: none; text-align: right; margin-left: auto; margin-right: 0; }
   .index-entry-images  { grid-template-columns: repeat(2, 1fr); }
-  .index-entry         { padding: 0.8rem 0; }
+  .index-entry         { padding: 0.4rem 0; }
   .index-footer-logo   { width: 8rem; height: 8rem; }
   .index-bottom-nav    { flex-wrap: wrap; gap: 1.5rem; }
   .index-bottom-col    { min-width: 0; }
-  .index-illustrations-cols { grid-template-columns: 1fr; gap: 0; }
   .index-illustrations-title { font-size: var(--mobile-bix-text); letter-spacing: var(--mobile-big-text-space); }
-  .index-illustrations-grid  { columns: 2; column-gap: 0.5rem; padding-left: 0.5rem; padding-right: 0.5rem; }
+  .index-illustrations-grid  { columns: 3; column-gap: 0.5rem; padding: 0.5rem; }
   .index-illustrations-item  { margin-bottom: 0.5rem; }
 
   /* ── CASE / WORK DETAIL ── */
@@ -2743,9 +2788,11 @@ html.lenis body {
     letter-spacing: -0.01em;
     padding-bottom: 0;
   }
-  .case-bottom-nav     { flex-wrap: wrap; gap: 1.5rem; }
+  .case-bottom-nav     { flex-wrap: wrap; gap: 2rem; }
   .case-bottom-col     { min-width: 0; }
-  .case-bottom-col:has(.case-bottom-brand) { flex-direction: row; gap: 1rem; }
+  .case-bottom-col-nav { display: none; }
+  .case-bottom-col-contact { display: none; }
+  .case-bottom-col-brand { flex-direction: column; gap: 0.05rem; }
   .case-prev-next-nav  { padding: var(--mid-section-break) 0; margin-top: var(--mid-section-break); gap: 1.2rem; }
   .case-prev-next-btn  { width: 2.5rem; height: 2.5rem; }
   .case-prev-next-btn svg { width: 20px; height: 20px; }
