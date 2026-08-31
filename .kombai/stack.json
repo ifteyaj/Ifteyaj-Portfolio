@@ -1,0 +1,16 @@
+// Kombai Tech Stack Configuration
+// Each value must be a string or an array of strings.
+// Example: "Framework": "Vite" or "Project Type": ["React", "Vue"]
+{
+  "Project Type": "React",
+  "Framework": "NextJS 16",
+  "Build Tool": "Turbopack",
+  "Tailwind Version": "v4",
+  "TS/JS": "TS",
+  "Router": "App Router",
+  "Icon Set": "Lucide",
+  "React Version": "19",
+  "Animation Library 2": "GSAP",
+  "Animation Library 3": "Lenis",
+  "Animation Library 1": "Framer Motion"
+}
