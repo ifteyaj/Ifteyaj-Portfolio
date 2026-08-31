@@ -2697,27 +2697,22 @@ html.lenis body {
     letter-spacing: var(--mobile-big-text-space);
     padding-left: 0;
     white-space: normal;
-    height: 3rem;
-    line-height: 3rem;
+    height: auto;
+    line-height: 1.2;
+    bottom: 0 !important;
   }
   .main-slider_title-wrap {
-    height: 3rem;
+    height: auto;
     margin-bottom: 0;
-    overflow: hidden;
+    overflow: visible;
   }
   .container.is-main-slider {
-    bottom: 5rem;
+    bottom: auto;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 20;
   }
   .is-hero .slider-toggle-nav  { display: none; }
-
-  /* Remove stacking context from .main-slider on mobile so title z-index works against footer */
-  .main-slider {
-    z-index: auto;
-  }
-  .main-slider_img-wrap {
-    z-index: 1;
-  }
 
   /* Controls row: prev/next with separator lines */
   .hero-controls {
