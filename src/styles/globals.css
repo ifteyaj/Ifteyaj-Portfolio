@@ -883,6 +883,7 @@ html.lenis body {
 
 /* ── MAIN SLIDER ── */
 .main-slider {
+  z-index: 4;
   width: 100%;
   display: block;
   position: absolute;
@@ -2706,8 +2707,17 @@ html.lenis body {
   }
   .container.is-main-slider {
     bottom: 5rem;
+    z-index: 20;
   }
   .is-hero .slider-toggle-nav  { display: none; }
+
+  /* Remove stacking context from .main-slider on mobile so title z-index works against footer */
+  .main-slider {
+    z-index: auto;
+  }
+  .main-slider_img-wrap {
+    z-index: 1;
+  }
 
   /* Controls row: prev/next with separator lines */
   .hero-controls {
