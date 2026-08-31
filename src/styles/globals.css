@@ -952,11 +952,11 @@ html.lenis body {
 }
 .container.is-main-slider {
   position: absolute;
-  bottom: 0;
+  bottom: 2.8rem;
   left: 0;
   right: 0;
   max-width: none;
-  z-index: 10;
+  z-index: 20;
   padding: 0 var(--page-margin);
 }
 .main-slider_title-wrap {
@@ -2696,20 +2696,23 @@ html.lenis body {
     letter-spacing: var(--mobile-big-text-space);
     padding-left: 0;
     white-space: normal;
-    height: 3.5rem;
-    line-height: 3.5rem;
+    height: 3rem;
+    line-height: 3rem;
   }
   .main-slider_title-wrap {
-    height: 3.5rem;
-    margin-bottom: 3.25rem;
+    height: 3rem;
+    margin-bottom: 0;
     overflow: hidden;
+  }
+  .container.is-main-slider {
+    bottom: 4rem;
   }
   .is-hero .slider-toggle-nav  { display: none; }
 
   /* Controls row: prev/next with separator lines */
   .hero-controls {
     position: absolute;
-    bottom: 7rem;
+    bottom: 7.5rem;
     left: 0;
     right: 0;
     z-index: 20;
@@ -2860,8 +2863,8 @@ html.lenis body {
     right: 0;
     height: auto;
     flex-wrap: wrap;
-    gap: 0.5rem;
-    padding: 0.8rem var(--page-margin);
+    gap: 0.3rem;
+    padding: 0.6rem var(--page-margin);
     z-index: 15;
   }
   .slider-footer-social-wrapper {
