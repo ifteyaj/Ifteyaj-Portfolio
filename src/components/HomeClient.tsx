@@ -436,6 +436,11 @@ export default function HomeClient() {
     };
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => { document.body.style.overflow = ""; };
+  }, []);
+
   return (
     <div ref={rootRef}>
       <Loader />
