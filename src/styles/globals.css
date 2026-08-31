@@ -952,11 +952,11 @@ html.lenis body {
 }
 .container.is-main-slider {
   position: absolute;
-  bottom: 2.8rem;
+  bottom: 0;
   left: 0;
   right: 0;
   max-width: none;
-  z-index: 20;
+  z-index: 10;
   padding: 0 var(--page-margin);
 }
 .main-slider_title-wrap {
