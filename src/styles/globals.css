@@ -883,7 +883,6 @@ html.lenis body {
 
 /* ── MAIN SLIDER ── */
 .main-slider {
-  z-index: 4;
   width: 100%;
   display: block;
   position: absolute;
@@ -2706,7 +2705,7 @@ html.lenis body {
     overflow: hidden;
   }
   .container.is-main-slider {
-    bottom: 4rem;
+    bottom: 5rem;
   }
   .is-hero .slider-toggle-nav  { display: none; }
 

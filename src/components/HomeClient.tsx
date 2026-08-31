@@ -396,27 +396,27 @@ export default function HomeClient() {
     });
 
     // Reveals (post loader)
-    const D = 5.4;
+    const D = 5.0;
     gsap.to(root.querySelector(".slider-nav-border"), {
       width: "100%",
-      duration: 1.5,
+      duration: 1,
       ease: "linedraw",
-      delay: 4.4,
+      delay: 3.8,
     });
     gsap.to(root.querySelector(".slider-footer-border"), {
       width: "100%",
-      duration: 1.5,
+      duration: 1,
       ease: "linedraw",
-      delay: 4.8,
+      delay: 4.0,
     });
-    gsap.to(".circle-minimize-btn", { clipPath: "inset(0% 0% 0% 0%)", duration: 1, ease: "texttshow", delay: D });
+    gsap.to(".circle-minimize-btn", { clipPath: "inset(0% 0% 0% 0%)", duration: 0.8, ease: "texttshow", delay: D });
     gsap.to(".numbers_wrap", {
       clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-      duration: 1,
+      duration: 0.8,
       ease: "texttshow",
       delay: D,
     });
-    gsap.to(".main-slider_item.active .main-slider_title", { bottom: "0", duration: 1.8, ease: "texttshow", delay: D });
+    gsap.to(".main-slider_item.active .main-slider_title", { bottom: "0", duration: 1, ease: "texttshow", delay: D });
     // Nav link reveal (first-menu-link starts at translateY(100%) — hidden)
     // Skip navbar and footer links - they're always visible
     gsap.to(".first-menu-link:not(.case-bottom-nav .first-menu-link):not(.about-nav-wrapper .first-menu-link):not(.contact-nav-wrapper .first-menu-link):not(.nav-clock-wrapper .first-menu-link):not(.work-nav-wrapper .first-menu-link)", { y: "0%", duration: 1, ease: "texttshow", delay: D });
