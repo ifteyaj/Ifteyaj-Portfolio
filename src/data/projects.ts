@@ -78,7 +78,7 @@ export const projects: Project[] = [
     category: "AI Agency",
     secondaryCategory: "Voice AI",
     year: "2025",
-    images: ["/images/riverborn.webp", "/images/riverborn_preview.png", "/images/riberborn_3.png", "/images/riverborn.webp"],
+    images: ["/images/riverborn.webp", "/images/riverborn_preview.png", "/images/riberborn_3.png", "/images/riberborn_4.png"],
     href: "/work/riverborn",
     short:
       "Voice agents, multi-agent systems, and generative AI products — built by a team shipping its own AI products. We know the difference between a demo and a deployment.",
