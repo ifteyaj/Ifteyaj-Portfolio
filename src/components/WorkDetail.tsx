@@ -142,6 +142,10 @@ export default function WorkDetail({ project }: WorkDetailProps) {
           </div>
 
           <div className="case-block case-block-full">
+            <img src={images[3 % images.length]} alt={`${project.title} detail`} loading="lazy" />
+          </div>
+
+          <div className="case-block case-block-full">
             <img src={images[0]} alt={`${project.title} banner`} loading="lazy" />
           </div>
 
@@ -159,10 +163,6 @@ export default function WorkDetail({ project }: WorkDetailProps) {
 
           <div className="case-block case-block-feature">
             <img src={images[1 % images.length]} alt={`${project.title} feature`} loading="lazy" />
-          </div>
-
-          <div className="case-block case-block-full">
-            <img src={images[3 % images.length]} alt={`${project.title} detail`} loading="lazy" />
           </div>
         </div>
 
