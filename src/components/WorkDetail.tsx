@@ -145,10 +145,6 @@ export default function WorkDetail({ project }: WorkDetailProps) {
             <img src={images[3 % images.length]} alt={`${project.title} detail`} loading="lazy" />
           </div>
 
-          <div className="case-block case-block-full">
-            <img src={images[0]} alt={`${project.title} banner`} loading="lazy" />
-          </div>
-
           <div className="case-desc-section">
             <div className="case-desc-label">Description</div>
             <div className="case-desc-body">
