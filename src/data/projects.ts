@@ -3,12 +3,47 @@ import type { Project } from "@/types";
 export const projects: Project[] = [
   {
     index: 1,
+    slug: "riverborn",
+    title: "Riverborn",
+    category: "Brand Identity",
+    secondaryCategory: "Voice AI",
+    year: "2025",
+    images: ["/images/riverborn.webp", "/images/riverborn_preview.png", "/images/riberborn_3.png", "/images/riberborn_4.png", "/images/riberborn_5.png", "/images/riberborn_6.png", "/images/riberborn_7.png", "/images/riberborn_8.png", "/images/riberborn_9.png", "/images/riberborn_10.png", "/images/riberborn_11.png", "/images/riberborn_12.png", "/images/riberborn_13.png", "/images/riberborn_14.png"],
+    href: "/work/riverborn",
+    short:
+      "Voice agents, multi-agent systems, and generative AI products — built by a team shipping its own AI products. We know the difference between a demo and a deployment.",
+    client: "Riverborn",
+    agency: "Riverborn Studio",
+    industry: "AI",
+    role: "AI Product Builder",
+    intro: [
+      {
+        body: "Riverborn is an AI product studio crafting voice agents, multi-agent systems and generative AI experiences. We ship our own AI products, so we know the difference between a demo and a deployment.",
+      },
+    ],
+    sections: [
+      {
+        heading: "Background",
+        body: "The AI category is full of polished demos and empty promises. Riverborn was founded by a team that builds and ships its own AI products — real voice agents, real multi-agent workflows, real generative systems that handle production traffic, not slide decks.",
+      },
+      {
+        heading: "Concept",
+        body: "We designed the identity to feel engineered yet human — the way Riverborn builds. Clean, disciplined typography carries a system grounded in voice and conversation. The brand language treats agents as team members, not demos: precise copy, clear structure, and a visual system that scales from a single voice agent to a full multi-agent architecture.",
+      },
+      {
+        heading: "Conclusion",
+        body: "The result is a studio brand that sounds like it ships. Riverborn's identity mirrors its craft: build voice agents, multi-agent systems and generative products that go from prototype to production — because the team already lives there.",
+      },
+    ],
+  },
+  {
+    index: 2,
     slug: "spendo",
     title: "Spendo",
     category: "Brand Identity",
     secondaryCategory: "Fintech",
     year: "2024",
-    images: ["/images/spendo.webp", "/images/spendo.webp", "/images/spendo.webp", "/images/spendo.webp"],
+    images: ["/images/spendo.webp", "/images/Spendo_2.jpg", "/images/Spendo_3.png", "/images/Spendo_4.png", "/images/Spendo_5.png", "/images/Spendo_6.png", "/images/Spendo_7.png", "/images/spendo.webp", "/images/Spendo_8.png", "/images/Spendo_10.png"],
     href: "/work/spendo",
     short:
       "A modern fintech brand identity built around clarity, trust and seamless digital payments.",
@@ -37,7 +72,42 @@ export const projects: Project[] = [
     ],
   },
   {
-    index: 2,
+    index: 3,
+    slug: "inner-circle",
+    title: "Inner Circle",
+    category: "Brand Identity",
+    secondaryCategory: "Coming Soon",
+    year: "2025",
+    images: ["/images/Inner%20Circle_01.png", "/images/Inner%20Circle_02.png", "/images/Inner%20Circle_03.png", "/images/Inner%20Circle_04.png", "/images/Inner%20Circle_05.png", "/images/Inner%20Circle_06.png", "/images/Inner%20Circle_07.png", "/images/Inner%20Circle_09.png", "/images/Inner%20Circle_08.png", "/images/Inner%20Circle_10.png", "/images/Inner%20Circle_11.png", "/images/Inner%20Circle_12.png", "/images/Inner%20Circle_13.png", "/images/Inner%20Circle_14.png"],
+    href: "/work/inner-circle",
+    short:
+      "A new identity project in the works — built around closeness, confidence and a modern, distinctive mark.",
+    client: "Inner Circle",
+    agency: "Baseborn",
+    industry: "Coming Soon",
+    role: "Brand Designer",
+    intro: [
+      {
+        body: "Inner Circle is an identity project currently under development. The visual direction is being built around confident, circular forms and a modern, distinctive tone — designed to signal belonging and trust.",
+      },
+    ],
+    sections: [
+      {
+        heading: "Background",
+        body: "Inner Circle is an identity project currently in progress. The brief centres on creating a distinctive, modern mark that feels like an invitation into something exclusive, while staying clear and confident at any size.",
+      },
+      {
+        heading: "Concept",
+        body: "The design is being developed around circular geometry and strong, clean shapes — building a refined visual language that centres the mark and reinforces a sense of membership and focus.",
+      },
+      {
+        heading: "Conclusion",
+        body: "The identity is still being built. Once finalised, it will flex across web, print and signage with a consistent, unmistakable presence.",
+      },
+    ],
+  },
+  {
+    index: 4,
     slug: "settle-desk",
     title: "Settle Desk",
     category: "Brand Identity",
@@ -72,42 +142,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    index: 3,
-    slug: "riverborn",
-    title: "Riverborn",
-    category: "AI Agency",
-    secondaryCategory: "Voice AI",
-    year: "2025",
-    images: ["/images/riverborn.webp", "/images/riverborn_preview.png", "/images/riberborn_3.png", "/images/riberborn_4.png"],
-    href: "/work/riverborn",
-    short:
-      "Voice agents, multi-agent systems, and generative AI products — built by a team shipping its own AI products. We know the difference between a demo and a deployment.",
-    client: "Riverborn",
-    agency: "Riverborn Studio",
-    industry: "AI",
-    role: "AI Product Builder",
-    intro: [
-      {
-        body: "Riverborn is an AI product studio crafting voice agents, multi-agent systems and generative AI experiences. We ship our own AI products, so we know the difference between a demo and a deployment.",
-      },
-    ],
-    sections: [
-      {
-        heading: "Background",
-        body: "The AI category is full of polished demos and empty promises. Riverborn was founded by a team that builds and ships its own AI products — real voice agents, real multi-agent workflows, real generative systems that handle production traffic, not slide decks.",
-      },
-      {
-        heading: "Concept",
-        body: "We designed the identity to feel engineered yet human — the way Riverborn builds. Clean, disciplined typography carries a system grounded in voice and conversation. The brand language treats agents as team members, not demos: precise copy, clear structure, and a visual system that scales from a single voice agent to a full multi-agent architecture.",
-      },
-      {
-        heading: "Conclusion",
-        body: "The result is a studio brand that sounds like it ships. Riverborn's identity mirrors its craft: build voice agents, multi-agent systems and generative products that go from prototype to production — because the team already lives there.",
-      },
-    ],
-  },
-  {
-    index: 4,
+    index: 5,
     slug: "ibaacl",
     title: "IBAACL",
     category: "Brand Identity",
@@ -142,7 +177,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    index: 5,
+    index: 6,
     slug: "nr",
     title: "NR",
     category: "Brand Identity",
@@ -177,7 +212,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    index: 6,
+    index: 7,
     slug: "next-door-baby",
     title: "Next Door Baby",
     category: "Brand Identity",
@@ -208,41 +243,6 @@ export const projects: Project[] = [
       {
         heading: "Conclusion",
         body: "The identity is still under construction. Once finalised, it will flex across web, print and packaging with a consistent, unmistakable presence.",
-      },
-    ],
-  },
-  {
-    index: 7,
-    slug: "inner-circle",
-    title: "Inner Circle",
-    category: "Brand Identity",
-    secondaryCategory: "Coming Soon",
-    year: "2025",
-    images: ["/images/inner-circle.webp", "/images/inner-circle.webp", "/images/inner-circle.webp", "/images/inner-circle.webp"],
-    href: "/work/inner-circle",
-    short:
-      "A new identity project in the works — built around closeness, confidence and a modern, distinctive mark.",
-    client: "Inner Circle",
-    agency: "Baseborn",
-    industry: "Coming Soon",
-    role: "Brand Designer",
-    intro: [
-      {
-        body: "Inner Circle is an identity project currently under development. The visual direction is being built around confident, circular forms and a modern, distinctive tone — designed to signal belonging and trust.",
-      },
-    ],
-    sections: [
-      {
-        heading: "Background",
-        body: "Inner Circle is an identity project currently in progress. The brief centres on creating a distinctive, modern mark that feels like an invitation into something exclusive, while staying clear and confident at any size.",
-      },
-      {
-        heading: "Concept",
-        body: "The design is being developed around circular geometry and strong, clean shapes — building a refined visual language that centres the mark and reinforces a sense of membership and focus.",
-      },
-      {
-        heading: "Conclusion",
-        body: "The identity is still being built. Once finalised, it will flex across web, print and signage with a consistent, unmistakable presence.",
       },
     ],
   },

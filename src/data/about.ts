@@ -50,8 +50,6 @@ export const about = {
     "Coca-Cola",
     "Zero Carbon Shipping",
   ],
-  testimonialsHeading: "What Clients Say",
-  testimonials: [],
   recognition: [
     { year: "2025", title: "Gold Creative Circle", project: "Craft / Website Design - CURB CPH" },
     { year: "2025", title: "Gold Lovie Award", project: "Aesthetic - CURB CPH" },

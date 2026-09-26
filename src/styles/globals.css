@@ -1622,6 +1622,9 @@ html.lenis body {
   grid-column: 1 / -1;
   aspect-ratio: 21 / 9;
 }
+.case-block-full-tall {
+  aspect-ratio: 16 / 9;
+}
 
 /* 3. Equal 2-col squares */
 .case-block-equal {
@@ -1632,6 +1635,9 @@ html.lenis body {
 }
 .case-block-equal .case-block-media {
   padding-top: 100%;
+}
+.case-block-equal-short .case-block-media {
+  padding-top: 75%;
 }
 
 /* 4. Asym split: small graphic + text */
@@ -1686,8 +1692,8 @@ html.lenis body {
 
 /* ── Selected Work section ── */
 .case-selected-work {
-  margin-top: var(--mid-section-break);
-  padding-top: var(--mid-section-break);
+  margin-top: 60px;
+  padding-top: 60px;
   padding-bottom: var(--row-margin);
   border-top: 1px solid var(--border-white);
   display: flex;
@@ -1880,8 +1886,7 @@ html.lenis body {
 /* Full-width (edge-to-edge) divider lines on the about page */
 .about-services,
 .about-clients,
-.about-list-block,
-.testimonials-section {
+.about-list-block {
   margin-left: calc(-1 * var(--page-margin));
   margin-right: calc(-1 * var(--page-margin));
   padding-left: var(--page-margin);
@@ -2244,113 +2249,6 @@ html.lenis body {
   color: var(--grey);
 }
 
-/* ── Testimonials ── */
-.testimonials-section {
-  margin-top: var(--section-break);
-  padding-top: var(--mid-section-break);
-  border-top: 1px solid var(--border-white);
-  overflow: hidden;
-}
-.testimonials-heading {
-  font-family: var(--main-type);
-  font-size: var(--mid-high-text);
-  line-height: 1.2;
-  font-weight: var(--main-weight-big);
-  letter-spacing: 0.02em;
-  margin-bottom: 3rem;
-}
-.testimonials-slider {
-  width: 100%;
-  height: 400px;
-  overflow: hidden;
-  position: relative;
-}
-.testimonials-track {
-  display: flex;
-  flex-direction: column;
-  will-change: transform;
-  height: 100%;
-}
-.testimonials-slide {
-  flex: 0 0 100%;
-  height: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 0 5% 0 0;
-}
-.testimonials-card {
-  max-width: 700px;
-  text-align: left;
-  padding: 0;
-}
-.testimonials-quote {
-  font-family: var(--main-type);
-  font-size: var(--mid-high-text);
-  line-height: 1.3;
-  font-weight: var(--main-weight-big);
-  color: var(--white);
-  margin-bottom: 2rem;
-}
-.testimonials-author {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-  align-items: flex-start;
-}
-.testimonials-name {
-  font-family: var(--main-type);
-  font-size: var(--small-discriptor-text);
-  font-weight: var(--main-weight);
-  color: var(--white);
-}
-.testimonials-role {
-  font-size: var(--small-discriptor-text);
-  color: var(--grey);
-}
-.testimonials-nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-.testimonials-btn {
-  background: none;
-  border: 1px solid var(--border-white);
-  border-radius: 50%;
-  width: 2.5rem;
-  height: 2.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--white);
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  font-size: 1rem;
-}
-.testimonials-btn:hover {
-  background-color: var(--white);
-  color: var(--black);
-}
-.testimonials-dots {
-  display: flex;
-  gap: 0.5rem;
-}
-.testimonials-dot {
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 50%;
-  border: 1px solid var(--border-white);
-  background: transparent;
-  cursor: pointer;
-  padding: 0;
-  transition: background-color 0.3s ease;
-}
-.testimonials-dot.active {
-  background-color: var(--white);
-}
-
 /* ── Footer block ── */
 .about-footer-block {
   display: flex;
@@ -2662,8 +2560,6 @@ html.lenis body {
   .about-client-list  { grid-template-columns: 1fr 1fr; }
 
   .index-entry-images { grid-template-columns: repeat(2, 1fr); }
-
-  .testimonials-slider { height: 540px; }
 }
 
 /* ── MOBILE (≤ 767) ───────────────────────────────────────────────────────── */
@@ -2812,8 +2708,6 @@ html.lenis body {
   .about-main          { padding-top: 3rem; }
   .about-hero          { height: 75dvh; }
   .about-hero-name     { font-size: var(--mobile-bix-text); letter-spacing: var(--mobile-big-text-space); }
-  .testimonials-slider { height: 420px; }
-  .testimonials-quote  { font-size: var(--small-high-text); line-height: 1.5; }
   .about-hero-tagline  { font-size: var(--small-discriptor-text); }
   .about-scroll-hint   { flex-direction: column; gap: 0.3rem; }
   .about-intro-text    { font-size: var(--small-high-text); line-height: var(--small-high-text-line); }

@@ -152,13 +152,49 @@ export default function WorkDetail({ project }: WorkDetailProps) {
             </div>
           </div>
 
-          <div className="case-block-equal">
-            <div className="case-block-media case-gallery-img-wrap"><img src={images[1 % images.length]} alt={`${project.title} detail`} loading="lazy" /></div>
-            <div className="case-block-media case-gallery-img-wrap"><img src={images[2 % images.length]} alt={`${project.title} detail`} loading="lazy" /></div>
+          <div className="case-block-equal case-block-equal-short">
+            <div className="case-block-media case-gallery-img-wrap"><img src={images[4 % images.length]} alt={`${project.title} detail`} loading="lazy" /></div>
+            <div className="case-block-media case-gallery-img-wrap"><img src={images[5 % images.length]} alt={`${project.title} detail`} loading="lazy" /></div>
           </div>
 
-          <div className="case-block case-block-feature">
-            <img src={images[1 % images.length]} alt={`${project.title} feature`} loading="lazy" />
+          <div className="case-block case-block-full case-block-full-tall">
+            <img src={images[6 % images.length]} alt={`${project.title} detail`} loading="lazy" />
+          </div>
+
+          <div className="case-desc-section">
+            <div className="case-desc-label">Description</div>
+            <div className="case-desc-body">
+              <p className="case-desc-text">{project.sections?.[0]?.body ?? project.short}</p>
+            </div>
+          </div>
+
+          <div className="case-block-asym">
+            <div className="case-block-media case-gallery-img-wrap case-block-media-landscape"><img src={images[8 % images.length]} alt={`${project.title} detail`} loading="lazy" /></div>
+            <div className="case-block-media case-gallery-img-wrap case-block-media-small"><img src={images[7 % images.length]} alt={`${project.title} detail`} loading="lazy" /></div>
+          </div>
+
+          <div className="case-block case-block-full case-block-full-tall">
+            <img src={images[9 % images.length]} alt={`${project.title} detail`} loading="lazy" />
+          </div>
+
+          <div className="case-block case-block-full">
+            <img src={images[10 % images.length]} alt={`${project.title} detail`} loading="lazy" />
+          </div>
+
+          <div className="case-desc-section">
+            <div className="case-desc-label">Description</div>
+            <div className="case-desc-body">
+              <p className="case-desc-text">{project.sections?.[1]?.body ?? project.short}</p>
+            </div>
+          </div>
+
+          <div className="case-block-equal case-block-equal-short">
+            <div className="case-block-media case-gallery-img-wrap"><img src={images[11 % images.length]} alt={`${project.title} detail`} loading="lazy" /></div>
+            <div className="case-block-media case-gallery-img-wrap"><img src={images[12 % images.length]} alt={`${project.title} detail`} loading="lazy" /></div>
+          </div>
+
+          <div className="case-block case-block-full case-block-full-tall">
+            <img src={images[13 % images.length]} alt={`${project.title} detail`} loading="lazy" />
           </div>
         </div>
 

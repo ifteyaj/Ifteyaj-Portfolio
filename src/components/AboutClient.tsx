@@ -6,7 +6,6 @@ import { gsap, registerEases } from "@/lib/gsap";
 import Navbar from "@/components/Navbar";
 import CustomCursor from "@/components/CustomCursor";
 import SiteFooter from "@/components/SiteFooter";
-import Testimonials from "@/components/Testimonials";
 import { about } from "@/data/about";
 import { siteConfig } from "@/data/site";
 
@@ -168,13 +167,6 @@ export default function AboutClient() {
             {siteConfig.email}
           </a>
         </section>
-
-        
-
-        <Testimonials
-          heading={about.testimonialsHeading}
-          testimonials={about.testimonials}
-        />
 
         <SiteFooter />
       </main>
