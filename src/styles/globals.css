@@ -2598,7 +2598,7 @@ html.lenis body {
   }
   .main-slider_title-wrap {
     height: 3.5rem;
-    margin-bottom: 3.25rem;
+    margin-bottom: 0.5rem;
     overflow: hidden;
   }
   .is-hero .slider-toggle-nav  { display: none; }
@@ -2661,7 +2661,7 @@ html.lenis body {
 
   /* ── CASE / WORK DETAIL ── */
   .case-main           { padding-top: var(--content-page-top-margin); }
-  .case-title          { font-size: var(--mobile-bix-text); letter-spacing: var(--mobile-big-text-space); }
+  .case-title          { font-size: 3.2rem; letter-spacing: var(--mobile-big-text-space); }
   .case-header         { gap: var(--row-margin); min-height: auto; flex-direction: column; align-items: flex-start; }
   .case-header-meta    { min-width: 0; width: 100%; margin-top: var(--row-margin); }
   .case-meta-row       { font-size: 0.7rem; padding: 0.6rem 0; }
@@ -2679,30 +2679,53 @@ html.lenis body {
   .case-selected-title { font-size: var(--mobile-bix-text); letter-spacing: var(--mobile-big-text-space); }
   .case-selected-grid  { grid-template-columns: 1fr; gap: 1.5rem; }
   .case-footer-sh-text { font-size: 6rem; }
-  .case-footer-inner   { flex-direction: column; align-items: flex-start; gap: 1.5rem; min-height: 0; }
-  .case-footer-block   { padding: var(--mid-section-break) 0 var(--page-top-margin); }
-  .case-footer-cta-link {
-    flex: none;
-    width: 100%;
-    max-width: none;
-    font-size: 1.6rem;
-    line-height: 1.25;
-    letter-spacing: -0.01em;
-    padding-bottom: 0;
+  .case-footer-block   { padding: 0.25rem 0 0; margin-top: var(--mid-section-break); }
+  .case-footer-inner   {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 0.75rem;
+    min-height: 0;
+    position: relative;
+    padding-top: 2rem;
   }
-  .case-bottom-nav     { flex-wrap: wrap; gap: 2rem; }
+  .case-back-to-top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 0.7rem;
+    margin-left: 0;
+  }
+  .case-footer-logo-link {
+    display: inline-block;
+    line-height: 0;
+    align-self: flex-end;
+    flex: 0 0 auto;
+  }
+  .case-footer-logo { height: 7rem; width: auto; display: block; }
+  .case-footer-cta-link {
+    flex: 1;
+    min-width: 0;
+    max-width: none;
+    font-size: 1.85rem;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    padding-bottom: 0;
+    align-self: center;
+  }
+  .case-bottom-nav     { flex-wrap: nowrap; gap: 0.5rem; padding: 1.25rem 0 20px; justify-content: space-between; align-items: flex-end; }
   .case-bottom-col     { min-width: 0; }
   .case-bottom-col-nav { display: none; }
   .case-bottom-col-contact { display: none; }
-  .case-bottom-col-brand { flex-direction: column; gap: 0.05rem; }
+  .case-bottom-col-copy { order: 3; text-align: right; align-items: flex-end; }
+  .case-bottom-col-social { order: 2; text-align: left; align-items: flex-start; }
+  .case-bottom-col-brand { order: 1; flex-direction: column; gap: 0.05rem; align-items: flex-start; text-align: left; }
   .case-prev-next-nav  { padding: var(--mid-section-break) 0; margin-top: var(--mid-section-break); gap: 1.2rem; }
   .case-prev-next-btn  { width: 2.5rem; height: 2.5rem; }
   .case-prev-next-btn svg { width: 20px; height: 20px; }
   .case-nav-dots       { gap: 0.4rem; }
   .case-nav-dot        { width: 0.4rem; height: 0.4rem; }
-
-  /* ── FOOTER (shared) ── */
-  .case-footer-logo { height: 10rem; }
 
   /* ── ABOUT PAGE ── */
   .about-main          { padding-top: 3rem; }
@@ -2788,7 +2811,7 @@ html.lenis body {
   .main-slider_title   { font-size: 2rem; }
   .index-title-text,
   .index-title-count   { font-size: 2rem; }
-  .case-title          { font-size: 2rem; }
+  .case-title          { font-size: 2.6rem; }
   .case-selected-title { font-size: 2rem; }
   .index-illustrations-title { font-size: 2rem; }
   .index-illustrations-count  { font-size: var(--small-number); }

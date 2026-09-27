@@ -40,16 +40,16 @@ export const projects: Project[] = [
     index: 2,
     slug: "spendo",
     title: "Spendo",
-    category: "Brand Identity",
-    secondaryCategory: "Fintech",
+    category: "Logo Design",
+    secondaryCategory: "Digital Banking",
     year: "2024",
-    images: ["/images/spendo.webp", "/images/Spendo_2.jpg", "/images/Spendo_3.png", "/images/Spendo_4.png", "/images/Spendo_5.png", "/images/Spendo_6.png", "/images/Spendo_7.png", "/images/spendo.webp", "/images/Spendo_8.png", "/images/Spendo_10.png"],
+    images: ["/images/spendo.webp", "/images/Spendo_2.jpg", "/images/Spendo_3.png", "/images/Spendo_4.png", "/images/Spendo_5.png", "/images/Spendo_6.png", "/images/Spendo_7.png", "/images/Spendo_9.png", "/images/Spendo_8.png", "/images/Spendo_10.png", "/images/Spendo_11.png", "/images/Spendo_12.png", "/images/Spendo_13.png", "/images/Spendo_14.png"],
     href: "/work/spendo",
     short:
       "A modern fintech brand identity built around clarity, trust and seamless digital payments.",
     client: "Spendo",
     agency: "Baseborn",
-    industry: "Fintech",
+    industry: "Digital Banking",
     role: "Brand Designer",
     intro: [
       {

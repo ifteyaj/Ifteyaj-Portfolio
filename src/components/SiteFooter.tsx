@@ -44,7 +44,7 @@ export default function SiteFooter() {
             <div className="menu-text second-menu-link"><p className="menu-big-text">About</p></div>
           </Link>
         </div>
-        <div className="case-bottom-col">
+        <div className="case-bottom-col case-bottom-col-social">
           {siteConfig.socials.map((s) => (
             <a key={s.label} href={s.href} target="_blank" className="menu-link">
               <div className="menu-text first-menu-link"><p className="menu-big-text">{s.label}</p></div>
@@ -63,10 +63,10 @@ export default function SiteFooter() {
           </a>
         </div>
         <div className="case-bottom-col case-bottom-col-brand">
-          <span className="case-bottom-brand">Brand Designer</span>
-          <span className="case-bottom-brand">Vibe Coder</span>
+          <span className="case-bottom-brand menu-big-text">Vibe Coder</span>
+          <span className="case-bottom-brand menu-big-text">Brand Designer</span>
         </div>
-        <div className="case-bottom-col">
+        <div className="case-bottom-col case-bottom-col-copy">
           <span className="case-bottom-copy">{siteConfig.copyright}</span>
         </div>
       </div>
