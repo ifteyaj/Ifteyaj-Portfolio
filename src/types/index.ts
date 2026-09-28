@@ -22,7 +22,7 @@ export interface Project {
   client?: string;
   agency?: string;
   industry?: string;
-  role?: string;
+  collab?: string;
   intro?: { heading?: string; body: string }[];
   sections?: WorkSection[];
 }

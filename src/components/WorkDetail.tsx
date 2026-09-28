@@ -115,10 +115,10 @@ export default function WorkDetail({ project }: WorkDetailProps) {
                 <span className="case-meta-value">{project.secondaryCategory}</span>
               </div>
             )}
-            {project.role && (
+            {project.collab && (
               <div className="case-meta-row">
-                <span className="case-meta-label">Role:</span>
-                <span className="case-meta-value">{project.role}</span>
+                <span className="case-meta-label">On collab with:</span>
+                <span className="case-meta-value">{project.collab}</span>
               </div>
             )}
           </div>

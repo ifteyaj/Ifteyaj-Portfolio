@@ -8,14 +8,14 @@ export const projects: Project[] = [
     category: "Brand Identity",
     secondaryCategory: "Voice AI",
     year: "2025",
-    images: ["/images/riverborn.webp", "/images/riverborn_preview.png", "/images/riberborn_3.png", "/images/riberborn_4.png", "/images/riberborn_5.png", "/images/riberborn_6.png", "/images/riberborn_7.png", "/images/riberborn_8.png", "/images/riberborn_9.png", "/images/riberborn_10.png", "/images/riberborn_11.png", "/images/riberborn_12.png", "/images/riberborn_13.png", "/images/riberborn_14.png"],
+    images: ["/images/riverborn/riverborn.webp", "/images/riverborn/riverborn_preview.webp", "/images/riverborn/riberborn_3.webp", "/images/riverborn/riberborn_4.webp", "/images/riverborn/riberborn_5.webp", "/images/riverborn/riberborn_6.webp", "/images/riverborn/riberborn_7.webp", "/images/riverborn/riberborn_8.webp", "/images/riverborn/riberborn_9.webp", "/images/riverborn/riberborn_10.webp", "/images/riverborn/riberborn_11.webp", "/images/riverborn/riberborn_12.webp", "/images/riverborn/riberborn_13.webp", "/images/riverborn/riberborn_14.webp"],
     href: "/work/riverborn",
     short:
       "Voice agents, multi-agent systems, and generative AI products — built by a team shipping its own AI products. We know the difference between a demo and a deployment.",
     client: "Riverborn",
     agency: "Riverborn Studio",
     industry: "AI",
-    role: "AI Product Builder",
+    collab: "Onindo Ahmed",
     intro: [
       {
         body: "Riverborn is an AI product studio crafting voice agents, multi-agent systems and generative AI experiences. We ship our own AI products, so we know the difference between a demo and a deployment.",
@@ -43,14 +43,14 @@ export const projects: Project[] = [
     category: "Logo Design",
     secondaryCategory: "Digital Banking",
     year: "2024",
-    images: ["/images/spendo.webp", "/images/Spendo_2.jpg", "/images/Spendo_3.png", "/images/Spendo_4.png", "/images/Spendo_5.png", "/images/Spendo_6.png", "/images/Spendo_7.png", "/images/Spendo_9.png", "/images/Spendo_8.png", "/images/Spendo_10.png", "/images/Spendo_11.png", "/images/Spendo_12.png", "/images/Spendo_13.png", "/images/Spendo_14.png"],
+    images: ["/images/spendo/spendo.webp", "/images/spendo/Spendo_2.webp", "/images/spendo/Spendo_3.webp", "/images/spendo/Spendo_4.webp", "/images/spendo/Spendo_5.webp", "/images/spendo/Spendo_6.webp", "/images/spendo/Spendo_7.webp", "/images/spendo/Spendo_9.webp", "/images/spendo/Spendo_8.webp", "/images/spendo/Spendo_10.webp", "/images/spendo/Spendo_11.webp", "/images/spendo/Spendo_12.webp", "/images/spendo/Spendo_13.webp", "/images/spendo/Spendo_14.webp"],
     href: "/work/spendo",
     short:
       "A modern fintech brand identity built around clarity, trust and seamless digital payments.",
     client: "Spendo",
     agency: "Baseborn",
     industry: "Digital Banking",
-    role: "Brand Designer",
+    collab: "Onindo Ahmed",
     intro: [
       {
         body: "Spendo is a digital payments platform that needed a brand as smooth as its transactions. We built an identity around geometric precision, a bold blue palette and a mark that signals forward motion.",
@@ -73,19 +73,67 @@ export const projects: Project[] = [
   },
   {
     index: 3,
+    slug: "tru-express",
+    title: "Tru.express",
+    category: "Brand Identity",
+    secondaryCategory: "Logistics",
+    year: "2026",
+    images: [
+      "/images/tru-express/tru-express.webp",
+      "/images/tru-express/tru-express-2.webp",
+      "/images/tru-express/tru-express-3.webp",
+      "/images/tru-express/tru-express-4.webp",
+      "/images/tru-express/tru-express-5.webp",
+      "/images/tru-express/tru-express-6.webp",
+      "/images/tru-express/tru-express-7.webp",
+      "/images/tru-express/tru-express-8.webp",
+      "/images/tru-express/tru-express-9.webp",
+      "/images/tru-express/tru-express-10.webp",
+      "/images/tru-express/tru-express-11.webp",
+      "/images/tru-express/tru-express-12.webp",
+      "/images/tru-express/tru-express-13.webp",
+      "/images/tru-express/tru-express-14.webp",
+    ],
+    href: "/work/tru-express",
+    short:
+      "A bold identity for Tru.express — built around speed, reliability and the promise of getting it there, truly.",
+    client: "Tru.express",
+    agency: "Baseborn",
+    industry: "Logistics",
+    intro: [
+      {
+        body: "Tru.express is a delivery and logistics brand built on one promise: true, on-time, no-excuses delivery. We shaped an identity around momentum and trust — sharp, fast and unmistakable at every touchpoint.",
+      },
+    ],
+    sections: [
+      {
+        heading: "Background",
+        body: "Logistics brands tend to look either industrial or generic. Tru.express needed a mark that felt fast and dependable at the same time — a brand customers recognise on a van, a label or a tracking screen.",
+      },
+      {
+        heading: "Concept",
+        body: "The identity is built on speed and clarity: a confident wordmark, a vivid palette and a modular system that holds up across packaging, app and print. Everything is designed to move — nothing sits still.",
+      },
+      {
+        heading: "Conclusion",
+        body: "The result is a brand that delivers on its name: direct, dependable and built to scale with every route Tru.express adds.",
+      },
+    ],
+  },
+  {
+    index: 4,
     slug: "inner-circle",
     title: "Inner Circle",
     category: "Brand Identity",
     secondaryCategory: "Coming Soon",
     year: "2025",
-    images: ["/images/Inner%20Circle_01.png", "/images/Inner%20Circle_02.png", "/images/Inner%20Circle_03.png", "/images/Inner%20Circle_04.png", "/images/Inner%20Circle_05.png", "/images/Inner%20Circle_06.png", "/images/Inner%20Circle_07.png", "/images/Inner%20Circle_09.png", "/images/Inner%20Circle_08.png", "/images/Inner%20Circle_10.png", "/images/Inner%20Circle_11.png", "/images/Inner%20Circle_12.png", "/images/Inner%20Circle_13.png", "/images/Inner%20Circle_14.png"],
+    images: ["/images/inner-circle/inner-circle-01.webp", "/images/inner-circle/inner-circle-02.webp", "/images/inner-circle/inner-circle-03.webp", "/images/inner-circle/inner-circle-04.webp", "/images/inner-circle/inner-circle-05.webp", "/images/inner-circle/inner-circle-06.webp", "/images/inner-circle/inner-circle-07.webp", "/images/inner-circle/inner-circle-09.webp", "/images/inner-circle/inner-circle-08.webp", "/images/inner-circle/inner-circle-10.webp", "/images/inner-circle/inner-circle-11.webp", "/images/inner-circle/inner-circle-12.webp", "/images/inner-circle/inner-circle-13.webp", "/images/inner-circle/inner-circle-14.webp"],
     href: "/work/inner-circle",
     short:
       "A new identity project in the works — built around closeness, confidence and a modern, distinctive mark.",
     client: "Inner Circle",
     agency: "Baseborn",
     industry: "Coming Soon",
-    role: "Brand Designer",
     intro: [
       {
         body: "Inner Circle is an identity project currently under development. The visual direction is being built around confident, circular forms and a modern, distinctive tone — designed to signal belonging and trust.",
@@ -107,7 +155,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    index: 4,
+    index: 5,
     slug: "settle-desk",
     title: "Settle Desk",
     category: "Brand Identity",
@@ -120,7 +168,6 @@ export const projects: Project[] = [
     client: "Settle Desk",
     agency: "Baseborn",
     industry: "Furniture",
-    role: "Brand Designer",
     intro: [
       {
         body: "Settle Desk is a modern desk brand built around one idea: a workspace you actually want to come back to. We designed an identity that feels grounded, tactile and quietly confident — the visual equivalent of sitting down and settling in.",
@@ -142,7 +189,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    index: 5,
+    index: 6,
     slug: "ibaacl",
     title: "IBAACL",
     category: "Brand Identity",
@@ -155,7 +202,6 @@ export const projects: Project[] = [
     client: "IBAACL",
     agency: "Baseborn",
     industry: "Coming Soon",
-    role: "Brand Designer",
     intro: [
       {
         body: "IBAACL is an identity project currently under development. The visual direction is being built around a clean, structured mark with a confident, contemporary tone — designed to scale across digital and print.",
@@ -177,7 +223,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    index: 6,
+    index: 7,
     slug: "nr",
     title: "NR",
     category: "Brand Identity",
@@ -190,7 +236,6 @@ export const projects: Project[] = [
     client: "NR",
     agency: "Baseborn",
     industry: "Coming Soon",
-    role: "Brand Designer",
     intro: [
       {
         body: "NR is an identity project currently under development. The visual direction is being built around a clean, structured mark with a confident, contemporary tone — designed to scale across digital and print.",
@@ -212,7 +257,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    index: 7,
+    index: 8,
     slug: "next-door-baby",
     title: "Next Door Baby",
     category: "Brand Identity",
@@ -225,7 +270,6 @@ export const projects: Project[] = [
     client: "Next Door Baby",
     agency: "Baseborn",
     industry: "Coming Soon",
-    role: "Brand Designer",
     intro: [
       {
         body: "Next Door Baby is an identity project currently under development. The visual direction is being built around a warm, approachable mark with a soft, contemporary tone — designed to feel as gentle and friendly as the brand itself.",
@@ -247,7 +291,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    index: 8,
+    index: 9,
     slug: "quickskill",
     title: "QuickSkill",
     category: "Brand Identity",
@@ -260,7 +304,6 @@ export const projects: Project[] = [
     client: "QuickSkill",
     agency: "Baseborn",
     industry: "Coming Soon",
-    role: "Brand Designer",
     intro: [
       {
         body: "QuickSkill is an identity project currently under development. The visual direction is being built around fast, focused energy — a modern, dynamic mark designed to stand out and stay memorable.",

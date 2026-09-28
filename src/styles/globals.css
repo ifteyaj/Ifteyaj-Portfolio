@@ -2661,7 +2661,7 @@ html.lenis body {
 
   /* ── CASE / WORK DETAIL ── */
   .case-main           { padding-top: var(--content-page-top-margin); }
-  .case-title          { font-size: 3.2rem; letter-spacing: var(--mobile-big-text-space); }
+  .case-title          { font-size: var(--mobile-bix-text); letter-spacing: var(--mobile-big-text-space); }
   .case-header         { gap: var(--row-margin); min-height: auto; flex-direction: column; align-items: flex-start; }
   .case-header-meta    { min-width: 0; width: 100%; margin-top: var(--row-margin); }
   .case-meta-row       { font-size: 0.7rem; padding: 0.6rem 0; }
@@ -2718,9 +2718,9 @@ html.lenis body {
   .case-bottom-col     { min-width: 0; }
   .case-bottom-col-nav { display: none; }
   .case-bottom-col-contact { display: none; }
-  .case-bottom-col-copy { order: 3; text-align: right; align-items: flex-end; }
+  .case-bottom-col-copy { order: 1; text-align: left; }
   .case-bottom-col-social { order: 2; text-align: left; align-items: flex-start; }
-  .case-bottom-col-brand { order: 1; flex-direction: column; gap: 0.05rem; align-items: flex-start; text-align: left; }
+  .case-bottom-col-brand { order: 3; flex-direction: column; gap: 0.05rem; align-items: flex-end; text-align: right; }
   .case-prev-next-nav  { padding: var(--mid-section-break) 0; margin-top: var(--mid-section-break); gap: 1.2rem; }
   .case-prev-next-btn  { width: 2.5rem; height: 2.5rem; }
   .case-prev-next-btn svg { width: 20px; height: 20px; }
@@ -2811,7 +2811,7 @@ html.lenis body {
   .main-slider_title   { font-size: 2rem; }
   .index-title-text,
   .index-title-count   { font-size: 2rem; }
-  .case-title          { font-size: 2.6rem; }
+  .case-title          { font-size: 2rem; }
   .case-selected-title { font-size: 2rem; }
   .index-illustrations-title { font-size: 2rem; }
   .index-illustrations-count  { font-size: var(--small-number); }

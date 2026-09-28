@@ -186,7 +186,7 @@ export default function WorkIndex() {
               <img src="/images/illustration-22.webp" alt="Illustration 22" className="index-illustrations-img" loading="lazy" />
             </div>
             <div className="index-illustrations-item">
-              <img src="/images/illustration-23.jpg" alt="Illustration 23" className="index-illustrations-img" loading="lazy" />
+              <img src="/images/illustration-23.webp" alt="Illustration 23" className="index-illustrations-img" loading="lazy" />
             </div>
           </div>
         </section>
