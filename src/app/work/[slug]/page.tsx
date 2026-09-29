@@ -18,6 +18,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${project.title} — Ifteyaj`,
     description: project.short,
+    keywords: [project.title, project.category, project.secondaryCategory, project.industry].filter(
+      Boolean
+    ) as string[],
+    openGraph: {
+      title: `${project.title} — Ifteyaj`,
+      description: project.short,
+      images: project.images?.[0] ? [{ url: project.images[0] }] : undefined,
+    },
   };
 }
 

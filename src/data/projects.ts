@@ -11,28 +11,28 @@ export const projects: Project[] = [
     images: ["/images/riverborn/riverborn.webp", "/images/riverborn/riverborn_preview.webp", "/images/riverborn/riberborn_3.webp", "/images/riverborn/riberborn_4.webp", "/images/riverborn/riberborn_5.webp", "/images/riverborn/riberborn_6.webp", "/images/riverborn/riberborn_7.webp", "/images/riverborn/riberborn_8.webp", "/images/riverborn/riberborn_9.webp", "/images/riverborn/riberborn_10.webp", "/images/riverborn/riberborn_11.webp", "/images/riverborn/riberborn_12.webp", "/images/riverborn/riberborn_13.webp", "/images/riverborn/riberborn_14.webp"],
     href: "/work/riverborn",
     short:
-      "Voice agents, multi-agent systems, and generative AI products — built by a team shipping its own AI products. We know the difference between a demo and a deployment.",
+      "Voice agents, multi-agent systems and generative AI products, built by a team that ships its own AI.",
     client: "Riverborn",
     agency: "Riverborn Studio",
     industry: "AI",
     collab: "Onindo Ahmed",
     intro: [
       {
-        body: "Riverborn is an AI product studio crafting voice agents, multi-agent systems and generative AI experiences. We ship our own AI products, so we know the difference between a demo and a deployment.",
+        body: "Riverborn is an AI product studio that builds voice agents, multi-agent systems and generative AI experiences. We ship our own products, so we know the difference between a demo and a deployment.",
       },
     ],
     sections: [
       {
         heading: "Background",
-        body: "The AI category is full of polished demos and empty promises. Riverborn was founded by a team that builds and ships its own AI products — real voice agents, real multi-agent workflows, real generative systems that handle production traffic, not slide decks.",
+        body: "The AI category is full of polished demos and empty promises. Riverborn was founded by a team that ships its own AI products, from real voice agents to multi-agent workflows running on production traffic, not slide decks.",
       },
       {
         heading: "Concept",
-        body: "We designed the identity to feel engineered yet human — the way Riverborn builds. Clean, disciplined typography carries a system grounded in voice and conversation. The brand language treats agents as team members, not demos: precise copy, clear structure, and a visual system that scales from a single voice agent to a full multi-agent architecture.",
+        body: "We wanted the identity to feel engineered but human, the way Riverborn builds. Clean typography carries a system grounded in voice and conversation, and the brand treats agents like team members: precise copy, clear structure, room to grow.",
       },
       {
         heading: "Conclusion",
-        body: "The result is a studio brand that sounds like it ships. Riverborn's identity mirrors its craft: build voice agents, multi-agent systems and generative products that go from prototype to production — because the team already lives there.",
+        body: "The result is a studio brand that sounds like it ships. It mirrors the team's craft: products that go from prototype to production, because that is where the team already lives.",
       },
     ],
   },
@@ -59,24 +59,24 @@ export const projects: Project[] = [
     sections: [
       {
         heading: "Background",
-        body: "Fintech brands often fall into two camps: coldly corporate or aggressively playful. Spendo wanted something in between — a visual language that felt trustworthy and premium, yet approachable and modern.",
+        body: "Fintech brands often fall into two camps: coldly corporate or aggressively playful. Spendo wanted something in between, a look that felt trustworthy and premium but still approachable.",
       },
       {
         heading: "Concept",
-        body: "The identity is anchored by a stylized 'S' mark — a folded ribbon that conveys fluidity and precision in equal measure. The deep navy and electric blue palette reinforces trust while the geometric typography keeps things sharp and legible across card, screen and print.",
+        body: "The identity is anchored by a stylized 'S' mark, a folded ribbon that conveys fluidity and precision. Deep navy and electric blue reinforce trust, while the geometric type keeps everything sharp across card, screen and print.",
       },
       {
         heading: "Conclusion",
-        body: "The result is a cohesive fintech identity that works effortlessly across physical cards, mobile interfaces and marketing touchpoints — clean, confident and unmistakably Spendo.",
+        body: "The result is a fintech identity that works the same on a card, an app and a marketing page: clean, confident and unmistakably Spendo.",
       },
     ],
   },
   {
     index: 3,
     slug: "tru-express",
-    title: "Tru.express",
+    title: "Tru.Express",
     category: "Brand Identity",
-    secondaryCategory: "Logistics",
+    secondaryCategory: "News & Media",
     year: "2026",
     images: [
       "/images/tru-express/tru-express.webp",
@@ -96,27 +96,28 @@ export const projects: Project[] = [
     ],
     href: "/work/tru-express",
     short:
-      "A bold identity for Tru.express — built around speed, reliability and the promise of getting it there, truly.",
+      "Brand and digital design for Tru.Express, a global news platform built around Truth in Motion.",
     client: "Tru.express",
     agency: "Baseborn",
-    industry: "Logistics",
+    industry: "News & Media",
+    collab: "Onindo Ahmed",
     intro: [
       {
-        body: "Tru.express is a delivery and logistics brand built on one promise: true, on-time, no-excuses delivery. We shaped an identity around momentum and trust — sharp, fast and unmistakable at every touchpoint.",
+        body: "Tru.Express is a global news platform covering breaking news, analysis and verified reporting across world affairs, business, politics, technology, sport and entertainment. We built the identity around one idea: Truth in Motion, so every screen feels fast, clear and trustworthy.",
       },
     ],
     sections: [
       {
         heading: "Background",
-        body: "Logistics brands tend to look either industrial or generic. Tru.express needed a mark that felt fast and dependable at the same time — a brand customers recognise on a van, a label or a tracking screen.",
+        body: "News brands live or die on trust. Tru.Express needed to carry headlines, live updates, news shorts and long reads in one place without feeling loud or tabloid. The goal was simple: make readers trust the page at a glance.",
       },
       {
         heading: "Concept",
-        body: "The identity is built on speed and clarity: a confident wordmark, a vivid palette and a modular system that holds up across packaging, app and print. Everything is designed to move — nothing sits still.",
+        body: "The design starts with a confident wordmark and an editorial type system built for speed and legibility. A high contrast palette keeps the layout calm when the news is busy, while live badges, category tags and News Shorts modules add just enough pulse.",
       },
       {
         heading: "Conclusion",
-        body: "The result is a brand that delivers on its name: direct, dependable and built to scale with every route Tru.express adds.",
+        body: "The result is a platform that feels fast and factual at the same time. The system scales from a push notification to a full investigation, and it holds up on web, in the app and in the newsletter.",
       },
     ],
   },
@@ -130,23 +131,23 @@ export const projects: Project[] = [
     images: ["/images/inner-circle/inner-circle-01.webp", "/images/inner-circle/inner-circle-02.webp", "/images/inner-circle/inner-circle-03.webp", "/images/inner-circle/inner-circle-04.webp", "/images/inner-circle/inner-circle-05.webp", "/images/inner-circle/inner-circle-06.webp", "/images/inner-circle/inner-circle-07.webp", "/images/inner-circle/inner-circle-09.webp", "/images/inner-circle/inner-circle-08.webp", "/images/inner-circle/inner-circle-10.webp", "/images/inner-circle/inner-circle-11.webp", "/images/inner-circle/inner-circle-12.webp", "/images/inner-circle/inner-circle-13.webp", "/images/inner-circle/inner-circle-14.webp"],
     href: "/work/inner-circle",
     short:
-      "A new identity project in the works — built around closeness, confidence and a modern, distinctive mark.",
+      "A new identity in the works, built around closeness, confidence and a modern, distinctive mark.",
     client: "Inner Circle",
     agency: "Baseborn",
     industry: "Coming Soon",
     intro: [
       {
-        body: "Inner Circle is an identity project currently under development. The visual direction is being built around confident, circular forms and a modern, distinctive tone — designed to signal belonging and trust.",
+        body: "Inner Circle is an identity project currently under development. The direction is built around confident, circular forms and a modern tone that signals belonging and trust.",
       },
     ],
     sections: [
       {
         heading: "Background",
-        body: "Inner Circle is an identity project currently in progress. The brief centres on creating a distinctive, modern mark that feels like an invitation into something exclusive, while staying clear and confident at any size.",
+        body: "The brief is to create a distinctive, modern mark that feels like an invitation into something exclusive, while staying clear and confident at any size.",
       },
       {
         heading: "Concept",
-        body: "The design is being developed around circular geometry and strong, clean shapes — building a refined visual language that centres the mark and reinforces a sense of membership and focus.",
+        body: "The design is being developed around circular geometry and strong, clean shapes, building a refined visual language that keeps the mark at the centre and reinforces membership.",
       },
       {
         heading: "Conclusion",
@@ -164,27 +165,27 @@ export const projects: Project[] = [
     images: ["/images/settle-desk.webp", "/images/settle-desk.webp", "/images/settle-desk.webp", "/images/settle-desk.webp"],
     href: "/work/settle-desk",
     short:
-      "A calm, considered identity for a modern desk brand — built around focus, craft and the ritual of sitting down to work.",
+      "A calm, considered identity for a modern desk brand, built around focus, craft and the ritual of sitting down to work.",
     client: "Settle Desk",
     agency: "Baseborn",
     industry: "Furniture",
     intro: [
       {
-        body: "Settle Desk is a modern desk brand built around one idea: a workspace you actually want to come back to. We designed an identity that feels grounded, tactile and quietly confident — the visual equivalent of sitting down and settling in.",
+        body: "Settle Desk is a modern desk brand built around one idea: a workspace you actually want to come back to. We designed an identity that feels grounded, tactile and quietly confident, the visual equivalent of sitting down and settling in.",
       },
     ],
     sections: [
       {
         heading: "Background",
-        body: "Settle Desk designs desks for people who spend real hours at them. The category is crowded with loud, tech-forward furniture brands, so we went the other way — finding a voice built on restraint, warmth and material honesty.",
+        body: "Settle Desk designs desks for people who spend real hours at them. The category is crowded with loud, tech-forward furniture brands, so we went the other way, with a voice built on restraint, warmth and honest materials.",
       },
       {
         heading: "Concept",
-        body: "The identity is anchored by clean, disciplined typography and a warm, natural palette borrowed from the materials themselves — oak, steel and soft shadow. Layout systems were kept generous and calm, mirroring the sense of space a good desk gives its owner.",
+        body: "The identity uses clean typography and a warm, natural palette borrowed from the materials themselves: oak, steel and soft shadow. The layouts stay generous and calm, mirroring the space a good desk gives its owner.",
       },
       {
         heading: "Conclusion",
-        body: "The result is a brand that feels like the furniture it represents: sturdy, unpretentious and made to last. Settle Desk speaks softly because it has nothing to prove — just a clear sense of place, built for everyday focus.",
+        body: "The result is a brand that feels like the furniture it represents: sturdy, unpretentious and made to last. Settle Desk speaks softly because it has nothing to prove, just a clear sense of place for everyday focus.",
       },
     ],
   },
@@ -198,23 +199,23 @@ export const projects: Project[] = [
     images: ["/images/ibaacl-cover.webp", "/images/ibaacl-cover.webp", "/images/ibaacl-cover.webp", "/images/ibaacl-cover.webp"],
     href: "/work/ibaacl",
     short:
-      "A new identity project in the works — built around clarity, structure and a modern, forward-thinking mark.",
+      "A new identity in the works, built around clarity, structure and a modern, forward-thinking mark.",
     client: "IBAACL",
     agency: "Baseborn",
     industry: "Coming Soon",
     intro: [
       {
-        body: "IBAACL is an identity project currently under development. The visual direction is being built around a clean, structured mark with a confident, contemporary tone — designed to scale across digital and print.",
+        body: "IBAACL is an identity project currently under development. The direction is a clean, structured mark with a confident, contemporary tone, designed to scale across digital and print.",
       },
     ],
     sections: [
       {
         heading: "Background",
-        body: "IBAACL is an identity project currently in progress. The brief centres on creating a distinctive, modern mark that stays legible and confident at any size, across any medium.",
+        body: "The brief is to create a distinctive, modern mark that stays legible and confident at any size, across any medium.",
       },
       {
         heading: "Concept",
-        body: "The design is being developed around precision and restraint — a sharp typographic or geometric lockup paired with a considered palette, letting the mark speak clearly without noise.",
+        body: "The design is being developed around precision and restraint: a sharp typographic or geometric lockup paired with a considered palette, so the mark speaks clearly without noise.",
       },
       {
         heading: "Conclusion",
@@ -232,23 +233,23 @@ export const projects: Project[] = [
     images: ["/images/nr-cover.webp", "/images/nr-cover.webp", "/images/nr-cover.webp", "/images/nr-cover.webp"],
     href: "/work/nr",
     short:
-      "A new identity project in the works — built around clarity, structure and a modern, forward-thinking mark.",
+      "A new identity in the works, built around clarity, structure and a modern, forward-thinking mark.",
     client: "NR",
     agency: "Baseborn",
     industry: "Coming Soon",
     intro: [
       {
-        body: "NR is an identity project currently under development. The visual direction is being built around a clean, structured mark with a confident, contemporary tone — designed to scale across digital and print.",
+        body: "NR is an identity project currently under development. The direction is a clean, structured mark with a confident, contemporary tone, designed to scale across digital and print.",
       },
     ],
     sections: [
       {
         heading: "Background",
-        body: "NR is an identity project currently in progress. The brief centres on creating a distinctive, modern mark that stays legible and confident at any size, across any medium.",
+        body: "The brief is to create a distinctive, modern mark that stays legible and confident at any size, across any medium.",
       },
       {
         heading: "Concept",
-        body: "The design is being developed around precision and restraint — a sharp typographic or geometric lockup paired with a considered palette, letting the mark speak clearly without noise.",
+        body: "The design is being developed around precision and restraint: a sharp typographic or geometric lockup paired with a considered palette, so the mark speaks clearly without noise.",
       },
       {
         heading: "Conclusion",
@@ -266,23 +267,23 @@ export const projects: Project[] = [
     images: ["/images/next-door-baby.webp", "/images/next-door-baby.webp", "/images/next-door-baby.webp", "/images/next-door-baby.webp"],
     href: "/work/next-door-baby",
     short:
-      "A new identity project in the works — built around warmth, softness and a modern, memorable mark.",
+      "A new identity in the works, built around warmth, softness and a modern, memorable mark.",
     client: "Next Door Baby",
     agency: "Baseborn",
     industry: "Coming Soon",
     intro: [
       {
-        body: "Next Door Baby is an identity project currently under development. The visual direction is being built around a warm, approachable mark with a soft, contemporary tone — designed to feel as gentle and friendly as the brand itself.",
+        body: "Next Door Baby is an identity project currently under development. The direction is a warm, approachable mark with a soft, contemporary tone, as gentle and friendly as the brand itself.",
       },
     ],
     sections: [
       {
         heading: "Background",
-        body: "Next Door Baby is an identity project currently in progress. The brief centres on creating a distinctive, modern mark that feels warm and memorable, while staying legible and confident at any size.",
+        body: "The brief is to create a distinctive, modern mark that feels warm and memorable, while staying legible and confident at any size.",
       },
       {
         heading: "Concept",
-        body: "The design is being developed around soft shapes, a gentle palette and clear typography — building a friendly, considered visual language that keeps the mark the hero.",
+        body: "The design is being developed around soft shapes, a gentle palette and clear typography, a friendly visual language that keeps the mark the hero.",
       },
       {
         heading: "Conclusion",
@@ -300,23 +301,23 @@ export const projects: Project[] = [
     images: ["/images/quickskill.webp", "/images/quickskill.webp", "/images/quickskill.webp", "/images/quickskill.webp"],
     href: "/work/quickskill",
     short:
-      "A new identity project in the works — built around speed, focus and a modern, energetic mark.",
+      "A new identity in the works, built around speed, focus and a modern, energetic mark.",
     client: "QuickSkill",
     agency: "Baseborn",
     industry: "Coming Soon",
     intro: [
       {
-        body: "QuickSkill is an identity project currently under development. The visual direction is being built around fast, focused energy — a modern, dynamic mark designed to stand out and stay memorable.",
+        body: "QuickSkill is an identity project currently under development. The direction is fast, focused energy: a modern, dynamic mark designed to stand out and stay memorable.",
       },
     ],
     sections: [
       {
         heading: "Background",
-        body: "QuickSkill is an identity project currently in progress. The brief centres on creating a distinctive, modern mark that communicates speed and skill, while staying legible and confident at any size.",
+        body: "The brief is to create a distinctive, modern mark that communicates speed and skill, while staying legible and confident at any size.",
       },
       {
         heading: "Concept",
-        body: "The design is being developed around sharp angles, bold motion and a vivid palette — building an energetic visual language that keeps the mark at the centre and never feels static.",
+        body: "The design is being developed around sharp angles, bold motion and a vivid palette, an energetic visual language that keeps the mark at the centre and never feels static.",
       },
       {
         heading: "Conclusion",
