@@ -14,6 +14,14 @@ export interface Project {
   year: string;
   image?: string;
   images?: string[];
+  /**
+   * When true, `images` is resolved at render time by reading
+   * `public/images/<slug>/` instead of the hardcoded `images` array.
+   * Files map to slots by name: `<slug>.webp` → slot 0 (cover/hero),
+   * `<slug>-NN.webp` → slot NN. Upload a file, it renders — no code edit.
+   * The `images` array stays as the fallback when the folder is empty.
+   */
+  autoImages?: boolean;
   video?: string;
   poster?: string;
   href: string;

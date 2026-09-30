@@ -264,7 +264,8 @@ export const projects: Project[] = [
     category: "Brand Identity",
     secondaryCategory: "Coming Soon",
     year: "2025",
-    images: ["/images/next-door-baby.webp", "/images/next-door-baby.webp", "/images/next-door-baby.webp", "/images/next-door-baby.webp"],
+    autoImages: true,
+    images: ["/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby-01.webp", "/images/next-door-baby/next-door-baby-02.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp"],
     href: "/work/next-door-baby",
     short:
       "A new identity in the works, built around warmth, softness and a modern, memorable mark.",
