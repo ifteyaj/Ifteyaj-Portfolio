@@ -179,6 +179,11 @@ export default function CustomCursor({
 
   if (!mounted) return null;
 
+  // TEMPORARILY DISABLED - CustomCursor causes scroll lag due to document.elementFromPoint() being called on every animation frame
+  return null;
+
+  // Original implementation below:
+  /*
   return createPortal(
     <canvas
       ref={canvasRef}
@@ -194,4 +199,6 @@ export default function CustomCursor({
     />,
     document.body
   );
+  */
+
 }
