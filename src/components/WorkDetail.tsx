@@ -17,6 +17,7 @@ interface WorkDetailProps {
 export default function WorkDetail({ project }: WorkDetailProps) {
   const rootRef = useRef<HTMLDivElement>(null);
   const [revealed, setRevealed] = useState(false);
+  const images = project.images ?? [];
 
   useEffect(() => {
     const root = rootRef.current;
@@ -26,7 +27,7 @@ export default function WorkDetail({ project }: WorkDetailProps) {
     const qs = <T extends Element = HTMLElement>(sel: string): T[] =>
       Array.from(root.querySelectorAll<T>(sel));
 
-    // ── Preload images between description 2 and 3 to prevent scroll lag ──
+    // ── Preload ALL images for this project to prevent scroll lag ──
     const preloadImages = (indices: number[]) => {
       indices.forEach((i) => {
         if (images[i]) {
@@ -36,19 +37,11 @@ export default function WorkDetail({ project }: WorkDetailProps) {
       });
     };
 
-    // Preload the images between description 2 and 3 (lines 155-162 in the JSX)
-    // These are: images[4], images[5], images[6]
-    preloadImages([4, 5, 6]);
+    // Preload all images (0-13) - covers hero, all gallery blocks, and case-selected-work
+    preloadImages([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]);
 
-    // Preload the landscape + square image blocks between descriptions 3-4 (lines 185-196)
-    // These are: images[7], images[8] in same row, and images[9], images[10] following
-    preloadImages([7, 8, 9, 10]);
-
-    // Preload the final image block between descriptions 4-5 (lines 209-216)
-    // These are: images[11], images[12], images[13]
-    preloadImages([11, 12, 13]);
-
-    const lenis = new Lenis({ lerp: 0.1, smoothWheel: true });
+    // Use less aggressive Lenis lerp to reduce scroll jank
+    const lenis = new Lenis({ lerp: 0.07, smoothWheel: true });
     let rafId: number;
     const raf = (time: number) => {
       lenis.raf(time);
@@ -103,8 +96,6 @@ export default function WorkDetail({ project }: WorkDetailProps) {
       lenis.destroy();
     };
   }, []);
-
-  const images = project.images ?? [];
 
   // Find prev/next projects
   const currentIndex = projects.findIndex((p) => p.slug === project.slug);
@@ -227,7 +218,7 @@ export default function WorkDetail({ project }: WorkDetailProps) {
             {projects.filter((p) => p.slug !== project.slug).slice(0, 2).map((p) => (
               <Link key={p.slug} href={p.href} className="case-selected-item">
                 <div className="case-selected-img-wrap">
-                  <img src={p.images?.[0]} alt={p.title} className="case-selected-img" loading="lazy" />
+                  <img src={p.images?.[0]} alt={p.title} className="case-selected-img" loading="eager" />
                 </div>
                 <span className="case-selected-label">({String(p.index).padStart(2, "0")}) {p.title}</span>
               </Link>
