@@ -59,9 +59,9 @@ Note the second asymmetric pair is visually swapped: `images[8]` (landscape) ren
 
 Indices above 13 wrap via `images[i % images.length]`, so a shorter set still renders — it just repeats the cover. Ship all 14 to avoid duplicates.
 
-## Placeholder
+## Placeholders
 
-`foshol-ghor.webp` currently ships as a **generated placeholder** (dark card reading "FOSHL GHOR — COVER PLACEHOLDER"). Overwrite it with the real cover first thing; everything else is still to come.
+The cover (`foshol-ghor.webp`) is your real art. Slots `01`–`13` currently hold **generated placeholders** (dark card reading "FOSHL GHOR / 01 / PLACEHOLDER - replace with real art") so every detail-page block renders with its own file. Overwrite each one with real art, keeping the same filename — the crop hint printed on each placeholder matches its slot.
 
 ## Wiring up
 
