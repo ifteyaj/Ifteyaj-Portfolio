@@ -44,3 +44,10 @@ public/Ifteyaj Ahmed.htm
 
 # lighthouse reports
 lighthouse-*.json
+
+# graphify (local only — do not commit)
+.opencode/
+.graphify/
+.agents/
+graphify-out/
+graphify-*.json

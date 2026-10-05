@@ -2623,37 +2623,54 @@ html.lenis body {
   .nav-mobile-menu     { top: 56px; display: block; }
 
   /* ── HERO / SLIDER ── */
+  /* ── Mobile distinct content zones ── */
+  /* Title Zone */
+  .container.is-main-slider {
+    position: absolute;
+    bottom: 4rem; /* above footer */
+    left: 0; right: 0;
+    height: 5rem;
+    padding: 0 var(--page-margin);
+    display: flex;
+    align-items: center;
+    z-index: 20;
+    background: transparent;
+  }
+  .main-slider_title-wrap {
+    height: 5rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+  }
   .main-slider_title {
     font-size: var(--mobile-bix-text);
     letter-spacing: var(--mobile-big-text-space);
     padding-left: 0;
     white-space: normal;
-    height: 3.5rem;
-    line-height: 3.5rem;
+    height: 5rem;
+    line-height: 5rem;
+    margin: 0;
+    position: relative;
+    bottom: -100%;
   }
-  .main-slider_title-wrap {
-    height: 3.5rem;
-    margin-bottom: 0.5rem;
-    overflow: hidden;
-  }
-  .is-hero .slider-toggle-nav  { display: none; }
-  .slider-footer {
-    z-index: 3;
-  }
+  .is-hero .slider-toggle-nav { display: none; }
 
-  /* Controls row: prev/next with separator lines */
+  /* Nav Zone */
   .hero-controls {
     position: absolute;
-    bottom: 7.5rem;
-    left: 0;
-    right: 0;
+    bottom: 9rem; /* above title (4 + 5 = 9) */
+    left: 0; right: 0;
+    height: 4rem;
     z-index: 20;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.4rem var(--page-margin);
+    padding: 0 var(--page-margin);
     border-top: 1px solid var(--border-white);
     border-bottom: 1px solid var(--border-white);
+    background: transparent;
   }
   .prev-btn-wrapper,
   .next-btn-wrapper    {
@@ -2670,6 +2687,8 @@ html.lenis body {
   .btn-nextslide       { width: auto; height: auto; }
   .btn-prevslide .second-menu-link,
   .btn-nextslide .second-menu-link { display: none !important; }
+  .btn-prevslide .first-menu-link,
+  .btn-nextslide .first-menu-link { transform: translateY(0) !important; }
   .slider-nav-text .menu-big-text { font-size: 0.7rem; }
 
   /* Number wrapper — hidden on mobile */
@@ -2814,12 +2833,17 @@ html.lenis body {
     bottom: 0;
     left: 0;
     right: 0;
-    height: auto;
-    flex-wrap: wrap;
-    gap: 0.3rem;
-    padding: 0.6rem var(--page-margin);
-    z-index: 15;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 0 var(--page-margin);
+    z-index: 20;
+    border-top: 1px solid var(--border-white);
+    background: transparent;
   }
+  .slider-footer-border { display: none !important; }
   .slider-footer-social-wrapper {
     display: flex;
   }

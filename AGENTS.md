@@ -7,3 +7,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->
+
+# Graphify: local only
+
+Graphify is a local-machine tool only. Never add, commit, or push any graphify-related code, config, or generated files to this GitHub repository. The repo must contain only project files. Keep all graphify artifacts untracked/local.
