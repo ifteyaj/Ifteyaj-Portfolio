@@ -314,7 +314,7 @@ html.lenis body {
   justify-content: flex-start;
   align-items: flex-end;
   height: auto;
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   position: relative;
 }
@@ -2626,18 +2626,16 @@ html.lenis body {
   /* ── Mobile distinct content zones ── */
   /* Title Zone */
   .container.is-main-slider {
-    position: absolute;
-    bottom: 4rem; /* above footer */
-    left: 0; right: 0;
-    height: 5rem;
-    padding: 0 var(--page-margin);
+    padding: var(--page-margin) var(--page-margin) 0;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--page-margin);
     z-index: 20;
     background: transparent;
   }
   .main-slider_title-wrap {
-    height: 5rem;
+    height: auto;
     margin: 0;
     display: flex;
     align-items: center;
@@ -2649,21 +2647,16 @@ html.lenis body {
     letter-spacing: var(--mobile-big-text-space);
     padding-left: 0;
     white-space: normal;
-    height: 5rem;
-    line-height: 5rem;
+    height: auto;
+    line-height: normal;
     margin: 0;
     position: relative;
-    bottom: -100%;
   }
   .is-hero .slider-toggle-nav { display: none; }
 
   /* Nav Zone */
   .hero-controls {
-    position: absolute;
-    bottom: 9rem; /* above title (4 + 5 = 9) */
-    left: 0; right: 0;
-    height: 4rem;
-    z-index: 20;
+    margin-top: var(--mid-section-break);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -2671,6 +2664,7 @@ html.lenis body {
     border-top: 1px solid var(--border-white);
     border-bottom: 1px solid var(--border-white);
     background: transparent;
+    z-index: 20;
   }
   .prev-btn-wrapper,
   .next-btn-wrapper    {
