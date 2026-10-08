@@ -19,7 +19,7 @@ export const blogPosts: BlogPost[] = [
     slug: "vibe-coding-seriously",
     title: "Vibe Coding, Seriously: What Happens When Anyone Can Build",
     tag: "Vibe Coding",
-    image: "/images/Vibe Coding.webp",
+    image: "/images/vibe-coding.webp",
     description:
       "Vibe coding started as a half-joke. In 2026 it's a real category of work and it has pulled a lot of new people into building things.",
     body: [
@@ -33,7 +33,7 @@ export const blogPosts: BlogPost[] = [
     slug: "design-to-dev-handoff",
     title: "Design-to-Dev Handoff Is Disappearing and That's Not All Good",
     tag: "Process",
-    image: "/images/Design to Dev.webp",
+    image: "/images/design-to-dev.webp",
     description:
       "The handoff used to be a defined boundary. In 2026 it's dissolving into a continuous loop and that surfaces a new problem.",
     body: [
@@ -47,7 +47,7 @@ export const blogPosts: BlogPost[] = [
     slug: "who-owns-an-ai-design",
     title: "Who Owns a Design an AI Helped You Make?",
     tag: "Ownership",
-    image: "/images/Own a Design.webp",
+    image: "/images/own-a-design.webp",
     description:
       "\"Who made this\" has gotten genuinely complicated, legally, professionally, and just as a matter of how a designer feels about their own portfolio.",
     body: [
@@ -61,7 +61,7 @@ export const blogPosts: BlogPost[] = [
     slug: "the-job-didnt-disappear",
     title: "The Job Didn't Disappear. It Moved.",
     tag: "Industry",
-    image: "/images/AI workflow.webp",
+    image: "/images/ai-workflow.webp",
     description:
       "The pure production role is shrinking. The parts hardest to specify in a prompt are growing. The job didn't disappear, it moved.",
     body: [
