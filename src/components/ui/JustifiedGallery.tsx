@@ -80,16 +80,19 @@ export default function JustifiedGallery({
     return <div ref={containerRef} className={`justified-gallery ${className ?? ""}`} />;
   }
 
-  let painted = 0;
-
   return (
     <div ref={containerRef} className={`justified-gallery ${className ?? ""}`}>
-      {layout.rows.map((row, r) => (
-        <div key={r} className="justified-row" style={{ height: row.height }}>
-          {row.panels.map((panel) => {
-            const item = panel.item;
-            const isPriority = priorityCount > 0 && painted < priorityCount;
-            if (isPriority) painted += 1;
+      {layout.rows.map((row, r) => {
+        // Global panel index across rows — determines priority without
+        // mutating render-scope state.
+        const rowStart = layout.rows
+          .slice(0, r)
+          .reduce((acc, rr) => acc + rr.panels.length, 0);
+        return (
+          <div key={r} className="justified-row" style={{ height: row.height }}>
+            {row.panels.map((panel, pi) => {
+              const item = panel.item;
+              const isPriority = priorityCount > 0 && rowStart + pi < priorityCount;
             return (
               <div
                 key={panel.key}
@@ -106,9 +109,10 @@ export default function JustifiedGallery({
                 />
               </div>
             );
-          })}
-        </div>
-      ))}
+            })}
+          </div>
+        );
+      })}
     </div>
   );
 }

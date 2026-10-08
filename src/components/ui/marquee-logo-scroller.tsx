@@ -73,6 +73,8 @@ export function MarqueeLogoScroller({
                   : undefined
               }
             >
+              {/* Tiny remote SVG logos — next/image remote optimization adds an optimizer hop for negligible gain. */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={logo.src}
                 alt={logo.alt}

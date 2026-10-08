@@ -122,6 +122,8 @@ function LogoCard({ logo, className, children, ...props }: LogoCardProps) {
       )}
       {...props}
     >
+      {/* Tiny remote SVG logos with explicit dimensions — next/image remote optimization would add an optimizer hop for negligible gain. */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         alt={logo.alt}
         className="pointer-events-none h-4 select-none md:h-5 dark:invert dark:brightness-0"

@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import dynamic from "next/dynamic";
 import Lenis from "lenis";
 import { gsap, registerEases } from "@/lib/gsap";
@@ -11,6 +12,32 @@ import SiteFooter from "@/components/SiteFooter";
 import { projects } from "@/data/projects";
 
 const DragableCarousel = dynamic(() => import("@/lib/framer/DragableCarousel"), { ssr: false });
+
+const ILLUSTRATIONS: { src: string; alt: string; width: number; height: number }[] = [
+  { src: "/images/illustration-1.webp", alt: "Illustration 1", width: 900, height: 1018 },
+  { src: "/images/illustration-2.webp", alt: "Illustration 2", width: 900, height: 900 },
+  { src: "/images/illustration-3.webp", alt: "Illustration 3", width: 900, height: 900 },
+  { src: "/images/illustration-4.webp", alt: "Illustration 4", width: 900, height: 1008 },
+  { src: "/images/illustration-5.webp", alt: "Illustration 5", width: 900, height: 525 },
+  { src: "/images/illustration-6.webp", alt: "Illustration 6", width: 900, height: 600 },
+  { src: "/images/illustration-7.webp", alt: "Illustration 7", width: 900, height: 549 },
+  { src: "/images/illustration-8.webp", alt: "Illustration 8", width: 900, height: 900 },
+  { src: "/images/illustration-9.webp", alt: "Illustration 9", width: 900, height: 900 },
+  { src: "/images/illustration-10.webp", alt: "Illustration 10", width: 900, height: 1103 },
+  { src: "/images/illustration-11.webp", alt: "Illustration 11", width: 900, height: 900 },
+  { src: "/images/illustration-12.webp", alt: "Illustration 12", width: 900, height: 900 },
+  { src: "/images/illustration-13.webp", alt: "Illustration 13", width: 900, height: 900 },
+  { src: "/images/illustration-14.webp", alt: "Illustration 14", width: 900, height: 684 },
+  { src: "/images/illustration-15.webp", alt: "Illustration 15", width: 900, height: 1125 },
+  { src: "/images/illustration-16.webp", alt: "Illustration 16", width: 900, height: 900 },
+  { src: "/images/illustration-17.webp", alt: "Illustration 17", width: 900, height: 900 },
+  { src: "/images/illustration-18.webp", alt: "Illustration 18", width: 900, height: 678 },
+  { src: "/images/illustration-19.webp", alt: "Illustration 19", width: 900, height: 900 },
+  { src: "/images/illustration-20.webp", alt: "Illustration 20", width: 710, height: 410 },
+  { src: "/images/illustration-21.webp", alt: "Illustration 21", width: 900, height: 900 },
+  { src: "/images/illustration-22.webp", alt: "Illustration 22", width: 900, height: 900 },
+  { src: "/images/illustration-23.webp", alt: "Illustration 23", width: 900, height: 832 },
+];
 
 const PORTRAIT_IMAGES = Array.from({ length: 6 }, (_, i) => ({
   src: `/images/portrait-${i + 1}.webp`,
@@ -104,7 +131,14 @@ export default function WorkIndex() {
               <div className="index-entry-images">
                 {project.images?.slice(0, 2).map((img, i) => (
                   <div key={i} className="index-entry-img-wrap">
-                    <img src={img} alt={`${project.title} ${i + 1}`} className="index-entry-img" loading="lazy" />
+                    <Image
+                      src={img}
+                      alt={`${project.title} ${i + 1}`}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="index-entry-img"
+                      style={{ objectFit: "cover" }}
+                    />
                   </div>
                 ))}
               </div>
@@ -119,75 +153,19 @@ export default function WorkIndex() {
               <span className="index-illustrations-count">(23)</span>
             </h2>
           <div className="index-illustrations-grid">
-            <div className="index-illustrations-item">
-              <img src="/images/illustration-1.webp" alt="Illustration 1" className="index-illustrations-img" loading="lazy" />
-            </div>
-            <div className="index-illustrations-item">
-              <img src="/images/illustration-2.webp" alt="Illustration 2" className="index-illustrations-img" loading="lazy" />
-            </div>
-            <div className="index-illustrations-item">
-              <img src="/images/illustration-3.webp" alt="Illustration 3" className="index-illustrations-img" loading="lazy" />
-            </div>
-            <div className="index-illustrations-item">
-              <img src="/images/illustration-4.webp" alt="Illustration 4" className="index-illustrations-img" loading="lazy" />
-            </div>
-            <div className="index-illustrations-item">
-              <img src="/images/illustration-5.webp" alt="Illustration 5" className="index-illustrations-img" loading="lazy" />
-            </div>
-            <div className="index-illustrations-item">
-              <img src="/images/illustration-6.webp" alt="Illustration 6" className="index-illustrations-img" loading="lazy" />
-            </div>
-            <div className="index-illustrations-item">
-              <img src="/images/illustration-7.webp" alt="Illustration 7" className="index-illustrations-img" loading="lazy" />
-            </div>
-            <div className="index-illustrations-item">
-              <img src="/images/illustration-8.webp" alt="Illustration 8" className="index-illustrations-img" loading="lazy" />
-            </div>
-            <div className="index-illustrations-item">
-              <img src="/images/illustration-9.webp" alt="Illustration 9" className="index-illustrations-img" loading="lazy" />
-            </div>
-            <div className="index-illustrations-item">
-              <img src="/images/illustration-10.webp" alt="Illustration 10" className="index-illustrations-img" loading="lazy" />
-            </div>
-            <div className="index-illustrations-item">
-              <img src="/images/illustration-11.webp" alt="Illustration 11" className="index-illustrations-img" loading="lazy" />
-            </div>
-            <div className="index-illustrations-item">
-              <img src="/images/illustration-12.webp" alt="Illustration 12" className="index-illustrations-img" loading="lazy" />
-            </div>
-            <div className="index-illustrations-item">
-              <img src="/images/illustration-13.webp" alt="Illustration 13" className="index-illustrations-img" loading="lazy" />
-            </div>
-            <div className="index-illustrations-item">
-              <img src="/images/illustration-14.webp" alt="Illustration 14" className="index-illustrations-img" loading="lazy" />
-            </div>
-            <div className="index-illustrations-item">
-              <img src="/images/illustration-15.webp" alt="Illustration 15" className="index-illustrations-img" loading="lazy" />
-            </div>
-            <div className="index-illustrations-item">
-              <img src="/images/illustration-16.webp" alt="Illustration 16" className="index-illustrations-img" loading="lazy" />
-            </div>
-            <div className="index-illustrations-item">
-              <img src="/images/illustration-17.webp" alt="Illustration 17" className="index-illustrations-img" loading="lazy" />
-            </div>
-            <div className="index-illustrations-item">
-              <img src="/images/illustration-18.webp" alt="Illustration 18" className="index-illustrations-img" loading="lazy" />
-            </div>
-            <div className="index-illustrations-item">
-              <img src="/images/illustration-19.webp" alt="Illustration 19" className="index-illustrations-img" loading="lazy" />
-            </div>
-            <div className="index-illustrations-item">
-              <img src="/images/illustration-20.webp" alt="Illustration 20" className="index-illustrations-img" loading="lazy" />
-            </div>
-            <div className="index-illustrations-item">
-              <img src="/images/illustration-21.webp" alt="Illustration 21" className="index-illustrations-img" loading="lazy" />
-            </div>
-            <div className="index-illustrations-item">
-              <img src="/images/illustration-22.webp" alt="Illustration 22" className="index-illustrations-img" loading="lazy" />
-            </div>
-            <div className="index-illustrations-item">
-              <img src="/images/illustration-23.webp" alt="Illustration 23" className="index-illustrations-img" loading="lazy" />
-            </div>
+            {ILLUSTRATIONS.map((ill) => (
+              <div key={ill.src} className="index-illustrations-item">
+                <Image
+                  src={ill.src}
+                  alt={ill.alt}
+                  width={ill.width}
+                  height={ill.height}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 16vw"
+                  className="index-illustrations-img"
+                  style={{ width: "100%", height: "auto" }}
+                />
+              </div>
+            ))}
           </div>
         </section>
         </div>

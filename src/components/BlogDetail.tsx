@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import Lenis from "lenis";
 import { gsap, registerEases } from "@/lib/gsap";
 import Navbar from "@/components/Navbar";
@@ -87,7 +88,15 @@ export default function BlogDetail({ post }: BlogDetailProps) {
 
         <div className="moodboard-detail-card">
           <div className="moodboard-detail-image-wrap moodboard-detail-image">
-            <img src={post.image} alt={post.title} className="moodboard-detail-img" />
+            <Image
+              src={post.image}
+              alt={post.title}
+              fill
+              sizes="(max-width: 768px) 100vw, 60vw"
+              priority
+              className="moodboard-detail-img"
+              style={{ objectFit: "cover" }}
+            />
           </div>
           <div className="moodboard-detail-info">
             <span className="moodboard-pin-tag">{post.tag}</span>
@@ -114,7 +123,14 @@ export default function BlogDetail({ post }: BlogDetailProps) {
             {related.map((p, i) => (
               <Link key={p.slug} href={`/blog/${p.slug}`} className="moodboard-pin moodboard-related-pin">
                 <div className={`moodboard-pin-media moodboard-pin-media--${(i % 5) + 1}`}>
-                  <img src={p.image} alt={p.title} className="moodboard-pin-img" loading="lazy" />
+                  <Image
+                    src={p.image}
+                    alt={p.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                    className="moodboard-pin-img"
+                    style={{ objectFit: "cover" }}
+                  />
                 </div>
                 <div className="moodboard-pin-body">
                   <span className="moodboard-pin-tag">{p.tag}</span>

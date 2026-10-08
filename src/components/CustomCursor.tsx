@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { createPortal } from "react-dom";
 
 interface CursorDotTrailProps {
   color?: string;
@@ -59,11 +58,10 @@ export default function CustomCursor({
   const velocityRef = useRef({ x: 0, y: 0 });
   const animRef = useRef<number>(undefined);
   const lastTimeRef = useRef(0);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  // Disabled by default (canvas cursor caused scroll jank via
+  // elementFromPoint on every frame). Kept mounted=false so the
+  // component renders nothing and effects below no-op.
+  const [mounted] = useState(false);
 
   useEffect(() => {
     const canvas = canvasRef.current;

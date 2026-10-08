@@ -2,13 +2,18 @@
 
 import { useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { navLinks, navInfoLinks, siteConfig } from "@/data/site";
 
 interface NavbarProps {
   revealed?: boolean;
 }
 
-export default function Navbar(_props: NavbarProps) {
+export default function Navbar(props: NavbarProps) {
+  // `revealed` is driven by GSAP intro animations in each page client;
+  // the nav itself stays mounted. Kept optional so existing callers
+  // (`<Navbar revealed={...} />`) don't need churn.
+  void props.revealed;
   const [menuOpen, setMenuOpen] = useState(false);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -85,7 +90,14 @@ export default function Navbar(_props: NavbarProps) {
       <div className="nav-bar">
         <div className="nav-logo-wrapper">
           <Link href="/" className="nav-logo-link" aria-label="Ifteyaj studio home" onClick={closeMenu}>
-            <img src="/nav-logo-primary.svg" alt="Ifteyaj" className="nav-logo" />
+            <Image
+              src="/nav-logo-primary.svg"
+              alt="Ifteyaj"
+              width={352}
+              height={157}
+              priority
+              className="nav-logo"
+            />
           </Link>
         </div>
 
@@ -254,7 +266,14 @@ export default function Navbar(_props: NavbarProps) {
             ))}
           </div>
           <div className="nav-mobile-bottom">
-            <img src="/favicon.ico" alt="Favicon" className="nav-mobile-favicon" />
+            <Image
+              src="/nav-favicon.svg"
+              alt="Ifteyaj monogram"
+              width={40}
+              height={40}
+              loading="lazy"
+              className="nav-mobile-favicon"
+            />
             <div className="nav-mobile-meta">
               <span>Brand Designer</span>
               <span>Vibe Coder</span>

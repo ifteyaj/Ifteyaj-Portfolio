@@ -115,6 +115,9 @@ const InfiniteSlider = memo(function InfiniteSlider({
 
 const LogoImage = memo(function LogoImage({ logo }: { logo: Logo }) {
   return (
+    // Tiny remote SVG logos with explicit dimensions — next/image remote
+    // optimization would add an optimizer hop for negligible gain.
+    // eslint-disable-next-line @next/next/no-img-element
     <img
       alt={logo.alt}
       src={logo.src}

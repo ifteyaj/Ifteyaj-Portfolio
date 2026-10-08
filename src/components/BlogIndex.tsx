@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import Lenis from "lenis";
 import { gsap, registerEases } from "@/lib/gsap";
 import Navbar from "@/components/Navbar";
@@ -101,7 +102,14 @@ export default function BlogIndex() {
           {blogPosts.map((pin, i) => (
             <Link key={pin.slug} href={`/blog/${pin.slug}`} className="moodboard-pin">
               <div className={`moodboard-pin-media moodboard-pin-media--${(i % 5) + 1}`}>
-                <img src={pin.image} alt={pin.title} className="moodboard-pin-img" loading="lazy" />
+                <Image
+                  src={pin.image}
+                  alt={pin.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                  className="moodboard-pin-img"
+                  style={{ objectFit: "cover" }}
+                />
               </div>
               <div className="moodboard-pin-body">
                 <span className="moodboard-pin-tag">{pin.tag}</span>

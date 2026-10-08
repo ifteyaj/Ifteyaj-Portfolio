@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import Lenis from "lenis";
 import { gsap, registerEases } from "@/lib/gsap";
 import Navbar from "@/components/Navbar";
@@ -111,7 +112,14 @@ export default function AboutClient() {
 
       <div className="about-hero">
         <div className="about-hero-img">
-          <img src={about.heroImage} alt={about.heroName} />
+          <Image
+            src={about.heroImage}
+            alt={about.heroName}
+            fill
+            sizes="100vw"
+            priority
+            style={{ objectFit: "cover" }}
+          />
         </div>
         <div className="about-hero-content">
           <p className="about-hero-label">Hello, I&apos;m</p>

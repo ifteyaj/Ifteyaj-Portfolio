@@ -1,18 +1,24 @@
 import Link from "next/link";
-import { projects } from "@/data/projects";
+import Image from "next/image";
 import { siteConfig } from "@/data/site";
 
 export default function SiteFooter() {
-  const count = projects.length;
   return (
     <>
       <footer className="case-footer-block">
         <div className="case-footer-inner">
           <Link href="/" className="case-footer-logo-link" aria-label="Home">
-            <img src="/monogram.svg" alt="Ifteyaj" className="case-footer-logo" />
+            <Image
+              src="/monogram.svg"
+              alt="Ifteyaj"
+              width={320}
+              height={320}
+              loading="lazy"
+              className="case-footer-logo"
+            />
           </Link>
           <a href={`mailto:${siteConfig.email}`} className="case-footer-cta-link">
-            Let's build something great together
+            Let&rsquo;s build something great together
           </a>
           <a
             href="#"

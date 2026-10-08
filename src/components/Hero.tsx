@@ -74,7 +74,7 @@ export default function Hero({ gridView, onToggleGridView }: HeroProps) {
                           </div>
                         ) : (
                           <Image
-                            src={project.images?.[0] ?? project.image ?? ""}
+                            src={project.images?.[0] ?? project.image ?? "/images/about-hero.webp"}
                             alt={project.title}
                             fill
                             sizes="100vw"

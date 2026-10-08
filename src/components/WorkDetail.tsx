@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import Lenis from "lenis";
 import { gsap, registerEases } from "@/lib/gsap";
 import Navbar from "@/components/Navbar";
@@ -17,7 +18,9 @@ interface WorkDetailProps {
 export default function WorkDetail({ project }: WorkDetailProps) {
   const rootRef = useRef<HTMLDivElement>(null);
   const [revealed, setRevealed] = useState(false);
-  const images = project.images ?? [];
+  // Fallback guarantees a non-empty array so `images[i % images.length]`
+  // and `images[0]` are always defined (data always provides 14).
+  const images = project.images?.length ? project.images : ["/images/about-hero.webp"];
 
   useEffect(() => {
     const root = rootRef.current;
@@ -27,21 +30,8 @@ export default function WorkDetail({ project }: WorkDetailProps) {
     const qs = <T extends Element = HTMLElement>(sel: string): T[] =>
       Array.from(root.querySelectorAll<T>(sel));
 
-    // ── Preload ALL images for this project to prevent scroll lag ──
-    const preloadImages = (indices: number[]) => {
-      indices.forEach((i) => {
-        if (images[i]) {
-          const img = new Image();
-          img.src = images[i];
-        }
-      });
-    };
-
-    // Preload all images (0-13) - covers hero, all gallery blocks, and case-selected-work
-    preloadImages([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]);
-
-    // Use less aggressive Lenis lerp to reduce scroll jank
-    const lenis = new Lenis({ lerp: 0.07, smoothWheel: true });
+    // Smooth scroll — lerp 0.1 is the recommended balance between feel and performance
+    const lenis = new Lenis({ lerp: 0.1, smoothWheel: true });
     let rafId: number;
     const raf = (time: number) => {
       lenis.raf(time);
@@ -97,10 +87,7 @@ export default function WorkDetail({ project }: WorkDetailProps) {
     };
   }, []);
 
-  // Find prev/next projects
-  const currentIndex = projects.findIndex((p) => p.slug === project.slug);
-  const prevProject = currentIndex > 0 ? projects[currentIndex - 1] : projects[projects.length - 1];
-  const nextProject = currentIndex < projects.length - 1 ? projects[currentIndex + 1] : projects[0];
+  // (Prev/next navigation lives in SiteFooter; no local computation needed.)
 
   return (
     <div ref={rootRef} className="case-page">
@@ -138,7 +125,15 @@ export default function WorkDetail({ project }: WorkDetailProps) {
         </header>
 
         <div className="case-hero-img">
-          <img src={images[0]} alt={project.title} />
+          <Image
+            src={images[0]}
+            alt={project.title}
+            fill
+            sizes="100vw"
+            priority
+            className="case-hero-img-inner"
+            style={{ objectFit: "cover" }}
+          />
         </div>
 
         <div className="case-desc-section">
@@ -150,12 +145,16 @@ export default function WorkDetail({ project }: WorkDetailProps) {
 
         <div className="case-gallery-grid">
           <div className="case-block-asym">
-            <div className="case-block-media case-gallery-img-wrap case-block-media-small"><img src={images[1 % images.length]} alt={`${project.title} detail`} loading="lazy" /></div>
-            <div className="case-block-media case-gallery-img-wrap case-block-media-landscape"><img src={images[2 % images.length]} alt={`${project.title} detail`} loading="lazy" /></div>
+            <div className="case-block-media case-gallery-img-wrap case-block-media-small">
+              <Image src={images[1 % images.length]} alt={`${project.title} detail`} fill sizes="(max-width: 768px) 100vw, 50vw" style={{ objectFit: "cover" }} />
+            </div>
+            <div className="case-block-media case-gallery-img-wrap case-block-media-landscape">
+              <Image src={images[2 % images.length]} alt={`${project.title} detail`} fill sizes="(max-width: 768px) 100vw, 60vw" style={{ objectFit: "cover" }} />
+            </div>
           </div>
 
           <div className="case-block case-block-full">
-            <img src={images[3 % images.length]} alt={`${project.title} detail`} loading="lazy" />
+            <Image src={images[3 % images.length]} alt={`${project.title} detail`} fill sizes="100vw" style={{ objectFit: "cover" }} />
           </div>
 
           <div className="case-desc-section">
@@ -166,12 +165,16 @@ export default function WorkDetail({ project }: WorkDetailProps) {
           </div>
 
           <div className="case-block-equal case-block-equal-short">
-            <div className="case-block-media case-gallery-img-wrap"><img src={images[4 % images.length]} alt={`${project.title} detail`} loading="eager" /></div>
-            <div className="case-block-media case-gallery-img-wrap"><img src={images[5 % images.length]} alt={`${project.title} detail`} loading="eager" /></div>
+            <div className="case-block-media case-gallery-img-wrap">
+              <Image src={images[4 % images.length]} alt={`${project.title} detail`} fill sizes="(max-width: 768px) 100vw, 50vw" style={{ objectFit: "cover" }} />
+            </div>
+            <div className="case-block-media case-gallery-img-wrap">
+              <Image src={images[5 % images.length]} alt={`${project.title} detail`} fill sizes="(max-width: 768px) 100vw, 50vw" style={{ objectFit: "cover" }} />
+            </div>
           </div>
 
           <div className="case-block case-block-full case-block-full-tall">
-            <img src={images[6 % images.length]} alt={`${project.title} detail`} loading="eager" />
+            <Image src={images[6 % images.length]} alt={`${project.title} detail`} fill sizes="100vw" style={{ objectFit: "cover" }} />
           </div>
 
           <div className="case-desc-section">
@@ -182,16 +185,20 @@ export default function WorkDetail({ project }: WorkDetailProps) {
           </div>
 
           <div className="case-block-asym">
-            <div className="case-block-media case-gallery-img-wrap case-block-media-landscape"><img src={images[8 % images.length]} alt={`${project.title} detail`} loading="eager" /></div>
-            <div className="case-block-media case-gallery-img-wrap case-block-media-small"><img src={images[7 % images.length]} alt={`${project.title} detail`} loading="eager" /></div>
+            <div className="case-block-media case-gallery-img-wrap case-block-media-landscape">
+              <Image src={images[8 % images.length]} alt={`${project.title} detail`} fill sizes="(max-width: 768px) 100vw, 60vw" style={{ objectFit: "cover" }} />
+            </div>
+            <div className="case-block-media case-gallery-img-wrap case-block-media-small">
+              <Image src={images[7 % images.length]} alt={`${project.title} detail`} fill sizes="(max-width: 768px) 100vw, 40vw" style={{ objectFit: "cover" }} />
+            </div>
           </div>
 
           <div className="case-block case-block-full case-block-full-tall">
-            <img src={images[9 % images.length]} alt={`${project.title} detail`} loading="eager" />
+            <Image src={images[9 % images.length]} alt={`${project.title} detail`} fill sizes="100vw" style={{ objectFit: "cover" }} />
           </div>
 
           <div className="case-block case-block-full">
-            <img src={images[10 % images.length]} alt={`${project.title} detail`} loading="eager" />
+            <Image src={images[10 % images.length]} alt={`${project.title} detail`} fill sizes="100vw" style={{ objectFit: "cover" }} />
           </div>
 
           <div className="case-desc-section">
@@ -202,12 +209,16 @@ export default function WorkDetail({ project }: WorkDetailProps) {
           </div>
 
           <div className="case-block-equal case-block-equal-short">
-            <div className="case-block-media case-gallery-img-wrap"><img src={images[11 % images.length]} alt={`${project.title} detail`} loading="eager" /></div>
-            <div className="case-block-media case-gallery-img-wrap"><img src={images[12 % images.length]} alt={`${project.title} detail`} loading="eager" /></div>
+            <div className="case-block-media case-gallery-img-wrap">
+              <Image src={images[11 % images.length]} alt={`${project.title} detail`} fill sizes="(max-width: 768px) 100vw, 50vw" style={{ objectFit: "cover" }} />
+            </div>
+            <div className="case-block-media case-gallery-img-wrap">
+              <Image src={images[12 % images.length]} alt={`${project.title} detail`} fill sizes="(max-width: 768px) 100vw, 50vw" style={{ objectFit: "cover" }} />
+            </div>
           </div>
 
           <div className="case-block case-block-full case-block-full-tall">
-            <img src={images[13 % images.length]} alt={`${project.title} detail`} loading="eager" />
+            <Image src={images[13 % images.length]} alt={`${project.title} detail`} fill sizes="100vw" style={{ objectFit: "cover" }} />
           </div>
         </div>
 
@@ -218,7 +229,14 @@ export default function WorkDetail({ project }: WorkDetailProps) {
             {projects.filter((p) => p.slug !== project.slug).slice(0, 2).map((p) => (
               <Link key={p.slug} href={p.href} className="case-selected-item">
                 <div className="case-selected-img-wrap">
-                  <img src={p.images?.[0]} alt={p.title} className="case-selected-img" loading="eager" />
+                  <Image
+                    src={p.images?.[0] ?? "/images/about-hero.webp"}
+                    alt={p.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="case-selected-img"
+                    style={{ objectFit: "cover" }}
+                  />
                 </div>
                 <span className="case-selected-label">({String(p.index).padStart(2, "0")}) {p.title}</span>
               </Link>

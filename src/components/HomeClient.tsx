@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import Lenis from "lenis";
 import { gsap, registerEases } from "@/lib/gsap";
 import Navbar from "@/components/Navbar";
@@ -486,7 +487,14 @@ export default function HomeClient() {
             <Link key={p.slug} href={p.href} className="home-grid-item">
               <span className="home-grid-label">({String(p.index).padStart(2, "0")}) {p.title}</span>
               <div className="home-grid-img-wrap">
-                <img src={p.images?.[0]} alt={p.title} className="home-grid-img" loading="lazy" />
+                <Image
+                  src={p.images?.[0] ?? "/images/about-hero.webp"}
+                  alt={p.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="home-grid-img"
+                  style={{ objectFit: "cover" }}
+                />
               </div>
             </Link>
           ))}

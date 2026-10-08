@@ -136,7 +136,9 @@ html {
 *, *::before, *::after {
   box-sizing: border-box;
 }
-* {
+h1, h2, h3, h4, h5, h6 {
+  /* Scoped to headings only — applying optimizeLegibility globally causes
+     measurable layout slowdowns on complex pages with many text nodes. */
   text-rendering: optimizeLegibility;
 }
 body {
@@ -960,6 +962,9 @@ html.lenis body {
   position: absolute;
   inset: 0;
   overflow: hidden;
+  /* Promote slider to its own GPU compositor layer so GSAP xPercent
+     animations run off the main thread and don't cause jank. */
+  will-change: transform;
 }
 .main-slider_img {
   z-index: 1;
@@ -1314,6 +1319,7 @@ html.lenis body {
   gap: 0;
 }
 .index-entry-img-wrap {
+  position: relative; /* Required for Next.js Image fill */
   overflow: hidden;
   aspect-ratio: 16/9;
 }
@@ -1545,8 +1551,10 @@ html.lenis body {
   height: calc(100vh - 16rem);
   min-height: 28rem;
   max-height: 46rem;
+  position: relative; /* Required for Next.js Image fill prop */
 }
-.case-hero-img img {
+.case-hero-img img,
+.case-hero-img-inner {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1760,6 +1768,7 @@ html.lenis body {
   display: block;
 }
 .case-selected-img-wrap {
+  position: relative; /* Required for Next.js Image fill */
   overflow: hidden;
   aspect-ratio: 16 / 9;
   line-height: 0;
@@ -1965,6 +1974,7 @@ html.lenis body {
   color: var(--white);
 }
 .home-grid-img-wrap {
+  position: relative; /* Required for Next.js Image fill */
   overflow: hidden;
   line-height: 0;
   aspect-ratio: 4 / 3;
@@ -2390,6 +2400,7 @@ html.lenis body {
   color: var(--white);
 }
 .moodboard-pin-media {
+  position: relative; /* Required for Next.js Image fill */
   overflow: hidden;
   border-radius: 0;
   aspect-ratio: 1 / 1;
@@ -2453,12 +2464,12 @@ html.lenis body {
   padding-bottom: var(--mid-section-break);
 }
 .moodboard-detail-image-wrap {
+  position: relative; /* Required for Next.js Image fill */
   overflow: hidden;
+  aspect-ratio: 4 / 3;
 }
 .moodboard-detail-img {
-  width: 100%;
-  height: auto;
-  display: block;
+  object-fit: cover;
 }
 .moodboard-detail-info {
   position: sticky;
