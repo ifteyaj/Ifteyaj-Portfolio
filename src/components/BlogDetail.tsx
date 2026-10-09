@@ -105,8 +105,6 @@ export default function BlogDetail({ post }: BlogDetailProps) {
           </div>
         </div>
 
-        <div className="blog-divider" />
-
         {post.body && post.body.length > 0 && (
           <section className="blog-content">
             {post.body.map((paragraph, i) => (
@@ -116,6 +114,8 @@ export default function BlogDetail({ post }: BlogDetailProps) {
             ))}
           </section>
         )}
+
+        <div className="blog-divider" />
 
         <section className="moodboard-related">
           <h2 className="moodboard-related-heading">More from the blog</h2>

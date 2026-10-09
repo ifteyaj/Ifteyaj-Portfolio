@@ -14,33 +14,33 @@ import { projects } from "@/data/projects";
 const DragableCarousel = dynamic(() => import("@/lib/framer/DragableCarousel"), { ssr: false });
 
 const ILLUSTRATIONS: { src: string; alt: string; width: number; height: number }[] = [
-  { src: "/images/illustration-1.webp", alt: "Illustration 1", width: 900, height: 1018 },
-  { src: "/images/illustration-2.webp", alt: "Illustration 2", width: 900, height: 900 },
-  { src: "/images/illustration-3.webp", alt: "Illustration 3", width: 900, height: 900 },
-  { src: "/images/illustration-4.webp", alt: "Illustration 4", width: 900, height: 1008 },
-  { src: "/images/illustration-5.webp", alt: "Illustration 5", width: 900, height: 525 },
-  { src: "/images/illustration-6.webp", alt: "Illustration 6", width: 900, height: 600 },
-  { src: "/images/illustration-7.webp", alt: "Illustration 7", width: 900, height: 549 },
-  { src: "/images/illustration-8.webp", alt: "Illustration 8", width: 900, height: 900 },
-  { src: "/images/illustration-9.webp", alt: "Illustration 9", width: 900, height: 900 },
-  { src: "/images/illustration-10.webp", alt: "Illustration 10", width: 900, height: 1103 },
-  { src: "/images/illustration-11.webp", alt: "Illustration 11", width: 900, height: 900 },
-  { src: "/images/illustration-12.webp", alt: "Illustration 12", width: 900, height: 900 },
-  { src: "/images/illustration-13.webp", alt: "Illustration 13", width: 900, height: 900 },
-  { src: "/images/illustration-14.webp", alt: "Illustration 14", width: 900, height: 684 },
-  { src: "/images/illustration-15.webp", alt: "Illustration 15", width: 900, height: 1125 },
-  { src: "/images/illustration-16.webp", alt: "Illustration 16", width: 900, height: 900 },
-  { src: "/images/illustration-17.webp", alt: "Illustration 17", width: 900, height: 900 },
-  { src: "/images/illustration-18.webp", alt: "Illustration 18", width: 900, height: 678 },
-  { src: "/images/illustration-19.webp", alt: "Illustration 19", width: 900, height: 900 },
-  { src: "/images/illustration-20.webp", alt: "Illustration 20", width: 710, height: 410 },
-  { src: "/images/illustration-21.webp", alt: "Illustration 21", width: 900, height: 900 },
-  { src: "/images/illustration-22.webp", alt: "Illustration 22", width: 900, height: 900 },
-  { src: "/images/illustration-23.webp", alt: "Illustration 23", width: 900, height: 832 },
+  { src: "/images/illustrations/illustration-1.webp", alt: "Illustration 1", width: 900, height: 1018 },
+  { src: "/images/illustrations/illustration-2.webp", alt: "Illustration 2", width: 900, height: 900 },
+  { src: "/images/illustrations/illustration-3.webp", alt: "Illustration 3", width: 900, height: 900 },
+  { src: "/images/illustrations/illustration-4.webp", alt: "Illustration 4", width: 900, height: 1008 },
+  { src: "/images/illustrations/illustration-5.webp", alt: "Illustration 5", width: 900, height: 525 },
+  { src: "/images/illustrations/illustration-6.webp", alt: "Illustration 6", width: 900, height: 600 },
+  { src: "/images/illustrations/illustration-7.webp", alt: "Illustration 7", width: 900, height: 549 },
+  { src: "/images/illustrations/illustration-8.webp", alt: "Illustration 8", width: 900, height: 900 },
+  { src: "/images/illustrations/illustration-9.webp", alt: "Illustration 9", width: 900, height: 900 },
+  { src: "/images/illustrations/illustration-10.webp", alt: "Illustration 10", width: 900, height: 1103 },
+  { src: "/images/illustrations/illustration-11.webp", alt: "Illustration 11", width: 900, height: 900 },
+  { src: "/images/illustrations/illustration-12.webp", alt: "Illustration 12", width: 900, height: 900 },
+  { src: "/images/illustrations/illustration-13.webp", alt: "Illustration 13", width: 900, height: 900 },
+  { src: "/images/illustrations/illustration-14.webp", alt: "Illustration 14", width: 900, height: 684 },
+  { src: "/images/illustrations/illustration-15.webp", alt: "Illustration 15", width: 900, height: 1125 },
+  { src: "/images/illustrations/illustration-16.webp", alt: "Illustration 16", width: 900, height: 900 },
+  { src: "/images/illustrations/illustration-17.webp", alt: "Illustration 17", width: 900, height: 900 },
+  { src: "/images/illustrations/illustration-18.webp", alt: "Illustration 18", width: 900, height: 678 },
+  { src: "/images/illustrations/illustration-19.webp", alt: "Illustration 19", width: 900, height: 900 },
+  { src: "/images/illustrations/illustration-20.webp", alt: "Illustration 20", width: 710, height: 410 },
+  { src: "/images/illustrations/illustration-21.webp", alt: "Illustration 21", width: 900, height: 900 },
+  { src: "/images/illustrations/illustration-22.webp", alt: "Illustration 22", width: 900, height: 900 },
+  { src: "/images/illustrations/illustration-23.webp", alt: "Illustration 23", width: 900, height: 832 },
 ];
 
 const PORTRAIT_IMAGES = Array.from({ length: 6 }, (_, i) => ({
-  src: `/images/portrait-${i + 1}.webp`,
+  src: `/images/vexel-art/portrait-${i + 1}.webp`,
   alt: `Portrait ${i + 1}`,
 }));
 
@@ -150,7 +150,7 @@ export default function WorkIndex() {
           <section className="index-illustrations">
             <h2 className="index-illustrations-title">
               Illustrations
-              <span className="index-illustrations-count">(23)</span>
+              <span className="index-illustrations-count">({String(ILLUSTRATIONS.length).padStart(2, "0")})</span>
             </h2>
           <div className="index-illustrations-grid">
             {ILLUSTRATIONS.map((ill) => (
@@ -173,7 +173,7 @@ export default function WorkIndex() {
         <section className="index-illustrations index-portraits">
             <h2 className="index-illustrations-title">
               Portrait / Vexel Art
-              <span className="index-illustrations-count">(06)</span>
+              <span className="index-illustrations-count">({String(PORTRAIT_IMAGES.length).padStart(2, "0")})</span>
             </h2>
           <div className="portraits-carousel-wrapper" style={{ height: '420px' }}>
             <DragableCarousel

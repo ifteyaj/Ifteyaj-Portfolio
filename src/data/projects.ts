@@ -192,142 +192,6 @@ export const projects: Project[] = [
   },
   {
     index: 6,
-    slug: "settle-desk",
-    title: "Settle Desk",
-    category: "Brand Identity",
-    secondaryCategory: "Furniture",
-    year: "2025",
-    images: ["/images/settle-desk.webp", "/images/settle-desk.webp", "/images/settle-desk.webp", "/images/settle-desk.webp"],
-    href: "/work/settle-desk",
-    short:
-      "A calm, considered identity for a modern desk brand, built around focus, craft and the ritual of sitting down to work.",
-    client: "Settle Desk",
-    agency: "Baseborn",
-    industry: "Furniture",
-    intro: [
-      {
-        body: "Settle Desk is a modern desk brand built around one idea: a workspace you actually want to come back to. We designed an identity that feels grounded, tactile and quietly confident, the visual equivalent of sitting down and settling in.",
-      },
-    ],
-    sections: [
-      {
-        heading: "Background",
-        body: "Settle Desk designs desks for people who spend real hours at them. The category is crowded with loud, tech-forward furniture brands, so we went the other way, with a voice built on restraint, warmth and honest materials.",
-      },
-      {
-        heading: "Concept",
-        body: "The identity uses clean typography and a warm, natural palette borrowed from the materials themselves: oak, steel and soft shadow. The layouts stay generous and calm, mirroring the space a good desk gives its owner.",
-      },
-      {
-        heading: "Conclusion",
-        body: "The result is a brand that feels like the furniture it represents: sturdy, unpretentious and made to last. Settle Desk speaks softly because it has nothing to prove, just a clear sense of place for everyday focus.",
-      },
-    ],
-  },
-  {
-    index: 7,
-    slug: "ibaacl",
-    title: "IBAACL",
-    category: "Brand Identity",
-    secondaryCategory: "Coming Soon",
-    year: "2025",
-    images: ["/images/ibaacl-cover.webp", "/images/ibaacl-cover.webp", "/images/ibaacl-cover.webp", "/images/ibaacl-cover.webp"],
-    href: "/work/ibaacl",
-    short:
-      "A new identity in the works, built around clarity, structure and a modern, forward-thinking mark.",
-    client: "IBAACL",
-    agency: "Baseborn",
-    industry: "Coming Soon",
-    intro: [
-      {
-        body: "IBAACL is an identity project currently under development. The direction is a clean, structured mark with a confident, contemporary tone, designed to scale across digital and print.",
-      },
-    ],
-    sections: [
-      {
-        heading: "Background",
-        body: "The brief is to create a distinctive, modern mark that stays legible and confident at any size, across any medium.",
-      },
-      {
-        heading: "Concept",
-        body: "The design is being developed around precision and restraint: a sharp typographic or geometric lockup paired with a considered palette, so the mark speaks clearly without noise.",
-      },
-      {
-        heading: "Conclusion",
-        body: "The identity is still under construction. Once finalised, it will flex across web, print and signage with a consistent, unmistakable presence.",
-      },
-    ],
-  },
-  {
-    index: 8,
-    slug: "nr",
-    title: "NR",
-    category: "Brand Identity",
-    secondaryCategory: "Coming Soon",
-    year: "2025",
-    images: ["/images/nr-cover.webp", "/images/nr-cover.webp", "/images/nr-cover.webp", "/images/nr-cover.webp"],
-    href: "/work/nr",
-    short:
-      "A new identity in the works, built around clarity, structure and a modern, forward-thinking mark.",
-    client: "NR",
-    agency: "Baseborn",
-    industry: "Coming Soon",
-    intro: [
-      {
-        body: "NR is an identity project currently under development. The direction is a clean, structured mark with a confident, contemporary tone, designed to scale across digital and print.",
-      },
-    ],
-    sections: [
-      {
-        heading: "Background",
-        body: "The brief is to create a distinctive, modern mark that stays legible and confident at any size, across any medium.",
-      },
-      {
-        heading: "Concept",
-        body: "The design is being developed around precision and restraint: a sharp typographic or geometric lockup paired with a considered palette, so the mark speaks clearly without noise.",
-      },
-      {
-        heading: "Conclusion",
-        body: "The identity is still under construction. Once finalised, it will flex across web, print and signage with a consistent, unmistakable presence.",
-      },
-    ],
-  },
-  {
-    index: 9,
-    slug: "quickskill",
-    title: "QuickSkill",
-    category: "Brand Identity",
-    secondaryCategory: "Coming Soon",
-    year: "2025",
-    images: ["/images/quickskill.webp", "/images/quickskill.webp", "/images/quickskill.webp", "/images/quickskill.webp"],
-    href: "/work/quickskill",
-    short:
-      "A new identity in the works, built around speed, focus and a modern, energetic mark.",
-    client: "QuickSkill",
-    agency: "Baseborn",
-    industry: "Coming Soon",
-    intro: [
-      {
-        body: "QuickSkill is an identity project currently under development. The direction is fast, focused energy: a modern, dynamic mark designed to stand out and stay memorable.",
-      },
-    ],
-    sections: [
-      {
-        heading: "Background",
-        body: "The brief is to create a distinctive, modern mark that communicates speed and skill, while staying legible and confident at any size.",
-      },
-      {
-        heading: "Concept",
-        body: "The design is being developed around sharp angles, bold motion and a vivid palette, an energetic visual language that keeps the mark at the centre and never feels static.",
-      },
-      {
-        heading: "Conclusion",
-        body: "The identity is still under construction. Once finalised, it will flex across web, print and digital touchpoints with a consistent, unmistakable presence.",
-      },
-    ],
-  },
-  {
-    index: 10,
     slug: "foshol-ghor",
     title: "Foshol Ghor",
     category: "Brand Identity",
@@ -373,6 +237,142 @@ export const projects: Project[] = [
       {
         heading: "Conclusion",
         body: "The identity is still under construction. Once finalised, it will flex across web, print and packaging with a consistent, unmistakable presence.",
+      },
+    ],
+  },
+  {
+    index: 7,
+    slug: "settle-desk",
+    title: "Settle Desk",
+    category: "Brand Identity",
+    secondaryCategory: "Furniture",
+    year: "2025",
+    images: ["/images/settle-desk.webp", "/images/settle-desk.webp", "/images/settle-desk.webp", "/images/settle-desk.webp"],
+    href: "/work/settle-desk",
+    short:
+      "A calm, considered identity for a modern desk brand, built around focus, craft and the ritual of sitting down to work.",
+    client: "Settle Desk",
+    agency: "Baseborn",
+    industry: "Furniture",
+    intro: [
+      {
+        body: "Settle Desk is a modern desk brand built around one idea: a workspace you actually want to come back to. We designed an identity that feels grounded, tactile and quietly confident, the visual equivalent of sitting down and settling in.",
+      },
+    ],
+    sections: [
+      {
+        heading: "Background",
+        body: "Settle Desk designs desks for people who spend real hours at them. The category is crowded with loud, tech-forward furniture brands, so we went the other way, with a voice built on restraint, warmth and honest materials.",
+      },
+      {
+        heading: "Concept",
+        body: "The identity uses clean typography and a warm, natural palette borrowed from the materials themselves: oak, steel and soft shadow. The layouts stay generous and calm, mirroring the space a good desk gives its owner.",
+      },
+      {
+        heading: "Conclusion",
+        body: "The result is a brand that feels like the furniture it represents: sturdy, unpretentious and made to last. Settle Desk speaks softly because it has nothing to prove, just a clear sense of place for everyday focus.",
+      },
+    ],
+  },
+  {
+    index: 8,
+    slug: "ibaacl",
+    title: "IBAACL",
+    category: "Brand Identity",
+    secondaryCategory: "Coming Soon",
+    year: "2025",
+    images: ["/images/ibaacl-cover.webp", "/images/ibaacl-cover.webp", "/images/ibaacl-cover.webp", "/images/ibaacl-cover.webp"],
+    href: "/work/ibaacl",
+    short:
+      "A new identity in the works, built around clarity, structure and a modern, forward-thinking mark.",
+    client: "IBAACL",
+    agency: "Baseborn",
+    industry: "Coming Soon",
+    intro: [
+      {
+        body: "IBAACL is an identity project currently under development. The direction is a clean, structured mark with a confident, contemporary tone, designed to scale across digital and print.",
+      },
+    ],
+    sections: [
+      {
+        heading: "Background",
+        body: "The brief is to create a distinctive, modern mark that stays legible and confident at any size, across any medium.",
+      },
+      {
+        heading: "Concept",
+        body: "The design is being developed around precision and restraint: a sharp typographic or geometric lockup paired with a considered palette, so the mark speaks clearly without noise.",
+      },
+      {
+        heading: "Conclusion",
+        body: "The identity is still under construction. Once finalised, it will flex across web, print and signage with a consistent, unmistakable presence.",
+      },
+    ],
+  },
+  {
+    index: 9,
+    slug: "nr",
+    title: "NR",
+    category: "Brand Identity",
+    secondaryCategory: "Coming Soon",
+    year: "2025",
+    images: ["/images/nr-cover.webp", "/images/nr-cover.webp", "/images/nr-cover.webp", "/images/nr-cover.webp"],
+    href: "/work/nr",
+    short:
+      "A new identity in the works, built around clarity, structure and a modern, forward-thinking mark.",
+    client: "NR",
+    agency: "Baseborn",
+    industry: "Coming Soon",
+    intro: [
+      {
+        body: "NR is an identity project currently under development. The direction is a clean, structured mark with a confident, contemporary tone, designed to scale across digital and print.",
+      },
+    ],
+    sections: [
+      {
+        heading: "Background",
+        body: "The brief is to create a distinctive, modern mark that stays legible and confident at any size, across any medium.",
+      },
+      {
+        heading: "Concept",
+        body: "The design is being developed around precision and restraint: a sharp typographic or geometric lockup paired with a considered palette, so the mark speaks clearly without noise.",
+      },
+      {
+        heading: "Conclusion",
+        body: "The identity is still under construction. Once finalised, it will flex across web, print and signage with a consistent, unmistakable presence.",
+      },
+    ],
+  },
+  {
+    index: 10,
+    slug: "dripcheck",
+    title: "Dripcheck",
+    category: "Brand Identity",
+    secondaryCategory: "Coming Soon",
+    year: "2025",
+    images: ["/images/dripcheck/dripcheck.webp", "/images/dripcheck/dripcheck.webp", "/images/dripcheck/dripcheck.webp", "/images/dripcheck/dripcheck.webp"],
+    href: "/work/dripcheck",
+    short:
+      "A new identity in the works, built around clarity, structure and a modern, forward-thinking mark.",
+    client: "Dripcheck",
+    agency: "Baseborn",
+    industry: "Coming Soon",
+    intro: [
+      {
+        body: "Dripcheck is an identity project currently under development. The direction is a clean, structured mark with a confident, contemporary tone, designed to scale across digital and print.",
+      },
+    ],
+    sections: [
+      {
+        heading: "Background",
+        body: "The brief is to create a distinctive, modern mark that stays legible and confident at any size, across any medium.",
+      },
+      {
+        heading: "Concept",
+        body: "The design is being developed around precision and restraint: a sharp typographic or geometric lockup paired with a considered palette, so the mark speaks clearly without noise.",
+      },
+      {
+        heading: "Conclusion",
+        body: "The identity is still under construction. Once finalised, it will flex across web, print and signage with a consistent, unmistakable presence.",
       },
     ],
   },

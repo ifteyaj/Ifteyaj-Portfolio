@@ -1789,7 +1789,7 @@ html.lenis body {
 
 /* ── Footer block (SH logo + Back to top) ── */
 .case-footer-block {
-  margin-top: var(--section-break);
+  margin-top: clamp(2rem, 5vw, 4rem);
   padding: 0.25rem 0 0;
   border-top: 1px solid var(--border-white);
 }
@@ -2197,8 +2197,13 @@ html.lenis body {
 
 /* ── Reach out ── */
 .about-reachout {
-  margin-top: var(--section-break);
-  padding-top: var(--mid-section-break);
+  margin-top: clamp(2rem, 5vw, 4rem);
+  padding-top: clamp(1.5rem, 4vw, 3rem);
+  padding-bottom: clamp(1rem, 3vw, 2rem);
+  width: 100vw;
+  margin-left: calc(-1 * var(--page-margin));
+  padding-left: var(--page-margin);
+  padding-right: var(--page-margin);
 }
 .about-reachout-text {
   font-size: var(--small-descriptor-text);
@@ -2208,16 +2213,15 @@ html.lenis body {
 }
 .about-reachout-mail {
   font-family: var(--main-type);
-  font-size: clamp(5rem, 15vw, 13rem);
-  line-height: 1.1;
+  font-size: clamp(4rem, 11vw, 14rem);
+  line-height: 1;
   font-weight: var(--main-weight-big);
-  letter-spacing: -0.03em;
+  letter-spacing: -0.04em;
   display: block;
-  word-break: break-word;
+  white-space: nowrap;
   color: var(--grey);
-  width: 100vw;
-  margin-left: calc(-1 * var(--page-margin));
-  padding-left: var(--page-margin);
+  width: 100%;
+  text-align: right;
 }
 .about-reachout-mail:hover {
   color: var(--grey);
@@ -2358,7 +2362,7 @@ html.lenis body {
 /* ── Header ── */
 .moodboard-header {
   padding-bottom: 3rem;
-  margin-bottom: var(--mid-section-break);
+  margin-bottom: 2rem;
   overflow: hidden;
   position: relative;
 }
@@ -2447,7 +2451,7 @@ html.lenis body {
 .moodboard-detail-breadcrumb {
   font-size: var(--small-descriptor-text);
   color: var(--grey);
-  margin-bottom: var(--mid-section-break);
+  margin-bottom: 2rem;
 }
 .moodboard-detail-breadcrumb a {
   color: var(--white);
@@ -2492,12 +2496,13 @@ html.lenis body {
 /* Blog article content */
 .blog-content {
   max-width: 150rem;
+  margin-top: 3rem;
 }
 .blog-divider {
   width: 100%;
   height: 1px;
   background: var(--border-white);
-  margin: 2rem 0;
+  margin: 1rem 0 2rem;
 }
 .blog-content-paragraph {
   font-size: var(--small-high-text);
@@ -2519,14 +2524,14 @@ html.lenis body {
 
 /* Related */
 .moodboard-related {
-  margin-top: var(--section-break);
+  margin-top: 4rem;
 }
 .moodboard-related-heading {
   font-family: var(--main-type);
-  font-size: var(--small-high-text);
-  line-height: var(--small-high-text-line);
+  font-size: var(--big-high-text);
+  line-height: var(--big-high-text-line);
   font-weight: var(--main-weight-big);
-  margin-bottom: var(--mid-section-break);
+  margin-bottom: 2rem;
 }
 .moodboard-related-grid {
   grid-template-columns: repeat(4, 1fr);
@@ -2799,7 +2804,7 @@ html.lenis body {
   .about-service-body { grid-column: auto; }
   .about-service-left { flex-wrap: wrap; row-gap: 0.25rem; }
   .about-service-heading { white-space: normal; }
-  .about-reachout-mail { font-size: var(--small-high-text); line-height: var(--small-high-text-line); word-break: break-all; }
+  .about-reachout-mail { font-size: clamp(2.5rem, 11vw, 4rem); line-height: 1.1; white-space: normal; overflow: visible; text-overflow: unset; }
   .about-client-list   { grid-template-columns: 1fr; }
   .about-recognition-item { grid-template-columns: 1fr; gap: 0.3rem; }
   .about-recognition-project { text-align: left; }

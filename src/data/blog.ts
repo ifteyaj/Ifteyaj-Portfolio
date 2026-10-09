@@ -5,7 +5,7 @@ export const blogPosts: BlogPost[] = [
     slug: "designer-new-toolbox",
     title: "The Designer's New Toolbox: From Figma to Prompted Interfaces",
     tag: "AI",
-    image: "/images/figma-make-toolbox.webp",
+    image: "/images/blogs/designer-new-toolbox.webp",
     description:
       "For most of the last decade, a designer's day started in Figma. In 2026, it's just as likely to start in a chat window. The toolbox changed, the job didn't.",
     body: [
@@ -19,7 +19,7 @@ export const blogPosts: BlogPost[] = [
     slug: "vibe-coding-seriously",
     title: "Vibe Coding, Seriously: What Happens When Anyone Can Build",
     tag: "Vibe Coding",
-    image: "/images/vibe-coding.webp",
+    image: "/images/blogs/vibe-coding-seriously.webp",
     description:
       "Vibe coding started as a half-joke. In 2026 it's a real category of work and it has pulled a lot of new people into building things.",
     body: [
@@ -33,7 +33,7 @@ export const blogPosts: BlogPost[] = [
     slug: "design-to-dev-handoff",
     title: "Design-to-Dev Handoff Is Disappearing and That's Not All Good",
     tag: "Process",
-    image: "/images/design-to-dev.webp",
+    image: "/images/blogs/design-to-dev-handoff.webp",
     description:
       "The handoff used to be a defined boundary. In 2026 it's dissolving into a continuous loop and that surfaces a new problem.",
     body: [
@@ -47,7 +47,7 @@ export const blogPosts: BlogPost[] = [
     slug: "who-owns-an-ai-design",
     title: "Who Owns a Design an AI Helped You Make?",
     tag: "Ownership",
-    image: "/images/own-a-design.webp",
+    image: "/images/blogs/who-owns-an-ai-design.webp",
     description:
       "\"Who made this\" has gotten genuinely complicated, legally, professionally, and just as a matter of how a designer feels about their own portfolio.",
     body: [
@@ -61,7 +61,7 @@ export const blogPosts: BlogPost[] = [
     slug: "the-job-didnt-disappear",
     title: "The Job Didn't Disappear. It Moved.",
     tag: "Industry",
-    image: "/images/ai-workflow.webp",
+    image: "/images/blogs/the-job-didnt-disappear.webp",
     description:
       "The pure production role is shrinking. The parts hardest to specify in a prompt are growing. The job didn't disappear, it moved.",
     body: [

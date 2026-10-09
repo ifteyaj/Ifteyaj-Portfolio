@@ -172,7 +172,7 @@ export default function AboutClient() {
         <section className="about-reachout">
           <p className="about-reachout-text">{about.reachout}</p>
           <a href={`mailto:${siteConfig.email}`} className="about-reachout-mail">
-            {siteConfig.email}
+            ifteyaj0<wbr />@gmail.com
           </a>
         </section>
 
