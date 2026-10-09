@@ -94,6 +94,7 @@ export default function BlogDetail({ post }: BlogDetailProps) {
               fill
               sizes="(max-width: 768px) 100vw, 60vw"
               priority
+              unoptimized
               className="moodboard-detail-img"
               style={{ objectFit: "cover" }}
             />
@@ -128,6 +129,7 @@ export default function BlogDetail({ post }: BlogDetailProps) {
                     alt={p.title}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                    unoptimized
                     className="moodboard-pin-img"
                     style={{ objectFit: "cover" }}
                   />
