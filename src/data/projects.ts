@@ -157,41 +157,6 @@ export const projects: Project[] = [
   },
   {
     index: 5,
-    slug: "next-door-baby",
-    title: "Next Door Baby",
-    category: "Brand Identity",
-    secondaryCategory: "Coming Soon",
-    year: "2025",
-    autoImages: true,
-    images: ["/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby-01.webp", "/images/next-door-baby/next-door-baby-02.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp"],
-    href: "/work/next-door-baby",
-    short:
-      "A new identity in the works, built around warmth, softness and a modern, memorable mark.",
-    client: "Next Door Baby",
-    agency: "Baseborn",
-    industry: "Coming Soon",
-    intro: [
-      {
-        body: "Next Door Baby is an identity project currently under development. The direction is a warm, approachable mark with a soft, contemporary tone, as gentle and friendly as the brand itself.",
-      },
-    ],
-    sections: [
-      {
-        heading: "Background",
-        body: "The brief is to create a distinctive, modern mark that feels warm and memorable, while staying legible and confident at any size.",
-      },
-      {
-        heading: "Concept",
-        body: "The design is being developed around soft shapes, a gentle palette and clear typography, a friendly visual language that keeps the mark the hero.",
-      },
-      {
-        heading: "Conclusion",
-        body: "The identity is still under construction. Once finalised, it will flex across web, print and packaging with a consistent, unmistakable presence.",
-      },
-    ],
-  },
-  {
-    index: 6,
     slug: "foshol-ghor",
     title: "Foshol Ghor",
     category: "Brand Identity",
@@ -233,6 +198,41 @@ export const projects: Project[] = [
       {
         heading: "Concept",
         body: "The design is being developed around natural shapes, a grounded palette and clear typography, a friendly visual language that keeps the mark the hero.",
+      },
+      {
+        heading: "Conclusion",
+        body: "The identity is still under construction. Once finalised, it will flex across web, print and packaging with a consistent, unmistakable presence.",
+      },
+    ],
+  },
+  {
+    index: 6,
+    slug: "next-door-baby",
+    title: "Next Door Baby",
+    category: "Brand Identity",
+    secondaryCategory: "Coming Soon",
+    year: "2025",
+    autoImages: true,
+    images: ["/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby-01.webp", "/images/next-door-baby/next-door-baby-02.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp"],
+    href: "/work/next-door-baby",
+    short:
+      "A new identity in the works, built around warmth, softness and a modern, memorable mark.",
+    client: "Next Door Baby",
+    agency: "Baseborn",
+    industry: "Coming Soon",
+    intro: [
+      {
+        body: "Next Door Baby is an identity project currently under development. The direction is a warm, approachable mark with a soft, contemporary tone, as gentle and friendly as the brand itself.",
+      },
+    ],
+    sections: [
+      {
+        heading: "Background",
+        body: "The brief is to create a distinctive, modern mark that feels warm and memorable, while staying legible and confident at any size.",
+      },
+      {
+        heading: "Concept",
+        body: "The design is being developed around soft shapes, a gentle palette and clear typography, a friendly visual language that keeps the mark the hero.",
       },
       {
         heading: "Conclusion",
