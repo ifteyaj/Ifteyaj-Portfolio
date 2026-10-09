@@ -73,6 +73,40 @@ export const projects: Project[] = [
   },
   {
     index: 3,
+    slug: "inner-circle",
+    title: "Inner Circle",
+    category: "Brand Identity",
+    secondaryCategory: "Coming Soon",
+    year: "2025",
+    images: ["/images/inner-circle/inner-circle-01.webp", "/images/inner-circle/inner-circle-02.webp", "/images/inner-circle/inner-circle-03.webp", "/images/inner-circle/inner-circle-04.webp", "/images/inner-circle/inner-circle-05.webp", "/images/inner-circle/inner-circle-06.webp", "/images/inner-circle/inner-circle-07.webp", "/images/inner-circle/inner-circle-09.webp", "/images/inner-circle/inner-circle-08.webp", "/images/inner-circle/inner-circle-10.webp", "/images/inner-circle/inner-circle-11.webp", "/images/inner-circle/inner-circle-12.webp", "/images/inner-circle/inner-circle-13.webp", "/images/inner-circle/inner-circle-14.webp"],
+    href: "/work/inner-circle",
+    short:
+      "A new identity in the works, built around closeness, confidence and a modern, distinctive mark.",
+    client: "Inner Circle",
+    agency: "Baseborn",
+    industry: "Coming Soon",
+    intro: [
+      {
+        body: "Inner Circle is an identity project currently under development. The direction is built around confident, circular forms and a modern tone that signals belonging and trust.",
+      },
+    ],
+    sections: [
+      {
+        heading: "Background",
+        body: "The brief is to create a distinctive, modern mark that feels like an invitation into something exclusive, while staying clear and confident at any size.",
+      },
+      {
+        heading: "Concept",
+        body: "The design is being developed around circular geometry and strong, clean shapes, building a refined visual language that keeps the mark at the centre and reinforces membership.",
+      },
+      {
+        heading: "Conclusion",
+        body: "The identity is still being built. Once finalised, it will flex across web, print and signage with a consistent, unmistakable presence.",
+      },
+    ],
+  },
+  {
+    index: 4,
     slug: "tru-express",
     title: "Tru.Express",
     category: "Brand Identity",
@@ -122,7 +156,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    index: 4,
+    index: 5,
     slug: "next-door-baby",
     title: "Next Door Baby",
     category: "Brand Identity",
@@ -153,40 +187,6 @@ export const projects: Project[] = [
       {
         heading: "Conclusion",
         body: "The identity is still under construction. Once finalised, it will flex across web, print and packaging with a consistent, unmistakable presence.",
-      },
-    ],
-  },
-  {
-    index: 5,
-    slug: "inner-circle",
-    title: "Inner Circle",
-    category: "Brand Identity",
-    secondaryCategory: "Coming Soon",
-    year: "2025",
-    images: ["/images/inner-circle/inner-circle-01.webp", "/images/inner-circle/inner-circle-02.webp", "/images/inner-circle/inner-circle-03.webp", "/images/inner-circle/inner-circle-04.webp", "/images/inner-circle/inner-circle-05.webp", "/images/inner-circle/inner-circle-06.webp", "/images/inner-circle/inner-circle-07.webp", "/images/inner-circle/inner-circle-09.webp", "/images/inner-circle/inner-circle-08.webp", "/images/inner-circle/inner-circle-10.webp", "/images/inner-circle/inner-circle-11.webp", "/images/inner-circle/inner-circle-12.webp", "/images/inner-circle/inner-circle-13.webp", "/images/inner-circle/inner-circle-14.webp"],
-    href: "/work/inner-circle",
-    short:
-      "A new identity in the works, built around closeness, confidence and a modern, distinctive mark.",
-    client: "Inner Circle",
-    agency: "Baseborn",
-    industry: "Coming Soon",
-    intro: [
-      {
-        body: "Inner Circle is an identity project currently under development. The direction is built around confident, circular forms and a modern tone that signals belonging and trust.",
-      },
-    ],
-    sections: [
-      {
-        heading: "Background",
-        body: "The brief is to create a distinctive, modern mark that feels like an invitation into something exclusive, while staying clear and confident at any size.",
-      },
-      {
-        heading: "Concept",
-        body: "The design is being developed around circular geometry and strong, clean shapes, building a refined visual language that keeps the mark at the centre and reinforces membership.",
-      },
-      {
-        heading: "Conclusion",
-        body: "The identity is still being built. Once finalised, it will flex across web, print and signage with a consistent, unmistakable presence.",
       },
     ],
   },
@@ -242,6 +242,55 @@ export const projects: Project[] = [
   },
   {
     index: 7,
+    slug: "dripcheck",
+    title: "Dripcheck",
+    category: "Brand Identity",
+    secondaryCategory: "Coming Soon",
+    year: "2025",
+    images: [
+      "/images/dripcheck/dripcheck.webp",
+      "/images/dripcheck/dripcheck-2.webp",
+      "/images/dripcheck/dripcheck-3.webp",
+      "/images/dripcheck/dripcheck-4.webp",
+      "/images/dripcheck/dripcheck-5.webp",
+      "/images/dripcheck/dripcheck-6.webp",
+      "/images/dripcheck/dripcheck-7.webp",
+      "/images/dripcheck/dripcheck-8.webp",
+      "/images/dripcheck/dripcheck-9.webp",
+      "/images/dripcheck/dripcheck-10.webp",
+      "/images/dripcheck/dripcheck-11.webp",
+      "/images/dripcheck/dripcheck-12.webp",
+      "/images/dripcheck/dripcheck-13.webp",
+      "/images/dripcheck/dripcheck-14.webp",
+    ],
+    href: "/work/dripcheck",
+    short:
+      "A new identity in the works, built around clarity, structure and a modern, forward-thinking mark.",
+    client: "Dripcheck",
+    agency: "Baseborn",
+    industry: "Coming Soon",
+    intro: [
+      {
+        body: "Dripcheck is an identity project currently under development. The direction is a clean, structured mark with a confident, contemporary tone, designed to scale across digital and print.",
+      },
+    ],
+    sections: [
+      {
+        heading: "Background",
+        body: "The brief is to create a distinctive, modern mark that stays legible and confident at any size, across any medium.",
+      },
+      {
+        heading: "Concept",
+        body: "The design is being developed around precision and restraint: a sharp typographic or geometric lockup paired with a considered palette, so the mark speaks clearly without noise.",
+      },
+      {
+        heading: "Conclusion",
+        body: "The identity is still under construction. Once finalised, it will flex across web, print and signage with a consistent, unmistakable presence.",
+      },
+    ],
+  },
+  {
+    index: 8,
     slug: "settle-desk",
     title: "Settle Desk",
     category: "Brand Identity",
@@ -275,7 +324,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    index: 8,
+    index: 9,
     slug: "ibaacl",
     title: "IBAACL",
     category: "Brand Identity",
@@ -309,7 +358,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    index: 9,
+    index: 10,
     slug: "nr",
     title: "NR",
     category: "Brand Identity",
@@ -325,40 +374,6 @@ export const projects: Project[] = [
     intro: [
       {
         body: "NR is an identity project currently under development. The direction is a clean, structured mark with a confident, contemporary tone, designed to scale across digital and print.",
-      },
-    ],
-    sections: [
-      {
-        heading: "Background",
-        body: "The brief is to create a distinctive, modern mark that stays legible and confident at any size, across any medium.",
-      },
-      {
-        heading: "Concept",
-        body: "The design is being developed around precision and restraint: a sharp typographic or geometric lockup paired with a considered palette, so the mark speaks clearly without noise.",
-      },
-      {
-        heading: "Conclusion",
-        body: "The identity is still under construction. Once finalised, it will flex across web, print and signage with a consistent, unmistakable presence.",
-      },
-    ],
-  },
-  {
-    index: 10,
-    slug: "dripcheck",
-    title: "Dripcheck",
-    category: "Brand Identity",
-    secondaryCategory: "Coming Soon",
-    year: "2025",
-    images: ["/images/dripcheck/dripcheck.webp", "/images/dripcheck/dripcheck.webp", "/images/dripcheck/dripcheck.webp", "/images/dripcheck/dripcheck.webp"],
-    href: "/work/dripcheck",
-    short:
-      "A new identity in the works, built around clarity, structure and a modern, forward-thinking mark.",
-    client: "Dripcheck",
-    agency: "Baseborn",
-    industry: "Coming Soon",
-    intro: [
-      {
-        body: "Dripcheck is an identity project currently under development. The direction is a clean, structured mark with a confident, contemporary tone, designed to scale across digital and print.",
       },
     ],
     sections: [
