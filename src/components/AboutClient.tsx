@@ -118,6 +118,7 @@ export default function AboutClient() {
             fill
             sizes="100vw"
             priority
+            unoptimized
             style={{ objectFit: "cover" }}
           />
         </div>

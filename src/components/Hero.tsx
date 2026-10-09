@@ -79,6 +79,7 @@ export default function Hero({ gridView, onToggleGridView }: HeroProps) {
                             fill
                             sizes="100vw"
                             priority={i === 0}
+                            unoptimized
                             className="main-slider_img"
                           />
                         )}

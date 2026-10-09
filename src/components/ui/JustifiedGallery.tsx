@@ -105,6 +105,7 @@ export default function JustifiedGallery({
                   fill
                   sizes={sizes}
                   loading={isPriority ? "eager" : "lazy"}
+                  unoptimized
                   className="justified-img"
                 />
               </div>
