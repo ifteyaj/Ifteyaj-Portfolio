@@ -45,7 +45,8 @@ export default function Hero({ gridView, onToggleGridView }: HeroProps) {
         <div className="main-slider">
           <div className="main-slider_wrap">
             <div className="main-slider_list">
-              {projects.map((project, i) => (
+              <div className="main-slider_items">
+                {projects.map((project, i) => (
                 <div
                   key={project.slug}
                   className={`main-slider_item${i === 0 ? " active" : ""}`}
@@ -87,79 +88,80 @@ export default function Hero({ gridView, onToggleGridView }: HeroProps) {
                     </div>
                   </a>
                 </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <div className="number-wrapper">
-          <div className="numbers">
-            <div className="numbers_wrap">
-              <div className="numbers_list">
-                {projects.map((project, i) => (
-                  <div
-                    key={project.slug}
-                    className={`numbers_item${i === 0 ? " active" : ""}`}
-                  >
-                    <p className="number_static">(0</p>
-                    <p className="numbers_text">{i + 1}</p>
-                    <p className="number_static">)</p>
-                  </div>
                 ))}
               </div>
-            </div>
-          </div>
-        </div>
 
-        <div className="hero-controls">
-          <div className="prev-btn-wrapper">
-            <div className="btn-prevslide">
-              <div className="menu-link">
-                <div className="menu-text first-menu-link slider-nav-text">
-                  <p className="menu-big-text">[←] Prev</p>
+              <div className="hero-controls">
+                <div className="prev-btn-wrapper">
+                  <div className="btn-prevslide">
+                    <div className="menu-link">
+                      <div className="menu-text first-menu-link slider-nav-text">
+                        <p className="menu-big-text">[←] Prev</p>
+                      </div>
+                      <div className="menu-text second-menu-link">
+                        <p className="menu-big-text">[←] Prev</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div className="menu-text second-menu-link">
-                  <p className="menu-big-text">[←] Prev</p>
+                <div className="next-btn-wrapper">
+                  <div className="btn-nextslide">
+                    <div className="menu-link">
+                      <div className="menu-text first-menu-link slider-nav-text">
+                        <p className="menu-big-text">Next [→]</p>
+                      </div>
+                      <div className="menu-text second-menu-link">
+                        <p className="menu-big-text">Next [→]</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
+
+              <div className="number-wrapper">
+                <div className="numbers">
+                  <div className="numbers_wrap">
+                    <div className="numbers_list">
+                      {projects.map((project, i) => (
+                        <div
+                          key={project.slug}
+                          className={`numbers_item${i === 0 ? " active" : ""}`}
+                        >
+                          <p className="number_static">(0</p>
+                          <p className="numbers_text">{i + 1}</p>
+                          <p className="number_static">)</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="slider-footer">
+                <div className="slider-footer-wrapper">
+                  <div className="slider-footer-information">
+                    <p className="slider-footer-text">{siteConfig.copyright}</p>
+                  </div>
+                </div>
+                <div className="slider-footer-social-wrapper">
+                  <div className="social-link-container">
+                    {siteConfig.socials.map((social) => (
+                      <a key={social.label} href={social.href} target="_blank" className="menu-link">
+                        <div className="menu-text first-menu-link-social">
+                          <p className="menu-big-text social-link">{social.label}</p>
+                        </div>
+                        <div className="menu-text second-menu-link-social">
+                          <p className="menu-big-text social-link">{social.label}</p>
+                        </div>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+                <div className="slider-footer-border" />
               </div>
             </div>
           </div>
-          <div className="next-btn-wrapper">
-            <div className="btn-nextslide">
-              <div className="menu-link">
-                <div className="menu-text first-menu-link slider-nav-text">
-                  <p className="menu-big-text">Next [→]</p>
-                </div>
-                <div className="menu-text second-menu-link">
-                  <p className="menu-big-text">Next [→]</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-
-      <div className="slider-footer">
-        <div className="slider-footer-wrapper">
-          <div className="slider-footer-information">
-            <p className="slider-footer-text">{siteConfig.copyright}</p>
-          </div>
-        </div>
-        <div className="slider-footer-social-wrapper">
-          <div className="social-link-container">
-            {siteConfig.socials.map((social) => (
-              <a key={social.label} href={social.href} target="_blank" className="menu-link">
-                <div className="menu-text first-menu-link-social">
-                  <p className="menu-big-text social-link">{social.label}</p>
-                </div>
-                <div className="menu-text second-menu-link-social">
-                  <p className="menu-big-text social-link">{social.label}</p>
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
-        <div className="slider-footer-border" />
       </div>
     </section>
   );

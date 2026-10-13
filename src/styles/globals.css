@@ -2626,32 +2626,83 @@ html.lenis body {
   }
 
   /* ── NAVBAR ── */
-  .nav-hamburger       { display: flex !important; }
+  /* Phones keep the logo + hamburger drawer (same as tablet); only the
+     desktop link rows stay hidden. */
+  .nav-hamburger       { display: flex; }
+  .nav-mobile-menu     { display: block; }
   .brand-designer-text { display: none; }
   .nav-clock-wrapper   { display: none; }
   .navbar              { height: auto; }
   .nav-bar             { min-height: 56px; width: 100%; overflow: visible; }
   .nav-logo            { height: 2.2rem; margin-left: 0; }
 
-  /* Keep the compact desktop links out of the phone header; the drawer owns them. */
+  /* Keep the compact desktop links out of the phone header. */
   .work-menu-section,
   .information-work-section { display: none !important; }
-  .nav-mobile-menu     { top: 56px; display: block; }
 
   /* ── HERO / SLIDER ── */
-  /* ── Mobile distinct content zones ── */
-  /* Title Zone */
+  /* The hero image keeps its full-bleed box; the bottom area is rebuilt as a
+     3-row grid anchored at the bottom: line 1 → prev/next → line 2, then the
+     counter and the slide title side by side in one row, then line 3 → footer.
+     The pieces can never overlap on any phone. */
+  .section.is-hero   { height: 100vh; height: 100dvh; }
+  .container.is-hero { min-height: 100vh; min-height: 100dvh; }
+
+  /* Stack container: normal flow, anchored as a group at the bottom.
+     Row 2 is "counter | title": the auto column hugs the (01) counter,
+     the title zone fills the rest (gap = counter's page-margin padding). */
+  .main-slider_list {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "controls controls"
+      "counter  title"
+      "footer   footer";
+    align-content: end;
+  }
+  /* Slides share one grid cell so a transition never changes the stack height. */
+  .main-slider_items {
+    grid-area: title;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .main-slider_item {
+    position: static;
+    inset: auto;
+    overflow: visible;
+    grid-area: 1 / 1;
+  }
+  .main-slider-link,
+  .main-slider-card {
+    position: static;
+    inset: auto;
+  }
+  /* Image layer: unchanged (absolute inset 0 against the full-height list). */
+
+  /* Title zone — sits between line 2 and line 3, never touching either. */
   .container.is-main-slider {
-    padding: var(--page-margin) var(--page-margin) 0;
+    position: relative;
+    inset: auto;
+    width: 100%;
+    max-width: none;
+    padding: clamp(0.35rem, 1.8vw, 0.9rem) var(--page-margin)
+             clamp(0.85rem, 4vw, 2rem);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: var(--page-margin);
+    gap: clamp(0.15rem, 0.8vw, 0.4rem);
     z-index: 20;
     background: transparent;
   }
   .main-slider_title-wrap {
-    height: auto;
+    /* Must be an EXPLICIT height (same value as the title's font-size clamp):
+       the slide transition animates the outgoing title with a percentage
+       `bottom`, which CSS resolves to 0 against a content-dependent (auto)
+       height — the old title would fade in place instead of sliding up and
+       crossing the incoming title like on desktop. */
+    height: clamp(2.5rem, 14vw, 8rem);
+    width: 100%;
     margin: 0;
     display: flex;
     align-items: center;
@@ -2659,20 +2710,26 @@ html.lenis body {
     position: relative;
   }
   .main-slider_title {
-    font-size: var(--mobile-bix-text);
-    letter-spacing: var(--mobile-big-text-space);
+    font-size: clamp(2.5rem, 14vw, 8rem);
+    line-height: 1;
+    letter-spacing: -0.04em;
+    white-space: nowrap;
     padding-left: 0;
-    white-space: normal;
     height: auto;
-    line-height: normal;
     margin: 0;
     position: relative;
   }
+  /* Divider band (both lines + its round icon) lives in .slider-toggle-nav,
+     which stays hidden on phones; line 1 and line 2 are .hero-controls' borders. */
   .is-hero .slider-toggle-nav { display: none; }
 
-  /* Nav Zone */
+  /* Line 1 / nav row / line 2 */
   .hero-controls {
-    margin-top: var(--mid-section-break);
+    grid-area: controls;
+    position: relative;
+    z-index: 20;
+    width: 100%;
+    min-height: 44px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -2680,7 +2737,6 @@ html.lenis body {
     border-top: 1px solid var(--border-white);
     border-bottom: 1px solid var(--border-white);
     background: transparent;
-    z-index: 20;
   }
   .prev-btn-wrapper,
   .next-btn-wrapper    {
@@ -2690,21 +2746,41 @@ html.lenis body {
     position: static;
     flex: 0 0 auto;
     margin: 0;
+    min-height: 44px;
   }
-  .prev-btn-wrapper    { margin-right: auto; }
-  .next-btn-wrapper    { margin-left: auto; }
   .btn-prevslide,
-  .btn-nextslide       { width: auto; height: auto; }
+  .btn-nextslide       {
+    width: auto;
+    height: auto;
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  .btn-prevslide       { justify-content: flex-start; }
+  .btn-nextslide       { justify-content: flex-end; }
   .btn-prevslide .second-menu-link,
   .btn-nextslide .second-menu-link { display: none !important; }
   .btn-prevslide .first-menu-link,
   .btn-nextslide .first-menu-link { transform: translateY(0) !important; }
-  .slider-nav-text .menu-big-text { font-size: 0.7rem; }
+  .slider-nav-text .menu-big-text { font-size: clamp(0.8rem, 3.4vw, 1rem); }
 
-  /* Number wrapper — hidden on mobile */
+  /* Slide counter — sits in the left column, baseline-aligned with the title
+     (padding-bottom mirrors the title zone's bottom padding). */
   .number-wrapper {
-    display: none;
+    grid-area: counter;
+    align-self: end;
+    position: relative;
+    z-index: 20;
+    display: block;
+    width: auto;
+    height: auto;
+    inset: auto;
+    padding: 0 0 clamp(0.85rem, 4vw, 2rem) var(--page-margin);
   }
+  .numbers_item,
+  .number_static,
+  .numbers_text { font-size: clamp(0.7rem, 3vw, 0.9rem); }
 
   /* ── INDEX / WORK PAGE ── */
   .index-main          { padding-top: var(--content-page-top-margin); }
@@ -2837,31 +2913,43 @@ html.lenis body {
     transform: translateY(0%);
   }
 
-  /* ── SLIDER FOOTER ── */
+  /* ── SLIDER FOOTER: line 3 + ©2026 (left) / socials (right) ── */
   .slider-footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 4rem;
+    grid-area: footer;
+    position: relative;
+    inset: auto;
+    z-index: 15;
+    width: 100%;
+    height: auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     flex-wrap: nowrap;
-    padding: 0 var(--page-margin);
-    z-index: 20;
+    padding: clamp(0.5rem, 2.4vw, 1rem) var(--page-margin);
+    padding-bottom: calc(
+      clamp(0.5rem, 2.4vw, 1rem) + env(safe-area-inset-bottom, 0px)
+    );
     border-top: 1px solid var(--border-white);
     background: transparent;
   }
   .slider-footer-border { display: none !important; }
+  .slider-footer-wrapper,
   .slider-footer-social-wrapper {
     display: flex;
+    align-items: flex-end;
   }
   .social-link-container {
-    gap: 1rem;
+    gap: clamp(0.75rem, 4vw, 1.5rem);
+  }
+  /* Keep a 44px tap target without lifting the label off the ©2026 baseline. */
+  .slider-footer .menu-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 44px;
   }
   .social-link {
-    font-size: 1rem;
+    font-size: clamp(0.8rem, 3.4vw, 1rem);
     color: var(--white);
     letter-spacing: 0.02em;
   }
@@ -2869,15 +2957,12 @@ html.lenis body {
   .menu-text.first-menu-link-social { transform: translateY(0) !important; }
   .slider-footer-text {
     color: var(--white);
-  }
-  .slider-footer-text {
-    font-size: 0.7rem;
+    font-size: clamp(0.8rem, 3.4vw, 1rem);
   }
 }
 
 /* ── VERY SMALL (≤ 400) ───────────────────────────────────────────────────── */
 @media (max-width: 400px) {
-  .main-slider_title   { font-size: 2rem; }
   .index-title-text,
   .index-title-count   { font-size: 2rem; }
   .case-title          { font-size: 2rem; }
