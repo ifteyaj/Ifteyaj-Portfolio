@@ -38,75 +38,6 @@ export const projects: Project[] = [
   },
   {
     index: 2,
-    slug: "spendo",
-    title: "Spendo",
-    category: "Logo Design",
-    secondaryCategory: "Digital Banking",
-    year: "2024",
-    images: ["/images/spendo/spendo.webp", "/images/spendo/Spendo_2.webp", "/images/spendo/Spendo_3.webp", "/images/spendo/Spendo_4.webp", "/images/spendo/Spendo_5.webp", "/images/spendo/Spendo_6.webp", "/images/spendo/Spendo_7.webp", "/images/spendo/Spendo_9.webp", "/images/spendo/Spendo_8.webp", "/images/spendo/Spendo_10.webp", "/images/spendo/Spendo_11.webp", "/images/spendo/Spendo_12.webp", "/images/spendo/Spendo_13.webp", "/images/spendo/Spendo_14.webp"],
-    href: "/work/spendo",
-    short:
-      "A modern fintech brand identity built around clarity, trust and seamless digital payments.",
-    client: "Spendo",
-    agency: "Baseborn",
-    industry: "Digital Banking",
-    collab: "Onindo Ahmed",
-    intro: [
-      {
-        body: "Spendo is a digital payments platform that needed a brand as smooth as its transactions. We built an identity around geometric precision, a bold blue palette and a mark that signals forward motion.",
-      },
-    ],
-    sections: [
-      {
-        heading: "Background",
-        body: "Fintech brands often fall into two camps: coldly corporate or aggressively playful. Spendo wanted something in between, a look that felt trustworthy and premium but still approachable.",
-      },
-      {
-        heading: "Concept",
-        body: "The identity is anchored by a stylized 'S' mark, a folded ribbon that conveys fluidity and precision. Deep navy and electric blue reinforce trust, while the geometric type keeps everything sharp across card, screen and print.",
-      },
-      {
-        heading: "Conclusion",
-        body: "The result is a fintech identity that works the same on a card, an app and a marketing page: clean, confident and unmistakably Spendo.",
-      },
-    ],
-  },
-  {
-    index: 3,
-    slug: "inner-circle",
-    title: "Inner Circle",
-    category: "Brand Identity",
-    secondaryCategory: "Coming Soon",
-    year: "2025",
-    images: ["/images/inner-circle/inner-circle-01.webp", "/images/inner-circle/inner-circle-02.webp", "/images/inner-circle/inner-circle-03.webp", "/images/inner-circle/inner-circle-04.webp", "/images/inner-circle/inner-circle-05.webp", "/images/inner-circle/inner-circle-06.webp", "/images/inner-circle/inner-circle-07.webp", "/images/inner-circle/inner-circle-09.webp", "/images/inner-circle/inner-circle-08.webp", "/images/inner-circle/inner-circle-10.webp", "/images/inner-circle/inner-circle-11.webp", "/images/inner-circle/inner-circle-12.webp", "/images/inner-circle/inner-circle-13.webp", "/images/inner-circle/inner-circle-14.webp"],
-    href: "/work/inner-circle",
-    short:
-      "A new identity in the works, built around closeness, confidence and a modern, distinctive mark.",
-    client: "Inner Circle",
-    agency: "Baseborn",
-    industry: "Coming Soon",
-    intro: [
-      {
-        body: "Inner Circle is an identity project currently under development. The direction is built around confident, circular forms and a modern tone that signals belonging and trust.",
-      },
-    ],
-    sections: [
-      {
-        heading: "Background",
-        body: "The brief is to create a distinctive, modern mark that feels like an invitation into something exclusive, while staying clear and confident at any size.",
-      },
-      {
-        heading: "Concept",
-        body: "The design is being developed around circular geometry and strong, clean shapes, building a refined visual language that keeps the mark at the centre and reinforces membership.",
-      },
-      {
-        heading: "Conclusion",
-        body: "The identity is still being built. Once finalised, it will flex across web, print and signage with a consistent, unmistakable presence.",
-      },
-    ],
-  },
-  {
-    index: 4,
     slug: "tru-express",
     title: "Tru.Express",
     category: "Brand Identity",
@@ -156,7 +87,160 @@ export const projects: Project[] = [
     ],
   },
   {
+    index: 3,
+    slug: "spendo",
+    title: "Spendo",
+    category: "Logo Design",
+    secondaryCategory: "Digital Banking",
+    year: "2024",
+    images: ["/images/spendo/spendo.webp", "/images/spendo/Spendo_2.webp", "/images/spendo/Spendo_3.webp", "/images/spendo/Spendo_4.webp", "/images/spendo/Spendo_5.webp", "/images/spendo/Spendo_6.webp", "/images/spendo/Spendo_7.webp", "/images/spendo/Spendo_9.webp", "/images/spendo/Spendo_8.webp", "/images/spendo/Spendo_10.webp", "/images/spendo/Spendo_11.webp", "/images/spendo/Spendo_12.webp", "/images/spendo/Spendo_13.webp", "/images/spendo/Spendo_14.webp"],
+    href: "/work/spendo",
+    short:
+      "A modern fintech brand identity built around clarity, trust and seamless digital payments.",
+    client: "Spendo",
+    agency: "Baseborn",
+    industry: "Digital Banking",
+    collab: "Onindo Ahmed",
+    intro: [
+      {
+        body: "Spendo is a digital payments platform that needed a brand as smooth as its transactions. We built an identity around geometric precision, a bold blue palette and a mark that signals forward motion.",
+      },
+    ],
+    sections: [
+      {
+        heading: "Background",
+        body: "Fintech brands often fall into two camps: coldly corporate or aggressively playful. Spendo wanted something in between, a look that felt trustworthy and premium but still approachable.",
+      },
+      {
+        heading: "Concept",
+        body: "The identity is anchored by a stylized 'S' mark, a folded ribbon that conveys fluidity and precision. Deep navy and electric blue reinforce trust, while the geometric type keeps everything sharp across card, screen and print.",
+      },
+      {
+        heading: "Conclusion",
+        body: "The result is a fintech identity that works the same on a card, an app and a marketing page: clean, confident and unmistakably Spendo.",
+      },
+    ],
+  },
+  {
+    index: 4,
+    slug: "inner-circle",
+    title: "Inner Circle",
+    category: "Brand Identity",
+    secondaryCategory: "Coming Soon",
+    year: "2025",
+    images: ["/images/inner-circle/inner-circle-01.webp", "/images/inner-circle/inner-circle-02.webp", "/images/inner-circle/inner-circle-03.webp", "/images/inner-circle/inner-circle-04.webp", "/images/inner-circle/inner-circle-05.webp", "/images/inner-circle/inner-circle-06.webp", "/images/inner-circle/inner-circle-07.webp", "/images/inner-circle/inner-circle-09.webp", "/images/inner-circle/inner-circle-08.webp", "/images/inner-circle/inner-circle-10.webp", "/images/inner-circle/inner-circle-11.webp", "/images/inner-circle/inner-circle-12.webp", "/images/inner-circle/inner-circle-13.webp", "/images/inner-circle/inner-circle-14.webp"],
+    href: "/work/inner-circle",
+    short:
+      "A new identity in the works, built around closeness, confidence and a modern, distinctive mark.",
+    client: "Inner Circle",
+    agency: "Baseborn",
+    industry: "Coming Soon",
+    intro: [
+      {
+        body: "Inner Circle is an identity project currently under development. The direction is built around confident, circular forms and a modern tone that signals belonging and trust.",
+      },
+    ],
+    sections: [
+      {
+        heading: "Background",
+        body: "The brief is to create a distinctive, modern mark that feels like an invitation into something exclusive, while staying clear and confident at any size.",
+      },
+      {
+        heading: "Concept",
+        body: "The design is being developed around circular geometry and strong, clean shapes, building a refined visual language that keeps the mark at the centre and reinforces membership.",
+      },
+      {
+        heading: "Conclusion",
+        body: "The identity is still being built. Once finalised, it will flex across web, print and signage with a consistent, unmistakable presence.",
+      },
+    ],
+  },
+  {
     index: 5,
+    slug: "next-door-baby",
+    title: "Next Door Baby",
+    category: "Brand Identity",
+    secondaryCategory: "Coming Soon",
+    year: "2025",
+    autoImages: true,
+    images: ["/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby-01.webp", "/images/next-door-baby/next-door-baby-02.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp"],
+    href: "/work/next-door-baby",
+    short:
+      "A new identity in the works, built around warmth, softness and a modern, memorable mark.",
+    client: "Next Door Baby",
+    agency: "Baseborn",
+    industry: "Coming Soon",
+    intro: [
+      {
+        body: "Next Door Baby is an identity project currently under development. The direction is a warm, approachable mark with a soft, contemporary tone, as gentle and friendly as the brand itself.",
+      },
+    ],
+    sections: [
+      {
+        heading: "Background",
+        body: "The brief is to create a distinctive, modern mark that feels warm and memorable, while staying legible and confident at any size.",
+      },
+      {
+        heading: "Concept",
+        body: "The design is being developed around soft shapes, a gentle palette and clear typography, a friendly visual language that keeps the mark the hero.",
+      },
+      {
+        heading: "Conclusion",
+        body: "The identity is still under construction. Once finalised, it will flex across web, print and packaging with a consistent, unmistakable presence.",
+      },
+    ],
+  },
+  {
+    index: 6,
+    slug: "dripcheck",
+    title: "Dripcheck",
+    category: "Brand Identity",
+    secondaryCategory: "Coming Soon",
+    year: "2025",
+    images: [
+      "/images/dripcheck/dripcheck.webp",
+      "/images/dripcheck/dripcheck-2.webp",
+      "/images/dripcheck/dripcheck-3.webp",
+      "/images/dripcheck/dripcheck-4.webp",
+      "/images/dripcheck/dripcheck-5.webp",
+      "/images/dripcheck/dripcheck-6.webp",
+      "/images/dripcheck/dripcheck-7.webp",
+      "/images/dripcheck/dripcheck-8.webp",
+      "/images/dripcheck/dripcheck-9.webp",
+      "/images/dripcheck/dripcheck-10.webp",
+      "/images/dripcheck/dripcheck-11.webp",
+      "/images/dripcheck/dripcheck-12.webp",
+      "/images/dripcheck/dripcheck-13.webp",
+      "/images/dripcheck/dripcheck-14.webp",
+    ],
+    href: "/work/dripcheck",
+    short:
+      "A new identity in the works, built around clarity, structure and a modern, forward-thinking mark.",
+    client: "Dripcheck",
+    agency: "Baseborn",
+    industry: "Coming Soon",
+    intro: [
+      {
+        body: "Dripcheck is an identity project currently under development. The direction is a clean, structured mark with a confident, contemporary tone, designed to scale across digital and print.",
+      },
+    ],
+    sections: [
+      {
+        heading: "Background",
+        body: "The brief is to create a distinctive, modern mark that stays legible and confident at any size, across any medium.",
+      },
+      {
+        heading: "Concept",
+        body: "The design is being developed around precision and restraint: a sharp typographic or geometric lockup paired with a considered palette, so the mark speaks clearly without noise.",
+      },
+      {
+        heading: "Conclusion",
+        body: "The identity is still under construction. Once finalised, it will flex across web, print and signage with a consistent, unmistakable presence.",
+      },
+    ],
+  },
+  {
+    index: 7,
     slug: "foshol-ghor",
     title: "Foshol Ghor",
     category: "Brand Identity",
@@ -202,90 +286,6 @@ export const projects: Project[] = [
       {
         heading: "Conclusion",
         body: "The identity is still under construction. Once finalised, it will flex across web, print and packaging with a consistent, unmistakable presence.",
-      },
-    ],
-  },
-  {
-    index: 6,
-    slug: "next-door-baby",
-    title: "Next Door Baby",
-    category: "Brand Identity",
-    secondaryCategory: "Coming Soon",
-    year: "2025",
-    autoImages: true,
-    images: ["/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby-01.webp", "/images/next-door-baby/next-door-baby-02.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp"],
-    href: "/work/next-door-baby",
-    short:
-      "A new identity in the works, built around warmth, softness and a modern, memorable mark.",
-    client: "Next Door Baby",
-    agency: "Baseborn",
-    industry: "Coming Soon",
-    intro: [
-      {
-        body: "Next Door Baby is an identity project currently under development. The direction is a warm, approachable mark with a soft, contemporary tone, as gentle and friendly as the brand itself.",
-      },
-    ],
-    sections: [
-      {
-        heading: "Background",
-        body: "The brief is to create a distinctive, modern mark that feels warm and memorable, while staying legible and confident at any size.",
-      },
-      {
-        heading: "Concept",
-        body: "The design is being developed around soft shapes, a gentle palette and clear typography, a friendly visual language that keeps the mark the hero.",
-      },
-      {
-        heading: "Conclusion",
-        body: "The identity is still under construction. Once finalised, it will flex across web, print and packaging with a consistent, unmistakable presence.",
-      },
-    ],
-  },
-  {
-    index: 7,
-    slug: "dripcheck",
-    title: "Dripcheck",
-    category: "Brand Identity",
-    secondaryCategory: "Coming Soon",
-    year: "2025",
-    images: [
-      "/images/dripcheck/dripcheck.webp",
-      "/images/dripcheck/dripcheck-2.webp",
-      "/images/dripcheck/dripcheck-3.webp",
-      "/images/dripcheck/dripcheck-4.webp",
-      "/images/dripcheck/dripcheck-5.webp",
-      "/images/dripcheck/dripcheck-6.webp",
-      "/images/dripcheck/dripcheck-7.webp",
-      "/images/dripcheck/dripcheck-8.webp",
-      "/images/dripcheck/dripcheck-9.webp",
-      "/images/dripcheck/dripcheck-10.webp",
-      "/images/dripcheck/dripcheck-11.webp",
-      "/images/dripcheck/dripcheck-12.webp",
-      "/images/dripcheck/dripcheck-13.webp",
-      "/images/dripcheck/dripcheck-14.webp",
-    ],
-    href: "/work/dripcheck",
-    short:
-      "A new identity in the works, built around clarity, structure and a modern, forward-thinking mark.",
-    client: "Dripcheck",
-    agency: "Baseborn",
-    industry: "Coming Soon",
-    intro: [
-      {
-        body: "Dripcheck is an identity project currently under development. The direction is a clean, structured mark with a confident, contemporary tone, designed to scale across digital and print.",
-      },
-    ],
-    sections: [
-      {
-        heading: "Background",
-        body: "The brief is to create a distinctive, modern mark that stays legible and confident at any size, across any medium.",
-      },
-      {
-        heading: "Concept",
-        body: "The design is being developed around precision and restraint: a sharp typographic or geometric lockup paired with a considered palette, so the mark speaks clearly without noise.",
-      },
-      {
-        heading: "Conclusion",
-        body: "The identity is still under construction. Once finalised, it will flex across web, print and signage with a consistent, unmistakable presence.",
       },
     ],
   },
