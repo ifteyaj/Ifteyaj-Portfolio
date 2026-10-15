@@ -49,5 +49,6 @@ lighthouse-*.json
 .opencode/
 .graphify/
 .agents/
+.graphifyignore
 graphify-out/
 graphify-*.json

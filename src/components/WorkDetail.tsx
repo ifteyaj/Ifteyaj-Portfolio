@@ -5,8 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import Lenis from "lenis";
 import { gsap, registerEases } from "@/lib/gsap";
+import { setupMenuLinkHovers } from "@/lib/menuHover";
 import Navbar from "@/components/Navbar";
-import CustomCursor from "@/components/CustomCursor";
 import SiteFooter from "@/components/SiteFooter";
 import { projects } from "@/data/projects";
 import type { Project } from "@/types";
@@ -39,21 +39,7 @@ export default function WorkDetail({ project }: WorkDetailProps) {
     };
     rafId = requestAnimationFrame(raf);
 
-    qs<HTMLElement>(".menu-link").forEach((link) => {
-      // Skip case-bottom-nav links (they use CSS left-to-right effect)
-      if (link.closest(".case-bottom-nav")) return;
-
-      const first = link.querySelector<HTMLElement>(".first-menu-link");
-      const second = link.querySelector<HTMLElement>(".second-menu-link");
-      link.addEventListener("mouseenter", () => {
-        if (first) gsap.to(first, { y: "0%", duration: 0.6, ease: "hoverin" });
-        if (second) gsap.to(second, { y: "-100%", duration: 0.6, ease: "hoverin" });
-      });
-      link.addEventListener("mouseleave", () => {
-        if (first) gsap.to(first, { y: "100%", duration: 1, ease: "hoverout" });
-        if (second) gsap.to(second, { y: "0%", duration: 1, ease: "hoverout" });
-      });
-    });
+    setupMenuLinkHovers(root);
 
     qs<HTMLElement>(".case-gallery-img-wrap, .case-selected-img-wrap").forEach((wrap) => {
       const img = wrap.querySelector<HTMLElement>("img");
@@ -92,7 +78,6 @@ export default function WorkDetail({ project }: WorkDetailProps) {
   return (
     <div ref={rootRef} className="case-page">
       <Navbar revealed={revealed} />
-      <CustomCursor />
 
       <main className="case-main">
         <header className="case-header">
@@ -131,7 +116,8 @@ export default function WorkDetail({ project }: WorkDetailProps) {
             fill
             sizes="100vw"
             priority
-            unoptimized
+            fetchPriority="high"
+            decoding="async"
             className="case-hero-img-inner"
             style={{ objectFit: "cover" }}
           />
@@ -147,15 +133,15 @@ export default function WorkDetail({ project }: WorkDetailProps) {
         <div className="case-gallery-grid">
           <div className="case-block-asym">
             <div className="case-block-media case-gallery-img-wrap case-block-media-small">
-              <Image src={images[1 % images.length]} alt={`${project.title} detail`} fill sizes="(max-width: 768px) 100vw, 50vw" unoptimized style={{ objectFit: "cover" }} />
+              <Image src={images[1 % images.length]} alt={`${project.title} detail`} fill sizes="(max-width: 768px) 100vw, 50vw" loading="lazy" decoding="async" style={{ objectFit: "cover" }} />
             </div>
             <div className="case-block-media case-gallery-img-wrap case-block-media-landscape">
-              <Image src={images[2 % images.length]} alt={`${project.title} detail`} fill sizes="(max-width: 768px) 100vw, 60vw" unoptimized style={{ objectFit: "cover" }} />
+              <Image src={images[2 % images.length]} alt={`${project.title} detail`} fill sizes="(max-width: 768px) 100vw, 60vw" loading="lazy" decoding="async" style={{ objectFit: "cover" }} />
             </div>
           </div>
 
           <div className="case-block case-block-full">
-            <Image src={images[3 % images.length]} alt={`${project.title} detail`} fill sizes="100vw" unoptimized style={{ objectFit: "cover" }} />
+            <Image src={images[3 % images.length]} alt={`${project.title} detail`} fill sizes="100vw" loading="lazy" decoding="async" style={{ objectFit: "cover" }} />
           </div>
 
           <div className="case-desc-section">
@@ -167,15 +153,15 @@ export default function WorkDetail({ project }: WorkDetailProps) {
 
           <div className="case-block-equal case-block-equal-short">
             <div className="case-block-media case-gallery-img-wrap">
-              <Image src={images[4 % images.length]} alt={`${project.title} detail`} fill sizes="(max-width: 768px) 100vw, 50vw" unoptimized style={{ objectFit: "cover" }} />
+              <Image src={images[4 % images.length]} alt={`${project.title} detail`} fill sizes="(max-width: 768px) 100vw, 50vw" loading="lazy" decoding="async" style={{ objectFit: "cover" }} />
             </div>
             <div className="case-block-media case-gallery-img-wrap">
-              <Image src={images[5 % images.length]} alt={`${project.title} detail`} fill sizes="(max-width: 768px) 100vw, 50vw" unoptimized style={{ objectFit: "cover" }} />
+              <Image src={images[5 % images.length]} alt={`${project.title} detail`} fill sizes="(max-width: 768px) 100vw, 50vw" loading="lazy" decoding="async" style={{ objectFit: "cover" }} />
             </div>
           </div>
 
           <div className="case-block case-block-full case-block-full-tall">
-            <Image src={images[6 % images.length]} alt={`${project.title} detail`} fill sizes="100vw" unoptimized style={{ objectFit: "cover" }} />
+            <Image src={images[6 % images.length]} alt={`${project.title} detail`} fill sizes="100vw" loading="lazy" decoding="async" style={{ objectFit: "cover" }} />
           </div>
 
           <div className="case-desc-section">
@@ -187,19 +173,19 @@ export default function WorkDetail({ project }: WorkDetailProps) {
 
           <div className="case-block-asym">
             <div className="case-block-media case-gallery-img-wrap case-block-media-landscape">
-              <Image src={images[8 % images.length]} alt={`${project.title} detail`} fill sizes="(max-width: 768px) 100vw, 60vw" unoptimized style={{ objectFit: "cover" }} />
+              <Image src={images[8 % images.length]} alt={`${project.title} detail`} fill sizes="(max-width: 768px) 100vw, 60vw" loading="lazy" decoding="async" style={{ objectFit: "cover" }} />
             </div>
             <div className="case-block-media case-gallery-img-wrap case-block-media-small">
-              <Image src={images[7 % images.length]} alt={`${project.title} detail`} fill sizes="(max-width: 768px) 100vw, 40vw" unoptimized style={{ objectFit: "cover" }} />
+              <Image src={images[7 % images.length]} alt={`${project.title} detail`} fill sizes="(max-width: 768px) 100vw, 40vw" loading="lazy" decoding="async" style={{ objectFit: "cover" }} />
             </div>
           </div>
 
           <div className="case-block case-block-full case-block-full-tall">
-            <Image src={images[9 % images.length]} alt={`${project.title} detail`} fill sizes="100vw" unoptimized style={{ objectFit: "cover" }} />
+            <Image src={images[9 % images.length]} alt={`${project.title} detail`} fill sizes="100vw" loading="lazy" decoding="async" style={{ objectFit: "cover" }} />
           </div>
 
           <div className="case-block case-block-full">
-            <Image src={images[10 % images.length]} alt={`${project.title} detail`} fill sizes="100vw" unoptimized style={{ objectFit: "cover" }} />
+            <Image src={images[10 % images.length]} alt={`${project.title} detail`} fill sizes="100vw" loading="lazy" decoding="async" style={{ objectFit: "cover" }} />
           </div>
 
           <div className="case-desc-section">
@@ -211,15 +197,15 @@ export default function WorkDetail({ project }: WorkDetailProps) {
 
           <div className="case-block-equal case-block-equal-short">
             <div className="case-block-media case-gallery-img-wrap">
-              <Image src={images[11 % images.length]} alt={`${project.title} detail`} fill sizes="(max-width: 768px) 100vw, 50vw" unoptimized style={{ objectFit: "cover" }} />
+              <Image src={images[11 % images.length]} alt={`${project.title} detail`} fill sizes="(max-width: 768px) 100vw, 50vw" loading="lazy" decoding="async" style={{ objectFit: "cover" }} />
             </div>
             <div className="case-block-media case-gallery-img-wrap">
-              <Image src={images[12 % images.length]} alt={`${project.title} detail`} fill sizes="(max-width: 768px) 100vw, 50vw" unoptimized style={{ objectFit: "cover" }} />
+              <Image src={images[12 % images.length]} alt={`${project.title} detail`} fill sizes="(max-width: 768px) 100vw, 50vw" loading="lazy" decoding="async" style={{ objectFit: "cover" }} />
             </div>
           </div>
 
           <div className="case-block case-block-full case-block-full-tall">
-            <Image src={images[13 % images.length]} alt={`${project.title} detail`} fill sizes="100vw" unoptimized style={{ objectFit: "cover" }} />
+            <Image src={images[13 % images.length]} alt={`${project.title} detail`} fill sizes="100vw" loading="lazy" decoding="async" style={{ objectFit: "cover" }} />
           </div>
         </div>
 
@@ -235,9 +221,9 @@ export default function WorkDetail({ project }: WorkDetailProps) {
                     alt={p.title}
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
-                    unoptimized
+                   
                     className="case-selected-img"
-                    style={{ objectFit: "cover" }}
+                    loading="lazy" decoding="async" style={{ objectFit: "cover" }}
                   />
                 </div>
                 <span className="case-selected-label">({String(p.index).padStart(2, "0")}) {p.title}</span>

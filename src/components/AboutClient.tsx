@@ -4,8 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Lenis from "lenis";
 import { gsap, registerEases } from "@/lib/gsap";
+import { setupMenuLinkHovers } from "@/lib/menuHover";
 import Navbar from "@/components/Navbar";
-import CustomCursor from "@/components/CustomCursor";
 import SiteFooter from "@/components/SiteFooter";
 import { about } from "@/data/about";
 import { siteConfig } from "@/data/site";
@@ -19,8 +19,6 @@ export default function AboutClient() {
     if (!root) return;
 
     registerEases();
-    const qs = <T extends Element = HTMLElement>(sel: string): T[] =>
-      Array.from(root.querySelectorAll<T>(sel));
 
     const lenis = new Lenis({ lerp: 0.1, smoothWheel: true });
     let rafId: number;
@@ -31,21 +29,7 @@ export default function AboutClient() {
     rafId = requestAnimationFrame(raf);
 
     // ── Link hover (dual-text) ──
-    qs<HTMLElement>(".menu-link").forEach((link) => {
-      // Skip case-bottom-nav links (they use CSS left-to-right effect)
-      if (link.closest(".case-bottom-nav")) return;
-
-      const first = link.querySelector<HTMLElement>(".first-menu-link");
-      const second = link.querySelector<HTMLElement>(".second-menu-link");
-      link.addEventListener("mouseenter", () => {
-        if (first) gsap.to(first, { y: "0%", duration: 0.6, ease: "hoverin" });
-        if (second) gsap.to(second, { y: "-100%", duration: 0.6, ease: "hoverin" });
-      });
-      link.addEventListener("mouseleave", () => {
-        if (first) gsap.to(first, { y: "100%", duration: 1, ease: "hoverout" });
-        if (second) gsap.to(second, { y: "0%", duration: 1, ease: "hoverout" });
-      });
-    });
+    setupMenuLinkHovers(root);
 
     // ── Page intro reveal ──
     gsap.fromTo(
@@ -108,7 +92,6 @@ export default function AboutClient() {
   return (
     <div ref={rootRef} className="about-page">
       <Navbar revealed={revealed} />
-      <CustomCursor />
 
       <div className="about-hero">
         <div className="about-hero-img">
@@ -118,7 +101,9 @@ export default function AboutClient() {
             fill
             sizes="100vw"
             priority
-            unoptimized
+            fetchPriority="high"
+            decoding="async"
+           
             style={{ objectFit: "cover" }}
           />
         </div>

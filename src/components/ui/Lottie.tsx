@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import lottie, { type AnimationItem } from "lottie-web";
+import lottie, { type AnimationItem } from "lottie-web/build/player/lottie_light";
 
 interface LottieProps {
   src: string;

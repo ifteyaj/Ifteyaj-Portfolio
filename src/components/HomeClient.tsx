@@ -5,10 +5,10 @@ import Link from "next/link";
 import Image from "next/image";
 import Lenis from "lenis";
 import { gsap, registerEases } from "@/lib/gsap";
+import { setupMenuLinkHovers } from "@/lib/menuHover";
 import Navbar from "@/components/Navbar";
 import Loader from "@/components/Loader";
 import Hero from "@/components/Hero";
-import CustomCursor from "@/components/CustomCursor";
 import LottiePlayer from "@/components/ui/Lottie";
 import { projects } from "@/data/projects";
 
@@ -302,22 +302,7 @@ export default function HomeClient() {
     window.addEventListener("keydown", onKey);
 
     // ── Link hover (dual-text) ──
-    qs<HTMLElement>(".menu-link").forEach((link) => {
-      // Skip case-bottom-nav links (they use CSS left-to-right effect)
-      if (link.closest(".case-bottom-nav")) return;
-
-      const first = link.querySelector<HTMLElement>(".first-menu-link");
-      const second = link.querySelector<HTMLElement>(".second-menu-link");
-
-      link.addEventListener("mouseenter", () => {
-        if (first) gsap.to(first, { y: "0%", duration: 0.6, ease: "hoverin" });
-        if (second) gsap.to(second, { y: "-100%", duration: 0.6, ease: "hoverin" });
-      });
-      link.addEventListener("mouseleave", () => {
-        if (first) gsap.to(first, { y: "100%", duration: 1, ease: "hoverout" });
-        if (second) gsap.to(second, { y: "0%", duration: 1, ease: "hoverout" });
-      });
-    });
+    setupMenuLinkHovers(root);
 
     // ── Page load intro ──
     const counterNumber = root.querySelector<HTMLElement>(".frontpage-counter-number");
@@ -447,7 +432,6 @@ export default function HomeClient() {
       <Loader />
       <div className="overlay" />
       <Navbar revealed={revealed} />
-      <CustomCursor />
       <div className="page-content">
         <div className="page-wrapper">
           <main id="smooth-content" className="main-wrapper">
@@ -492,6 +476,8 @@ export default function HomeClient() {
                   alt={p.title}
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
+                  loading="lazy"
+                  decoding="async"
                   className="home-grid-img"
                   style={{ objectFit: "cover" }}
                 />

@@ -5,7 +5,6 @@
  * Import and call registerEases() once at the top of the app (RootLayout).
  * All ease names match the originals from the live site's inline script.
  */
-import { useEffect } from "react";
 import gsap from "gsap";
 import { CustomEase } from "gsap/CustomEase";
 
@@ -19,13 +18,6 @@ export function registerEases() {
   CustomEase.create("hoverin",     ".65,.05,.36,1");
   CustomEase.create("slowoutfade", "1,0,1,.93");
   CustomEase.create("fastinfade",  "0,.89,.63,1");
-}
-
-/** React hook — registers eases once on mount (client-side only). */
-export function useGsapEases() {
-  useEffect(() => {
-    registerEases();
-  }, []);
 }
 
 export { gsap };

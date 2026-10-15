@@ -2569,6 +2569,31 @@ html.lenis body {
 }
 
 /* ══════════════════════════════════════════════════════════════════════════════
+   OFFSCREEN RENDER OPTIMIZATION
+   Skip layout/paint for large below-the-fold blocks until they approach the
+   viewport. `contain-intrinsic-size: auto <n>px` reserves a placeholder height
+   so scroll position stays stable, and once the block has rendered the browser
+   remembers its real size (the `auto` keyword). Big win on case pages with
+   14 full-width images.
+   ══════════════════════════════════════════════════════════════════════════════ */
+.case-block,
+.case-block-asym,
+.case-block-equal,
+.case-block-text,
+.case-block-offset,
+.case-selected-work,
+.case-footer-block,
+.about-services,
+.about-list-block,
+.moodboard-grid,
+.moodboard-related,
+.index-illustrations-grid,
+.index-portraits {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
    RESPONSIVE
    ══════════════════════════════════════════════════════════════════════════════ */
 

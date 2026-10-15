@@ -5,8 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import Lenis from "lenis";
 import { gsap, registerEases } from "@/lib/gsap";
+import { setupMenuLinkHovers } from "@/lib/menuHover";
 import Navbar from "@/components/Navbar";
-import CustomCursor from "@/components/CustomCursor";
 import SiteFooter from "@/components/SiteFooter";
 import { blogPosts } from "@/data/blog";
 import type { BlogPost } from "@/types";
@@ -26,8 +26,6 @@ export default function BlogDetail({ post }: BlogDetailProps) {
     if (!root) return;
 
     registerEases();
-    const qs = <T extends Element = HTMLElement>(sel: string): T[] =>
-      Array.from(root.querySelectorAll<T>(sel));
 
     const lenis = new Lenis({ lerp: 0.1, smoothWheel: true });
     let rafId: number;
@@ -37,21 +35,7 @@ export default function BlogDetail({ post }: BlogDetailProps) {
     };
     rafId = requestAnimationFrame(raf);
 
-    qs<HTMLElement>(".menu-link").forEach((link) => {
-      // Skip case-bottom-nav links (they use CSS left-to-right effect)
-      if (link.closest(".case-bottom-nav")) return;
-
-      const first = link.querySelector<HTMLElement>(".first-menu-link");
-      const second = link.querySelector<HTMLElement>(".second-menu-link");
-      link.addEventListener("mouseenter", () => {
-        if (first) gsap.to(first, { y: "0%", duration: 0.6, ease: "hoverin" });
-        if (second) gsap.to(second, { y: "-100%", duration: 0.6, ease: "hoverin" });
-      });
-      link.addEventListener("mouseleave", () => {
-        if (first) gsap.to(first, { y: "100%", duration: 1, ease: "hoverout" });
-        if (second) gsap.to(second, { y: "0%", duration: 1, ease: "hoverout" });
-      });
-    });
+    setupMenuLinkHovers(root);
 
     gsap.fromTo(".moodboard-detail-image", { y: 80, opacity: 0 }, { y: 0, opacity: 1, duration: 1.1, ease: "texttshow", delay: 0.3 });
     gsap.fromTo(".moodboard-detail-info", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.9, ease: "texttshow", delay: 0.7 });
@@ -77,7 +61,6 @@ export default function BlogDetail({ post }: BlogDetailProps) {
   return (
     <div ref={rootRef} className="moodboard-detail-page">
       <Navbar revealed={revealed} />
-      <CustomCursor />
 
       <main className="moodboard-detail-main">
         <nav className="moodboard-detail-breadcrumb">
@@ -94,7 +77,9 @@ export default function BlogDetail({ post }: BlogDetailProps) {
               fill
               sizes="(max-width: 768px) 100vw, 60vw"
               priority
-              unoptimized
+              fetchPriority="high"
+              decoding="async"
+             
               className="moodboard-detail-img"
               style={{ objectFit: "cover" }}
             />
@@ -129,9 +114,9 @@ export default function BlogDetail({ post }: BlogDetailProps) {
                     alt={p.title}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                    unoptimized
+                   
                     className="moodboard-pin-img"
-                    style={{ objectFit: "cover" }}
+                    loading="lazy" decoding="async" style={{ objectFit: "cover" }}
                   />
                 </div>
                 <div className="moodboard-pin-body">
