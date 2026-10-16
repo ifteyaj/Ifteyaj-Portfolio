@@ -146,11 +146,11 @@ export default function AboutClient() {
           <h2 className="about-services-title">{about.servicesHeading}</h2>
           {about.services.map((service, i) => (
             <div key={i} className="about-service">
-              <div className="about-service-left">
-                <span className="about-service-num">({String(i + 1).padStart(2, "0")})</span>
+              <span className="about-service-num">({String(i + 1).padStart(2, "0")})</span>
+              <div className="about-bio-body about-service-grid">
                 <h3 className="about-service-heading">{service.heading}</h3>
+                <p className="about-service-body">{service.body}</p>
               </div>
-              <p className="about-service-body">{service.body}</p>
             </div>
           ))}
         </section>

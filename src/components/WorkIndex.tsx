@@ -10,6 +10,7 @@ import { setupMenuLinkHovers } from "@/lib/menuHover";
 import Navbar from "@/components/Navbar";
 import SiteFooter from "@/components/SiteFooter";
 import { projects } from "@/data/projects";
+import { thumb } from "@/lib/thumbs";
 
 const DragableCarousel = dynamic(() => import("@/lib/framer/DragableCarousel"), { ssr: false });
 
@@ -69,6 +70,14 @@ export default function WorkIndex() {
     // ── Link hover (dual-text) ──
     setupMenuLinkHovers(root);
 
+    // ── Page intro reveal ──
+    gsap.fromTo(".index-title-text", { y: 120 }, { y: 0, duration: 1.4, ease: "texttshow", delay: 0.1 });
+    gsap.fromTo(".index-title-count", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.9, ease: "texttshow", delay: 0.4 });
+    gsap.fromTo(".index-entry", { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: "texttshow", stagger: 0.05, delay: 0.5 });
+    gsap.fromTo(".index-illustrations:not(.index-portraits)", { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: "texttshow", delay: 0.9 });
+    gsap.fromTo(".index-portraits", { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: "texttshow", delay: 1.05 });
+    gsap.fromTo(".case-footer-block", { y: 80, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: "texttshow", delay: 1.2 });
+
     // ── Row hover: images scale up slightly ──
     qs<HTMLElement>(".index-entry").forEach((row) => {
       const imgs = Array.from(row.querySelectorAll<HTMLElement>(".index-entry-img"));
@@ -117,7 +126,7 @@ export default function WorkIndex() {
                 {project.images?.slice(0, 2).map((img, i) => (
                   <div key={i} className="index-entry-img-wrap">
                     <Image
-                      src={img}
+                      src={thumb(img)}
                       alt={`${project.title} ${i + 1}`}
                       fill
                       sizes="(max-width: 768px) 100vw, 50vw"

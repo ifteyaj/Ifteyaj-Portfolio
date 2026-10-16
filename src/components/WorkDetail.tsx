@@ -9,6 +9,7 @@ import { setupMenuLinkHovers } from "@/lib/menuHover";
 import Navbar from "@/components/Navbar";
 import SiteFooter from "@/components/SiteFooter";
 import { projects } from "@/data/projects";
+import { thumb } from "@/lib/thumbs";
 import type { Project } from "@/types";
 
 interface WorkDetailProps {
@@ -218,7 +219,7 @@ export default function WorkDetail({ project }: WorkDetailProps) {
               <Link key={p.slug} href={p.href} className="case-selected-item">
                 <div className="case-selected-img-wrap">
                   <Image
-                    src={p.images?.[0] ?? "/images/about-hero.webp"}
+                    src={thumb(p.images?.[0] ?? "/images/about-hero.webp")}
                     alt={p.title}
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"

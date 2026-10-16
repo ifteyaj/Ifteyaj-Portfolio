@@ -2015,6 +2015,13 @@ html.lenis body {
 }
 .about-main {
   padding: 2rem var(--page-margin) 0;
+  /* Single source of truth for the About alignment grid, shared by the bio
+     and every service row so their column edges can never drift apart. */
+  --about-label-col: 23.5rem;
+  --about-col-gap: 1.5rem;
+  --about-body-nudge: 0rem;
+  --about-body-gap: 3rem;
+  --about-body-max: 800px;
 }
 
 /* ── Hero ── */
@@ -2104,8 +2111,7 @@ html.lenis body {
   line-height: var(--mid-high-text-line);
   font-weight: var(--main-weight-big);
   color: var(--grey);
-  max-width: 800px;
-  padding-right: 5%;
+  max-width: 1000px;
 }
 .about-divider {
   width: 100%;
@@ -2114,12 +2120,15 @@ html.lenis body {
   margin: var(--mid-section-break) 0;
 }
 
-/* ── Bio ── */
+/* ── Bio + Services share one alignment grid ── */
+.about-bio,
+.about-service {
+  display: grid;
+  grid-template-columns: var(--about-label-col) 1fr;
+  gap: 0 var(--about-col-gap);
+}
 .about-bio {
   margin-top: 2rem;
-  display: grid;
-  grid-template-columns: 23.5rem 1fr;
-  gap: 0 1.5rem;
 }
 .about-bio-heading {
   font-family: var(--main-type);
@@ -2132,9 +2141,11 @@ html.lenis body {
 .about-bio-body {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem 3rem;
+  column-gap: var(--about-body-gap);
+  row-gap: 2rem;
   padding-right: 0;
-  max-width: 800px;
+  margin-left: var(--about-body-nudge);
+  max-width: var(--about-body-max);
 }
 .about-bio-paragraph {
   font-size: var(--body-copy);
@@ -2156,17 +2167,9 @@ html.lenis body {
   margin-bottom: 2rem;
 }
 .about-service {
-  display: grid;
-  grid-template-columns: 23.5rem 1fr;
-  gap: 0 1.5rem;
   padding: 3rem 0;
   border-bottom: 1px solid var(--border-white);
-  align-items: start;
-}
-.about-service-left {
-  display: flex;
   align-items: baseline;
-  gap: 1rem;
 }
 .about-service-num {
   font-size: var(--small-number);
@@ -2193,6 +2196,17 @@ html.lenis body {
   color: var(--white);
   text-align: left;
   max-width: 800px;
+}
+/* Desktop only: the description keeps the bio's right column edge as its left
+   edge (name column == bio column), then runs beneath it to the page edge,
+   capped at 600px so the copy wraps onto fewer lines. */
+@media (min-width: 1025px) {
+  .about-service-grid {
+    grid-template-columns:
+      calc((min(var(--about-body-max), 100%) - var(--about-body-gap)) / 2)
+      minmax(0, 600px);
+    max-width: none;
+  }
 }
 
 /* ── Reach out ── */
@@ -2630,8 +2644,7 @@ html.lenis body {
   .moodboard-title      { font-size: 6rem; letter-spacing: -0.02em; }
 
   .about-bio          { grid-template-columns: 1fr; gap: 1.5rem; }
-  .about-service    { grid-template-columns: 1fr; gap: 1rem; }
-  .about-service-body { grid-column: auto; }
+  .about-service      { grid-template-columns: 1fr; gap: 1.5rem; }
 
   .about-client-list  { grid-template-columns: 1fr 1fr; }
 
@@ -2901,10 +2914,11 @@ html.lenis body {
   .about-intro-text    { font-size: var(--small-high-text); line-height: var(--small-high-text-line); }
   .about-bio           { grid-template-columns: 1fr; gap: 1.5rem; }
   .about-bio-body      { margin-left: 0; }
-  .about-service     { grid-template-columns: 1fr; gap: 1rem; }
-  .about-service-body { grid-column: auto; }
-  .about-service-left { flex-wrap: wrap; row-gap: 0.25rem; }
-  .about-service-heading { white-space: normal; }
+  .about-service       { grid-template-columns: auto 1fr; column-gap: var(--about-col-gap); row-gap: 0.25rem; align-items: baseline; }
+  .about-service-grid  { display: contents; }
+  .about-service-num   { grid-column: 1; grid-row: 1; }
+  .about-service-heading { grid-column: 2; grid-row: 1; white-space: normal; }
+  .about-service-body  { grid-column: 1 / -1; grid-row: 2; max-width: none; }
   .about-reachout-mail { font-size: clamp(2.5rem, 11vw, 4rem); line-height: 1.1; white-space: normal; overflow: visible; text-overflow: unset; }
   .about-client-list   { grid-template-columns: 1fr; }
   .about-recognition-item { grid-template-columns: 1fr; gap: 0.3rem; }

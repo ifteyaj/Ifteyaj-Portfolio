@@ -11,6 +11,7 @@ import Loader from "@/components/Loader";
 import Hero from "@/components/Hero";
 import LottiePlayer from "@/components/ui/Lottie";
 import { projects } from "@/data/projects";
+import { thumb } from "@/lib/thumbs";
 
 export default function HomeClient() {
   const rootRef = useRef<HTMLDivElement>(null);
@@ -472,7 +473,7 @@ export default function HomeClient() {
               <span className="home-grid-label">({String(p.index).padStart(2, "0")}) {p.title}</span>
               <div className="home-grid-img-wrap">
                 <Image
-                  src={p.images?.[0] ?? "/images/about-hero.webp"}
+                  src={thumb(p.images?.[0] ?? "/images/about-hero.webp")}
                   alt={p.title}
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
