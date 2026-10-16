@@ -137,45 +137,7 @@ export default function Navbar(props: NavbarProps) {
             ))}
           </div>
 
-          <div className="nav-group contact-nav-wrapper">
-            <a href={`mailto:${siteConfig.email}`} className="menu-link contact-link">
-              <div className="menu-text first-menu-link">
-                <p className="menu-big-text">{siteConfig.email}</p>
-              </div>
-              <div className="menu-text second-menu-link">
-                <p className="menu-big-text">{siteConfig.email}</p>
-              </div>
-            </a>
-            <a href={`tel:${siteConfig.phone}`} className="menu-link contact-link">
-              <div className="menu-text first-menu-link">
-                <p className="menu-big-text">{siteConfig.phone}</p>
-              </div>
-              <div className="menu-text second-menu-link">
-                <p className="menu-big-text">{siteConfig.phone}</p>
-              </div>
-            </a>
-          </div>
-
-          <div className="nav-group brand-designer-text">
-            <span className="menu-big-text">Brand Designer</span>
-            <span className="menu-big-text brand-designer-sub">Vibe Coder</span>
-          </div>
-
           <div className="nav-group nav-clock-wrapper">
-            <Link href="/moodboard" className="menu-link page_link" onClick={closeMenu}>
-              <div className="menu-text first-menu-link">
-                <p className="menu-big-text">Moodboard</p>
-                <svg className="nav-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
-                </svg>
-              </div>
-              <div className="menu-text second-menu-link">
-                <p className="menu-big-text">Moodboard</p>
-                <svg className="nav-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
-                </svg>
-              </div>
-            </Link>
             <Link href="/blog" className="menu-link page_link" onClick={closeMenu}>
               <div className="menu-text first-menu-link">
                 <p className="menu-big-text">Blog</p>
@@ -190,6 +152,44 @@ export default function Navbar(props: NavbarProps) {
                 </svg>
               </div>
             </Link>
+            <Link href="/moodboard" className="menu-link page_link" onClick={closeMenu}>
+              <div className="menu-text first-menu-link">
+                <p className="menu-big-text">Moodboard</p>
+                <svg className="nav-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+              </div>
+              <div className="menu-text second-menu-link">
+                <p className="menu-big-text">Moodboard</p>
+                <svg className="nav-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+              </div>
+            </Link>
+          </div>
+
+          <div className="nav-group contact-nav-wrapper">
+            <a href={`tel:${siteConfig.phone}`} className="menu-link contact-link">
+              <div className="menu-text first-menu-link">
+                <p className="menu-big-text">{siteConfig.phone}</p>
+              </div>
+              <div className="menu-text second-menu-link">
+                <p className="menu-big-text">{siteConfig.phone}</p>
+              </div>
+            </a>
+            <a href={`mailto:${siteConfig.email}`} className="menu-link contact-link">
+              <div className="menu-text first-menu-link">
+                <p className="menu-big-text">{siteConfig.email}</p>
+              </div>
+              <div className="menu-text second-menu-link">
+                <p className="menu-big-text">{siteConfig.email}</p>
+              </div>
+            </a>
+          </div>
+
+          <div className="nav-group brand-designer-text">
+            <span className="menu-big-text">Web Designer</span>
+            <span className="menu-big-text brand-designer-sub">Brand Designer</span>
           </div>
         </div>
 
@@ -229,14 +229,6 @@ export default function Navbar(props: NavbarProps) {
             ))}
           </div>
           <div className="nav-mobile-section">
-            <Link href="/moodboard" className="nav-mobile-link" onClick={closeMenu}>
-              Moodboard
-              <svg className="nav-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M7 17L17 7M17 7H7M17 7V17"/>
-              </svg>
-            </Link>
-          </div>
-          <div className="nav-mobile-section">
             <Link href="/blog" className="nav-mobile-link" onClick={closeMenu}>
               Blog
               <svg className="nav-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -245,16 +237,24 @@ export default function Navbar(props: NavbarProps) {
             </Link>
           </div>
           <div className="nav-mobile-section">
+            <Link href="/moodboard" className="nav-mobile-link" onClick={closeMenu}>
+              Moodboard
+              <svg className="nav-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+              </svg>
+            </Link>
+          </div>
+          <div className="nav-mobile-section">
             <Link href="/about" className="nav-mobile-link" onClick={closeMenu}>
-              About
+              About Me
               <svg className="nav-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M7 17L17 7M17 7H7M17 7V17"/>
               </svg>
             </Link>
           </div>
           <div className="nav-mobile-section nav-mobile-contact">
-            <a href={`mailto:${siteConfig.email}`} className="nav-mobile-link">{siteConfig.email}</a>
             <a href={`tel:${siteConfig.phone}`} className="nav-mobile-link">{siteConfig.phone}</a>
+            <a href={`mailto:${siteConfig.email}`} className="nav-mobile-link">{siteConfig.email}</a>
           </div>
           <div className="nav-mobile-section nav-mobile-social">
             {siteConfig.socials.map((s) => (
@@ -271,8 +271,8 @@ export default function Navbar(props: NavbarProps) {
               className="nav-mobile-favicon"
             />
             <div className="nav-mobile-meta">
+              <span>Web Designer</span>
               <span>Brand Designer</span>
-              <span>Vibe Coder</span>
             </div>
           </div>
         </div>

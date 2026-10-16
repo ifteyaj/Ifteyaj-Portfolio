@@ -349,6 +349,7 @@ html.lenis body {
   padding-left: var(--page-margin);
   font-size: var(--small-nav-text);
   letter-spacing: var(--small-discriptor-space);
+  justify-content: space-between;
   align-items: flex-start;
   width: 100vw;
   height: auto;
@@ -356,7 +357,7 @@ html.lenis body {
   display: flex;
   position: relative;
   inset: 0;
-  --nav-group-gap: clamp(32px, 4vw, 64px);
+  --nav-group-gap: clamp(64px, 9vw, 144px);
 }
 .nav-logo-wrapper {
   pointer-events: none;
@@ -384,7 +385,6 @@ html.lenis body {
   display: flex;
   align-items: baseline;
   gap: var(--nav-group-gap);
-  margin-left: clamp(2rem, 8vw, 9rem);
 }
 .nav-group {
   display: flex;
@@ -1205,11 +1205,14 @@ html.lenis body {
   min-width: 12rem;
 }
 .index-entry-cat {
-  font-size: var(--small-discriptor-text);
-  color: var(--grey);
-  letter-spacing: var(--small-discriptor-space);
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.72);
+  letter-spacing: var(--small-descriptor-space);
   margin-left: auto;
   text-align: right;
+  background-color: var(--darkgrey);
+  padding: 0.18rem 0.45rem;
+  border-radius: 0;
 }
 .index-entry-sub {
   font-size: var(--small-discriptor-text);
@@ -2609,8 +2612,7 @@ html.lenis body {
   .case-footer-logo    { height: 14rem; }
 
   /* ── Navbar: keep the stacked groups, drop the descriptor column ── */
-  .nav-bar             { --nav-group-gap: clamp(24px, 3vw, 32px); min-height: 56px; align-items: flex-start; }
-  .nav-groups          { margin-left: clamp(1.5rem, 5vw, 4rem); }
+  .nav-bar             { --nav-group-gap: clamp(32px, 4vw, 40px); min-height: 56px; align-items: flex-start; }
   .brand-designer-text { display: none; }
   .navbar              { height: auto; }
   .nav-logo            { height: 3rem; margin-left: 0; }

@@ -27,5 +27,5 @@ export const navLinks: NavLinkItem[] = [
 ];
 
 export const navInfoLinks: NavLinkItem[] = [
-  { label: "About", href: "/about" },
+  { label: "About Me", href: "/about" },
 ];
