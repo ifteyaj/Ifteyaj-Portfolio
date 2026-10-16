@@ -476,6 +476,7 @@ export default function HomeClient() {
                   alt={p.title}
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
+                  unoptimized
                   loading="lazy"
                   decoding="async"
                   className="home-grid-img"

@@ -121,6 +121,7 @@ export default function WorkIndex() {
                       alt={`${project.title} ${i + 1}`}
                       fill
                       sizes="(max-width: 768px) 100vw, 50vw"
+                      unoptimized
                       loading="lazy"
                       decoding="async"
                       className="index-entry-img"
@@ -148,6 +149,7 @@ export default function WorkIndex() {
                   width={ill.width}
                   height={ill.height}
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 16vw"
+                  unoptimized
                   loading="lazy"
                   decoding="async"
                   className="index-illustrations-img"

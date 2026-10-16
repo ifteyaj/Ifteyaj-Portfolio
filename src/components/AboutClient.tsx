@@ -101,9 +101,9 @@ export default function AboutClient() {
             fill
             sizes="100vw"
             priority
+            unoptimized
             fetchPriority="high"
             decoding="async"
-           
             style={{ objectFit: "cover" }}
           />
         </div>

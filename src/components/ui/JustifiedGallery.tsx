@@ -104,6 +104,7 @@ export default function JustifiedGallery({
                   alt={item.title}
                   fill
                   sizes={sizes}
+                  unoptimized
                   loading={isPriority ? "eager" : "lazy"}
                   decoding="async"
                   fetchPriority={isPriority ? "high" : "low"}
