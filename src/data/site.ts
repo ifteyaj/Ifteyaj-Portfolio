@@ -23,7 +23,6 @@ export const siteConfig: SiteConfig = {
 };
 
 export const navLinks: NavLinkItem[] = [
-  { label: "Featured", count: 5, href: "/" },
   { label: "All Works", count: 13, href: "/work" },
 ];
 

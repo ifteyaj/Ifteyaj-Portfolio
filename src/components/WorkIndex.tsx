@@ -3,16 +3,14 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import dynamic from "next/dynamic";
 import Lenis from "lenis";
 import { gsap, registerEases } from "@/lib/gsap";
 import { setupMenuLinkHovers } from "@/lib/menuHover";
 import Navbar from "@/components/Navbar";
 import SiteFooter from "@/components/SiteFooter";
+import IllustrationMarquee from "@/components/IllustrationMarquee";
 import { projects } from "@/data/projects";
 import { thumb } from "@/lib/thumbs";
-
-const DragableCarousel = dynamic(() => import("@/lib/framer/DragableCarousel"), { ssr: false });
 
 const ILLUSTRATIONS: { src: string; alt: string; width: number; height: number }[] = [
   { src: "/images/illustrations/illustration-1.webp", alt: "Illustration 1", width: 900, height: 1018 },
@@ -40,12 +38,21 @@ const ILLUSTRATIONS: { src: string; alt: string; width: number; height: number }
   { src: "/images/illustrations/illustration-23.webp", alt: "Illustration 23", width: 900, height: 832 },
 ];
 
-const PORTRAIT_IMAGES = Array.from({ length: 6 }, (_, i) => ({
+const PORTRAIT_DIMS = [
+  { width: 800, height: 588 },
+  { width: 800, height: 996 },
+  { width: 800, height: 1105 },
+  { width: 800, height: 780 },
+  { width: 800, height: 1151 },
+  { width: 800, height: 936 },
+  { width: 800, height: 1134 },
+];
+
+const PORTRAIT_IMAGES = PORTRAIT_DIMS.map((dims, i) => ({
   src: `/images/vexel-art/portrait-${i + 1}.webp`,
   alt: `Portrait ${i + 1}`,
+  ...dims,
 }));
-
-const PORTRAIT_SLIDES = PORTRAIT_IMAGES.map((img) => img.src);
 
 export default function WorkIndex() {
   const rootRef = useRef<HTMLDivElement>(null);
@@ -71,8 +78,8 @@ export default function WorkIndex() {
     setupMenuLinkHovers(root);
 
     // ── Page intro reveal ──
-    gsap.fromTo(".index-title-text", { y: 120 }, { y: 0, duration: 1.4, ease: "texttshow", delay: 0.1 });
-    gsap.fromTo(".index-title-count", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.9, ease: "texttshow", delay: 0.4 });
+    gsap.fromTo(".index-title-text", { x: -120, opacity: 0 }, { x: 0, opacity: 1, duration: 1.4, ease: "texttshow", delay: 0.1 });
+    gsap.fromTo(".index-title-count", { x: -40, opacity: 0 }, { x: 0, opacity: 1, duration: 0.9, ease: "texttshow", delay: 0.4 });
     gsap.fromTo(".index-entry", { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: "texttshow", stagger: 0.05, delay: 0.5 });
     gsap.fromTo(".index-illustrations:not(.index-portraits)", { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: "texttshow", delay: 0.9 });
     gsap.fromTo(".index-portraits", { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: "texttshow", delay: 1.05 });
@@ -149,24 +156,7 @@ export default function WorkIndex() {
               Illustrations
               <span className="index-illustrations-count">({String(ILLUSTRATIONS.length).padStart(2, "0")})</span>
             </h2>
-          <div className="index-illustrations-grid">
-            {ILLUSTRATIONS.map((ill) => (
-              <div key={ill.src} className="index-illustrations-item">
-                <Image
-                  src={ill.src}
-                  alt={ill.alt}
-                  width={ill.width}
-                  height={ill.height}
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 16vw"
-                  unoptimized
-                  loading="lazy"
-                  decoding="async"
-                  className="index-illustrations-img"
-                  style={{ width: "100%", height: "auto" }}
-                />
-              </div>
-            ))}
-          </div>
+            <IllustrationMarquee images={ILLUSTRATIONS} />
         </section>
         </div>
 
@@ -175,29 +165,23 @@ export default function WorkIndex() {
               Portrait / Vexel Art
               <span className="index-illustrations-count">({String(PORTRAIT_IMAGES.length).padStart(2, "0")})</span>
             </h2>
-          <div className="portraits-carousel-wrapper" style={{ height: '420px' }}>
-            <DragableCarousel
-              images={PORTRAIT_SLIDES}
-              slideWidth={320}
-              slideHeight={400}
-              gap={20}
-              preset="Custom"
-              perspective={1000}
-              rotateY={45}
-              depth={150}
-              activeScale={1}
-              inactiveScale={0.85}
-              inactiveOpacity={0.5}
-              borderRadius={12}
-              objectFit="cover"
-              showArrows={true}
-              arrowColor="rgb(51, 51, 51)"
-              arrowSize={44}
-              showDots={true}
-              dotColor="rgb(255, 255, 255)"
-              dotSize={8}
-              loop={true}
-            />
+          <div className="index-portraits-grid">
+            {PORTRAIT_IMAGES.map((img) => (
+              <div key={img.src} className="index-portraits-item">
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  width={img.width}
+                  height={img.height}
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  unoptimized
+                  loading="lazy"
+                  decoding="async"
+                  className="index-portraits-img"
+                  style={{ width: "100%", height: "auto" }}
+                />
+              </div>
+            ))}
           </div>
         </section>
 

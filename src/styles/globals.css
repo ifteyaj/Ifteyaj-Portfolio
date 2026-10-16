@@ -349,7 +349,6 @@ html.lenis body {
   padding-left: var(--page-margin);
   font-size: var(--small-nav-text);
   letter-spacing: var(--small-discriptor-space);
-  justify-content: space-between;
   align-items: flex-start;
   width: 100vw;
   height: auto;
@@ -357,6 +356,7 @@ html.lenis body {
   display: flex;
   position: relative;
   inset: 0;
+  --nav-group-gap: clamp(32px, 4vw, 64px);
 }
 .nav-logo-wrapper {
   pointer-events: none;
@@ -379,26 +379,26 @@ html.lenis body {
   width: 100%;
   height: 100%;
 }
-.work-menu-section {
+/* ── Nav groups: four stacked columns in one flex row ── */
+.nav-groups {
   display: flex;
-  align-items: flex-start;
-  padding-left: 2rem;
+  align-items: baseline;
+  gap: var(--nav-group-gap);
+  margin-left: clamp(2rem, 8vw, 9rem);
 }
-.work-nav-wrapper {
+.nav-group {
   display: flex;
   flex-direction: column;
-  gap: 0.1rem;
   align-items: flex-start;
+  gap: 0.15rem;
   pointer-events: none;
 }
-.work-nav-wrapper .menu-link {
+.nav-group .menu-link {
   pointer-events: auto;
-}
-.work-nav-wrapper .menu-link {
   position: relative;
   overflow: hidden;
 }
-.work-nav-wrapper .menu-link::before {
+.nav-group .menu-link::before {
   content: "";
   position: absolute;
   top: 0;
@@ -409,81 +409,27 @@ html.lenis body {
   z-index: 0;
   transition: width 0.4s cubic-bezier(0.44, 0, 0.56, 1);
 }
-.work-nav-wrapper .menu-link:hover::before {
+.nav-group .menu-link:hover::before {
   width: 100%;
 }
-.work-nav-wrapper .menu-link .menu-text {
+.nav-group .menu-link .menu-text {
   position: relative;
   z-index: 1;
 }
-.work-nav-wrapper .menu-link .menu-big-text,
-.work-nav-wrapper .menu-link .menu-small-text {
+.nav-group .menu-big-text,
+.nav-group .menu-small-text {
   color: var(--white);
 }
-.work-nav-wrapper .menu-link:hover .menu-big-text,
-.work-nav-wrapper .menu-link:hover .menu-small-text {
-  color: var(--black);
-}
-
-/* ── Navbar links (same left-to-right fill, no text shift) ── */
-.about-nav-wrapper .menu-link,
-.contact-nav-wrapper .menu-link,
-.nav-clock-wrapper .menu-link {
-  position: relative;
-  overflow: hidden;
-}
-.about-nav-wrapper .menu-link::before,
-.contact-nav-wrapper .menu-link::before,
-.nav-clock-wrapper .menu-link::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0%;
-  height: 100%;
-  background-color: var(--white);
-  z-index: 0;
-  transition: width 0.4s cubic-bezier(0.44, 0, 0.56, 1);
-}
-.about-nav-wrapper .menu-link:hover::before,
-.contact-nav-wrapper .menu-link:hover::before,
-.nav-clock-wrapper .menu-link:hover::before {
-  width: 100%;
-}
-.about-nav-wrapper .menu-link .menu-text,
-.contact-nav-wrapper .menu-link .menu-text,
-.nav-clock-wrapper .menu-link .menu-text {
-  position: relative;
-  z-index: 1;
-}
-.about-nav-wrapper .menu-big-text,
-.about-nav-wrapper .menu-small-text,
-.contact-nav-wrapper .menu-big-text,
-.contact-nav-wrapper .menu-small-text,
-.nav-clock-wrapper .menu-big-text,
-.nav-clock-wrapper .menu-small-text {
-  color: var(--white);
-}
-.about-nav-wrapper .menu-link:hover .menu-big-text,
-.about-nav-wrapper .menu-link:hover .menu-small-text,
-.contact-nav-wrapper .menu-link:hover .menu-big-text,
-.contact-nav-wrapper .menu-link:hover .menu-small-text,
-.nav-clock-wrapper .menu-link:hover .menu-big-text,
-.nav-clock-wrapper .menu-link:hover .menu-small-text {
+.nav-group .menu-link:hover .menu-big-text,
+.nav-group .menu-link:hover .menu-small-text {
   color: var(--black);
 }
 
 /* ── Navbar: hide second-menu-link, show first-menu-link by default ── */
-.about-nav-wrapper .menu-text.second-menu-link,
-.contact-nav-wrapper .menu-text.second-menu-link,
-.nav-clock-wrapper .menu-text.second-menu-link,
-.work-nav-wrapper .menu-text.second-menu-link {
+.nav-group .menu-text.second-menu-link {
   display: none !important;
 }
-.about-nav-wrapper .menu-text.first-menu-link,
-.contact-nav-wrapper .menu-text.first-menu-link,
-.nav-clock-wrapper .menu-text.first-menu-link,
-.work-nav-wrapper .menu-text.first-menu-link {
+.nav-group .menu-text.first-menu-link {
   transform: translateY(0%) !important;
   margin-top: 0 !important;
 }
@@ -495,21 +441,6 @@ html.lenis body {
 .case-bottom-nav .menu-text.first-menu-link {
   transform: translateY(0%) !important;
   margin-top: 0 !important;
-}
-.information-work-section {
-  display: flex;
-  align-items: flex-start;
-  gap: 3rem;
-  margin-left: -2rem;
-}
-.about-nav-wrapper {
-  display: flex;
-  flex-direction: column;
-  pointer-events: none;
-  margin-left: -2rem;
-}
-.about-nav-wrapper .menu-link {
-  margin-left: -5rem;
 }
 .nav-arrow {
   margin-left: 0.3rem;
@@ -523,39 +454,17 @@ html.lenis body {
 .menu-small-text {
   display: none;
 }
-.contact-nav-wrapper {
-  display: flex;
-  flex-direction: column;
-  pointer-events: none;
-  margin-left: 5rem;
-}
-.about-nav-wrapper .menu-link,
-.contact-nav-wrapper .menu-link,
-.about-nav-wrapper a,
-.contact-nav-wrapper a {
-  pointer-events: auto;
-}
 .brand-designer-text {
   white-space: nowrap;
   pointer-events: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-  font-size: var(--small-discriptor-text);
-  letter-spacing: var(--small-discriptor-space);
-}
-.moodboard-nav-link {
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-}
-.nav-clock-wrapper {
-  margin-left: 2rem;
+  font-size: var(--small-descriptor-text);
+  letter-spacing: var(--small-descriptor-space);
 }
 
 /* ── HAMBURGER BUTTON (shown at tablet/mobile widths) ── */
 .nav-hamburger {
   display: none;
+  margin-left: auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -1242,6 +1151,7 @@ html.lenis body {
   line-height: 1;
 }
 .index-title-text {
+  display: inline-block;
   font-family: var(--main-type);
   font-size: var(--big-text);
   font-weight: var(--main-weight-big);
@@ -1249,6 +1159,7 @@ html.lenis body {
   letter-spacing: var(--big-text-space);
 }
 .index-title-count {
+  display: inline-block;
   font-family: var(--main-type);
   font-size: var(--mid-high-text);
   font-weight: var(--main-weight-big);
@@ -1380,7 +1291,7 @@ html.lenis body {
 
 /* ══ ILLUSTRATIONS SECTION ════════════════════════════════════════════════════ */
 .index-illustrations-cols {
-  margin-top: var(--mid-section-break);
+  margin-top: 2.5rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--border-white);
 }
@@ -1405,73 +1316,98 @@ html.lenis body {
   letter-spacing: var(--small-discriptor-space);
   color: var(--grey);
 }
-.index-illustrations-grid {
-  columns: 6;
-  column-gap: 0.5rem;
-  padding: 0.5rem;
+/* Drifting multi-row marquee (video-wall style) */
+.illustration-marquee {
+  --marquee-tile-h: 200px;
+  --marquee-gap: 0.5rem;
+  margin-top: 1.5rem;
+  margin-left: calc(-1 * var(--page-margin));
+  margin-right: calc(-1 * var(--page-margin));
+  display: flex;
+  flex-direction: column;
+  gap: var(--marquee-gap);
+  overflow: hidden;
 }
-.index-illustrations-item {
+.illustration-marquee-row {
+  overflow: hidden;
+}
+.illustration-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-left 80s linear infinite;
+  will-change: transform;
+}
+.illustration-marquee-row.is-reverse .illustration-marquee-track {
+  animation-name: marquee-right;
+}
+.illustration-marquee-group {
+  display: flex;
+}
+.illustration-marquee-tile {
+  position: relative;
+  flex: 0 0 auto;
+  height: var(--marquee-tile-h);
+  margin-right: var(--marquee-gap);
+  overflow: hidden;
+  background: var(--border-white);
+}
+.illustration-marquee-img {
+  object-fit: cover;
+}
+.illustration-marquee:hover .illustration-marquee-track {
+  animation-play-state: paused;
+}
+@keyframes marquee-left {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@keyframes marquee-right {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}
+@media (max-width: 1024px) {
+  .illustration-marquee { --marquee-tile-h: 148px; }
+}
+@media (max-width: 767px) {
+  .illustration-marquee { --marquee-tile-h: 112px; --marquee-gap: 0.4rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .illustration-marquee-track { animation: none; }
+}
+.index-portraits {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-white);
+}
+
+/* ── Portrait / Vexel Art grid ── */
+.index-portraits-grid {
+  columns: 4;
+  column-gap: 0.5rem;
+}
+.index-portraits-item {
   break-inside: avoid;
   margin-bottom: 0.5rem;
   overflow: hidden;
   line-height: 0;
 }
-.index-illustrations-img {
+.index-portraits-img {
   width: 100%;
   height: auto;
   display: block;
-  filter: saturate(0.92);
-  transition: filter 0.6s ease, transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
-.index-illustrations-item:hover .index-illustrations-img {
+.index-portraits-item:hover .index-portraits-img {
   transform: scale(1.02);
-  filter: saturate(1);
-}
-.index-portraits {
-  margin-top: var(--mid-section-break);
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--border-white);
-}
-
-.index-portraits .index-illustrations-grid {
-  columns: 3;
-}
-
-/* ── DragableCarousel portrait section ── */
-.portraits-carousel-wrapper {
-  width: 100%;
-  max-width: 1200px;
-  margin: 10rem auto 0;
-  padding: 0;
-  position: relative;
-  z-index: 10;
-}
-
-.portraits-carousel-wrapper > div {
-  width: 100%;
-  height: 420px;
-  overflow: hidden;
 }
 
 @media (max-width: 1024px) {
-  .portraits-carousel-wrapper {
-    max-width: 100%;
-    padding: 0 0.5rem;
-  }
-
-  .portraits-carousel-wrapper > div {
-    height: 350px;
-  }
+  .index-portraits-grid { columns: 3; }
 }
 
-@media (max-width: 768px) {
-  .portraits-carousel-wrapper {
-    padding: 0 1rem;
-  }
-
-  .portraits-carousel-wrapper > div {
-    height: 300px;
-  }
+@media (max-width: 767px) {
+  .index-portraits-grid { columns: 2; column-gap: 0.4rem; }
+  .index-portraits-item { margin-bottom: 0.4rem; }
 }
 
 /* ── Case / Footer ── */
@@ -2100,6 +2036,7 @@ html.lenis body {
 /* ── Intro statement ── */
 .about-intro {
   padding-top: 1.2rem;
+  padding-bottom: 2rem;
   margin-left: calc(-1 * var(--page-margin));
   margin-right: calc(-1 * var(--page-margin));
   padding-left: var(--page-margin);
@@ -2117,7 +2054,7 @@ html.lenis body {
   width: 100%;
   height: 1px;
   background: var(--border-white);
-  margin: var(--mid-section-break) 0;
+  margin: 1.5rem 0;
 }
 
 /* ── Bio + Services share one alignment grid ── */
@@ -2154,11 +2091,18 @@ html.lenis body {
   margin-bottom: 1.5rem;
 }
 
-/* ── Services ── */
-.about-services {
+/* ── Services + Process ── */
+.about-services,
+.about-process {
   margin-top: 1.5rem;
 }
-.about-services-title {
+.about-process {
+  --process-label-gap: 1rem;
+  --process-body-gap: 1rem;
+  --process-item-gap: 0rem;
+}
+.about-services-title,
+.about-process-title {
   font-family: var(--main-type);
   font-size: var(--mid-high-text);
   line-height: 1.2;
@@ -2171,6 +2115,9 @@ html.lenis body {
   border-bottom: 1px solid var(--border-white);
   align-items: baseline;
 }
+.about-service:last-child {
+  border-bottom: none;
+}
 .about-service-num {
   font-size: var(--small-number);
   letter-spacing: var(--small-menu-number-space);
@@ -2179,7 +2126,7 @@ html.lenis body {
 .about-service-heading {
   font-family: var(--main-type);
   font-size: var(--small-discriptor-text);
-  line-height: var(--small-discriptor-line);
+  line-height: var(--small-descriptor-line);
   font-weight: var(--main-weight-big);
   color: var(--green);
   white-space: nowrap;
@@ -2207,38 +2154,71 @@ html.lenis body {
       minmax(0, 600px);
     max-width: none;
   }
+  .about-process {
+    --process-label-gap: 0.4rem;
+  }
 }
 
-/* ── Reach out ── */
-.about-reachout {
-  margin-top: clamp(2rem, 5vw, 4rem);
-  padding-top: clamp(1.5rem, 4vw, 3rem);
-  padding-bottom: clamp(1rem, 3vw, 2rem);
-  width: 100vw;
-  margin-left: calc(-1 * var(--page-margin));
-  padding-left: var(--page-margin);
-  padding-right: var(--page-margin);
+/* ── Process (horizontal steps) ── */
+.about-process-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: var(--about-body-gap);
 }
-.about-reachout-text {
-  font-size: var(--small-descriptor-text);
-  letter-spacing: var(--small-discriptor-space);
+.about-process-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--process-body-gap);
+}
+.about-process-label {
+  display: flex;
+  flex-direction: column;
+  gap: var(--process-label-gap);
+}
+.about-process-num {
+  font-size: var(--small-number);
+  letter-spacing: var(--small-menu-number-space);
   color: var(--grey);
-  margin-bottom: 1rem;
 }
-.about-reachout-mail {
+.about-process-heading {
   font-family: var(--main-type);
-  font-size: clamp(4rem, 11vw, 14rem);
-  line-height: 1;
+  font-size: var(--small-discriptor-text);
+  line-height: var(--small-descriptor-line);
   font-weight: var(--main-weight-big);
-  letter-spacing: -0.04em;
-  display: block;
-  white-space: nowrap;
-  color: var(--grey);
-  width: 100%;
-  text-align: right;
+  letter-spacing: 0.02em;
+  color: var(--green);
 }
-.about-reachout-mail:hover {
-  color: var(--grey);
+.about-process-body {
+  font-family: var(--main-type);
+  font-size: var(--body-copy);
+  line-height: var(--body-copy-line);
+  font-weight: var(--main-weight-big);
+  letter-spacing: var(--body-copy-space);
+  color: var(--white);
+}
+
+/* ── About carousel (Curveflow) ── */
+.about-carousel {
+  margin-top: 4rem;
+}
+.about-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  height: 640px;
+  z-index: 10;
+}
+@media (max-width: 1024px) {
+  .about-carousel-wrapper {
+    height: 480px;
+  }
+}
+@media (max-width: 767px) {
+  .about-carousel {
+    margin-top: 2.5rem;
+  }
+  .about-carousel-wrapper {
+    height: 340px;
+  }
 }
 
 /* ── List blocks (clients / recognition) ── */
@@ -2551,33 +2531,34 @@ html.lenis body {
   grid-template-columns: repeat(4, 1fr);
 }
 
-/* ── Moodboard: justified gallery (Flickr-style, zero gaps) ── */
+/* ── Moodboard: Pinterest-style masonry (natural aspect ratios) ── */
 .mb-index {
   width: 100%;
 }
-.justified-gallery {
-  width: 100%;
+.mb-grid {
+  display: grid;
+  gap: 0.5rem;
+  align-items: start;
 }
-.justified-row {
-  position: relative;
+.mb-col {
   display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 0;
+}
+.mb-tile {
+  position: relative;
   width: 100%;
   overflow: hidden;
 }
-.justified-cell {
-  position: relative;
-  flex-shrink: 0;
-  height: 100%;
-  overflow: hidden;
-}
-.justified-img {
+.mb-tile-img {
   object-fit: cover;
   width: 100%;
   height: 100%;
   filter: saturate(0.85);
   transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), filter 0.6s ease;
 }
-.justified-cell:hover .justified-img {
+.mb-tile:hover .mb-tile-img {
   transform: scale(1.04);
   filter: saturate(1);
 }
@@ -2598,10 +2579,10 @@ html.lenis body {
 .case-selected-work,
 .case-footer-block,
 .about-services,
+.about-process,
 .about-list-block,
 .moodboard-grid,
 .moodboard-related,
-.index-illustrations-grid,
 .index-portraits {
   content-visibility: auto;
   contain-intrinsic-size: auto 500px;
@@ -2627,16 +2608,11 @@ html.lenis body {
   .about-footer-logo   { width: 12rem; height: 12rem; }
   .case-footer-logo    { height: 14rem; }
 
-  /* ── Navbar: collapse to hamburger menu on tablet ── */
-  .nav-hamburger       { display: flex; }
-  .work-menu-section,
-  .information-work-section,
-  .brand-designer-text,
-  .nav-clock-wrapper   { display: none; }
-  .nav-clock-wrapper   { margin-left: auto; display: none; }
+  /* ── Navbar: keep the stacked groups, drop the descriptor column ── */
+  .nav-bar             { --nav-group-gap: clamp(24px, 3vw, 32px); min-height: 56px; align-items: flex-start; }
+  .nav-groups          { margin-left: clamp(1.5rem, 5vw, 4rem); }
+  .brand-designer-text { display: none; }
   .navbar              { height: auto; }
-  .nav-bar             { min-height: 56px; align-items: center; }
-  .nav-mobile-menu     { top: 56px; display: block; }
   .nav-logo            { height: 3rem; margin-left: 0; }
 
   /* ── Hero / headlines that have no tablet override yet ── */
@@ -2645,6 +2621,9 @@ html.lenis body {
 
   .about-bio          { grid-template-columns: 1fr; gap: 1.5rem; }
   .about-service      { grid-template-columns: 1fr; gap: 1.5rem; }
+
+  /* Process: two per row */
+  .about-process-row  { grid-template-columns: repeat(2, 1fr); }
 
   .about-client-list  { grid-template-columns: 1fr 1fr; }
 
@@ -2664,19 +2643,16 @@ html.lenis body {
   }
 
   /* ── NAVBAR ── */
-  /* Phones keep the logo + hamburger drawer (same as tablet); only the
+  /* Phones keep the logo + hamburger drawer (same as before); only the
      desktop link rows stay hidden. */
   .nav-hamburger       { display: flex; }
   .nav-mobile-menu     { display: block; }
-  .brand-designer-text { display: none; }
-  .nav-clock-wrapper   { display: none; }
   .navbar              { height: auto; }
   .nav-bar             { min-height: 56px; width: 100%; overflow: visible; }
   .nav-logo            { height: 2.2rem; margin-left: 0; }
 
   /* Keep the compact desktop links out of the phone header. */
-  .work-menu-section,
-  .information-work-section { display: none !important; }
+  .nav-groups { display: none !important; }
 
   /* ── HERO / SLIDER ── */
   /* The hero image keeps its full-bleed box; the bottom area is rebuilt as a
@@ -2834,8 +2810,6 @@ html.lenis body {
   .index-bottom-nav    { flex-wrap: wrap; gap: 1.5rem; }
   .index-bottom-col    { min-width: 0; }
   .index-illustrations-title { font-size: var(--mobile-bix-text); letter-spacing: var(--mobile-big-text-space); }
-  .index-illustrations-grid  { columns: 3; column-gap: 0.5rem; padding: 0.5rem; }
-  .index-illustrations-item  { margin-bottom: 0.5rem; }
 
   /* ── CASE / WORK DETAIL ── */
   .case-main           { padding-top: var(--content-page-top-margin); }
@@ -2897,8 +2871,8 @@ html.lenis body {
   .case-bottom-col-nav { display: none; }
   .case-bottom-col-contact { display: none; }
   .case-bottom-col-copy { order: 1; text-align: left; }
-  .case-bottom-col-social { order: 2; text-align: left; align-items: flex-start; }
-  .case-bottom-col-brand { order: 3; flex-direction: column; gap: 0.05rem; align-items: flex-end; text-align: right; }
+  .case-bottom-col-social { order: 2; flex-direction: row; gap: 1rem; align-items: flex-end; text-align: right; }
+  .case-bottom-col-brand { display: none; }
   .case-prev-next-nav  { padding: var(--mid-section-break) 0; margin-top: var(--mid-section-break); gap: 1.2rem; }
   .case-prev-next-btn  { width: 2.5rem; height: 2.5rem; }
   .case-prev-next-btn svg { width: 20px; height: 20px; }
@@ -2919,7 +2893,9 @@ html.lenis body {
   .about-service-num   { grid-column: 1; grid-row: 1; }
   .about-service-heading { grid-column: 2; grid-row: 1; white-space: normal; }
   .about-service-body  { grid-column: 1 / -1; grid-row: 2; max-width: none; }
-  .about-reachout-mail { font-size: clamp(2.5rem, 11vw, 4rem); line-height: 1.1; white-space: normal; overflow: visible; text-overflow: unset; }
+  .about-process           { --process-label-gap: 0.25rem; --process-body-gap: 0.95rem; --process-item-gap: 2.75rem; }
+  .about-process-row   { grid-template-columns: 1fr; row-gap: 0; }
+  .about-process-card + .about-process-card { margin-top: calc(var(--process-item-gap) / 2); padding-top: calc(var(--process-item-gap) / 2); border-top: 1px solid var(--border-white); }
   .about-client-list   { grid-template-columns: 1fr; }
   .about-recognition-item { grid-template-columns: 1fr; gap: 0.3rem; }
   .about-recognition-project { text-align: left; }

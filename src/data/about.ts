@@ -32,9 +32,25 @@ export const about = {
       body: "Developing responsive, high-performance websites with clean code and modern technologies that bring designs to life and deliver seamless user experiences.",
     },
   ],
-  reachout:
-    "Feel free to reach out to discuss your project:",
-  reachoutImage: "/images/about-hero.webp",
+  processHeading: "Process",
+  process: [
+    {
+      heading: "Discover",
+      body: "Every project starts with listening. I dig into your business, audience, and ambitions, then gather the references and constraints that will shape the direction.",
+    },
+    {
+      heading: "Define",
+      body: "I turn those insights into a clear strategy: positioning, messaging, and the visual principles that give the brand a foundation it can grow from.",
+    },
+    {
+      heading: "Design",
+      body: "I craft the identity system: logo, typography, colour, and the flexible building blocks that let the brand adapt across every touchpoint.",
+    },
+    {
+      heading: "Deliver",
+      body: "You get a complete, documented toolkit: guidelines, assets, and files, ready to roll out with confidence and evolve over time.",
+    },
+  ],
   clients: [
     "Baseborn",
     "Maersk",

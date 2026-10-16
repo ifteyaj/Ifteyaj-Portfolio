@@ -6,7 +6,7 @@ import { gsap, registerEases } from "@/lib/gsap";
 import { setupMenuLinkHovers } from "@/lib/menuHover";
 import Navbar from "@/components/Navbar";
 import SiteFooter from "@/components/SiteFooter";
-import JustifiedGallery from "@/components/ui/JustifiedGallery";
+import MoodboardGrid from "@/components/MoodboardGrid";
 import { moodboardItems } from "@/data/moodboard";
 
 export default function MoodboardIndex() {
@@ -45,7 +45,7 @@ export default function MoodboardIndex() {
       { x: 0, opacity: 1, duration: 0.9, ease: "texttshow", delay: 0.6 }
     );
     gsap.fromTo(
-      ".justified-gallery",
+      ".mb-grid",
       { opacity: 0 },
       { opacity: 1, duration: 1.2, ease: "texttshow", delay: 0.7 }
     );
@@ -81,7 +81,7 @@ export default function MoodboardIndex() {
         </header>
 
         <div className="mb-index">
-          <JustifiedGallery items={moodboardItems} />
+          <MoodboardGrid items={moodboardItems} />
         </div>
 
         <SiteFooter />

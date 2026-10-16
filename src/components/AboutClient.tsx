@@ -2,15 +2,17 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import Lenis from "lenis";
 import { gsap, registerEases } from "@/lib/gsap";
 import { setupMenuLinkHovers } from "@/lib/menuHover";
 import Navbar from "@/components/Navbar";
 import SiteFooter from "@/components/SiteFooter";
 import { about } from "@/data/about";
-import { siteConfig } from "@/data/site";
 
-export default function AboutClient() {
+const CurveflowCarousel = dynamic(() => import("@/lib/framer/CurveflowCarousel"), { ssr: false });
+
+export default function AboutClient({ carouselImages = [] }: { carouselImages?: string[] }) {
   const rootRef = useRef<HTMLDivElement>(null);
   const [revealed, setRevealed] = useState(false);
 
@@ -61,11 +63,6 @@ export default function AboutClient() {
       ".about-principle",
       { y: 60, opacity: 0 },
       { y: 0, opacity: 1, duration: 0.9, ease: "texttshow", stagger: 0.1, delay: 1.5 }
-    );
-    gsap.fromTo(
-      ".about-reachout",
-      { y: 60, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1, ease: "texttshow", delay: 1.7 }
     );
     gsap.fromTo(
       ".about-list-block",
@@ -155,12 +152,18 @@ export default function AboutClient() {
           ))}
         </section>
 
-        <section className="about-reachout">
-          <p className="about-reachout-text">{about.reachout}</p>
-          <a href={`mailto:${siteConfig.email}`} className="about-reachout-mail">
-            ifteyaj0<wbr />@gmail.com
-          </a>
-        </section>
+        {carouselImages.length > 0 && (
+          <section className="about-carousel">
+            <div className="about-carousel-wrapper">
+              <CurveflowCarousel
+                slides={carouselImages.map((src) => ({ kind: "image", pictureUrl: src, href: "" }))}
+                frame={{ corner: 12, heightPct: 50, fit: "natural", offset: 0 }}
+                drive={{ autoplay: 50, holdOnHover: true }}
+                backdrop={{ fill: "transparent" }}
+              />
+            </div>
+          </section>
+        )}
 
         <SiteFooter />
       </main>

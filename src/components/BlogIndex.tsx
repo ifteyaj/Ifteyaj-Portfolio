@@ -38,8 +38,8 @@ export default function BlogIndex() {
 
     gsap.fromTo(
       ".moodboard-title",
-      { y: 120 },
-      { y: 0, duration: 1.4, ease: "texttshow", delay: 0.1 }
+      { x: -120, opacity: 0 },
+      { x: 0, opacity: 1, duration: 1.4, ease: "texttshow", delay: 0.1 }
     );
     gsap.fromTo(
       ".moodboard-header-line",

@@ -1,7 +1,8 @@
-# Portrait / Vexel Art — index page carousel
+# Portrait / Vexel Art — index page grid
 
 Drop-in folder for the **Portrait / Vexel Art** section on `/work`
-(`src/components/WorkIndex.tsx`), rendered by `DragableCarousel`.
+(`src/components/WorkIndex.tsx`), rendered as a static CSS grid
+(`.index-portraits-grid` — 4 columns desktop, 3 tablet, 2 mobile).
 
 ## File structure
 
@@ -10,30 +11,34 @@ public/images/vexel-art/
 ├── portrait-1.webp
 ├── portrait-2.webp
 …
-└── portrait-6.webp
+└── portrait-7.webp
 ```
 
-Rule: **`portrait-<n>.webp`, starting at `1`, no gaps.** Currently 6 files.
+Rule: **`portrait-<n>.webp`, starting at `1`, no gaps.** Currently 7 files.
 
 ## Wiring up
 
-`WorkIndex.tsx` builds the list from a count — add or remove files and change
-`length` to match, plus the hardcoded `(06)` in the section header:
+`WorkIndex.tsx` holds an explicit `PORTRAIT_DIMS` list (one `{ width, height }`
+per file) that is mapped into `PORTRAIT_IMAGES`. Add the file, then append its
+real dimensions — the section header count is derived from
+`PORTRAIT_IMAGES.length`, so it updates itself:
 
 ```ts
-const PORTRAIT_IMAGES = Array.from({ length: 6 }, (_, i) => ({
-  src: `/images/vexel-art/portrait-${i + 1}.webp`,
-  alt: `Portrait ${i + 1}`,
-}));
+const PORTRAIT_DIMS = [
+  { width: 800, height: 588 },
+  …
+  { width: 800, height: 1134 }, // portrait-7
+];
 ```
 
 A wrong name (`Portrait-7.webp`, `vexel-7.webp`, `portrait_7.webp`) will 404 —
-the list is generated, there is no folder scan here.
+the list is exact, there is no folder scan here.
 
-## Carousel sizing
+## Sizing
 
-Slides render at `slideWidth={320}` × `slideHeight={400}` with `objectFit="cover"`,
-so **portrait 4:5** art crops cleanest. Export at 2× → **640×800** or larger.
+The grid renders each tile at ~25vw on desktop with `objectFit="cover"`, so a
+**long edge of ~1600px** is plenty for 2× displays; cap at 2400px. Keep
+`width` / `height` matching the real file so the pre-load box reserves space.
 
 ```
 cwebp -q 82 -resize 800 0 src.png -o portrait-7.webp

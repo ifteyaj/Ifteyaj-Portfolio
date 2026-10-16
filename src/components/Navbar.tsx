@@ -101,8 +101,22 @@ export default function Navbar(props: NavbarProps) {
           </Link>
         </div>
 
-        <div className="work-menu-section">
-          <div className="work-nav-wrapper">
+        <div className="nav-groups">
+          <div className="nav-group about-nav-wrapper">
+            <Link href="/about" className="menu-link page_link">
+              <div className="menu-text first-menu-link">
+                <p className="menu-big-text">{navInfoLinks[0].label}</p>
+                <svg className="nav-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+              </div>
+              <div className="menu-text second-menu-link">
+                <p className="menu-big-text">{navInfoLinks[0].label}</p>
+                <svg className="nav-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+              </div>
+            </Link>
             {navLinks.map((link) => (
               <Link key={link.label} href={link.href} className="menu-link page_link" onClick={closeMenu}>
                 <div className="menu-text first-menu-link">
@@ -122,26 +136,8 @@ export default function Navbar(props: NavbarProps) {
               </Link>
             ))}
           </div>
-        </div>
 
-        <div className="information-work-section">
-          <div className="about-nav-wrapper">
-            <Link href="/about" className="menu-link page_link">
-              <div className="menu-text first-menu-link">
-                <p className="menu-big-text">{navInfoLinks[0].label}</p>
-                <svg className="nav-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
-                </svg>
-              </div>
-              <div className="menu-text second-menu-link">
-                <p className="menu-big-text">{navInfoLinks[0].label}</p>
-                <svg className="nav-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
-                </svg>
-              </div>
-            </Link>
-          </div>
-          <div className="contact-nav-wrapper">
+          <div className="nav-group contact-nav-wrapper">
             <a href={`mailto:${siteConfig.email}`} className="menu-link contact-link">
               <div className="menu-text first-menu-link">
                 <p className="menu-big-text">{siteConfig.email}</p>
@@ -159,42 +155,42 @@ export default function Navbar(props: NavbarProps) {
               </div>
             </a>
           </div>
-        </div>
 
-        <div className="brand-designer-text">
-          <span className="menu-big-text">Brand Designer</span>
-          <span className="menu-big-text brand-designer-sub">Vibe Coder</span>
-        </div>
+          <div className="nav-group brand-designer-text">
+            <span className="menu-big-text">Brand Designer</span>
+            <span className="menu-big-text brand-designer-sub">Vibe Coder</span>
+          </div>
 
-        <div className="nav-clock-wrapper moodboard-nav-link">
-          <Link href="/moodboard" className="menu-link page_link" onClick={closeMenu}>
-            <div className="menu-text first-menu-link">
-              <p className="menu-big-text">Moodboard</p>
-              <svg className="nav-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M7 17L17 7M17 7H7M17 7V17"/>
-              </svg>
-            </div>
-            <div className="menu-text second-menu-link">
-              <p className="menu-big-text">Moodboard</p>
-              <svg className="nav-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M7 17L17 7M17 7H7M17 7V17"/>
-              </svg>
-            </div>
-          </Link>
-          <Link href="/blog" className="menu-link page_link" onClick={closeMenu}>
-            <div className="menu-text first-menu-link">
-              <p className="menu-big-text">Blog</p>
-              <svg className="nav-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M7 17L17 7M17 7H7M17 7V17"/>
-              </svg>
-            </div>
-            <div className="menu-text second-menu-link">
-              <p className="menu-big-text">Blog</p>
-              <svg className="nav-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M7 17L17 7M17 7H7M17 7V17"/>
-              </svg>
-            </div>
-          </Link>
+          <div className="nav-group nav-clock-wrapper">
+            <Link href="/moodboard" className="menu-link page_link" onClick={closeMenu}>
+              <div className="menu-text first-menu-link">
+                <p className="menu-big-text">Moodboard</p>
+                <svg className="nav-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+              </div>
+              <div className="menu-text second-menu-link">
+                <p className="menu-big-text">Moodboard</p>
+                <svg className="nav-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+              </div>
+            </Link>
+            <Link href="/blog" className="menu-link page_link" onClick={closeMenu}>
+              <div className="menu-text first-menu-link">
+                <p className="menu-big-text">Blog</p>
+                <svg className="nav-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+              </div>
+              <div className="menu-text second-menu-link">
+                <p className="menu-big-text">Blog</p>
+                <svg className="nav-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+              </div>
+            </Link>
+          </div>
         </div>
 
         <button

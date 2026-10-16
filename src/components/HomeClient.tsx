@@ -302,6 +302,31 @@ export default function HomeClient() {
     window.addEventListener("wheel", onWheel, { passive: true });
     window.addEventListener("keydown", onKey);
 
+    // ── Touch swipe (mobile) ──
+    const sliderWrap = root.querySelector<HTMLElement>(".main-slider_wrap");
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchTracking = false;
+    const onTouchStart = (e: TouchEvent) => {
+      if (root.classList.contains("is-grid-open")) return;
+      const t = e.changedTouches[0];
+      touchStartX = t.clientX;
+      touchStartY = t.clientY;
+      touchTracking = true;
+    };
+    const onTouchEnd = (e: TouchEvent) => {
+      if (!touchTracking) return;
+      touchTracking = false;
+      const t = e.changedTouches[0];
+      const dx = t.clientX - touchStartX;
+      const dy = t.clientY - touchStartY;
+      if (Math.abs(dx) < 45 || Math.abs(dx) < Math.abs(dy)) return;
+      if (dx < 0) nextSlide();
+      else prevSlide();
+    };
+    sliderWrap?.addEventListener("touchstart", onTouchStart, { passive: true });
+    sliderWrap?.addEventListener("touchend", onTouchEnd);
+
     // ── Link hover (dual-text) ──
     setupMenuLinkHovers(root);
 
@@ -418,6 +443,8 @@ export default function HomeClient() {
       gridOverlay?.removeEventListener("wheel", onGridWheel);
       window.removeEventListener("wheel", onWheel);
       window.removeEventListener("keydown", onKey);
+      sliderWrap?.removeEventListener("touchstart", onTouchStart);
+      sliderWrap?.removeEventListener("touchend", onTouchEnd);
       nextBtn?.removeEventListener("click", nextSlide);
       prevBtn?.removeEventListener("click", prevSlide);
     };
