@@ -52,3 +52,4 @@ lighthouse-*.json
 .graphifyignore
 graphify-out/
 graphify-*.json
+.gitattributes
