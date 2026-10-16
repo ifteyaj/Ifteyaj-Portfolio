@@ -11,3 +11,14 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 # Graphify: local only
 
 Graphify is a local-machine tool only. Never add, commit, or push any graphify-related code, config, or generated files to this GitHub repository. The repo must contain only project files. Keep all graphify artifacts untracked/local.
+
+# Graphify: update on every commit
+
+Keep the local knowledge graph (`graphify-out/`) in sync with the repo. Treat a commit as
+incomplete until the graph reflects it:
+
+- A post-commit hook auto-rebuilds the graph from code changes after every `git commit`
+  (detached, no LLM). Check with `graphify hook status`; install with `graphify hook install`.
+- The hook ignores doc/image changes. After committing docs (e.g. `README.md`, `AGENTS.md`),
+  run `graphify . --update` once so those changes are extracted too.
+- Never commit graphify artifacts — install the hook locally, not in tracked files.
