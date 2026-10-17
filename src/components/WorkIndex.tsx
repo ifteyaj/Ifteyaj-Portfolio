@@ -127,7 +127,13 @@ export default function WorkIndex() {
             <Link key={project.slug} href={project.href} className="index-entry">
               <div className="index-entry-info">
                 <span className="index-entry-title">{project.title}</span>
-                <span className="index-entry-cat">{project.category}</span>
+                <span className="index-entry-cats">
+                  {[project.category, ...(project.categories ?? [])]
+                    .filter((cat, i, all) => cat && all.indexOf(cat) === i)
+                    .map((cat) => (
+                      <span key={cat} className="index-entry-cat">{cat}</span>
+                    ))}
+                </span>
               </div>
               <div className="index-entry-images">
                 {project.images?.slice(0, 2).map((img, i) => (

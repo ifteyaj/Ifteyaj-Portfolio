@@ -113,11 +113,11 @@ export default function AboutClient({ carouselImages = [] }: { carouselImages?: 
       </div>
 
       <div className="about-scroll-hint">
-        <div className="about-scroll-left">
+        <span className="about-hero-tagline">{about.heroTagline}</span>
+        <div className="about-scroll-right">
           <span className="about-scroll-arrow">[↓]</span>
           <span className="about-scroll-text">Scroll</span>
         </div>
-        <span className="about-hero-tagline">{about.heroTagline}</span>
       </div>
 
       <main className="about-main">

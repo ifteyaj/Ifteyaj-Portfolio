@@ -11,6 +11,8 @@ export interface Project {
   title: string;
   category: string;
   secondaryCategory?: string;
+  /** Multiple categories shown on the All Works page. Falls back to `category`. */
+  categories?: string[];
   year: string;
   image?: string;
   images?: string[];

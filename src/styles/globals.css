@@ -578,9 +578,10 @@ html.lenis body {
 }
 .nav-mobile-meta {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 0.5rem;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  gap: 0.15rem;
   font-size: 0.7rem;
   color: var(--grey);
 }
@@ -839,6 +840,9 @@ html.lenis body {
   display: block;
   position: absolute;
   inset: 0%;
+  /* Horizontal gestures are app-managed (JS swipe); let the browser keep
+     vertical handling so we never fight native scrolling. */
+  touch-action: pan-y;
 }
 .main-slider_list {
   position: absolute;
@@ -1194,6 +1198,7 @@ html.lenis body {
 .index-entry-info {
   display: flex;
   align-items: baseline;
+  justify-content: space-between;
   padding: 1.5rem 0 0.8rem;
   gap: 0;
 }
@@ -1204,11 +1209,18 @@ html.lenis body {
   letter-spacing: var(--small-discriptor-space);
   min-width: 12rem;
 }
+.index-entry-cats {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.4rem;
+  margin-left: auto;
+}
 .index-entry-cat {
   font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.72);
   letter-spacing: var(--small-descriptor-space);
-  margin-left: auto;
+  margin-left: 0;
   text-align: right;
   background-color: var(--darkgrey);
   padding: 0.18rem 0.45rem;
@@ -1464,12 +1476,13 @@ html.lenis body {
   display: flex;
   flex-direction: column;
   gap: 0;
-  min-width: 200px;
+  min-width: 320px;
 }
 .case-meta-row {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
+  gap: 0.75rem;
   padding: 0.3rem 0;
   font-size: var(--small-discriptor-text);
   letter-spacing: var(--small-discriptor-space);
@@ -1480,7 +1493,10 @@ html.lenis body {
 .case-meta-value {
   color: var(--white);
   font-weight: var(--main-weight);
+  text-align: right;
+  white-space: nowrap;
 }
+
 
 /* ── Hero image (first image, fixed-size container) ── */
 .case-hero-img {
@@ -1675,7 +1691,7 @@ html.lenis body {
 /* ── Selected Work section ── */
 .case-selected-work {
   margin-top: 60px;
-  padding-top: 60px;
+  padding-top: 24px;
   padding-bottom: var(--row-margin);
   border-top: 1px solid var(--border-white);
   display: flex;
@@ -1728,7 +1744,7 @@ html.lenis body {
 
 /* ── Footer block (SH logo + Back to top) ── */
 .case-footer-block {
-  margin-top: clamp(2rem, 5vw, 4rem);
+  margin-top: clamp(0.5rem, 1vw, 1rem);
   padding: 0.25rem 0 0;
   border-top: 1px solid var(--border-white);
 }
@@ -1834,10 +1850,16 @@ html.lenis body {
 
 /* ── Bottom nav (matches index) ── */
 .case-bottom-nav {
+  /* Full-width row: first group pinned to the left gutter, last to the right,
+     equal space between the rest. The gap is a safety minimum only. */
+  --footer-group-gap: 24px;
+  width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
-  padding: var(--x-small-section-break) 0 50px;
+  gap: var(--footer-group-gap);
+  padding: var(--x-small-section-break) 0 32px;
   border-top: 1px solid var(--border-white);
   font-size: var(--small-discriptor-text);
   letter-spacing: var(--small-discriptor-space);
@@ -1845,6 +1867,7 @@ html.lenis body {
 .case-bottom-col {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 0.15rem;
 }
 .case-bottom-brand {
@@ -1852,6 +1875,8 @@ html.lenis body {
 }
 .case-bottom-copy {
   color: var(--grey);
+  /* Match the stacks' line-height so all first lines share one baseline. */
+  line-height: var(--small-discriptor-line);
 }
 
 /* Full-width (edge-to-edge) divider lines on the case page */
@@ -2020,7 +2045,7 @@ html.lenis body {
   color: var(--grey);
   padding: 0.5rem var(--page-margin);
 }
-.about-scroll-left {
+.about-scroll-right {
   display: flex;
   gap: 0.5rem;
   align-items: baseline;
@@ -2459,10 +2484,10 @@ html.lenis body {
 .moodboard-detail-card {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-  gap: var(--mid-section-break);
+  gap: 2rem;
   align-items: start;
   border-bottom: 1px solid var(--border-white);
-  padding-bottom: var(--mid-section-break);
+  padding-bottom: 3rem;
 }
 .moodboard-detail-image-wrap {
   position: relative; /* Required for Next.js Image fill */
@@ -2493,13 +2518,13 @@ html.lenis body {
 /* Blog article content */
 .blog-content {
   max-width: 150rem;
-  margin-top: 3rem;
+  margin-top: 1.5rem;
 }
 .blog-divider {
   width: 100%;
   height: 1px;
   background: var(--border-white);
-  margin: 1rem 0 2rem;
+  margin: 1rem 0 1.5rem;
 }
 .blog-content-paragraph {
   font-size: var(--small-high-text);
@@ -2513,6 +2538,9 @@ html.lenis body {
   margin-bottom: 0;
 }
 @media (max-width: 767px) {
+  .blog-content {
+    margin-top: 1.5rem;
+  }
   .blog-content-paragraph {
     font-size: 1.05rem;
     line-height: 1.6;
@@ -2521,7 +2549,7 @@ html.lenis body {
 
 /* Related */
 .moodboard-related {
-  margin-top: 4rem;
+  margin-top: 2.5rem;
 }
 .moodboard-related-heading {
   font-family: var(--main-type);
@@ -2630,6 +2658,14 @@ html.lenis body {
   .about-client-list  { grid-template-columns: 1fr 1fr; }
 
   .index-entry-images { grid-template-columns: repeat(2, 1fr); }
+
+  /* ── Footer link row: same full-width spread, tighter minimum gap so it
+     still fits; wraps to a second row instead of overflowing ── */
+  .case-bottom-nav {
+    --footer-group-gap: 18px;
+    row-gap: 1.25rem;
+    align-content: flex-start;
+  }
 }
 
 /* ── MOBILE (≤ 767) ───────────────────────────────────────────────────────── */
@@ -2734,6 +2770,8 @@ html.lenis body {
     height: auto;
     margin: 0;
     position: relative;
+    /* Swipe drag translates the title on the compositor. */
+    will-change: transform;
   }
   /* Divider band (both lines + its round icon) lives in .slider-toggle-nav,
      which stays hidden on phones; line 1 and line 2 are .hero-controls' borders. */
@@ -2803,9 +2841,10 @@ html.lenis body {
   .index-entries       { grid-template-columns: 1fr; column-gap: 0; }
   .index-title-text,
   .index-title-count   { font-size: var(--mobile-bix-text); letter-spacing: var(--mobile-big-text-space); }
-  .index-entry-info    { flex-wrap: nowrap; gap: 0.5rem; align-items: baseline; }
+  .index-entry-info    { flex-wrap: nowrap; gap: 0.4rem; align-items: baseline; }
   .index-entry-title   { min-width: 0; flex: 1; }
-  .index-entry-cat      { flex: none; text-align: right; margin-left: auto; margin-right: 0; }
+  .index-entry-cats     { flex: none; max-width: none; }
+  .index-entry-cat      { flex: none; font-size: 0.68rem; padding: 0.15rem 0.4rem; text-align: right; margin-left: 0; margin-right: 0; }
   .index-entry-images  { grid-template-columns: repeat(2, 1fr); }
   .index-entry         { padding: 0.4rem 0; }
   .index-footer-logo   { width: 8rem; height: 8rem; }
@@ -2818,7 +2857,7 @@ html.lenis body {
   .case-title          { font-size: var(--mobile-bix-text); letter-spacing: var(--mobile-big-text-space); }
   .case-header         { gap: var(--row-margin); min-height: auto; flex-direction: column; align-items: flex-start; }
   .case-header-meta    { min-width: 0; width: 100%; margin-top: var(--row-margin); }
-  .case-meta-row       { font-size: 0.7rem; padding: 0.6rem 0; }
+  .case-meta-row       { font-size: 0.7rem; padding: 0.25rem 0; }
   .case-hero-img       { height: 50vw; min-height: 16rem; max-height: none; }
   .case-desc-section   { grid-template-columns: 1fr; gap: 2rem; }
   .case-desc-text      { font-size: var(--small-high-text); line-height: var(--small-high-text-line); }
@@ -2831,9 +2870,9 @@ html.lenis body {
   .case-block-media-strip   { padding-top: 56.25%; }
   .case-block-media-portrait { padding-top: 120%; }
   .case-selected-title { font-size: var(--mobile-bix-text); letter-spacing: var(--mobile-big-text-space); }
-  .case-selected-grid  { grid-template-columns: 1fr; gap: 1.5rem; }
+  .case-selected-grid  { grid-template-columns: repeat(2, 1fr); gap: 2px; }
   .case-footer-sh-text { font-size: 6rem; }
-  .case-footer-block   { padding: 0.25rem 0 0; margin-top: var(--mid-section-break); }
+  .case-footer-block   { padding: 0.25rem 0 0; margin-top: 16px; }
   .case-footer-inner   {
     display: flex;
     flex-direction: row;
@@ -2868,13 +2907,24 @@ html.lenis body {
     padding-bottom: 0;
     align-self: center;
   }
-  .case-bottom-nav     { flex-wrap: nowrap; gap: 0.5rem; padding: 1.25rem 0 20px; justify-content: space-between; align-items: flex-end; }
+  /* Phones show only ©2026 (left) and the social links (right), bottom-aligned.
+     Vertical padding only — the page-gutter inset comes from the
+     edge-to-edge rule, which this later block must not clobber. */
+  .case-bottom-nav     {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 0.5rem;
+    padding-top: 1.25rem;
+    padding-bottom: 20px;
+  }
   .case-bottom-col     { min-width: 0; }
-  .case-bottom-col-nav { display: none; }
+  .case-bottom-col-nav     { display: none; }
   .case-bottom-col-contact { display: none; }
-  .case-bottom-col-copy { order: 1; text-align: left; }
-  .case-bottom-col-social { order: 2; flex-direction: row; gap: 1rem; align-items: flex-end; text-align: right; }
-  .case-bottom-col-brand { display: none; }
+  .case-bottom-col-brand   { display: none; }
+  .case-bottom-col-copy { text-align: left; }
+  .case-bottom-col-social { flex-direction: row; gap: 1rem; align-items: flex-end; text-align: right; }
   .case-prev-next-nav  { padding: var(--mid-section-break) 0; margin-top: var(--mid-section-break); gap: 1.2rem; }
   .case-prev-next-btn  { width: 2.5rem; height: 2.5rem; }
   .case-prev-next-btn svg { width: 20px; height: 20px; }
@@ -2883,11 +2933,15 @@ html.lenis body {
 
   /* ── ABOUT PAGE ── */
   .about-main          { padding-top: 3rem; }
-  .about-hero          { height: 75dvh; }
-  .about-hero-name     { font-size: var(--mobile-bix-text); letter-spacing: var(--mobile-big-text-space); }
-  .about-hero-tagline  { font-size: var(--small-discriptor-text); }
-  .about-scroll-hint   { flex-direction: column; gap: 0.3rem; }
-  .about-intro-text    { font-size: var(--small-high-text); line-height: var(--small-high-text-line); }
+  /* Fixed cover area (same idea as desktop's fixed band): a stable
+     aspect-ratio box so the image never resizes with browser chrome. */
+  .about-hero          { height: auto; aspect-ratio: 4 / 5; }
+  .about-hero-name     { font-size: clamp(3rem, 15vw, 5rem); letter-spacing: var(--mobile-big-text-space); margin-bottom: 0.5rem; }
+  .about-hero-name-wrap { padding-bottom: 0.6rem; }
+  .about-hero-tagline  { font-size: var(--small-discriptor-text); text-align: left; }
+  /* Tagline on the left, "Scroll" text + arrow on the right, bottom-aligned. */
+  .about-scroll-hint   { flex-direction: row; align-items: flex-end; justify-content: space-between; gap: 1rem; }
+  .about-intro-text    { font-size: clamp(2rem, 6vw, 2.6rem); line-height: 1.3; }
   .about-bio           { grid-template-columns: 1fr; gap: 1.5rem; }
   .about-bio-body      { margin-left: 0; }
   .about-service       { grid-template-columns: auto 1fr; column-gap: var(--about-col-gap); row-gap: 0.25rem; align-items: baseline; }
@@ -2909,11 +2963,12 @@ html.lenis body {
   /* ── MOODBOARD ── */
   .moodboard-main,
   .moodboard-detail-main { padding-top: var(--content-page-top-margin); }
-  .moodboard-title       { font-size: var(--mobile-bix-text); letter-spacing: var(--mobile-big-text-space); }
+  .moodboard-title       { font-size: clamp(3rem, 15vw, 5rem); letter-spacing: var(--mobile-big-text-space); }
+  .moodboard-header      { padding-bottom: 1rem; margin-bottom: 1rem; }
   .moodboard-grid        { grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
   .moodboard-related-grid { grid-template-columns: repeat(2, 1fr); }
   .moodboard-pin-title   { font-size: 1.1rem; line-height: 1.3; }
-  .moodboard-detail-card { grid-template-columns: 1fr; gap: 2rem; }
+  .moodboard-detail-card { grid-template-columns: 1fr; gap: 2rem; padding-bottom: 2rem; }
   .moodboard-detail-info { position: static; top: auto; }
   .moodboard-detail-title { font-size: var(--mobile-bix-text); line-height: 1.1; }
 
@@ -2986,10 +3041,10 @@ html.lenis body {
   .case-selected-title { font-size: 2rem; }
   .index-illustrations-title { font-size: 2rem; }
   .index-illustrations-count  { font-size: var(--small-number); }
-  .about-hero-name     { font-size: 2rem; }
-  .moodboard-title     { font-size: 2rem; }
+  .about-hero-name     { font-size: clamp(3rem, 15vw, 4.5rem); }
+  .moodboard-title     { font-size: clamp(3rem, 15vw, 4.5rem); }
   .moodboard-detail-title { font-size: 2rem; }
-  .about-intro-text    { font-size: 1.1rem; line-height: 1.4; }
+  .about-intro-text    { font-size: clamp(1.8rem, 5vw, 2.2rem); line-height: 1.3; }
   .nav-mobile-link     { font-size: 1.2rem; }
   .home-grid-item      { width: clamp(200px, 85vw, 320px); }
 }

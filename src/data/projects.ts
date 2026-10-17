@@ -7,6 +7,7 @@ export const projects: Project[] = [
     title: "Riverborn",
     category: "Brand Identity",
     secondaryCategory: "Voice AI",
+    categories: ["Strategy", "Guidelines"],
     year: "2025",
     images: ["/images/riverborn/riverborn.webp", "/images/riverborn/riverborn_2.webp", "/images/riverborn/riberborn_3.webp", "/images/riverborn/riberborn_4.webp", "/images/riverborn/riberborn_5.webp", "/images/riverborn/riberborn_6.webp", "/images/riverborn/riberborn_7.webp", "/images/riverborn/riberborn_8.webp", "/images/riverborn/riberborn_9.webp", "/images/riverborn/riberborn_10.webp", "/images/riverborn/riberborn_11.webp", "/images/riverborn/riberborn_12.webp", "/images/riverborn/riberborn_13.webp", "/images/riverborn/riberborn_14.webp"],
     href: "/work/riverborn",

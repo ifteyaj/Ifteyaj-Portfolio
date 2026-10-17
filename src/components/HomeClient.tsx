@@ -302,30 +302,182 @@ export default function HomeClient() {
     window.addEventListener("wheel", onWheel, { passive: true });
     window.addEventListener("keydown", onKey);
 
-    // ── Touch swipe (mobile) ──
+    // ── Touch swipe (mobile) — finger-following, compositor-only transforms ──
     const sliderWrap = root.querySelector<HTMLElement>(".main-slider_wrap");
+    const slideParts = items.map((el) => ({
+      img: el.querySelector<HTMLElement>(".main-slider_img-wrap"),
+      title: el.querySelector<HTMLElement>(".main-slider_title"),
+    }));
+    const SWIPE_PROGRESS = 0.22; // fraction of viewport width to commit a swipe
+    const SWIPE_VELOCITY = 0.4; // px/ms flick threshold
+    let dragActive = false;
+    let dragLocked = false;
+    let dragStartX = 0;
+    let dragStartY = 0;
+    let dragLastX = 0;
+    let dragLastT = 0;
+    let dragVelocity = 0;
+    let dragWidth = 0;
+    let dragDir: 1 | -1 = 1;
+    let dragNeighbor = -1;
+    let suppressClick = false;
+    let suppressClickTimer: number | null = null;
     let touchStartX = 0;
     let touchStartY = 0;
-    let touchTracking = false;
+
+    const setSlideState = (index: number) => {
+      currentSlide = index;
+      items.forEach((it, i) => {
+        it.classList.toggle("active", i === index);
+        it.style.zIndex = "";
+      });
+      slideParts.forEach((p) => {
+        if (p.img) gsap.set(p.img, { clearProps: "transform" });
+        if (p.title) gsap.set(p.title, { clearProps: "transform" });
+      });
+      numberItems.forEach((n, i) => n.classList.toggle("active", i === index));
+      if (numbersList) gsap.to(numbersList, { y: -index * ITEM_H, duration: 0.5, ease: "Pagtrans" });
+      syncVideos();
+    };
+
     const onTouchStart = (e: TouchEvent) => {
-      if (root.classList.contains("is-grid-open")) return;
+      if (root.classList.contains("is-grid-open") || isAnimating || items.length < 2) return;
       const t = e.changedTouches[0];
       touchStartX = t.clientX;
       touchStartY = t.clientY;
-      touchTracking = true;
+      dragActive = true;
+      dragLocked = false;
+      dragStartX = dragLastX = t.clientX;
+      dragStartY = t.clientY;
+      dragLastT = performance.now();
+      dragVelocity = 0;
+      dragNeighbor = -1;
+      dragWidth = sliderWrap?.clientWidth || window.innerWidth;
     };
-    const onTouchEnd = (e: TouchEvent) => {
-      if (!touchTracking) return;
-      touchTracking = false;
+
+    const onTouchMove = (e: TouchEvent) => {
+      if (!dragActive) return;
+
+      // Reduced motion: no finger-follow, just measured on release.
+      if (prefersReducedMotion) return;
+
       const t = e.changedTouches[0];
-      const dx = t.clientX - touchStartX;
-      const dy = t.clientY - touchStartY;
-      if (Math.abs(dx) < 45 || Math.abs(dx) < Math.abs(dy)) return;
-      if (dx < 0) nextSlide();
-      else prevSlide();
+      const dx = t.clientX - dragStartX;
+      const dy = t.clientY - dragStartY;
+
+      if (!dragLocked) {
+        if (Math.abs(dx) < 8 && Math.abs(dy) < 8) return;
+        if (Math.abs(dx) <= Math.abs(dy)) { dragActive = false; return; }
+        dragLocked = true;
+        isAnimating = true;
+        dragDir = dx < 0 ? 1 : -1;
+        dragNeighbor = (currentSlide + dragDir + items.length) % items.length;
+        const activeItem = items[currentSlide];
+        const neighborItem = items[dragNeighbor];
+        neighborItem.style.zIndex = "5";
+        activeItem.style.zIndex = "4";
+        neighborItem.classList.add("active");
+        activeItem.classList.add("active");
+        const off = dragDir === 1 ? dragWidth : -dragWidth;
+        const np = slideParts[dragNeighbor];
+        if (np.img) gsap.set(np.img, { xPercent: 0, x: off });
+        if (np.title) gsap.set(np.title, { x: off });
+        const ap = slideParts[currentSlide];
+        if (ap.img) gsap.set(ap.img, { xPercent: 0, x: 0 });
+        if (ap.title) gsap.set(ap.title, { x: 0 });
+      }
+
+      if (e.cancelable) e.preventDefault();
+
+      const now = performance.now();
+      const dt = now - dragLastT || 16;
+      dragVelocity = (t.clientX - dragLastX) / dt;
+      dragLastX = t.clientX;
+      dragLastT = now;
+
+      const clamped = Math.max(-dragWidth, Math.min(dragWidth, dx));
+      const ap = slideParts[currentSlide];
+      if (ap.img) gsap.set(ap.img, { x: clamped });
+      if (ap.title) gsap.set(ap.title, { x: clamped });
+      if (dragNeighbor >= 0) {
+        const np = slideParts[dragNeighbor];
+        const base = dragDir === 1 ? dragWidth : -dragWidth;
+        if (np.img) gsap.set(np.img, { x: base + clamped });
+        if (np.title) gsap.set(np.title, { x: base + clamped });
+      }
     };
+
+    const onTouchEnd = (e: TouchEvent) => {
+      if (!dragActive && !dragLocked) return;
+      const wasLocked = dragLocked;
+      dragActive = false;
+      dragLocked = false;
+
+      // Tap / reduced motion / vertical scroll: fall back to a simple threshold.
+      if (!wasLocked || dragNeighbor < 0) {
+        const t = e.changedTouches[0];
+        const dx = t.clientX - touchStartX;
+        const dy = t.clientY - touchStartY;
+        if (prefersReducedMotion && Math.abs(dx) >= 45 && Math.abs(dx) >= Math.abs(dy)) {
+          if (dx < 0) nextSlide();
+          else prevSlide();
+        }
+        return;
+      }
+
+      suppressClick = true;
+      if (suppressClickTimer) window.clearTimeout(suppressClickTimer);
+      suppressClickTimer = window.setTimeout(() => { suppressClick = false; }, 400);
+
+      const t = e.changedTouches[0];
+      const dx = t.clientX - dragStartX;
+      const sign = dragDir === 1 ? -1 : 1;
+      const progress = Math.abs(dx) / (dragWidth || 1);
+      const flicked = Math.abs(dragVelocity) > SWIPE_VELOCITY && Math.sign(dragVelocity) === sign;
+      const complete = Math.sign(dx) === sign && (progress > SWIPE_PROGRESS || flicked);
+
+      const ap = slideParts[currentSlide];
+      const np = slideParts[dragNeighbor];
+      const base = dragDir === 1 ? dragWidth : -dragWidth;
+      const duration = complete ? 0.34 : 0.26;
+      const ease = complete ? "power3.out" : "power2.out";
+
+      const tl = gsap.timeline({
+        onComplete: () => {
+          if (complete) {
+            setSlideState(dragNeighbor);
+          } else {
+            items[currentSlide].classList.add("active");
+            items[dragNeighbor].classList.remove("active");
+            items[currentSlide].style.zIndex = "";
+            items[dragNeighbor].style.zIndex = "";
+            if (np.img) gsap.set(np.img, { clearProps: "transform" });
+            if (np.title) gsap.set(np.title, { clearProps: "transform" });
+            if (ap.img) gsap.set(ap.img, { clearProps: "transform" });
+            if (ap.title) gsap.set(ap.title, { clearProps: "transform" });
+          }
+          isAnimating = false;
+        },
+      });
+      if (ap.img) tl.to(ap.img, { x: complete ? -base : 0, duration, ease }, 0);
+      if (ap.title) tl.to(ap.title, { x: complete ? -base : 0, duration, ease }, 0);
+      if (np.img) tl.to(np.img, { x: complete ? 0 : base, duration, ease }, 0);
+      if (np.title) tl.to(np.title, { x: complete ? 0 : base, duration, ease }, 0);
+    };
+
+    // Block the synthesized click/tap navigation after a completed drag swipe.
+    const onClickCapture = (e: MouseEvent) => {
+      if (suppressClick) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+    };
+
     sliderWrap?.addEventListener("touchstart", onTouchStart, { passive: true });
+    sliderWrap?.addEventListener("touchmove", onTouchMove, { passive: false });
     sliderWrap?.addEventListener("touchend", onTouchEnd);
+    sliderWrap?.addEventListener("touchcancel", onTouchEnd);
+    sliderWrap?.addEventListener("click", onClickCapture, true);
 
     // ── Link hover (dual-text) ──
     setupMenuLinkHovers(root);
@@ -443,8 +595,12 @@ export default function HomeClient() {
       gridOverlay?.removeEventListener("wheel", onGridWheel);
       window.removeEventListener("wheel", onWheel);
       window.removeEventListener("keydown", onKey);
+      if (suppressClickTimer) window.clearTimeout(suppressClickTimer);
       sliderWrap?.removeEventListener("touchstart", onTouchStart);
+      sliderWrap?.removeEventListener("touchmove", onTouchMove);
       sliderWrap?.removeEventListener("touchend", onTouchEnd);
+      sliderWrap?.removeEventListener("touchcancel", onTouchEnd);
+      sliderWrap?.removeEventListener("click", onClickCapture, true);
       nextBtn?.removeEventListener("click", nextSlide);
       prevBtn?.removeEventListener("click", prevSlide);
     };

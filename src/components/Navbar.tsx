@@ -218,6 +218,14 @@ export default function Navbar(props: NavbarProps) {
         }}
       >
         <div className="nav-mobile-inner">
+          <div className="nav-mobile-section">
+            <Link href="/about" className="nav-mobile-link" onClick={closeMenu}>
+              About Me
+              <svg className="nav-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+              </svg>
+            </Link>
+          </div>
           <div className="nav-mobile-section nav-mobile-section-work">
             {navLinks.map((link) => (
               <Link key={link.label} href={link.href} className="nav-mobile-link" onClick={closeMenu}>
@@ -239,14 +247,6 @@ export default function Navbar(props: NavbarProps) {
           <div className="nav-mobile-section">
             <Link href="/moodboard" className="nav-mobile-link" onClick={closeMenu}>
               Moodboard
-              <svg className="nav-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M7 17L17 7M17 7H7M17 7V17"/>
-              </svg>
-            </Link>
-          </div>
-          <div className="nav-mobile-section">
-            <Link href="/about" className="nav-mobile-link" onClick={closeMenu}>
-              About Me
               <svg className="nav-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M7 17L17 7M17 7H7M17 7V17"/>
               </svg>

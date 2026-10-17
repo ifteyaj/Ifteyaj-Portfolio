@@ -22,6 +22,9 @@ export default function WorkDetail({ project }: WorkDetailProps) {
   // Fallback guarantees a non-empty array so `images[i % images.length]`
   // and `images[0]` are always defined (data always provides 14).
   const images = project.images?.length ? project.images : ["/images/about-hero.webp"];
+  const extraCategories = (project.categories ?? []).filter(
+    (cat) => cat && cat !== project.category
+  );
 
   useEffect(() => {
     const root = rootRef.current;
@@ -92,7 +95,9 @@ export default function WorkDetail({ project }: WorkDetailProps) {
             {project.category && (
               <div className="case-meta-row">
                 <span className="case-meta-label">Category:</span>
-                <span className="case-meta-value">{project.category}</span>
+                <span className="case-meta-value">
+                  {[project.category, ...extraCategories].join(", ")}
+                </span>
               </div>
             )}
             {project.secondaryCategory && (

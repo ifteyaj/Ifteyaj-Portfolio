@@ -34,20 +34,17 @@ export default function SiteFooter() {
       </footer>
 
       <div className="case-bottom-nav">
-        <div className="case-bottom-col case-bottom-col-nav">
-          <Link href="/" className="menu-link">
-            <div className="menu-text first-menu-link"><p className="menu-big-text">Featured</p></div>
-            <div className="menu-text second-menu-link"><p className="menu-big-text">Featured</p></div>
-          </Link>
-          <Link href="/work" className="menu-link">
-            <div className="menu-text first-menu-link"><p className="menu-big-text">All Works</p></div>
-            <div className="menu-text second-menu-link"><p className="menu-big-text">All Works</p></div>
-          </Link>
+        <div className="case-bottom-col case-bottom-col-copy">
+          <span className="case-bottom-copy">{siteConfig.copyright}</span>
         </div>
         <div className="case-bottom-col case-bottom-col-nav">
           <Link href="/about" className="menu-link">
             <div className="menu-text first-menu-link"><p className="menu-big-text">About</p></div>
             <div className="menu-text second-menu-link"><p className="menu-big-text">About</p></div>
+          </Link>
+          <Link href="/work" className="menu-link">
+            <div className="menu-text first-menu-link"><p className="menu-big-text">All Works</p></div>
+            <div className="menu-text second-menu-link"><p className="menu-big-text">All Works</p></div>
           </Link>
         </div>
         <div className="case-bottom-col case-bottom-col-social">
@@ -59,21 +56,18 @@ export default function SiteFooter() {
           ))}
         </div>
         <div className="case-bottom-col case-bottom-col-contact">
-          <a href={`mailto:${siteConfig.email}`} className="menu-link">
-            <div className="menu-text first-menu-link"><p className="menu-big-text">{siteConfig.email}</p></div>
-            <div className="menu-text second-menu-link"><p className="menu-big-text">{siteConfig.email}</p></div>
-          </a>
           <a href={`tel:${siteConfig.phone}`} className="menu-link">
             <div className="menu-text first-menu-link"><p className="menu-big-text">{siteConfig.phone}</p></div>
             <div className="menu-text second-menu-link"><p className="menu-big-text">{siteConfig.phone}</p></div>
           </a>
+          <a href={`mailto:${siteConfig.email}`} className="menu-link">
+            <div className="menu-text first-menu-link"><p className="menu-big-text">{siteConfig.email}</p></div>
+            <div className="menu-text second-menu-link"><p className="menu-big-text">{siteConfig.email}</p></div>
+          </a>
         </div>
         <div className="case-bottom-col case-bottom-col-brand">
-          <span className="case-bottom-brand menu-big-text">Vibe Coder</span>
+          <span className="case-bottom-brand menu-big-text">Web Designer</span>
           <span className="case-bottom-brand menu-big-text">Brand Designer</span>
-        </div>
-        <div className="case-bottom-col case-bottom-col-copy">
-          <span className="case-bottom-copy">{siteConfig.copyright}</span>
         </div>
       </div>
     </>
