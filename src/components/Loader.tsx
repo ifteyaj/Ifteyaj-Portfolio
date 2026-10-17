@@ -20,10 +20,10 @@ export default function Loader() {
           </div>
         </div>
 
-        {/* Middle left: Vibe Coder */}
+        {/* Middle left: Web Designer */}
         <div className="loader-corner loader-corner--middle-left">
           <div className="loader-header-one">
-            <h3 className="loader-header">Vibe Coder</h3>
+            <h3 className="loader-header">Web Designer</h3>
           </div>
         </div>
 

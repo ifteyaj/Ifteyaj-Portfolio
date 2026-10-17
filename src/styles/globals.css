@@ -2334,26 +2334,28 @@ html.lenis body {
 .about-tools-list {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: var(--about-body-gap);
+  grid-template-columns: repeat(4, 1fr);
+  border-right: 1px solid var(--border-white);
+  border-bottom: 1px solid var(--border-white);
 }
 .about-tool {
   display: flex;
   align-items: center;
-  gap: 0.7rem;
-  padding: 0.9rem 0;
-  border-bottom: 1px solid var(--border-white);
+  gap: 1.1rem;
+  padding: 1.6rem 1.25rem;
+  border-top: 1px solid var(--border-white);
+  border-left: 1px solid var(--border-white);
   color: var(--white);
 }
 .about-tool-icon {
-  width: 1.8rem;
-  height: 1.8rem;
+  width: 3.4rem;
+  height: 3.4rem;
   flex-shrink: 0;
   object-fit: contain;
 }
 .about-tool-name {
   font-family: var(--main-type);
-  font-size: var(--body-copy);
+  font-size: 1.75rem;
   line-height: 1.2;
   font-weight: var(--main-weight);
   letter-spacing: 0.02em;
@@ -2419,6 +2421,11 @@ html.lenis body {
   }
   .about-carousel-wrapper {
     height: 340px;
+  }
+}
+@media (min-width: 1025px) {
+  .about-carousel {
+    margin-top: 1.5rem;
   }
 }
 
@@ -3143,8 +3150,10 @@ html.lenis body {
   .about-experience-company { line-height: 1.15; }
   .about-experience-period,
   .about-experience-location { text-align: left; }
-  .about-tools-list    { grid-template-columns: 1fr; }
-  .about-tool          { padding: 0.7rem 0; }
+  .about-tools-list    { grid-template-columns: repeat(2, 1fr); border-right: none; border-bottom: none; }
+  .about-tool          { padding: 1.05rem 0; gap: 0.8rem; border-top: none; border-left: none; }
+  .about-tool-icon     { width: 2.3rem; height: 2.3rem; }
+  .about-tool-name     { font-size: 1.25rem; }
   .about-process           { --process-label-gap: 0.25rem; --process-body-gap: 0.95rem; --process-item-gap: 2.75rem; }
   .about-process-row   { grid-template-columns: 1fr; row-gap: 0; }
   .about-process-card + .about-process-card { margin-top: calc(var(--process-item-gap) / 2); padding-top: calc(var(--process-item-gap) / 2); border-top: 1px solid var(--border-white); }
