@@ -275,28 +275,27 @@ export const projects: Project[] = [
     year: "2025",
     images: ["/images/settle-desk.webp", "/images/settle-desk.webp", "/images/settle-desk.webp", "/images/settle-desk.webp"],
     href: "/work/settle-desk",
-    short:
-      "A calm, considered identity for a modern desk brand, built around focus, craft and the ritual of sitting down to work.",
+    short: "Coming Soon",
     client: "Settle Desk",
     agency: "Baseborn",
     industry: "Furniture",
     intro: [
       {
-        body: "Settle Desk is a modern desk brand built around one idea: a workspace you actually want to come back to. We designed an identity that feels grounded, tactile and quietly confident, the visual equivalent of sitting down and settling in.",
+        body: "Coming Soon",
       },
     ],
     sections: [
       {
         heading: "Background",
-        body: "Settle Desk designs desks for people who spend real hours at them. The category is crowded with loud, tech-forward furniture brands, so we went the other way, with a voice built on restraint, warmth and honest materials.",
+        body: "Coming Soon",
       },
       {
         heading: "Concept",
-        body: "The identity uses clean typography and a warm, natural palette borrowed from the materials themselves: oak, steel and soft shadow. The layouts stay generous and calm, mirroring the space a good desk gives its owner.",
+        body: "Coming Soon",
       },
       {
         heading: "Conclusion",
-        body: "The result is a brand that feels like the furniture it represents: sturdy, unpretentious and made to last. Settle Desk speaks softly because it has nothing to prove, just a clear sense of place for everyday focus.",
+        body: "Coming Soon",
       },
     ],
   },
