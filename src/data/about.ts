@@ -16,20 +16,28 @@ export const about = {
   servicesHeading: "Services",
   services: [
     {
-      heading: "Brand Identity",
-      body: "Crafting unique visual systems that tell your story, from logos and color palettes to typography and brand guidelines that connect with your audience.",
+      heading: "Brand Identity Design",
+      body: "Creating distinctive brand identities, including logos, colour palettes, typography, and visual systems that make brands memorable.",
     },
     {
-      heading: "Digital Design",
-      body: "Designing intuitive, visually compelling websites and digital experiences that perform beautifully across every screen and device.",
+      heading: "Brand Strategy & Guidelines",
+      body: "Building clear brand guidelines that maintain consistency across every platform and customer touchpoint.",
     },
     {
-      heading: "Visual Strategy",
-      body: "Building cohesive visual frameworks that align with your business goals and create lasting impact in the digital landscape.",
+      heading: "Social Media Design",
+      body: "Designing engaging social media posts, campaigns, and creative assets that communicate your message effectively.",
     },
     {
-      heading: "Web Design",
-      body: "Developing responsive, high-performance websites with clean code and modern technologies that bring designs to life and deliver seamless user experiences.",
+      heading: "Brand Collateral Design",
+      body: "Designing business cards, packaging, stationery, marketing materials, and other branded assets.",
+    },
+    {
+      heading: "UI/UX Design",
+      body: "Designing clean, intuitive, and user-friendly digital experiences for websites and web applications.",
+    },
+    {
+      heading: "Website Design & Development",
+      body: "Building modern, responsive websites that combine thoughtful design with practical functionality.",
     },
   ],
   processHeading: "Process",

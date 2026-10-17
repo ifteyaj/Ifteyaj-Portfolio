@@ -131,7 +131,7 @@ export default function WorkDetail({ project }: WorkDetailProps) {
         </div>
 
         <div className="case-desc-section">
-          <div className="case-desc-label">Description</div>
+          <div className="case-desc-label">Overview</div>
           <div className="case-desc-body">
             <p className="case-desc-text">{project.short}</p>
           </div>
@@ -152,7 +152,7 @@ export default function WorkDetail({ project }: WorkDetailProps) {
           </div>
 
           <div className="case-desc-section">
-            <div className="case-desc-label">Description</div>
+            <div className="case-desc-label">The Challenge</div>
             <div className="case-desc-body">
               <p className="case-desc-text">{project.intro?.[0]?.body ?? project.short}</p>
             </div>
@@ -172,7 +172,7 @@ export default function WorkDetail({ project }: WorkDetailProps) {
           </div>
 
           <div className="case-desc-section">
-            <div className="case-desc-label">Description</div>
+            <div className="case-desc-label">The Solution</div>
             <div className="case-desc-body">
               <p className="case-desc-text">{project.sections?.[0]?.body ?? project.short}</p>
             </div>
@@ -196,7 +196,7 @@ export default function WorkDetail({ project }: WorkDetailProps) {
           </div>
 
           <div className="case-desc-section">
-            <div className="case-desc-label">Description</div>
+            <div className="case-desc-label">The Result</div>
             <div className="case-desc-body">
               <p className="case-desc-text">{project.sections?.[1]?.body ?? project.short}</p>
             </div>

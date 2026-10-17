@@ -1433,6 +1433,7 @@ html.lenis body {
   color: var(--white);
   font-family: var(--main-type);
   min-height: 100dvh;
+  --case-desc-pad: calc(0.22 * var(--big-text));
 }
 .case-main {
   padding: var(--content-page-top-margin) var(--page-margin) 0;
@@ -1446,6 +1447,7 @@ html.lenis body {
   gap: 2rem;
   position: relative;
   min-height: 24vh;
+  padding-bottom: var(--case-desc-pad);
 }
 .case-header-left {
   flex: 1;
@@ -1459,6 +1461,9 @@ html.lenis body {
   align-items: baseline;
   gap: 1rem;
   flex-wrap: wrap;
+  font-size: var(--big-text);
+  padding-bottom: var(--case-desc-pad);
+  margin-bottom: calc(-1 * var(--case-desc-pad));
 }
 .case-title {
   font-family: var(--main-type);
@@ -1489,12 +1494,14 @@ html.lenis body {
 }
 .case-meta-label {
   color: var(--grey);
+  flex-shrink: 0;
 }
 .case-meta-value {
   color: var(--white);
   font-weight: var(--main-weight);
   text-align: right;
-  white-space: nowrap;
+  white-space: normal;
+  min-width: 0;
 }
 
 
@@ -1537,7 +1544,7 @@ html.lenis body {
   max-width: 800px;
   margin-left: auto;
   width: 100%;
-  margin-bottom: var(--mid-section-break);
+  margin-bottom: 2rem;
 }
 .case-desc-text {
   font-family: var(--main-type);
@@ -2124,6 +2131,16 @@ html.lenis body {
 .about-process {
   margin-top: 1.5rem;
 }
+/* Equal-height service rows: the title keeps its natural height (auto row),
+   every service row is `1fr`, so they all match the tallest one. */
+.about-services {
+  display: grid;
+  grid-template-rows: auto;
+  grid-auto-rows: 1fr;
+}
+.about-services-title {
+  grid-row: 1;
+}
 .about-process {
   --process-label-gap: 1rem;
   --process-body-gap: 1rem;
@@ -2139,7 +2156,7 @@ html.lenis body {
   margin-bottom: 2rem;
 }
 .about-service {
-  padding: 3rem 0;
+  padding: 1.5rem 0;
   border-bottom: 1px solid var(--border-white);
   align-items: baseline;
 }
@@ -2176,6 +2193,11 @@ html.lenis body {
    edge (name column == bio column), then runs beneath it to the page edge,
    capped at 600px so the copy wraps onto fewer lines. */
 @media (min-width: 1025px) {
+  .about-service-heading {
+    font-size: var(--small-high-text);
+    line-height: var(--small-high-text-line);
+    white-space: normal;
+  }
   .about-service-grid {
     grid-template-columns:
       calc((min(var(--about-body-max), 100%) - var(--about-body-gap)) / 2)
@@ -2846,15 +2868,20 @@ html.lenis body {
   .index-entry-cats     { flex: none; max-width: none; }
   .index-entry-cat      { flex: none; font-size: 0.68rem; padding: 0.15rem 0.4rem; text-align: right; margin-left: 0; margin-right: 0; }
   .index-entry-images  { grid-template-columns: repeat(2, 1fr); }
-  .index-entry         { padding: 0.4rem 0; }
+  .index-entry {
+    padding: 0.4rem 0;
+    border-bottom: none;
+  }
   .index-footer-logo   { width: 8rem; height: 8rem; }
   .index-bottom-nav    { flex-wrap: wrap; gap: 1.5rem; }
   .index-bottom-col    { min-width: 0; }
   .index-illustrations-title { font-size: var(--mobile-bix-text); letter-spacing: var(--mobile-big-text-space); }
 
   /* ── CASE / WORK DETAIL ── */
+  .case-page           { --case-desc-pad: calc(0.22 * var(--mobile-bix-text)); }
   .case-main           { padding-top: var(--content-page-top-margin); }
-  .case-title          { font-size: var(--mobile-bix-text); letter-spacing: var(--mobile-big-text-space); }
+  .case-title          { font-size: 3rem; letter-spacing: var(--mobile-big-text-space); }
+  .case-title-wrap     { gap: 0.4rem; }
   .case-header         { gap: var(--row-margin); min-height: auto; flex-direction: column; align-items: flex-start; }
   .case-header-meta    { min-width: 0; width: 100%; margin-top: var(--row-margin); }
   .case-meta-row       { font-size: 0.7rem; padding: 0.25rem 0; }
@@ -2944,7 +2971,7 @@ html.lenis body {
   .about-intro-text    { font-size: clamp(2rem, 6vw, 2.6rem); line-height: 1.3; }
   .about-bio           { grid-template-columns: 1fr; gap: 1.5rem; }
   .about-bio-body      { margin-left: 0; }
-  .about-service       { grid-template-columns: auto 1fr; column-gap: var(--about-col-gap); row-gap: 0.25rem; align-items: baseline; }
+  .about-service       { padding: 1.1rem 0; grid-template-columns: auto 1fr; column-gap: var(--about-col-gap); row-gap: 0.25rem; align-items: baseline; }
   .about-service-grid  { display: contents; }
   .about-service-num   { grid-column: 1; grid-row: 1; }
   .about-service-heading { grid-column: 2; grid-row: 1; white-space: normal; }
@@ -3037,7 +3064,7 @@ html.lenis body {
 @media (max-width: 400px) {
   .index-title-text,
   .index-title-count   { font-size: 2rem; }
-  .case-title          { font-size: 2rem; }
+  .case-title          { font-size: 2.6rem; }
   .case-selected-title { font-size: 2rem; }
   .index-illustrations-title { font-size: 2rem; }
   .index-illustrations-count  { font-size: var(--small-number); }
@@ -3082,4 +3109,44 @@ html.lenis body {
 @media (max-width: 767px) and (orientation: landscape) {
   .about-hero          { height: 60dvh; }
   .nav-mobile-inner    { padding: 1rem var(--page-margin) 2rem; }
+}
+
+/* ══ DESKTOP SHARED GRID: nav stacks ↔ case metadata ═════════════════════════
+   The nav stacks and the case metadata block are placed on one shared column
+   template so the Phone / Email stack and the metadata block start on the same
+   vertical line. Fixed tracks keep the line stable regardless of nav content. */
+@media (min-width: 1025px) {
+  :root {
+    --layout-col-about:   5.75rem;
+    --layout-col-blog:    6.5rem;
+    --layout-col-contact: 8.6rem;
+    --layout-col-brand:   6.5rem;
+    --layout-gap:         clamp(64px, 9vw, 144px);
+    --layout-cols:
+      var(--layout-col-about) var(--layout-col-blog)
+      var(--layout-col-contact) var(--layout-col-brand);
+  }
+
+  .nav-bar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) var(--layout-cols);
+    column-gap: var(--layout-gap);
+    align-items: start;
+    justify-content: normal;
+  }
+  .nav-logo-wrapper    { grid-column: 1; }
+  .nav-groups          { display: contents; }
+  .about-nav-wrapper   { grid-column: 2; }
+  .nav-clock-wrapper   { grid-column: 3; }
+  .contact-nav-wrapper { grid-column: 4; }
+  .brand-designer-text { grid-column: 5; }
+
+  .case-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) var(--layout-cols);
+    column-gap: var(--layout-gap);
+    align-items: end;
+  }
+  .case-header-left { grid-column: 1 / 4; }
+  .case-header-meta { grid-column: 4 / 6; min-width: 0; width: auto; }
 }
