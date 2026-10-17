@@ -18,7 +18,9 @@ export default function SiteFooter() {
             />
           </Link>
           <a href={`mailto:${siteConfig.email}`} className="case-footer-cta-link">
-            Let&rsquo;s build something great together
+            Let&rsquo;s build something{" "}
+            <br className="case-footer-cta-break" />
+            great together
           </a>
           <a
             href="#"

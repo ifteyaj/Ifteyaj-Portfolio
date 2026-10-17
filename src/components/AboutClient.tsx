@@ -165,6 +165,42 @@ export default function AboutClient({ carouselImages = [] }: { carouselImages?: 
           </section>
         )}
 
+        <section className="about-experience">
+          <h2 className="about-experience-title">{about.experienceHeading}</h2>
+          {about.experience.map((item, i) => (
+            <div key={i} className="about-experience-item">
+              <span className="about-experience-num">({String(i + 1).padStart(2, "0")})</span>
+              <div className="about-experience-content">
+                <h3 className="about-experience-company">{item.company}</h3>
+                <p className="about-experience-role">{item.role}</p>
+                <span className="about-experience-period">{item.period}</span>
+                {item.location && (
+                  <span className="about-experience-location">{item.location}</span>
+                )}
+              </div>
+            </div>
+          ))}
+        </section>
+
+        <section className="about-tools">
+          <h2 className="about-tools-title">{about.toolsHeading}</h2>
+          <ul className="about-tools-list">
+            {about.tools.map((tool, i) => (
+              <li key={i} className="about-tool">
+                <Image
+                  className="about-tool-icon"
+                  src={tool.icon}
+                  alt=""
+                  width={40}
+                  height={40}
+                  aria-hidden
+                />
+                <span className="about-tool-name">{tool.name}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
         <SiteFooter />
       </main>
     </div>

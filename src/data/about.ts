@@ -40,6 +40,48 @@ export const about = {
       body: "Building modern, responsive websites that combine thoughtful design with practical functionality.",
     },
   ],
+  experienceHeading: "Experience",
+  experience: [
+    {
+      company: "Yellow Raptor",
+      role: "Communication Designer",
+      period: "2023 — Present",
+      location: "Dhaka, Bangladesh",
+    },
+    {
+      company: "Freelance",
+      role: "Brand & Web Designer",
+      period: "2025 — Present",
+      location: "Dhaka, Bangladesh",
+    },
+    {
+      company: "ithink.io",
+      role: "Brand Designer & QA",
+      period: "2025 — 2025",
+      location: "Dhaka, Bangladesh",
+    },
+    {
+      company: "Foshol Ghor",
+      role: "Brand & Social Visual & Print Designer",
+      period: "2025 — 2026",
+      location: "Dhaka, Bangladesh",
+    },
+  ],
+  toolsHeading: "Tools",
+  tools: [
+    { name: "Figma", icon: "/tools/figma.svg" },
+    { name: "Adobe Illustrator", icon: "/tools/illustrator.svg" },
+    { name: "Adobe Photoshop", icon: "/tools/photoshop.svg" },
+    { name: "Adobe InDesign", icon: "/tools/indesign.svg" },
+    { name: "Adobe After Effects", icon: "/tools/after-effects.svg" },
+    { name: "Premiere Pro", icon: "/tools/premiere-pro.svg" },
+    { name: "Framer", icon: "/tools/framer.svg" },
+    { name: "Webflow", icon: "/tools/webflow.svg" },
+    { name: "Next.js", icon: "/tools/nextjs.svg" },
+    { name: "React", icon: "/tools/react.svg" },
+    { name: "GSAP", icon: "/tools/gsap.svg" },
+    { name: "HTML & CSS", icon: "/tools/html-css.svg" },
+  ],
   processHeading: "Process",
   process: [
     {
