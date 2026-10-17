@@ -331,9 +331,12 @@ export default function HomeClient() {
         it.classList.toggle("active", i === index);
         it.style.zIndex = "";
       });
-      slideParts.forEach((p) => {
+      slideParts.forEach((p, i) => {
         if (p.img) gsap.set(p.img, { clearProps: "transform" });
-        if (p.title) gsap.set(p.title, { clearProps: "transform" });
+        if (p.title) {
+          gsap.set(p.title, { clearProps: "transform" });
+          gsap.set(p.title, { bottom: i === index ? "0%" : "-100%" });
+        }
       });
       numberItems.forEach((n, i) => n.classList.toggle("active", i === index));
       if (numbersList) gsap.to(numbersList, { y: -index * ITEM_H, duration: 0.5, ease: "Pagtrans" });
@@ -381,10 +384,10 @@ export default function HomeClient() {
         const off = dragDir === 1 ? dragWidth : -dragWidth;
         const np = slideParts[dragNeighbor];
         if (np.img) gsap.set(np.img, { xPercent: 0, x: off });
-        if (np.title) gsap.set(np.title, { x: off });
+        if (np.title) gsap.set(np.title, { x: off, bottom: "0%" });
         const ap = slideParts[currentSlide];
         if (ap.img) gsap.set(ap.img, { xPercent: 0, x: 0 });
-        if (ap.title) gsap.set(ap.title, { x: 0 });
+        if (ap.title) gsap.set(ap.title, { x: 0, bottom: "0%" });
       }
 
       if (e.cancelable) e.preventDefault();
