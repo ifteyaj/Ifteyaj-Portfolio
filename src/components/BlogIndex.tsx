@@ -83,7 +83,12 @@ export default function BlogIndex() {
 
       <main className="moodboard-main">
         <header className="moodboard-header">
-          <h1 className="moodboard-title">Blog</h1>
+          <h1 className="moodboard-title">
+            Blog{" "}
+            <span className="moodboard-title-count">
+              ({String(blogPosts.length).padStart(2, "0")})
+            </span>
+          </h1>
           <div className="moodboard-header-line" />
         </header>
 

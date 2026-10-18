@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import Lenis from "lenis";
 import { gsap, registerEases } from "@/lib/gsap";
 import { setupMenuLinkHovers } from "@/lib/menuHover";
@@ -54,9 +55,38 @@ const PORTRAIT_IMAGES = PORTRAIT_DIMS.map((dims, i) => ({
   ...dims,
 }));
 
+const CardDeck = dynamic(() => import("@/lib/framer/CardDeck"), { ssr: false });
+
+// Design footprint of the deck (7 cards, spacing 110, card 240 wide):
+//   width  = (7 - 1) * 110 + 240 = 900
+//   height = card height (340) + outer arc (3² * 12 = 108) + breathing room
+const DECK_DESIGN_WIDTH = 900;
+const DECK_DESIGN_HEIGHT = 620;
+
 export default function WorkIndex() {
   const rootRef = useRef<HTMLDivElement>(null);
+  const deckRef = useRef<HTMLDivElement>(null);
   const [revealed, setRevealed] = useState(false);
+  const [deckScale, setDeckScale] = useState(1);
+
+  useEffect(() => {
+    const el = deckRef.current;
+    if (!el) return;
+    const measure = () => {
+      const w = el.clientWidth;
+      if (!w) return;
+      const next = Math.min(1, w / DECK_DESIGN_WIDTH);
+      setDeckScale((prev) => (Math.abs(next - prev) < 0.001 ? prev : next));
+    };
+    measure();
+    if (typeof window !== "undefined" && typeof window.ResizeObserver !== "undefined") {
+      const ro = new window.ResizeObserver(measure);
+      ro.observe(el);
+      return () => ro.disconnect();
+    }
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
+  }, []);
 
   useEffect(() => {
     const root = rootRef.current;
@@ -171,23 +201,28 @@ export default function WorkIndex() {
               Portrait / Vexel Art
               <span className="index-illustrations-count">({String(PORTRAIT_IMAGES.length).padStart(2, "0")})</span>
             </h2>
-          <div className="index-portraits-grid">
-            {PORTRAIT_IMAGES.map((img) => (
-              <div key={img.src} className="index-portraits-item">
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  width={img.width}
-                  height={img.height}
-                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                  unoptimized
-                  loading="lazy"
-                  decoding="async"
-                  className="index-portraits-img"
-                  style={{ width: "100%", height: "auto" }}
-                />
-              </div>
-            ))}
+          <div
+            ref={deckRef}
+            className="index-portraits-deck"
+            style={{ height: `${DECK_DESIGN_HEIGHT * deckScale}px` }}
+          >
+            <div
+              className="index-portraits-deck-inner"
+              style={{ transform: `scale(${deckScale})` }}
+            >
+              <CardDeck
+                images={PORTRAIT_IMAGES.map(({ src, alt }) => ({ src, alt }))}
+                fanSettings={{ spacing: 110, rotationIntensity: 12, arcIntensity: 12, scaleDecay: 0.06 }}
+                hoverBoost={1.15}
+                hoverLift={60}
+                pushForce={130}
+                cardWidth={240}
+                cardHeight={340}
+                borderRadius={20}
+                shadow={0.25}
+                transitionStyle="smooth"
+              />
+            </div>
           </div>
         </section>
 
