@@ -850,14 +850,14 @@ html.lenis body {
 }
 .main-slider_item {
   width: 100%;
-  display: none;
+  visibility: hidden;
   position: absolute;
   inset: 0%;
   overflow: hidden;
   pointer-events: none;
 }
 .main-slider_item.active {
-  display: block;
+  visibility: visible;
   pointer-events: initial;
 }
 .main-slider-link {
@@ -3002,6 +3002,19 @@ html.lenis body {
   .btn-prevslide .first-menu-link,
   .btn-nextslide .first-menu-link { transform: translateY(0) !important; }
   .slider-nav-text .menu-big-text { font-size: clamp(0.8rem, 3.4vw, 1rem); }
+
+  /* PHONE SLIDER NAV: centre Prev/Next labels between the hero-controls lines.
+     The touch block gives .menu-link a 44px min-height; centre the text in that
+     inflated box instead of letting it crowd line 1. */
+  @media (max-width: 767px) and (hover: none) and (pointer: coarse) {
+    .btn-prevslide .menu-link,
+    .btn-nextslide .menu-link {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 
   /* Slide counter — sits in the left column, baseline-aligned with the title
      (padding-bottom mirrors the title zone's bottom padding). */
