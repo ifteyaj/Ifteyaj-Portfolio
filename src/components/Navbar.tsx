@@ -192,17 +192,16 @@ export default function Navbar(props: NavbarProps) {
         </div>
 
         <button
-  ref={menuButtonRef}
-  className={`nav-hamburger ${menuOpen ? "is-open" : ""}`}
-  type="button"
-  aria-label={menuOpen ? "Close menu" : "Open menu"}
-  aria-expanded={menuOpen}
-  aria-controls="mobile-navigation"
-  onClick={toggleMenu}
-  style={{ background: "rgba(255,255,255,0.08)", borderRadius: "4px", padding: "0.5rem 1rem", color: "var(--white)" }}
->
-  {menuOpen ? "Close" : "Menu"}
-</button>
+          ref={menuButtonRef}
+          className={`nav-menu-toggle ${menuOpen ? "is-open" : ""}`}
+          type="button"
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={menuOpen}
+          aria-controls="mobile-navigation"
+          onClick={toggleMenu}
+        >
+          {menuOpen ? "Close" : "Menu"}
+        </button>
       </div>
 
       <div

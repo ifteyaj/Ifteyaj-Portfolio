@@ -461,34 +461,27 @@ html.lenis body {
   letter-spacing: var(--small-descriptor-space);
 }
 
-/* ── HAMBURGER BUTTON (shown at tablet/mobile widths) ── */
-.nav-hamburger {
+/* ── MENU TOGGLE (shown on phones) ──
+   Deliberately identical to .index-entry-cat (the project category chip on
+   the All Works page): same fill, text colour, padding, size and spacing.
+   One button is reused for both the "Menu" and "Close" states. */
+.nav-menu-toggle {
   display: none;
   margin-left: auto;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 5px;
-  width: 44px;
-  height: 44px;
-  background: none;
+  justify-content: center;
+  background-color: var(--darkgrey);
+  color: rgba(255, 255, 255, 0.72);
   border: none;
+  border-radius: 0;
+  padding: 0.4rem 0.75rem;
+  font-family: inherit;
+  font-size: 0.85rem;
+  line-height: 1.2;
+  letter-spacing: normal;
+  white-space: nowrap;
   cursor: pointer;
-  padding: 0;
   z-index: 1001;
-}
-.nav-hamburger-line {
-  display: block;
-  width: 24px;
-  height: 1.5px;
-  background: var(--white);
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-.nav-hamburger.is-open .nav-hamburger-line:first-child {
-  transform: translateY(3.25px) rotate(45deg);
-}
-.nav-hamburger.is-open .nav-hamburger-line:last-child {
-  transform: translateY(-3.25px) rotate(-45deg);
 }
 
 /* ── MOBILE MENU OVERLAY ── */
@@ -2874,7 +2867,7 @@ html.lenis body {
   /* ── NAVBAR ── */
   /* Phones keep the logo + hamburger drawer (same as before); only the
      desktop link rows stay hidden. */
-  .nav-hamburger       { display: flex; }
+  .nav-menu-toggle     { display: inline-flex; }
   .nav-mobile-menu     { display: block; }
   .navbar              { height: auto; }
   .nav-bar             { min-height: 56px; width: 100%; overflow: visible; }
