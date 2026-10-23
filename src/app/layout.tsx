@@ -17,9 +17,7 @@ const personJsonLd = {
     addressLocality: "Dhaka",
     addressCountry: "BD",
   },
-  sameAs: siteConfig.socials
-    .map((s) => s.href)
-    .filter((href) => href !== "https://www.linkedin.com/"), // Exclude placeholder
+  sameAs: siteConfig.socials.map((s) => s.href),
 };
 
 const websiteJsonLd = {

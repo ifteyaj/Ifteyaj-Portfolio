@@ -42,8 +42,7 @@ export const siteConfig: SiteConfig = {
   socials: [
     {
       label: "Linkedin",
-      // TODO: Replace with your real LinkedIn profile URL
-      href: "https://www.linkedin.com/",
+      href: "https://www.linkedin.com/in/ifteyaj-ahmed",
     },
     {
       label: "Instagram",
