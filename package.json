@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "thumbs": "node scripts/make-thumbs.mjs"
+    "thumbs": "node scripts/make-thumbs.mjs",
+    "og": "node scripts/make-og-images.mjs"
   },
   "dependencies": {
     "gsap": "^3.15.0",

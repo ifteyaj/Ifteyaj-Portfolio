@@ -51,7 +51,7 @@ export default function SiteFooter() {
         </div>
         <div className="case-bottom-col case-bottom-col-social">
           {siteConfig.socials.map((s) => (
-            <a key={s.label} href={s.href} target="_blank" className="menu-link">
+            <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" className="menu-link">
               <div className="menu-text first-menu-link"><p className="menu-big-text">{s.label}</p></div>
               <div className="menu-text second-menu-link"><p className="menu-big-text">{s.label}</p></div>
             </a>

@@ -76,7 +76,7 @@ export default function Hero({ gridView, onToggleGridView }: HeroProps) {
                         ) : (
                           <Image
                             src={project.images?.[0] ?? project.image ?? "/images/about-hero.webp"}
-                            alt={project.title}
+                            alt={`${project.title} — ${project.category} project cover`}
                             fill
                             sizes="100vw"
                             priority={i === 0}
@@ -149,7 +149,7 @@ export default function Hero({ gridView, onToggleGridView }: HeroProps) {
                 <div className="slider-footer-social-wrapper">
                   <div className="social-link-container">
                     {siteConfig.socials.map((social) => (
-                      <a key={social.label} href={social.href} target="_blank" className="menu-link">
+                      <a key={social.label} href={social.href} target="_blank" rel="noopener noreferrer" className="menu-link">
                         <div className="menu-text first-menu-link-social">
                           <p className="menu-big-text social-link">{social.label}</p>
                         </div>

@@ -3134,6 +3134,24 @@ html.lenis body {
   .case-bottom-col-brand   { display: none; }
   .case-bottom-col-copy { text-align: left; }
   .case-bottom-col-social { flex-direction: row; gap: 1rem; align-items: flex-end; text-align: right; }
+  /* ©2026 and both social links share one bottom baseline. The desktop
+     .menu-link clip (height 1.05rem + overflow:hidden) trims the text box,
+     cutting descenders like the "g" in "Instagram" and lifting the links
+     above the copyright — so on phones the three text boxes are un-clipped
+     and normalised to the descriptor line-height. */
+  .case-bottom-copy,
+  .case-bottom-col-social .menu-link,
+  .case-bottom-col-social .menu-text,
+  .case-bottom-col-social .menu-big-text {
+    height: auto;
+    overflow: visible;
+    line-height: var(--small-discriptor-line);
+  }
+  .case-bottom-col-social .menu-text {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+  }
   .case-prev-next-nav  { padding: var(--mid-section-break) 0; margin-top: var(--mid-section-break); gap: 1.2rem; }
   .case-prev-next-btn  { width: 2.5rem; height: 2.5rem; }
   .case-prev-next-btn svg { width: 20px; height: 20px; }
@@ -3350,4 +3368,57 @@ html.lenis body {
   }
   .case-header-left { grid-column: 1 / 4; }
   .case-header-meta { grid-column: 4 / 6; min-width: 0; width: auto; }
+}
+
+/* ── 404 Not Found ─────────────────────────────────────────────────────────── */
+.not-found-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: var(--black, #0a0a0a);
+  color: var(--white, #fff);
+  padding: 2rem;
+}
+
+.not-found-inner {
+  text-align: center;
+  max-width: 420px;
+}
+
+.not-found-icon {
+  margin: 0 auto 1.5rem;
+  opacity: 0.5;
+}
+
+.not-found-title {
+  font-family: "PPNeueMontrealTT", sans-serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.75rem;
+}
+
+.not-found-body {
+  font-family: "PPNeueMontrealTT", sans-serif;
+  font-size: 1rem;
+  color: var(--grey, #888);
+  margin: 0 0 2rem;
+  line-height: 1.5;
+}
+
+.not-found-link {
+  font-family: "PPNeueMontrealTT", sans-serif;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--white, #fff);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: opacity 0.2s ease;
+}
+
+.not-found-link:hover {
+  opacity: 0.7;
 }
