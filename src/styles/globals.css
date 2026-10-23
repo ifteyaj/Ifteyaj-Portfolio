@@ -489,7 +489,9 @@ html.lenis body {
   display: none;
   position: fixed;
   inset: 0;
-  top: 56px;
+  top: 0;
+  height: 100vh;
+  height: 100dvh;
   background: var(--black);
   z-index: 998;
   overflow-y: auto;
@@ -2869,8 +2871,14 @@ html.lenis body {
      desktop link rows stay hidden. */
   .nav-menu-toggle     { display: inline-flex; }
   .nav-mobile-menu     { display: block; }
+  /* The overlay is true full-screen (top:0), so the header must sit above it
+     to keep the logo and Menu/Close control reachable. */
   .navbar              { height: auto; }
-  .nav-bar             { min-height: 56px; width: 100%; overflow: visible; }
+  /* The full-screen overlay is a sibling of .nav-bar inside .navbar, so lift
+     the header row above it — logo and Menu/Close stay reachable on top. */
+  .nav-bar             { min-height: 56px; width: 100%; overflow: visible; position: relative; z-index: 1000; }
+  /* Start the menu links below the fixed header instead of behind it. */
+  .nav-mobile-inner    { padding-top: calc(56px + 1.5rem); }
   .nav-logo            { height: 2.2rem; margin-left: 0; }
 
   /* Keep the compact desktop links out of the phone header. */
@@ -3320,7 +3328,7 @@ html.lenis body {
 /* ── LANDSCAPE PHONE ──────────────────────────────────────────────────────── */
 @media (max-width: 767px) and (orientation: landscape) {
   .about-hero          { height: 60dvh; }
-  .nav-mobile-inner    { padding: 1rem var(--page-margin) 2rem; }
+  .nav-mobile-inner    { padding: calc(56px + 0.75rem) var(--page-margin) 2rem; }
 }
 
 /* ══ DESKTOP SHARED GRID: nav stacks ↔ case metadata ═════════════════════════
