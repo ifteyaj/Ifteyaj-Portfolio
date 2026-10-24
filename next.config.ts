@@ -1,6 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // The dev-mode indicator parks itself in the bottom-left corner, on top of
+  // the loading screen's "Portfolio" label (it uses the maximum z-index).
+  // Errors and warnings still surface without it.
+  devIndicators: false,
   images: {
     // Serve AVIF first (smallest), fall back to WebP. Next generates
     // responsive variants automatically, fixing the Lighthouse

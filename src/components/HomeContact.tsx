@@ -44,8 +44,9 @@ export default function HomeContact() {
     const smooth = () => {
       const el = document.getElementById("contact");
       if (!el) return;
-      if ((window as unknown).lenis && typeof (window as unknown).lenis.scrollTo === "function") {
-        (window as unknown).lenis.scrollTo(el, { offset: 0, duration: 1 });
+      const lenis = (window as unknown as { lenis?: { scrollTo: (target: Element, options?: { offset?: number; duration?: number }) => void } }).lenis;
+      if (lenis && typeof lenis.scrollTo === "function") {
+        lenis.scrollTo(el, { offset: 0, duration: 1 });
       } else {
         const top = el.getBoundingClientRect().top + window.scrollY;
         window.scrollTo({ top, behavior: "smooth" });

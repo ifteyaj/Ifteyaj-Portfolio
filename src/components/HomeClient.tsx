@@ -29,8 +29,12 @@ export default function HomeClient() {
     registerEases();
     setupMenuLinkHovers(root);
 
+    // Lock the viewport itself: `html { overflow-x: hidden }` makes the root's
+    // overflow propagate to the viewport, so a body-only lock never reaches it
+    // and the page stays scrollable behind the loader.
     const unlockScroll = () => {
       document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
     };
 
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -69,6 +73,7 @@ export default function HomeClient() {
     // Keep the page still behind the loader, then let the media row continue
     // below the fold once the reveal starts.
     document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
 
     if (prefersReducedMotion) {
       if (loader) loader.style.display = "none";

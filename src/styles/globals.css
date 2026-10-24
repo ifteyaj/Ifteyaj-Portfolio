@@ -736,8 +736,12 @@ html.lenis body {
   z-index: 999;
   padding: var(--page-top-margin) var(--page-margin);
   background-color: var(--lightblack);
-  width: 100vw;
+  width: 100%;
+  /* 100vh is the *large* viewport, so on mobile the bottom row
+     (Portfolio / ©2026) lands under the browser chrome. dvh tracks the
+     visible viewport instead; vh stays as the fallback. */
   height: 100vh;
+  height: 100dvh;
   position: fixed;
   inset: 0%;
 }
@@ -3489,7 +3493,11 @@ html.lenis body {
   --home-media-gap: clamp(4px, 0.35vw, 8px);
   display: flex;
   flex-direction: column;
-  min-height: 100dvh;
+  /* Deliberately no min-height: the hero is exactly as tall as its content.
+     Stretching it to the viewport leaves a blank band between the reel row
+     and the work section whenever the content is shorter than the screen —
+     which happens on any viewport wider than 639 CSS px (some phones render
+     wider than that), tablets and landscape. */
   padding: clamp(9rem, 19vh, 13rem) var(--page-margin) 0;
 }
 
@@ -3587,7 +3595,7 @@ html.lenis body {
 /* ── Tablet: same structure, smaller headline, wider measure ─────────────── */
 @media (min-width: 640px) {
   .home-intro {
-    max-width: none;
+    max-width: 85%;
     text-wrap: wrap;
   }
 
@@ -3628,9 +3636,6 @@ html.lenis body {
 @media (max-width: 639px) {
   .home-stage {
     padding-top: clamp(6rem, 15vh, 8rem);
-    /* The one-row media block is short, so the hero ends with it instead of
-       being stretched to a full screen and leaving a gap above the work. */
-    min-height: auto;
   }
 
   .home-intro {
