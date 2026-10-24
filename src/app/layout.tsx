@@ -105,7 +105,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
       </head>
-      <body className="min-h-full">
+      {/* The host shell / browser extensions can add inline styles to <body> before
+          React hydrates (e.g. user-select), which is not something we render and
+          would otherwise flood the console with a hydration mismatch. */}
+      <body className="min-h-full" suppressHydrationWarning>
         <PageTransition>{children}</PageTransition>
       </body>
     </html>

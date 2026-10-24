@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/data/site";
@@ -17,11 +19,11 @@ export default function SiteFooter() {
               className="case-footer-logo"
             />
           </Link>
-          <a href={`mailto:${siteConfig.email}`} className="case-footer-cta-link">
+          <Link href="/contact" className="case-footer-cta-link">
             Let&rsquo;s build something{" "}
             <br className="case-footer-cta-break" />
             great together
-          </a>
+          </Link>
           <a
             href="#"
             className="case-back-to-top"
@@ -44,6 +46,10 @@ export default function SiteFooter() {
             <div className="menu-text first-menu-link"><p className="menu-big-text">About</p></div>
             <div className="menu-text second-menu-link"><p className="menu-big-text">About</p></div>
           </Link>
+          <a href="https://drive.google.com/file/d/1FrO_WGZ_RXZvE894trR2sm_1kpdQR6wC/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="menu-link">
+            <div className="menu-text first-menu-link"><p className="menu-big-text">Resume</p></div>
+            <div className="menu-text second-menu-link"><p className="menu-big-text">Resume</p></div>
+          </a>
           <Link href="/work" className="menu-link">
             <div className="menu-text first-menu-link"><p className="menu-big-text">All Works</p></div>
             <div className="menu-text second-menu-link"><p className="menu-big-text">All Works</p></div>
@@ -56,16 +62,6 @@ export default function SiteFooter() {
               <div className="menu-text second-menu-link"><p className="menu-big-text">{s.label}</p></div>
             </a>
           ))}
-        </div>
-        <div className="case-bottom-col case-bottom-col-contact">
-          <a href={`tel:${siteConfig.phone}`} className="menu-link">
-            <div className="menu-text first-menu-link"><p className="menu-big-text">{siteConfig.phone}</p></div>
-            <div className="menu-text second-menu-link"><p className="menu-big-text">{siteConfig.phone}</p></div>
-          </a>
-          <a href={`mailto:${siteConfig.email}`} className="menu-link">
-            <div className="menu-text first-menu-link"><p className="menu-big-text">{siteConfig.email}</p></div>
-            <div className="menu-text second-menu-link"><p className="menu-big-text">{siteConfig.email}</p></div>
-          </a>
         </div>
         <div className="case-bottom-col case-bottom-col-brand">
           <span className="case-bottom-brand menu-big-text">Web Designer</span>

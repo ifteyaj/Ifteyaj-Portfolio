@@ -51,6 +51,20 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "PT Serif";
+  src: url("/fonts/PTSerif-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/JetBrainsMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* ── Design tokens (verbatim from RECON rootVariables) ─────────────────────── */
 :root {
@@ -72,6 +86,7 @@
 
   /* Typography */
   --main-type:              PPNeueMontrealTT, sans-serif;
+  --mono-type:              "JetBrains Mono", monospace;
   --main-weight:            500;
   --main-weight-big:        400;
   --small-discriptor-text:  0.9rem;
@@ -329,9 +344,11 @@ html.lenis body {
 /* ── NAVBAR ── */
 .navbar {
   z-index: 997;
+  /* Transparent so the page shows through the pinned nav. */
   background-color: transparent;
   width: 100vw;
-  height: 90px;
+  /* Hugs the nav content, so the bar's bottom edge sits right under it. */
+  height: auto;
   position: fixed;
   inset: 0% 0% auto;
 }
@@ -373,7 +390,6 @@ html.lenis body {
   margin-top: 0;
   margin-left: 0.5rem;
   position: relative;
-  top: 0;
   pointer-events: auto;
 }
 .nav-logo svg {
@@ -390,7 +406,7 @@ html.lenis body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.15rem;
+  gap: 0.7rem;
   pointer-events: none;
 }
 .nav-group .menu-link {
@@ -570,23 +586,43 @@ html.lenis body {
 }
 .nav-mobile-social {
   margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  align-items: flex-start;
+}
+.nav-mobile-social a {
+  font-family: var(--main-type);
+  font-size: 0.85rem;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  color: var(--white);
+  text-decoration: none;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+.nav-mobile-social a:hover,
+.nav-mobile-social a:focus-visible {
+  color: var(--grey);
 }
 .nav-mobile-meta {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   text-align: right;
-  gap: 0.15rem;
-  font-size: 0.7rem;
+  gap: 0.25rem;
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
   color: var(--grey);
 }
 .nav-mobile-bottom {
   margin-top: auto;
-  padding-top: 1.5rem;
+  padding-top: 0.5rem;
   border-top: 1px solid var(--border-white);
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
 }
 .nav-mobile-favicon {
   width: 40px;
@@ -1410,6 +1446,21 @@ html.lenis body {
 
 /* ── Case / Footer ── */
 
+@media (min-width: 1025px) {
+  .index-portraits .index-illustrations-title {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 639px) {
+  .index-portraits .index-illustrations-title {
+    margin-bottom: 1.25rem;
+  }
+  .index-portraits-deck {
+    margin-top: -12%;
+  }
+}
+
 /* ══ WORK DETAIL / CASE PAGE ═════════════════════════════════════════════════ */
 .case-page {
   background-color: var(--black);
@@ -1886,9 +1937,10 @@ html.lenis body {
 }
 .case-bottom-col {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.15rem;
+  flex-direction: row;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
 .case-bottom-brand {
   color: var(--white);
@@ -2030,14 +2082,6 @@ html.lenis body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-/* On hover-capable devices the LiquidImage effect renders grayscale at rest,
-   so start the base image grayscale too — avoids a colour flash before the
-   client-only canvas mounts. */
-@media (hover: hover) and (pointer: fine) {
-  .about-hero-img > img {
-    filter: grayscale(1);
-  }
 }
 .about-hero-content {
   position: absolute;
@@ -2192,8 +2236,8 @@ html.lenis body {
 }
 .about-service-heading {
   font-family: var(--main-type);
-  font-size: var(--small-discriptor-text);
-  line-height: var(--small-descriptor-line);
+  font-size: clamp(1rem, 1.3vw, 1.25rem);
+  line-height: 1.2;
   font-weight: var(--main-weight-big);
   color: var(--green);
   white-space: nowrap;
@@ -2216,8 +2260,8 @@ html.lenis body {
    capped at 600px so the copy wraps onto fewer lines. */
 @media (min-width: 1025px) {
   .about-service-heading {
-    font-size: var(--small-high-text);
-    line-height: var(--small-high-text-line);
+    font-size: clamp(1rem, 1.3vw, 1.25rem);
+    line-height: 1.2;
     white-space: normal;
   }
   .about-service-grid {
@@ -3060,6 +3104,12 @@ html.lenis body {
   .index-bottom-col    { min-width: 0; }
   .index-illustrations-title { font-size: var(--mobile-bix-text); letter-spacing: var(--mobile-big-text-space); }
 
+  /* The portrait deck's box is taller than the fan (the cards are centred in
+     it), so lift it by that dead space to sit right under its title. The
+     slack is 140/900 of the deck width, hence the percentage. */
+  .index-portraits .index-illustrations-title { margin-bottom: 0.75rem; }
+  .index-portraits-deck { margin-top: -15.5%; }
+
   /* ── CASE / WORK DETAIL ── */
   .case-page           { --case-desc-pad: calc(0.22 * var(--mobile-bix-text)); }
   .case-main           { padding-top: var(--content-page-top-margin); }
@@ -3091,7 +3141,7 @@ html.lenis body {
     gap: 0.75rem;
     min-height: 0;
     position: relative;
-    padding-top: 2rem;
+    padding-top: 1rem;
   }
   .case-back-to-top {
     position: absolute;
@@ -3172,7 +3222,7 @@ html.lenis body {
   .about-intro-text    { font-size: clamp(2rem, 6vw, 2.6rem); line-height: 1.3; }
   .about-bio           { grid-template-columns: 1fr; gap: 1.5rem; }
   .about-bio-body      { margin-left: 0; }
-  .about-service       { padding: 1.1rem 0; grid-template-columns: auto 1fr; column-gap: var(--about-col-gap); row-gap: 0.25rem; align-items: baseline; }
+  .about-service       { padding: 1.1rem 0; grid-template-columns: auto 1fr; column-gap: 0.6rem; row-gap: 0.25rem; align-items: baseline; }
   .about-service-grid  { display: contents; }
   .about-service-num   { grid-column: 1; grid-row: 1; }
   .about-service-heading { grid-column: 2; grid-row: 1; white-space: normal; }
@@ -3422,4 +3472,1250 @@ html.lenis body {
 
 .not-found-link:hover {
   opacity: 0.7;
+}
+
+/* ══ HOME: TYPOGRAPHIC STAGE ═════════════════════════════════════════════════
+   Minimal, visual-first home: a small intro in the header's second column, a
+   two-line headline with one italic-serif accent word, and a media row
+   (16:9 reel + 1:1 featured cover) that starts inside the first viewport and
+   continues below it. */
+
+.home-main {
+  min-height: 100dvh;
+}
+
+.home-stage {
+  /* Sharp, near-seamless gap between the reel and the cover (4–8px). */
+  --home-media-gap: clamp(4px, 0.35vw, 8px);
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  padding: clamp(9rem, 19vh, 13rem) var(--page-margin) 0;
+}
+
+/* ── Intro paragraph ─────────────────────────────────────────────────────────
+   Width comes from the column it sits in. On phones and tablets it is simply
+   aligned to the page padding. */
+.home-copy-grid {
+  display: block;
+}
+
+.home-intro {
+  max-width: none;
+  text-wrap: wrap;
+  font-family: var(--main-type);
+  font-size: clamp(12px, 0.55vw + 6px, 15px);
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.002em;
+  text-align: left;
+  color: var(--white);
+  opacity: 0;
+  transform: translateY(0.75rem);
+}
+
+/* ── Headline ──────────────────────────────────────────────────────────────── */
+.home-headline {
+  margin-top: clamp(2.25rem, 8vh, 5rem);
+  font-family: var(--main-type);
+  font-size: clamp(2.25rem, 11vw, 3.5rem);
+  font-weight: var(--main-weight);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  color: var(--white);
+}
+
+.home-headline-line {
+  display: block;
+  opacity: 0;
+  transform: translateY(0.16em);
+}
+
+/* ── Media row ───────────────────────────────────────────────────────────────
+   16fr 9fr plus 16:9 | 1:1 means both blocks are exactly (9/25)(row − gap)
+   tall at every width. No fixed heights. */
+.home-media {
+  display: grid;
+  grid-template-columns: 16fr 9fr;
+  gap: var(--home-media-gap);
+  align-items: start;
+  margin-top: clamp(1rem, 2.5vh, 2rem);
+  padding-bottom: clamp(2rem, 6vh, 4rem);
+  opacity: 0;
+  transform: translateY(1rem);
+}
+
+.home-media-video {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background-color: var(--lightblack);
+}
+
+.home-reel {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.home-featured {
+  position: relative;
+  display: block;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background-color: var(--lightblack);
+}
+
+.home-featured-img {
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.home-featured:hover .home-featured-img,
+.home-featured:focus-visible .home-featured-img {
+  transform: scale(1.02);
+}
+
+.home-featured:focus-visible {
+  outline: 1px solid var(--border-white);
+  outline-offset: 4px;
+}
+
+/* ── Tablet: same structure, smaller headline, wider measure ─────────────── */
+@media (min-width: 640px) {
+  .home-intro {
+    max-width: none;
+    text-wrap: wrap;
+  }
+
+  /* px-based so the phone-scale root font doesn't inflate the tablet size. */
+  .home-headline {
+    font-size: clamp(40px, 7vw, 76px);
+  }
+}
+
+/* ── Desktop: intro lands on the header's About-Me column ─────────────────── */
+@media (min-width: 1025px) {
+  /* Exactly the header's grid: same full-viewport width, same page padding,
+     same column tracks and gap. The copy starts on column 2 (About Me), so
+     its left edge lines up with that nav column. */
+  .home-copy-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) var(--layout-cols);
+    column-gap: var(--layout-gap);
+    align-items: start;
+    /* Full-bleed out of the stage's page padding, exactly like .nav-bar. */
+    width: 100vw;
+    margin-left: calc(-1 * var(--page-margin));
+    padding-inline: var(--page-margin);
+  }
+
+  .home-intro {
+    grid-column: 2 / span 4;
+    max-width: clamp(20rem, 30vw, 28rem);
+    text-wrap: wrap;
+  }
+
+  .home-headline {
+    font-size: clamp(2.75rem, 7vw, 7.5rem);
+  }
+}
+
+/* ── Phones: half-width intro, headline, then the reel and cover in one row ── */
+@media (max-width: 639px) {
+  .home-stage {
+    padding-top: clamp(6rem, 15vh, 8rem);
+    /* The one-row media block is short, so the hero ends with it instead of
+       being stretched to a full screen and leaving a gap above the work. */
+    min-height: auto;
+  }
+
+  .home-intro {
+    max-width: 85%;
+  }
+
+  .home-media {
+    padding-bottom: 1.25rem;
+  }
+}
+
+/* ── Short viewports: keep the top of the media row in the first screen ───── */
+@media (max-height: 700px) and (min-width: 768px) {
+  .home-headline {
+    margin-top: clamp(1.5rem, 5vh, 2.5rem);
+  }
+}
+
+/* ── Reduced motion: no reveal, no autoplay (the poster stays) ────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .home-intro,
+  .home-headline-line,
+  .home-media {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .home-featured-img {
+    transition: none;
+  }
+}
+
+/* ══ HOME: FEATURED WORK, CTA, FOOTER ════════════════════════════════════════ */
+
+/* Page padding for everything below the hero; the footer's own rules then
+   bleed its dividers back out to the edges, exactly like the case pages. */
+.home-sections {
+  padding: 0 var(--page-margin);
+}
+
+/* ── Featured work ── */
+.home-work {
+  margin-top: clamp(0.5rem, 2vh, 1rem);
+  margin-left: 0;
+  margin-right: 0;
+  padding: 1rem var(--page-margin) clamp(3rem, 9vh, 6.5rem);
+  border-top: 1px solid var(--border-white);
+  border-bottom: 1px solid var(--border-white);
+}
+
+@media (min-width: 640px) {
+  .home-work {
+    margin-top: clamp(0.5rem, 2vh, 1rem);
+    padding-top: clamp(2rem, 4vh, 4rem);
+  }
+}
+
+.home-work-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: clamp(1.5rem, 4vh, 3rem);
+}
+
+.home-work-title {
+  font-family: var(--main-type);
+  font-size: clamp(1.75rem, 3vw, 3rem);
+  font-weight: var(--main-weight);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.home-work-count {
+  margin-left: 0.35rem;
+  color: var(--grey);
+  font-size: 0.55em;
+  letter-spacing: 0;
+}
+
+.home-work-all {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  padding: 0.45rem 0.85rem;
+  font-family: var(--mono-type);
+  font-size: 0.8rem;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: var(--darkgrey);
+  white-space: nowrap;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.home-work-all:hover,
+.home-work-all:focus-visible {
+  color: var(--white);
+  background-color: rgba(255, 255, 255, 0.14);
+}
+
+.home-work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: clamp(0.75rem, 1.5vw, 1.25rem);
+  row-gap: clamp(1.75rem, 4vh, 3rem);
+}
+
+.home-work-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  color: inherit;
+}
+
+.home-work-media {
+  position: relative;
+  display: block;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background-color: var(--lightblack);
+}
+
+.home-work-img {
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.home-work-item:hover .home-work-img,
+.home-work-item:focus-visible .home-work-img {
+  transform: scale(1.02);
+}
+
+.home-work-item:focus-visible {
+  outline: 1px solid var(--border-white);
+  outline-offset: 6px;
+}
+
+.home-work-meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.home-work-name {
+  font-family: var(--main-type);
+  font-size: var(--small-descriptor-text);
+  letter-spacing: var(--small-descriptor-space);
+}
+
+/* Category chip: same fill, text colour, padding and radius as the All Works
+   page's .index-entry-cat, so both indexes read as one system. */
+.home-work-cat {
+  font-size: 0.85rem;
+  line-height: 1.3;
+  letter-spacing: var(--small-descriptor-space);
+  color: rgba(255, 255, 255, 0.72);
+  background-color: var(--darkgrey);
+  padding: 0.18rem 0.45rem;
+  border-radius: 0;
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* Compact index row from 1024px: all featured projects side by side. */
+@media (min-width: 1024px) {
+  .home-work-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* ── Phones ── */
+@media (max-width: 639px) {
+  /* The compact one-row hero ends just below the reel, so the work section
+     needs far less breathing room here than on desktop. */
+  .home-work {
+    margin-top: clamp(0.5rem, 2vh, 1rem);
+    padding-bottom: 1.25rem;
+  }
+
+  /* Keep the head as a row: title on the left, All Works on the right. */
+  .home-work-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .home-work-title {
+    font-size: clamp(1.5rem, 6.2vw, 1.75rem);
+    white-space: nowrap;
+  }
+
+  .home-work-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-work-all {
+    flex-shrink: 0;
+    gap: 0.3rem;
+    padding: 0.4rem 0.6rem;
+    font-size: 0.7rem;
+  }
+
+  .home-work-meta {
+    flex-wrap: wrap;
+    row-gap: 0.15rem;
+  }
+
+  .home-work-cat {
+    font-size: 0.68rem;
+    padding: 0.15rem 0.4rem;
+  }
+}
+
+
+/* ══ HOME: HOW I WORK / PROCESS ══════════════════════════════════════════════ */
+
+/* Outer section: full-width divider, no indentation change on its own. */
+.home-process {
+  margin-top: clamp(0.75rem, 2vh, 1.25rem);
+  padding: clamp(2rem, 5vh, 3rem) 0 clamp(0.5rem, 2vh, 1rem);
+  border-top: 1px solid var(--border-white);
+}
+
+/* Mirror the home intro's desktop grid so the process content starts on the
+   same left edge as the intro paragraph (the nav's "About Me" column). */
+.home-process-grid {
+  display: block;
+}
+
+.home-process-content {
+  max-width: 62rem;
+}
+
+.home-process-head {
+  margin-bottom: clamp(1.5rem, 4vh, 3rem);
+}
+
+.home-process-title {
+  font-family: var(--main-type);
+  font-size: clamp(1.75rem, 3vw, 3rem);
+  font-weight: var(--main-weight);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--white);
+}
+
+.home-process-list {
+  display: grid;
+}
+
+.home-process-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 1.25rem;
+  row-gap: 0.35rem;
+  padding: clamp(1.5rem, 3vh, 2.25rem) 0;
+  border-bottom: 1px solid var(--border-white);
+  align-items: start;
+}
+
+.home-process-item:first-child {
+  padding-top: 0;
+}
+
+.home-process-item:last-child {
+  border-bottom: none;
+}
+
+.home-process-num {
+  grid-row: 1 / 3;
+  font-size: var(--small-number);
+  letter-spacing: var(--small-menu-number-space);
+  color: var(--grey);
+  padding-top: 0.15rem;
+  white-space: nowrap;
+}
+
+.home-process-body {
+  grid-column: 2;
+}
+
+.home-process-heading {
+  font-family: var(--main-type);
+  font-size: var(--small-high-text);
+  line-height: var(--small-high-text-line);
+  font-weight: var(--main-weight-big);
+  letter-spacing: 0.02em;
+  color: var(--green);
+  margin-bottom: 0.4rem;
+  text-align: left;
+}
+
+.home-process-text {
+  font-family: var(--main-type);
+  font-size: var(--body-copy);
+  line-height: var(--body-copy-line);
+  letter-spacing: var(--body-copy-space);
+  color: var(--white);
+  text-align: left;
+  max-width: 62ch;
+}
+
+@media (min-width: 1025px) {
+  :root {
+    /* ensure layout tokens are in scope for the grid below */
+  }
+
+  .home-process-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) var(--layout-cols);
+    column-gap: var(--layout-gap);
+    width: 100vw;
+    margin-left: calc(-1 * var(--page-margin));
+    padding-inline: var(--page-margin);
+  }
+
+  .home-process-content {
+    grid-column: 2 / 6;
+    max-width: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .home-process-item {
+    grid-template-columns: auto 1fr;
+  }
+
+  .home-process-content {
+    max-width: none;
+  }
+}
+
+@media (max-width: 639px) {
+  .home-process {
+    margin-top: clamp(0.5rem, 2vh, 1rem);
+    padding: clamp(1.25rem, 3vh, 1.75rem) 0 clamp(0.5rem, 2vh, 1rem);
+  }
+
+  .home-process-title {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+
+  .home-process-content {
+    max-width: none;
+  }
+}
+
+.home-process {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
+}
+
+/* ══ HOME: CONTACT ══════════════════════════════════════════════════════════ */
+.home-contact {
+  display: flex;
+  flex-direction: column;
+  margin-top: clamp(1.5rem, 4vh, 2.5rem);
+  padding: clamp(0.5rem, 1.5vh, 1rem) 0 clamp(0.35rem, 1vh, 0.75rem);
+}
+
+.home-contact-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.home-contact-intro {
+  font-family: var(--main-type);
+  font-size: clamp(1rem, 1.2vw, 1.4rem);
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+  color: var(--grey);
+}
+
+.home-contact-socials {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.home-contact-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--darkgrey);
+  color: var(--grey);
+  transition: background-color 0.2s ease, color 180ms ease;
+}
+
+.home-contact-social svg {
+  width: 20px;
+  height: 20px;
+}
+
+.home-contact-social:hover,
+.home-contact-social:focus-visible {
+  background-color: rgba(255, 255, 255, 0.14);
+  color: var(--white);
+}
+
+.home-contact-social:focus-visible {
+  outline: 1px solid var(--white);
+  outline-offset: 2px;
+}
+
+.home-contact-email-wrap {
+  width: 100%;
+  min-width: 0;
+  margin-top: clamp(2.5rem, 6vw, 5rem);
+}
+
+.home-contact-email {
+  display: inline-block;
+  max-width: 100%;
+  font-family: var(--main-type);
+  font-size: clamp(2rem, 11.5vw, 20rem);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  color: var(--grey);
+  white-space: nowrap;
+  padding-bottom: 0.05em;
+  transition: color 200ms ease;
+}
+
+.home-contact-email:hover,
+.home-contact-email:focus-visible {
+  color: var(--white);
+}
+
+.home-contact-email:focus-visible {
+  outline: 1px solid var(--white);
+  outline-offset: 4px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 639px) {
+  .home-contact {
+    margin-top: clamp(1.25rem, 3vh, 2rem);
+    padding-top: 0.25rem;
+    padding-bottom: 0.4rem;
+  }
+
+  .home-contact-top {
+    align-items: flex-start;
+    gap: 0.75rem;
+    /* The social row's negative margin tucks the last glyph flush with the
+       edge; clipping hides the empty 12px of its hit area instead of letting
+       it widen the page. */
+    overflow: clip;
+  }
+
+  .home-contact-intro {
+    max-width: 48%;
+  }
+
+  .home-contact-socials {
+    gap: 0.125rem;
+    margin-top: calc(0.56rem - 10px);
+    margin-right: 0;
+  }
+
+  .home-contact-social {
+    width: 28px;
+    height: 28px;
+  }
+
+  .home-contact-social svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .home-contact-email {
+    font-size: clamp(2.25rem, 11.5vw, 3rem);
+  }
+}
+
+/* ══ HOME: CLOSING PANORAMA ═════════════════════════════════════════════════ */
+.home-panorama {
+  position: relative;
+  width: 100%;
+  height: clamp(240px, 38vw, 540px);
+  margin: clamp(1.5rem, 4vw, 3rem) calc(-1 * var(--page-margin))
+    clamp(1rem, 3vw, 2rem);
+  overflow: hidden;
+  background: var(--black);
+  container-type: size;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+@media (max-width: 639px) {
+  .home-panorama {
+    height: clamp(220px, 62vw, 340px);
+  }
+}
+
+/* ══ GOOEY NAV (desktop) ═════════════════════════════════════════════════════ */
+.nav-gooey {
+  position: absolute;
+  right: clamp(1rem, 1.5vw, 2rem);
+  top: calc(50% + var(--page-top-margin) / 2);
+  transform: translateY(-50%);
+  z-index: 2;
+  width: max-content;
+}
+
+.nav-gooey nav {
+  font-family: var(--main-type);
+}
+
+@media (max-width: 1024px) {
+  .nav-gooey {
+    display: none;
+  }
+
+  .nav-menu-toggle {
+    display: inline-flex;
+  }
+
+  .nav-mobile-menu {
+    display: block;
+  }
+
+  .nav-bar {
+    min-height: 56px;
+    width: 100%;
+    overflow: visible;
+    position: relative;
+    z-index: 1000;
+  }
+
+  .nav-mobile-inner {
+    padding-top: calc(56px + 1.5rem);
+  }
+}
+
+/* ── Responsive: portraits title gap ── */
+@media (max-width: 639px) {
+  .index-portraits .index-illustrations-title {
+    margin-bottom: 1.25rem;
+  }
+  .index-portraits-deck {
+    margin-top: -12%;
+  }
+}
+
+
+/* ── Contact page (editorial two-column) ────────────────────────────────────── */
+
+.contact-page {
+  background-color: var(--black);
+  color: var(--white);
+  font-family: var(--main-type);
+  min-height: 100dvh;
+}
+
+.contact-body {
+  padding: clamp(9rem, 14vh, 12rem) var(--page-margin) var(--page-margin);
+  min-height: auto;
+}
+
+.contact-container {
+  height: 100%;
+  min-height: calc(100dvh - var(--content-page-top-margin) - var(--page-margin) - 2rem);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: clamp(2rem, 4vw, 5rem);
+  min-height: inherit;
+  align-items: stretch;
+}
+
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2rem;
+  padding-top: 0.5rem;
+}
+
+.contact-headline {
+  font-family: var(--main-type);
+  font-weight: var(--main-weight-big);
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  margin: 0;
+  color: var(--white);
+}
+
+  .contact-intro {
+  font-size: clamp(1.1rem, 1.5vw, 1.45rem);
+  line-height: 1.3;
+  letter-spacing: 0.01em;
+  color: var(--white);
+  font-weight: 400;
+  max-width: 44ch;
+  margin: 0.3rem 0 0;
+  opacity: 0.9;
+}
+
+.contact-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 2rem;
+  margin-top: auto;
+  padding-top: 0;
+}
+
+.contact-social-link {
+  font-size: 1rem;
+  color: var(--white);
+  text-decoration: none;
+  opacity: 0.9;
+  transition: opacity 180ms ease, color 180ms ease, background-color 180ms ease;
+  padding: 0.25rem 0.6rem;
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--darkgrey);
+  border-radius: 0;
+}
+
+.contact-social-link:hover {
+  opacity: 1;
+  color: var(--offwhite);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.contact-social-link:focus-visible {
+  outline: 1px solid var(--white);
+  outline-offset: 4px;
+}
+
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.25rem, 2vw, 1.75rem);
+  min-height: inherit;
+  justify-content: space-between;
+}
+
+.contact-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: clamp(1.75rem, 3vw, 2.5rem);
+  column-gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.contact-info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-info-label {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: lowercase;
+  color: var(--grey);
+}
+
+.contact-info-values {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.contact-info-link,
+.contact-info-value {
+  font-size: clamp(15px, 1.05vw, 17px);
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--white);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.contact-info-link {
+  position: relative;
+  transition: opacity 180ms ease, color 180ms ease;
+}
+
+.contact-info-link:hover {
+  opacity: 0.85;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.contact-info-link:focus-visible {
+  outline: 1px solid var(--white);
+  outline-offset: 4px;
+}
+
+.contact-copied {
+  font-size: 11px;
+  color: var(--green);
+  opacity: 0.9;
+  letter-spacing: 0.06em;
+  text-transform: lowercase;
+}
+
+.contact-image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background-color: var(--lightblack);
+  border-radius: 0;
+}
+
+.contact-image {
+  object-fit: cover;
+  transition: transform 400ms cubic-bezier(.23,1,.32,1);
+}
+
+.contact-image-wrap:hover .contact-image {
+  transform: scale(1.02);
+}
+
+/* ── Tablet ── */
+@media (max-width: 1023px) and (min-width: 640px) {
+  .contact-grid {
+    grid-template-columns: 1fr 1.6fr;
+    gap: 2rem;
+  }
+  .contact-headline { font-size: clamp(3rem, 6vw, 4.5rem); }
+}
+
+/* ── Mobile ── */
+@media (max-width: 639px) {
+  .contact-body {
+    padding: clamp(6rem, 14vh, 8rem) var(--page-margin) var(--page-margin);
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    min-height: auto;
+  }
+  .contact-left,
+  .contact-right {
+    display: contents;
+  }
+  .contact-headline { order: 1; }
+  .contact-intro { order: 2; }
+  .contact-info-grid { order: 3; }
+  .contact-socials {
+    order: 4;
+    margin-top: 1.5rem;
+    padding-top: 0;
+  }
+  .contact-social-link {
+    padding: 0.15rem 0.5rem;
+    min-height: 28px;
+    font-size: 0.9rem;
+  }
+  .contact-image-wrap {
+    order: 5;
+    margin-top: 1.5rem;
+    aspect-ratio: 4 / 3;
+  }
+  .contact-left {
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+  .contact-headline {
+    font-size: clamp(2.5rem, 12vw, 4rem);
+    line-height: 1;
+  }
+  .contact-intro {
+    max-width: 100%;
+    margin-top: 0.5rem;
+  }
+  .contact-socials {
+    margin-top: 1.75rem;
+    gap: 1rem 1.5rem;
+  }
+  .contact-info-grid {
+    grid-template-columns: 1fr;
+    row-gap: 1.5rem;
+  }
+  .contact-image-wrap {
+    aspect-ratio: 4 / 3;
+  }
+  .contact-image-wrap:hover .contact-image {
+    transform: none;
+  }
+  .contact-social-link {
+    min-height: 28px;
+  }
+}
+
+
+/* ── Contact: keep info grid above the image on tablet/desktop ── */
+@media (min-width: 640px) {
+  .contact-right {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-image-wrap {
+    order: 0;
+    margin-top: 0;
+  }
+  .contact-info-grid {
+    margin-top: 9.25rem;
+  }
+}
+
+/* ── About: tools section trailing image ── */
+.about-tools-image {
+  max-width: 1920px;
+  margin: 2rem auto 0;
+  line-height: 0;
+}
+.about-tools-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── Home logo reel headline ── */
+.home-logo-reel-title {
+  font-family: var(--mono-type);
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 1.5rem;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-transform: uppercase;
+  display: inline-block;
+  background-color: var(--darkgrey);
+  padding: 0.45rem 0.85rem;
+  white-space: nowrap;
+  border-radius: 0;
+}
+.home-logo-reel {
+  padding: 2rem 0 0;
+  text-align: center;
+}
+
+
+@media (min-width: 1024px) {
+  .home-logo-reel-title {
+    margin-bottom: 2.5rem;
+  }
+}
+
+/* ── Home logo marquee (horizontal drift) ── */
+.home-logo-marquee {
+  overflow: hidden;
+  width: 100%;
+  margin-top: 1rem;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+.home-logo-marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+  width: max-content;
+  animation: home-logo-drift 30s linear infinite;
+}
+
+.home-logo-marquee-img {
+  height: 40px;
+  width: 120px;
+  object-fit: contain;
+}
+
+.home-logo-marquee-img.is-salvator {
+  height: 70px;
+  width: 200px;
+}
+
+@keyframes home-logo-drift {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-logo-marquee-track {
+    animation: none;
+  }
+}
+
+/* ── Spacing after home logo reel (desktop) ── */
+.home-logo-reel-divider {
+  margin-top: 6rem;
+}
+@media (max-width: 639px) {
+  .home-logo-reel-divider {
+    margin-top: 2rem;
+  }
+}
+
+
+/* ══ HOME: PROCESS (4-column editorial) ═══════════════════════════════════ */
+.home-process {
+  margin-top: clamp(0.75rem, 2vh, 1.25rem);
+  padding: clamp(2rem, 5vh, 3rem) var(--page-margin);
+  border-top: 1px solid var(--border-white);
+}
+
+.home-process-label {
+  font-family: var(--main-type);
+  font-size: 0.6875rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--grey);
+  margin: 0 0 clamp(1.5rem, 3vh, 2.5rem);
+}
+
+.home-process-cols {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-height: clamp(20rem, 32vw, 28rem);
+}
+
+.home-process-col {
+  padding: clamp(1rem, 2vw, 1.75rem);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  opacity: 1;
+  transform: none;
+}
+
+.home-process-col:not(:first-child) {
+  border-left: 1px solid rgb(255 255 255 / 0.12);
+}
+
+.home-process-num {
+  font-family: var(--mono-type);
+  font-size: 0.6875rem;
+  letter-spacing: 0.04em;
+  color: var(--grey);
+  margin-bottom: clamp(2.5rem, 6vw, 5rem);
+}
+
+.home-process-icon {
+  width: clamp(72px, 7vw, 112px);
+  height: clamp(72px, 7vw, 112px);
+  color: var(--white);
+  margin-bottom: 2rem;
+}
+
+.home-process-title {
+  font-family: var(--main-type);
+  font-size: clamp(1.125rem, 1.6vw, 1.5rem);
+  font-weight: var(--main-weight-big);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: var(--white);
+  margin: 0 0 0.75rem;
+}
+
+.home-process-desc {
+  font-family: var(--main-type);
+  font-size: clamp(0.75rem, 0.9vw, 0.875rem);
+  line-height: 1.5;
+  color: var(--grey);
+  margin: 0;
+  max-width: 28ch;
+}
+
+/* Tablet */
+@media (max-width: 1023px) and (min-width: 640px) {
+  .home-process-cols {
+    grid-template-columns: repeat(2, 1fr);
+    min-height: auto;
+  }
+  .home-process-col:nth-child(2) {
+    /* internal vertical divider comes from base :not(:first-child) */
+  }
+  .home-process-col:nth-child(3) {
+    border-left: none;
+    border-top: 1px solid rgb(255 255 255 / 0.12);
+  }
+  .home-process-col:last-child {
+    border-top: 1px solid rgb(255 255 255 / 0.12);
+  }
+  .home-process-icon {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 639px) {
+  .home-process {
+    padding: clamp(1.5rem, 4vh, 2rem) var(--page-margin);
+  }
+  .home-process-cols {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    gap: 1.5rem;
+  }
+  .home-process-col {
+    border-left: none !important;
+    border-right: none !important;
+  }
+  .home-process-col {
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid rgb(255 255 255 / 0.12);
+    padding: 1.5rem 0;
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    grid-template-rows: auto auto auto;
+    column-gap: 1rem;
+    align-items: start;
+  }
+  .home-process-col:first-child {
+    border-top: none;
+    padding-top: 0;
+  }
+  .home-process-num {
+    grid-column: 2;
+    grid-row: 1;
+    margin-bottom: 0.25rem;
+  }
+  .home-process-icon {
+    grid-column: 1;
+    grid-row: 1 / 4;
+    width: 64px;
+    height: 64px;
+    margin-bottom: 0;
+  }
+  .home-process-title {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .home-process-desc {
+    grid-column: 2;
+    grid-row: 3;
+    max-width: none;
+  }
+}
+
+/* ── Space after process headline ── */
+.home-process .home-work-title {
+  margin-bottom: clamp(1.5rem, 4vh, 3rem);
+}
+
+/* Keep footer dividers inset like the other page dividers */
+.case-footer-block,
+.case-bottom-nav {
+  margin-left: 0;
+  margin-right: 0;
 }

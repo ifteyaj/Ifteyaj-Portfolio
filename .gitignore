@@ -53,3 +53,32 @@ lighthouse-*.json
 graphify-out/
 graphify-*.json
 .gitattributes
+# dependencies & build
+node_modules/
+.next/
+out/
+.vercel/
+.turbo/
+coverage/
+# env & secrets
+.env
+.env.*
+!.env.example
+# AI tools & agents
+.freebuff/
+.kilo/
+.kombai/
+.claude/
+.cursor/
+.windsurf/
+.codex/
+.gemini/
+.aider*
+AGENTS.md
+CLAUDE.md
+# audit artifacts
+*_audit_report.md
+*_implementation_report.md
+# OS / editor / logs
+.vscode/
+*.log

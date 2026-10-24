@@ -3,30 +3,59 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { navLinks, navInfoLinks, siteConfig } from "@/data/site";
+import { usePathname } from "next/navigation";
+import GooeyNavbar from "@/components/ui/GooeyNavbar";
+import { siteConfig } from "@/data/site";
+import { markSiteBooted } from "@/lib/navSession";
 
 interface NavbarProps {
   revealed?: boolean;
 }
 
+const NAV_ITEMS = [
+  { label: "About", link: "/about" },
+  { label: "All Works", link: "/work" },
+  { label: "Contact", link: "/contact" },
+  { label: "Blog", link: "/blog" },
+  { label: "Moodboard", link: "/moodboard" },
+];
+
 export default function Navbar(props: NavbarProps) {
-  // `revealed` is driven by GSAP intro animations in each page client;
-  // the nav itself stays mounted. Kept optional so existing callers
-  // (`<Navbar revealed={...} />`) don't need churn.
   void props.revealed;
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
   const menuButtonRef = useRef<HTMLButtonElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
   const wasOpenRef = useRef(false);
   const previousBodyOverflowRef = useRef<string | null>(null);
 
-  const toggleMenu = useCallback(() => {
-    setMenuOpen((prev) => !prev);
+  const toggleMenu = useCallback(() => setMenuOpen((prev) => !prev), []);
+  const closeMenu = useCallback(() => setMenuOpen(false), []);
+
+  // Contact navigation is handled by the router (GooeyNavbar pushes the
+  // href directly for internal links). Nothing extra to do here.
+  const handleNavSelect = useCallback((index: number) => {
+    void index;
+    closeMenu();
+  }, [closeMenu]);
+
+  useEffect(() => {
+    markSiteBooted();
   }, []);
 
-  const closeMenu = useCallback(() => {
-    setMenuOpen(false);
-  }, []);
+  const handleLogoClick = useCallback(
+    (event: React.MouseEvent<HTMLAnchorElement>) => {
+      closeMenu();
+      if (pathname !== "/") return;
+
+      event.preventDefault();
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      window.setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+      }, 60);
+    },
+    [closeMenu, pathname]
+  );
 
   useEffect(() => {
     const onMenuKeyDown = (event: KeyboardEvent) => {
@@ -89,7 +118,13 @@ export default function Navbar(props: NavbarProps) {
     <nav className="navbar" aria-label="Primary navigation">
       <div className="nav-bar">
         <div className="nav-logo-wrapper">
-          <Link href="/" className="nav-logo-link" aria-label="Ifteyaj studio home" onClick={closeMenu}>
+          <Link
+            href="/"
+            className="nav-logo-link"
+            aria-label="Ifteyaj studio home"
+            aria-current={pathname === "/" ? "page" : undefined}
+            onClick={handleLogoClick}
+          >
             <Image
               src="/nav-logo-primary.svg"
               alt="Ifteyaj"
@@ -101,94 +136,27 @@ export default function Navbar(props: NavbarProps) {
           </Link>
         </div>
 
-        <div className="nav-groups">
-          <div className="nav-group about-nav-wrapper">
-            <Link href="/about" className="menu-link page_link">
-              <div className="menu-text first-menu-link">
-                <p className="menu-big-text">{navInfoLinks[0].label}</p>
-                <svg className="nav-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
-                </svg>
-              </div>
-              <div className="menu-text second-menu-link">
-                <p className="menu-big-text">{navInfoLinks[0].label}</p>
-                <svg className="nav-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
-                </svg>
-              </div>
-            </Link>
-            {navLinks.map((link) => (
-              <Link key={link.label} href={link.href} className="menu-link page_link" onClick={closeMenu}>
-                <div className="menu-text first-menu-link">
-                  <p className="menu-big-text">{link.label}</p>
-                  <svg className="nav-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
-                  </svg>
-                </div>
-                <div className="menu-text second-menu-link">
-                  <p className="menu-big-text">{link.label}</p>
-                  <svg className="nav-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
-                  </svg>
-                </div>
-              </Link>
-            ))}
-          </div>
-
-          <div className="nav-group nav-clock-wrapper">
-            <Link href="/blog" className="menu-link page_link" onClick={closeMenu}>
-              <div className="menu-text first-menu-link">
-                <p className="menu-big-text">Blog</p>
-                <svg className="nav-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
-                </svg>
-              </div>
-              <div className="menu-text second-menu-link">
-                <p className="menu-big-text">Blog</p>
-                <svg className="nav-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
-                </svg>
-              </div>
-            </Link>
-            <Link href="/moodboard" className="menu-link page_link" onClick={closeMenu}>
-              <div className="menu-text first-menu-link">
-                <p className="menu-big-text">Moodboard</p>
-                <svg className="nav-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
-                </svg>
-              </div>
-              <div className="menu-text second-menu-link">
-                <p className="menu-big-text">Moodboard</p>
-                <svg className="nav-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
-                </svg>
-              </div>
-            </Link>
-          </div>
-
-          <div className="nav-group contact-nav-wrapper">
-            <a href={`tel:${siteConfig.phone}`} className="menu-link contact-link">
-              <div className="menu-text first-menu-link">
-                <p className="menu-big-text">{siteConfig.phone}</p>
-              </div>
-              <div className="menu-text second-menu-link">
-                <p className="menu-big-text">{siteConfig.phone}</p>
-              </div>
-            </a>
-            <a href={`mailto:${siteConfig.email}`} className="menu-link contact-link">
-              <div className="menu-text first-menu-link">
-                <p className="menu-big-text">{siteConfig.email}</p>
-              </div>
-              <div className="menu-text second-menu-link">
-                <p className="menu-big-text">{siteConfig.email}</p>
-              </div>
-            </a>
-          </div>
-
-          <div className="nav-group brand-designer-text">
-            <span className="menu-big-text">Web Designer</span>
-            <span className="menu-big-text brand-designer-sub">Brand Designer</span>
-          </div>
+        <div className="nav-gooey">
+          <GooeyNavbar
+            items={NAV_ITEMS}
+            pillColor="#212121"
+            hoverPillColor="#4ade80"
+            textColor="#ffffff"
+            hoverTextColor="#111111"
+            uppercase
+            letterSpacing={0.6}
+            fontSize={13}
+            paddingX={18}
+            paddingY={12}
+            cornerRadius="0px"
+            gap={10}
+            neighborPush={8}
+            anchorEdge="center"
+            neckRatio={0.4}
+            glowSize={80}
+            activeFrom="page"
+            onSelect={handleNavSelect}
+          />
         </div>
 
         <button
@@ -215,58 +183,56 @@ export default function Navbar(props: NavbarProps) {
         }}
       >
         <div className="nav-mobile-inner">
-          <div className="nav-mobile-section">
-            <Link href="/about" className="nav-mobile-link" onClick={closeMenu}>
-              About Me
-              <svg className="nav-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M7 17L17 7M17 7H7M17 7V17"/>
-              </svg>
-            </Link>
-          </div>
-          <div className="nav-mobile-section nav-mobile-section-work">
-            {navLinks.map((link) => (
-              <Link key={link.label} href={link.href} className="nav-mobile-link" onClick={closeMenu}>
-                {link.label}
-                <svg className="nav-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
+          {NAV_ITEMS.map((item) => {
+            const isInternal = item.link.startsWith("/");
+            const content = (
+              <>
+                {item.label}
+                <svg
+                  className="nav-arrow"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path d="M7 17L17 7M17 7H7M17 7V17" />
                 </svg>
-              </Link>
-            ))}
-          </div>
-          <div className="nav-mobile-section">
-            <Link href="/blog" className="nav-mobile-link" onClick={closeMenu}>
-              Blog
-              <svg className="nav-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M7 17L17 7M17 7H7M17 7V17"/>
-              </svg>
-            </Link>
-          </div>
-          <div className="nav-mobile-section">
-            <Link href="/moodboard" className="nav-mobile-link" onClick={closeMenu}>
-              Moodboard
-              <svg className="nav-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M7 17L17 7M17 7H7M17 7V17"/>
-              </svg>
-            </Link>
-          </div>
-          <div className="nav-mobile-section nav-mobile-contact">
-            <a href={`tel:${siteConfig.phone}`} className="nav-mobile-link">{siteConfig.phone}</a>
-            <a href={`mailto:${siteConfig.email}`} className="nav-mobile-link">{siteConfig.email}</a>
-          </div>
-          <div className="nav-mobile-section nav-mobile-social">
-            {siteConfig.socials.map((s) => (
-              <a key={s.label} href={s.href} target="_blank" className="nav-mobile-link" rel="noopener noreferrer">{s.label}</a>
-            ))}
-          </div>
+              </>
+            );
+
+            return (
+              <div key={item.label} className="nav-mobile-section">
+                {isInternal ? (
+                  <Link href={item.link} className="nav-mobile-link" onClick={closeMenu}>
+                    {content}
+                  </Link>
+                ) : (
+                  <a href={item.link} className="nav-mobile-link" onClick={closeMenu}>
+                    {content}
+                  </a>
+                )}
+              </div>
+            );
+          })}
+
           <div className="nav-mobile-bottom">
-            <Image
-              src="/nav-favicon.svg"
-              alt="Ifteyaj monogram"
-              width={40}
-              height={40}
-              loading="lazy"
-              className="nav-mobile-favicon"
-            />
+            <div className="nav-mobile-social">
+              {siteConfig.socials
+                .filter((social) => social.label.toLowerCase() !== "behance")
+                .map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={closeMenu}
+                >
+                  {social.label}
+                </a>
+              ))}
+            </div>
             <div className="nav-mobile-meta">
               <span>Web Designer</span>
               <span>Brand Designer</span>

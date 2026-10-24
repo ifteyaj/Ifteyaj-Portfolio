@@ -11,12 +11,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return (
-    <>
-      <h1 className="sr-only">
-        Ifteyaj Ahmed — Brand Identity Designer, Logo Designer & AI Web Developer
-      </h1>
-      <HomeClient />
-    </>
-  );
+  return <HomeClient />;
 }

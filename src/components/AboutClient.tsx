@@ -11,21 +11,10 @@ import SiteFooter from "@/components/SiteFooter";
 import { about } from "@/data/about";
 
 const CurveflowCarousel = dynamic(() => import("@/lib/framer/CurveflowCarousel"), { ssr: false });
-const LiquidImage = dynamic(() => import("@/lib/framer/LiquidImage"), { ssr: false });
 
 export default function AboutClient({ carouselImages = [] }: { carouselImages?: string[] }) {
   const rootRef = useRef<HTMLDivElement>(null);
   const [revealed, setRevealed] = useState(false);
-  const [canHover, setCanHover] = useState(false);
-
-  useEffect(() => {
-    if (typeof window === "undefined" || !window.matchMedia) return;
-    const mq = window.matchMedia("(hover: hover) and (pointer: fine)");
-    const update = () => setCanHover(mq.matches);
-    update();
-    mq.addEventListener?.("change", update);
-    return () => mq.removeEventListener?.("change", update);
-  }, []);
 
   useEffect(() => {
     const root = rootRef.current;
@@ -114,17 +103,7 @@ export default function AboutClient({ carouselImages = [] }: { carouselImages?: 
             decoding="async"
             style={{ objectFit: "cover" }}
           />
-          {canHover && (
-            <LiquidImage
-              image={{ src: about.heroImage, alt: about.heroName }}
-              fit="cover"
-              strength={0.03}
-              speed={0.14}
-              colorReveal
-              borderRadius={0}
-              style={{ position: "absolute", inset: 0 }}
-            />
-          )}
+
         </div>
         <div className="about-hero-content">
           <p className="about-hero-label">Hello, I&apos;m</p>
@@ -221,6 +200,16 @@ export default function AboutClient({ carouselImages = [] }: { carouselImages?: 
               </li>
             ))}
           </ul>
+        </section>
+
+        <section className="about-tools-image">
+          <Image
+            src={about.heroImage}
+            alt={about.heroName}
+            width={1920}
+            height={1080}
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
         </section>
 
         <SiteFooter />

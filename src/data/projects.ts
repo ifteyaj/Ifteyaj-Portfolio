@@ -9,6 +9,7 @@ export const projects: Project[] = [
     secondaryCategory: "Voice AI",
     categories: ["Strategy", "Guidelines"],
     year: "2025",
+    homeHeight: 280,
     images: ["/images/riverborn/riverborn.webp", "/images/riverborn/riverborn_2.webp", "/images/riverborn/riberborn_3.webp", "/images/riverborn/riberborn_4.webp", "/images/riverborn/riberborn_5.webp", "/images/riverborn/riberborn_6.webp", "/images/riverborn/riberborn_7.webp", "/images/riverborn/riberborn_8.webp", "/images/riverborn/riberborn_9.webp", "/images/riverborn/riberborn_10.webp", "/images/riverborn/riberborn_11.webp", "/images/riverborn/riberborn_12.webp", "/images/riverborn/riberborn_13.webp", "/images/riverborn/riberborn_14.webp"],
     href: "/work/riverborn",
     short:
@@ -41,6 +42,7 @@ export const projects: Project[] = [
     secondaryCategory: "News & Media",
     categories: ["Strategy", "Guidelines"],
     year: "2026",
+    homeHeight: 220,
     images: [
       "/images/tru-express/tru-express.webp",
       "/images/tru-express/tru-express-2.webp",
@@ -88,6 +90,7 @@ export const projects: Project[] = [
     secondaryCategory: "Digital Banking",
     categories: ["Social Visual"],
     year: "2024",
+    homeHeight: 300,
     images: ["/images/spendo/spendo.webp", "/images/spendo/Spendo_2.webp", "/images/spendo/Spendo_3.webp", "/images/spendo/Spendo_4.webp", "/images/spendo/Spendo_5.webp", "/images/spendo/Spendo_6.webp", "/images/spendo/Spendo_7.webp", "/images/spendo/Spendo_9.webp", "/images/spendo/Spendo_8.webp", "/images/spendo/Spendo_10.webp", "/images/spendo/Spendo_11.webp", "/images/spendo/Spendo_12.webp", "/images/spendo/Spendo_13.webp", "/images/spendo/Spendo_14.webp"],
     href: "/work/spendo",
     short:
@@ -120,6 +123,7 @@ export const projects: Project[] = [
     secondaryCategory: "Child Therapy",
     categories: ["Strategy", "Guidelines", "Visual"],
     year: "2025",
+    homeHeight: 200,
     images: ["/images/inner-circle/inner-circle-01.webp", "/images/inner-circle/inner-circle-02.webp", "/images/inner-circle/inner-circle-03.webp", "/images/inner-circle/inner-circle-04.webp", "/images/inner-circle/inner-circle-05.webp", "/images/inner-circle/inner-circle-06.webp", "/images/inner-circle/inner-circle-07.webp", "/images/inner-circle/inner-circle-09.webp", "/images/inner-circle/inner-circle-08.webp", "/images/inner-circle/inner-circle-10.webp", "/images/inner-circle/inner-circle-11.webp", "/images/inner-circle/inner-circle-12.webp", "/images/inner-circle/inner-circle-13.webp", "/images/inner-circle/inner-circle-14.webp"],
     href: "/work/inner-circle",
     short:
@@ -150,6 +154,7 @@ export const projects: Project[] = [
     category: "Logo Style",
     secondaryCategory: "Toys & Clothing",
     year: "2025",
+    homeHeight: 260,
     autoImages: true,
     images: ["/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby-01.webp", "/images/next-door-baby/next-door-baby-02.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp", "/images/next-door-baby/next-door-baby.webp"],
     href: "/work/next-door-baby",
@@ -181,6 +186,7 @@ export const projects: Project[] = [
     category: "Logo Style",
     secondaryCategory: "Fashion",
     year: "2025",
+    homeHeight: 240,
     images: [
       "/images/dripcheck/dripcheck.webp",
       "/images/dripcheck/dripcheck-2.webp",
@@ -227,6 +233,7 @@ export const projects: Project[] = [
     secondaryCategory: "Agri-Tech",
     categories: ["Social Visual", "Print Visual"],
     year: "2026",
+    homeHeight: 180,
     autoImages: true,
     images: [
       "/images/foshol-ghor/foshol-ghor.webp",
@@ -273,6 +280,7 @@ export const projects: Project[] = [
     category: "Brand Identity",
     secondaryCategory: "Furniture",
     year: "2025",
+    homeHeight: 270,
     images: ["/images/settle-desk.webp", "/images/settle-desk.webp", "/images/settle-desk.webp", "/images/settle-desk.webp"],
     href: "/work/settle-desk",
     short: "Coming Soon",

@@ -48,6 +48,10 @@ export const siteConfig: SiteConfig = {
       label: "Instagram",
       href: "https://instagram.com/_charlieforc/",
     },
+    {
+      label: "Behance",
+      href: "https://www.behance.net/ifteyaj-portfolio",
+    },
   ],
 };
 

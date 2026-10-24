@@ -14,6 +14,11 @@ const eslintConfig = defineConfig([
     "next-env.d.ts",
     // Vendored third-party Framer component (minified, external source):
     "src/lib/framer/**",
+    // Vendored compiled GooeyNavbar (minified, external source):
+    "src/components/ui/GooeyNavbar.jsx",
+    // Tooling (not shipped):
+    ".opencode/**",
+    "scripts/**",
   ]),
 ]);
 

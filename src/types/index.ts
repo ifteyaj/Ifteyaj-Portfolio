@@ -14,6 +14,8 @@ export interface Project {
   /** Multiple categories shown on the All Works page. Falls back to `category`. */
   categories?: string[];
   year: string;
+  /** Optional height in the home marquee strip (px at desktop). Controls size variety. */
+  homeHeight?: number;
   image?: string;
   images?: string[];
   /**
