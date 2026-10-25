@@ -4807,3 +4807,14 @@ html.lenis body {
   line-height: 1.2;
   padding-bottom: 0.5rem;
 }
+
+
+/* ── Contact: top 3 social buttons combined width equals Resume button ── */
+.contact-top-social {
+  width: calc((324px - 2rem) / 3);
+}
+@media (max-width: 639px) {
+  .contact-top-social {
+    width: calc((264px - 2rem) / 3);
+  }
+}

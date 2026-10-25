@@ -76,7 +76,7 @@ export default function ContactContent() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="contact-social-link"
+                  className="contact-social-link contact-top-social"
                 >
                   {social.label}
                 </a>
