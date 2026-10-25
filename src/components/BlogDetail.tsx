@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Lenis from "lenis";
@@ -13,6 +13,50 @@ import type { BlogPost } from "@/types";
 
 interface BlogDetailProps {
   post: BlogPost;
+}
+
+const INLINE_PATTERN = /(\*\*[^*]+\*\*|\*[^*]+\*|\[[^\]]+\]\([^)]+\))/g;
+
+/** Renders light inline markdown: **bold**, *italic* and [links](/path). */
+function InlineText({ text }: { text: string }) {
+  const nodes: ReactNode[] = [];
+  let lastIndex = 0;
+  let key = 0;
+
+  for (const match of text.matchAll(INLINE_PATTERN)) {
+    const index = match.index ?? 0;
+    if (index > lastIndex) nodes.push(text.slice(lastIndex, index));
+
+    const token = match[0];
+    if (token.startsWith("**")) {
+      nodes.push(<strong key={key++}>{token.slice(2, -2)}</strong>);
+    } else if (token.startsWith("[")) {
+      const link = /^\[([^\]]+)\]\(([^)]+)\)$/.exec(token);
+      if (link) {
+        const [, label, href] = link;
+        nodes.push(
+          href.startsWith("/") ? (
+            <Link key={key++} href={href}>
+              {label}
+            </Link>
+          ) : (
+            <a key={key++} href={href} target="_blank" rel="noopener noreferrer">
+              {label}
+            </a>
+          )
+        );
+      } else {
+        nodes.push(token);
+      }
+    } else {
+      nodes.push(<em key={key++}>{token.slice(1, -1)}</em>);
+    }
+
+    lastIndex = index + token.length;
+  }
+
+  if (lastIndex < text.length) nodes.push(text.slice(lastIndex));
+  return <>{nodes}</>;
 }
 
 export default function BlogDetail({ post }: BlogDetailProps) {
@@ -40,7 +84,7 @@ export default function BlogDetail({ post }: BlogDetailProps) {
     gsap.fromTo(".moodboard-detail-image", { y: 80, opacity: 0 }, { y: 0, opacity: 1, duration: 1.1, ease: "texttshow", delay: 0.3 });
     gsap.fromTo(".moodboard-detail-info", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.9, ease: "texttshow", delay: 0.7 });
     gsap.fromTo(".moodboard-related-pin", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "texttshow", stagger: 0.06, delay: 1.0 });
-    gsap.fromTo(".blog-content .blog-content-paragraph", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: "texttshow", stagger: 0.08, delay: 0.9 });
+    gsap.fromTo(".blog-content > *", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: "texttshow", stagger: 0.08, delay: 0.9 });
     gsap.fromTo(".case-footer-block", { y: 80, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: "texttshow", delay: 1.2 });
 
     gsap.to(".first-menu-link:not(.case-bottom-nav .first-menu-link):not(.about-nav-wrapper .first-menu-link):not(.contact-nav-wrapper .first-menu-link):not(.nav-clock-wrapper .first-menu-link):not(.work-nav-wrapper .first-menu-link)", { y: "0%", duration: 1, ease: "texttshow", delay: 0.3 });
@@ -91,14 +135,73 @@ export default function BlogDetail({ post }: BlogDetailProps) {
           </div>
         </div>
 
-        {post.body && post.body.length > 0 && (
-          <section className="blog-content">
-            {post.body.map((paragraph, i) => (
-              <p key={i} className="blog-content-paragraph">
-                {paragraph}
-              </p>
-            ))}
+        {post.content && post.content.length > 0 ? (
+          <section className="blog-content blog-content--rich">
+            {post.content.map((block, i) => {
+              switch (block.type) {
+                case "heading": {
+                  const numbered = /^(\d{2}\.)\s+(.*)$/.exec(block.text);
+                  return (
+                    <h2 key={i} className="blog-content-heading">
+                      {numbered ? (
+                        <>
+                          <span className="blog-content-heading-index">{numbered[1]}</span>{" "}
+                          {numbered[2]}
+                        </>
+                      ) : (
+                        block.text
+                      )}
+                    </h2>
+                  );
+                }
+                case "list":
+                  return (
+                    <ul key={i} className="blog-content-list">
+                      {block.items.map((item, j) => (
+                        <li key={j}>
+                          <InlineText text={item} />
+                        </li>
+                      ))}
+                    </ul>
+                  );
+                case "lead":
+                  return (
+                    <p key={i} className="blog-content-lead">
+                      <InlineText text={block.text} />
+                    </p>
+                  );
+                case "callout":
+                  return (
+                    <p key={i} className="blog-content-callout">
+                      <InlineText text={block.text} />
+                    </p>
+                  );
+                case "note":
+                  return (
+                    <p key={i} className="blog-content-note">
+                      <InlineText text={block.text} />
+                    </p>
+                  );
+                default:
+                  return (
+                    <p key={i} className="blog-content-paragraph">
+                      <InlineText text={block.text} />
+                    </p>
+                  );
+              }
+            })}
           </section>
+        ) : (
+          post.body &&
+          post.body.length > 0 && (
+            <section className="blog-content">
+              {post.body.map((paragraph, i) => (
+                <p key={i} className="blog-content-paragraph">
+                  {paragraph}
+                </p>
+              ))}
+            </section>
+          )
         )}
 
         <div className="blog-divider" />

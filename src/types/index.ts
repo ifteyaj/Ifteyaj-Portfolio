@@ -75,12 +75,23 @@ export interface MoodboardPin {
   description: string;
 }
 
+/** Structured long-form content block for a blog post. */
+export type BlogBlock =
+  | { type: "lead"; text: string }
+  | { type: "heading"; text: string }
+  | { type: "paragraph"; text: string }
+  | { type: "list"; items: string[] }
+  | { type: "callout"; text: string }
+  | { type: "note"; text: string };
+
 export interface BlogPost {
   slug: string;
   title: string;
   tag: string;
   image: string;
   description: string;
+  /** Optional structured article content (headings, lists, callouts). */
+  content?: BlogBlock[];
   /** Optional long-form paragraphs rendered on the detail page. */
   body?: string[];
 }
