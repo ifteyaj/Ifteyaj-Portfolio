@@ -1,0 +1,14 @@
+</rfl:parameter>  .case-bottom-copy {
+>     height: auto;
+>     overflow: visible;
+>     line-height: var(--small-discriptor-line);
+>   }
+>   .case-bottom-col-social .menu-link,
+>   .case-bottom-col-social .menu-text,
+>   .case-bottom-col-social .menu-big-text {
+>     height: auto;
+>     /* Clip descenders (e.g. the "g" in "Instagram") so the social labels'
+>        visible bottom matches the flat-bottomed ©2026 copyright. */
+>     overflow: hidden;
+>     line-height: var(--small-discriptor-line);
+>   }

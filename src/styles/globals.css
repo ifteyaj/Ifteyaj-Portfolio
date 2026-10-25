@@ -3556,6 +3556,7 @@ html.lenis body {
 .home-media-video {
   position: relative;
   aspect-ratio: 16 / 9;
+  max-height: 360px;
   overflow: hidden;
   background-color: var(--lightblack);
 }
@@ -4216,7 +4217,7 @@ html.lenis body {
 }
 
 .contact-body {
-  padding: clamp(9rem, 14vh, 12rem) var(--page-margin) var(--page-margin);
+  padding: clamp(4.5rem, 7vh, 5.5rem) var(--page-margin) 0;
   min-height: auto;
 }
 
@@ -4265,8 +4266,8 @@ html.lenis body {
 .contact-socials {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem 2rem;
-  margin-top: auto;
+  gap: 0.75rem 1rem;
+  margin-top: 1rem;
   padding-top: 0;
 }
 
@@ -4276,7 +4277,7 @@ html.lenis body {
   text-decoration: none;
   opacity: 0.9;
   transition: opacity 180ms ease, color 180ms ease, background-color 180ms ease;
-  padding: 0.25rem 0.6rem;
+  padding: 0.2rem 0.5rem;
   min-height: 32px;
   display: inline-flex;
   align-items: center;
@@ -4299,7 +4300,7 @@ html.lenis body {
 .contact-right {
   display: flex;
   flex-direction: column;
-  gap: clamp(1.25rem, 2vw, 1.75rem);
+  gap: 1rem;
   min-height: inherit;
   justify-content: space-between;
 }
@@ -4723,4 +4724,66 @@ html.lenis body {
 .case-bottom-nav {
   margin-left: 0;
   margin-right: 0;
+}
+
+
+/* ── Mobile footer: force bottom alignment of copy & social links ── */
+@media (max-width: 639px) {
+  .case-bottom-nav {
+    align-items: flex-end !important;
+  }
+  .case-bottom-copy,
+  .case-bottom-col-social .menu-link,
+  .case-bottom-col-social .menu-text,
+  .case-bottom-col-social .menu-big-text {
+    height: auto !important;
+    overflow: visible !important;
+    line-height: 1.4 !important;
+    align-self: flex-end !important;
+  }
+  .case-bottom-col-social .menu-text {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin: 0 !important;
+  }
+}
+
+
+/* ── Contact: monogram where social links used to sit ── */
+.contact-monogram-wrap {
+  margin-top: auto;
+  line-height: 0;
+  align-self: flex-start;
+}
+.contact-monogram {
+  height: 22rem;
+  width: auto;
+  display: block;
+}
+@media (max-width: 1023px) {
+  .contact-monogram {
+    height: 12rem;
+  }
+  .contact-monogram-wrap {
+    gap: 0.75rem;
+  }
+}
+
+
+/* ── Contact: role stack beside monogram ── */
+.contact-monogram-wrap {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.5rem;
+}
+.contact-role-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--grey);
+  line-height: 1.2;
+  padding-bottom: 0.5rem;
 }

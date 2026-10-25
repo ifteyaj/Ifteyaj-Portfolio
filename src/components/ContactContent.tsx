@@ -82,6 +82,20 @@ export default function ContactContent() {
                 </a>
               ))}
             </nav>
+
+            <div className="contact-monogram-wrap" aria-hidden="true">
+              <div className="contact-role-stack">
+                <span>Web Designer</span>
+                <span>Brand Designer</span>
+              </div>
+              <Image
+                src="/monogram.svg"
+                alt=""
+                width={320}
+                height={320}
+                className="contact-monogram"
+              />
+            </div>
           </div>
 
           <div className="contact-right">
