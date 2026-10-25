@@ -3605,6 +3605,18 @@ html.lenis body {
   }
 }
 
+/* ── In-between range (tablets + phones that render wider than 639 CSS px): ──
+   The root font here is vw-scaled (up to ~27px), so rem-based values inflate
+   and 85% reads nearly full-width on a 740px screen. Lock the measure and
+   the text size in px/em instead: noticeably larger copy, much shorter line. */
+@media (min-width: 640px) and (max-width: 1024px) {
+  .home-intro {
+    font-size: clamp(14px, 1.1vw + 9px, 16px);
+    max-width: min(85%, 24em);
+    text-wrap: wrap;
+  }
+}
+
 /* ── Desktop: intro lands on the header's About-Me column ─────────────────── */
 @media (min-width: 1025px) {
   /* Exactly the header's grid: same full-viewport width, same page padding,
@@ -4555,9 +4567,23 @@ html.lenis body {
   }
 }
 
-/* ── Spacing after home logo reel (desktop) ── */
+/* ── Spacing after home logo reel ──
+   px/vh, not rem: phones that render wider than 639 CSS px get a vw-scaled
+   root font (~27px), which ballooned the old 6rem into a ~170px blank band. */
 .home-logo-reel-divider {
-  margin-top: 6rem;
+  margin-top: clamp(40px, 10vh, 96px);
+}
+
+/* Phone-wide range (640–767px): tall narrow screens where vh-based spacing
+   still balloons. Match the rhythm phones get below 640px. */
+@media (min-width: 640px) and (max-width: 767px) {
+  .home-logo-reel-divider {
+    margin-top: 40px;
+  }
+
+  .home-contact {
+    margin-top: 42px;
+  }
 }
 @media (max-width: 639px) {
   .home-logo-reel-divider {
