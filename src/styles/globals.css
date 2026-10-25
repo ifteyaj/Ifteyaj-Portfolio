@@ -4687,6 +4687,19 @@ html.lenis body {
   }
 }
 
+/* Phone-wide range (640–767px): the vw-scaled root font (~28px/rem) inflated
+   the column rhythm — number→icon was ~70px and icon→heading ~56px. Tone it
+   down in px so "My Work process" reads compact on tall narrow screens. */
+@media (min-width: 640px) and (max-width: 767px) {
+  .home-process-num {
+    margin-bottom: 24px;
+  }
+
+  .home-process-icon {
+    margin-bottom: 20px;
+  }
+}
+
 /* Mobile */
 @media (max-width: 639px) {
   .home-process {
