@@ -136,7 +136,7 @@ export default function BlogDetail({ post }: BlogDetailProps) {
         </div>
 
         {post.content && post.content.length > 0 ? (
-          <section className="blog-content blog-content--rich">
+          <section className="blog-content">
             {post.content.map((block, i) => {
               switch (block.type) {
                 case "heading": {
