@@ -4788,6 +4788,8 @@ html.lenis body {
     order: 4;
     margin-top: 0;
     margin-bottom: -0.5rem;
+    margin-left: auto;
+    justify-content: flex-end;
   }
 }
 
