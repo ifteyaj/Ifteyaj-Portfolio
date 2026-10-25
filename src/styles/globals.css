@@ -3379,6 +3379,32 @@ html.lenis body {
   }
 }
 
+/* ── Phone-wide range (640–767px): bottom-align the footer credit row ──
+   The phone normalization above only fires under (hover:none/pointer:coarse),
+   and the base row aligns items top with clipped 1.05rem link boxes — so
+   ©2026 and the social links render at slightly different heights. Force the
+   phone treatment on all devices in this width range, pointer type aside. */
+@media (min-width: 640px) and (max-width: 767px) {
+  .case-bottom-nav {
+    align-items: flex-end;
+  }
+
+  .case-bottom-copy,
+  .case-bottom-nav .menu-link,
+  .case-bottom-nav .menu-text,
+  .case-bottom-nav .menu-big-text {
+    height: auto;
+    overflow: visible;
+    line-height: var(--small-discriptor-line);
+  }
+
+  .case-bottom-nav .menu-text {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+  }
+}
+
 /* ── LANDSCAPE PHONE ──────────────────────────────────────────────────────── */
 @media (max-width: 767px) and (orientation: landscape) {
   .about-hero          { height: 60dvh; }
