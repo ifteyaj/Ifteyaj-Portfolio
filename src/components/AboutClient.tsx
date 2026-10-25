@@ -93,7 +93,7 @@ export default function AboutClient({ carouselImages = [] }: { carouselImages?: 
       <div className="about-hero">
         <div className="about-hero-img">
           <Image
-            src="/images/Contact_page.png"
+            src={about.heroImage}
             alt={about.heroName}
             fill
             sizes="100vw"
@@ -204,7 +204,7 @@ export default function AboutClient({ carouselImages = [] }: { carouselImages?: 
 
         <section className="about-tools-image">
           <Image
-            src={about.heroImage}
+            src="/images/Contact_page.png"
             alt={about.heroName}
             width={1920}
             height={1080}
