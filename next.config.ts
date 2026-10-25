@@ -5,6 +5,16 @@ const nextConfig: NextConfig = {
   // the loading screen's "Portfolio" label (it uses the maximum z-index).
   // Errors and warnings still surface without it.
   devIndicators: false,
+  async redirects() {
+    return [
+      // The brand post was published with this slug first; keep old links alive.
+      {
+        source: "/blog/how-to-make-a-small-brand-feel-established",
+        destination: "/blog/how-to-make-a-small-brand-feel-more-established",
+        permanent: true,
+      },
+    ];
+  },
   images: {
     // Serve AVIF first (smallest), fall back to WebP. Next generates
     // responsive variants automatically, fixing the Lighthouse

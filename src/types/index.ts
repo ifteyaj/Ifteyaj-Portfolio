@@ -87,6 +87,8 @@ export type BlogBlock =
 export interface BlogPost {
   slug: string;
   title: string;
+  /** Optional search/social title when it should differ from the on-page title. */
+  seoTitle?: string;
   tag: string;
   image: string;
   description: string;
