@@ -2926,7 +2926,7 @@ html.lenis body {
      the header row above it — logo and Menu/Close stay reachable on top. */
   .nav-bar             { min-height: 56px; width: 100%; overflow: visible; position: relative; z-index: 1000; }
   /* Start the menu links below the fixed header instead of behind it. */
-  .nav-mobile-inner    { padding-top: calc(56px + 1.5rem); }
+  .nav-mobile-inner    { padding-top: calc(56px + clamp(3.5rem, 12vh, 120px)); }
   .nav-logo            { height: 2.2rem; margin-left: 0; }
 
   /* Keep the compact desktop links out of the phone header. */
@@ -4203,7 +4203,7 @@ html.lenis body {
   }
 
   .nav-mobile-inner {
-    padding-top: calc(56px + 1.5rem);
+    padding-top: calc(56px + clamp(3.5rem, 12vh, 120px));
   }
 }
 
