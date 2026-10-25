@@ -4766,6 +4766,8 @@ html.lenis body {
   }
   .contact-monogram-wrap {
     gap: 0.75rem;
+    order: 4;
+    margin-top: 1.5rem;
   }
 }
 
@@ -4782,7 +4784,7 @@ html.lenis body {
   gap: 0.15rem;
   font-size: 0.8rem;
   letter-spacing: 0.06em;
-  text-transform: uppercase;
+  text-transform: none;
   color: var(--grey);
   line-height: 1.2;
   padding-bottom: 0.5rem;

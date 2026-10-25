@@ -81,6 +81,14 @@ export default function ContactContent() {
                   {social.label}
                 </a>
               ))}
+              <a
+                href="https://drive.google.com/file/d/1FrO_WGZ_RXZvE894trR2sm_1kpdQR6wC/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact-social-link"
+              >
+                Resume
+              </a>
             </nav>
 
             <div className="contact-monogram-wrap" aria-hidden="true">
