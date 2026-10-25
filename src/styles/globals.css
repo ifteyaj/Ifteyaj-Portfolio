@@ -4434,7 +4434,7 @@ html.lenis body {
   }
   .contact-image-wrap {
     order: 5;
-    margin-top: 1.5rem;
+    margin-top: 0;
     aspect-ratio: 4 / 3;
   }
   .contact-left {
@@ -4785,7 +4785,8 @@ html.lenis body {
   .contact-monogram-wrap {
     gap: 0.75rem;
     order: 4;
-    margin-top: 1.5rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0;
   }
 }
 
