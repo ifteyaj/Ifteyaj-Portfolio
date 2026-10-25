@@ -93,7 +93,7 @@ export default function AboutClient({ carouselImages = [] }: { carouselImages?: 
       <div className="about-hero">
         <div className="about-hero-img">
           <Image
-            src={about.heroImage}
+            src="/images/Contact_page.png"
             alt={about.heroName}
             fill
             sizes="100vw"
