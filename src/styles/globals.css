@@ -4757,6 +4757,16 @@ html.lenis body {
 }
 
 
+/* ── Contact: Resume button spans the width of 3 social buttons ── */
+.contact-resume-link {
+  width: 324px;
+}
+@media (max-width: 639px) {
+  .contact-resume-link {
+    width: 264px;
+  }
+}
+
 /* ── Contact: monogram where social links used to sit ── */
 .contact-monogram-wrap {
   margin-top: auto;

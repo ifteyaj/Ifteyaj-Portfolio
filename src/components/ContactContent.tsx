@@ -85,7 +85,7 @@ export default function ContactContent() {
                 href="https://drive.google.com/file/d/1FrO_WGZ_RXZvE894trR2sm_1kpdQR6wC/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="contact-social-link"
+                className="contact-social-link contact-resume-link"
               >
                 Resume
               </a>
