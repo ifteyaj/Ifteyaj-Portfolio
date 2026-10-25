@@ -73,6 +73,8 @@
   --lightblack:       #212121;
   --darkgrey:         #272727;
   --white:            white;
+  /* Body copy: slightly muted so headings stay the brightest thing on screen. */
+  --body-text:        #d4d4d4;
   --grey:             #a3a3a3;
   --mid-grey:         #7a7771;
   --naturalgrey:      #a8a59c;
@@ -1590,6 +1592,7 @@ html.lenis body {
   line-height: 1.2;
   font-weight: var(--main-weight-big);
   letter-spacing: 0.02em;
+  color: var(--body-text);
 }
 .case-desc-more {
   font-family: var(--main-type);
@@ -2193,6 +2196,7 @@ html.lenis body {
   font-size: var(--body-copy);
   line-height: var(--body-copy-line);
   letter-spacing: var(--body-copy-space);
+  color: var(--body-text);
   margin-bottom: 1.5rem;
 }
 
@@ -2255,7 +2259,7 @@ html.lenis body {
   line-height: var(--small-high-text-line);
   font-weight: var(--main-weight-big);
   letter-spacing: 0.02em;
-  color: var(--white);
+  color: var(--body-text);
   text-align: left;
   max-width: 800px;
 }
@@ -2437,7 +2441,7 @@ html.lenis body {
   line-height: var(--body-copy-line);
   font-weight: var(--main-weight-big);
   letter-spacing: var(--body-copy-space);
-  color: var(--white);
+  color: var(--body-text);
 }
 
 /* ── About carousel (Curveflow) ── */
@@ -2760,8 +2764,8 @@ html.lenis body {
   font-size: var(--small-high-text);
   line-height: var(--small-high-text-line);
   font-weight: var(--main-weight-big);
-  letter-spacing: 0.02em;
-  color: var(--white);
+  letter-spacing: -0.01em;
+  color: var(--body-text);
   margin-bottom: 1.2rem;
 }
 .blog-content-paragraph:last-child {
@@ -2803,8 +2807,8 @@ html.lenis body {
   font-size: var(--small-high-text);
   line-height: var(--small-high-text-line);
   font-weight: var(--main-weight-big);
-  letter-spacing: 0.02em;
-  color: var(--white);
+  letter-spacing: -0.01em;
+  color: var(--body-text);
 }
 .blog-content-list li::before {
   content: "—";
@@ -3626,7 +3630,7 @@ html.lenis body {
   line-height: 1.5;
   letter-spacing: 0.002em;
   text-align: left;
-  color: var(--white);
+  color: var(--body-text);
   opacity: 0;
   transform: translateY(0.75rem);
 }
@@ -4365,11 +4369,10 @@ html.lenis body {
   font-size: clamp(1.1rem, 1.5vw, 1.45rem);
   line-height: 1.3;
   letter-spacing: 0.01em;
-  color: var(--white);
+  color: var(--body-text);
   font-weight: 400;
   max-width: 44ch;
   margin: 0.3rem 0 0;
-  opacity: 0.9;
 }
 
 .contact-socials {
