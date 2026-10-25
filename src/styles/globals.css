@@ -4279,6 +4279,10 @@ html.lenis body {
   transition: opacity 180ms ease, color 180ms ease, background-color 180ms ease;
   padding: 0.2rem 0.5rem;
   min-height: 32px;
+  width: 108px;
+  justify-content: center;
+  box-sizing: border-box;
+  text-align: center;
   display: inline-flex;
   align-items: center;
   background-color: var(--darkgrey);
@@ -4423,6 +4427,10 @@ html.lenis body {
     padding: 0.15rem 0.5rem;
     min-height: 28px;
     font-size: 0.9rem;
+    width: 88px;
+    justify-content: center;
+    box-sizing: border-box;
+    text-align: center;
   }
   .contact-image-wrap {
     order: 5;
