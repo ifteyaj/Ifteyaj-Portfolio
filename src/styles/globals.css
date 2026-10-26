@@ -4610,6 +4610,14 @@ html.lenis body {
   .home-contact {
     margin-top: 42px;
   }
+
+  /* The intro row cap `max-width: 48%` only exists below 640px, so wide
+     phones render the intro at ~64% of the row while its inflated root font
+     makes the line feel stretched. Cap it in em so it scales with the phone
+     root font instead of a hard px. */
+  .home-contact-intro {
+    max-width: min(60%, 13em);
+  }
 }
 @media (max-width: 639px) {
   .home-logo-reel-divider {
