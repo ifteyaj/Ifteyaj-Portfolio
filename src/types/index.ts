@@ -79,6 +79,7 @@ export interface MoodboardPin {
 export type BlogBlock =
   | { type: "lead"; text: string }
   | { type: "heading"; text: string }
+  | { type: "subheading"; text: string }
   | { type: "paragraph"; text: string }
   | { type: "list"; items: string[] }
   | { type: "callout"; text: string }

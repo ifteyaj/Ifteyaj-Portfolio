@@ -15,7 +15,7 @@ interface BlogDetailProps {
   post: BlogPost;
 }
 
-const INLINE_PATTERN = /(\*\*[^*]+\*\*|\*[^*]+\*|\[[^\]]+\]\([^)]+\))/g;
+const INLINE_PATTERN = /(\*\*[^*]+\*\*|\*[^*]+\*|\[[^\]]+\]\([^)]+\)|==[^=]+==)/g;
 
 /** Renders light inline markdown: **bold**, *italic* and [links](/path). */
 function InlineText({ text }: { text: string }) {
@@ -30,6 +30,8 @@ function InlineText({ text }: { text: string }) {
     const token = match[0];
     if (token.startsWith("**")) {
       nodes.push(<strong key={key++}>{token.slice(2, -2)}</strong>);
+    } else if (token.startsWith("==")) {
+      nodes.push(<span key={key++} className="blog-content-green">{token.slice(2, -2)}</span>);
     } else if (token.startsWith("[")) {
       const link = /^\[([^\]]+)\]\(([^)]+)\)$/.exec(token);
       if (link) {
@@ -154,6 +156,12 @@ export default function BlogDetail({ post }: BlogDetailProps) {
                     </h2>
                   );
                 }
+                case "subheading":
+                  return (
+                    <h3 key={i} className="blog-content-subheading">
+                      {block.text}
+                    </h3>
+                  );
                 case "list":
                   return (
                     <ul key={i} className="blog-content-list">

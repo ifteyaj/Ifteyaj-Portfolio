@@ -127,4 +127,79 @@ export const blogPosts: BlogPost[] = [
       "The practical middle ground a lot of working designers have landed on: use AI freely for exploration and speed, but treat the final creative decisions, the ones that actually define the work, as the part that has to be genuinely yours.",
     ],
   },
+  {
+    slug: "i-built-my-own-ai-dev-stack-to-make-ai-coding-more-structured",
+    title: "I Built My Own AI Dev Stack to Make AI Coding More Structured",
+    tag: "AI",
+    image: "/images/blogs/i-built-my-own-ai-dev-stack-to-make-ai-coding-more-structured.webp",
+    description:
+      "A look inside my personal AI coding harness, built to bring structure to planning, implementation, code review, and verification with Claude Code and OpenCode.",
+    content: [
+      {
+        type: "paragraph",
+        text: "AI coding tools are improving quickly, making it easier to turn ideas into working applications. But I started thinking about a bigger challenge: how to make AI coding more structured, consistent, and reliable beyond a single prompt or conversation. That led me to build **AI Dev Stack**, a personal AI coding harness that helps agents understand a project, follow standards, plan features, review requirements, implement changes, and verify results. **Explore the project on GitHub:** [https://github.com/ifteyaj/ai-dev-stack](https://github.com/ifteyaj/ai-dev-stack)",
+      },
+      { type: "heading", text: "Why I Built It" },
+      {
+        type: "paragraph",
+        text: "Generating code quickly does not guarantee a correct, maintainable, or architecture-aligned solution. Planning, understanding the codebase, documenting decisions, reviewing changes, and testing are equally important when AI agents do much of the work. I wanted a reusable setup for managing these responsibilities without repeating instructions for every project. So I built a system around how AI works: shared rules, structured workflows, project-specific context, and verification.",
+      },
+      { type: "heading", text: "What Is AI Dev Stack?" },
+      {
+        type: "paragraph",
+        text: "AI Dev Stack is a reusable harness built around Claude Code and OpenCode. It combines shared instructions, workflows, documentation templates, integrations, scripts, and verification tools while letting projects keep their own requirements, architecture, and decisions. By separating reusable development infrastructure from project-specific knowledge, it keeps practices consistent without mixing contexts. It focuses on the system around the agents, not on replacing them.",
+      },
+      { type: "heading", text: "How It Works" },
+      { type: "subheading", text: "Shared Rules and Instructions" },
+      {
+        type: "paragraph",
+        text: "Projects differ in technology and architecture, but engineering principles stay consistent. AI Dev Stack shares development rules, coding standards, safety settings, and instructions, with adapters for Claude Code and OpenCode. This keeps one common foundation for future projects and avoids managing separate configurations.",
+      },
+      { type: "subheading", text: "Spec-Driven Development" },
+      {
+        type: "paragraph",
+        text: "For substantial features, plan before implementing: brainstorm, draft a specification, review it independently, refine, get human approval, implement, and verify. I use the Elephant-Goldfish Model (EGM), separating spec creation from review so a fresh session can challenge assumptions and catch gaps early. It keeps developers informed rather than removing them from decisions.",
+      },
+      { type: "subheading", text: "Understanding the Codebase" },
+      {
+        type: "paragraph",
+        text: "Existing projects require understanding structure, relationships, dependencies, and impact. Graphify maps codebase relationships alongside source code, docs, specs, and tests. This makes codebase understanding part of the workflow, helping agents make better-informed changes.",
+      },
+      { type: "subheading", text: "Project Memory and Documentation" },
+      {
+        type: "paragraph",
+        text: "Important knowledge should outlive chat history. Reusable Markdown templates document requirements, specs, architecture, decisions, roadmaps, plans, and status. The harness provides shared rules and templates; projects keep their own documentation. This keeps the environment reusable while projects evolve independently.",
+      },
+      { type: "subheading", text: "Verification and Safety" },
+      {
+        type: "paragraph",
+        text: "An agent saying \"done\" is not proof. The harness adds installation checks, diagnostics, structural checks, tests, shell guard, secret scanning, and backup/restore mechanisms. These safeguards catch problems earlier and support a stronger process: evidence of verification after implementation, not just an agent's final response.",
+      },
+      { type: "heading", text: "What's Inside the Repository?" },
+      {
+        type: "paragraph",
+        text: "Each directory has a clear responsibility: ==config/== holds rules, standards, safety settings, and hooks; ==workflows/== has common task instructions; ==templates/== holds reusable docs; ==integrations/== has setup notes and versions, ==scripts/== handles installation, diagnostics, updates, and verification, and ==skills/== holds custom skills. ==projects/== tracks registered projects, and ==tests/== covers script checks. A master architecture document explains the rest.",
+      },
+      { type: "heading", text: "What Have I Verified So Far?" },
+      {
+        type: "paragraph",
+        text: "AI Dev Stack is evolving. So far: installation checks, Graphify setup, structural checks, and a pilot feature that went through spec, reviews, tests, and live smoke verification. Limitations remain: some runtime workflows were not fully exercised due to an API billing error, and clean-machine installation is unverified. Documenting gaps is part of improving reliability.",
+      },
+      { type: "heading", text: "Explore the Project and Documentation" },
+      {
+        type: "paragraph",
+        text: "Start with the [AI Dev Stack GitHub repository](https://github.com/ifteyaj/ai-dev-stack). For deeper detail, see the [Master Architecture Document](https://github.com/ifteyaj/ai-dev-stack/blob/main/AI_Coding_Harness_Spec_Driven_Engineering_Master_Document.md), [Changelog](https://github.com/ifteyaj/ai-dev-stack/blob/main/CHANGELOG.md), and [New Project Workflow](https://github.com/ifteyaj/ai-dev-stack/blob/main/workflows/new-project.md). The project is MIT licensed.",
+      },
+      { type: "heading", text: "What's Next?" },
+      {
+        type: "paragraph",
+        text: "I'm refining workflows, strengthening verification, maintaining integrations, and learning where structure genuinely helps. Components should earn their place, and the workflow should stay light for small tasks while supporting complex features. As I use it across projects, I'll keep tuning the balance between flexibility and structure.",
+      },
+      { type: "heading", text: "Final Thoughts" },
+      {
+        type: "paragraph",
+        text: "I want to understand the engineering process behind AI software development, architecture, planning, testing, automation, maintenance. AI Dev Stack brings these together as a system I can keep improving. It's a work in progress, and I'd love to hear how others approach AI coding workflows. **Explore AI Dev Stack on GitHub:** [https://github.com/ifteyaj/ai-dev-stack](https://github.com/ifteyaj/ai-dev-stack)",
+      },
+    ],
+  },
 ];

@@ -2795,6 +2795,19 @@ html.lenis body {
   vertical-align: 0.25em;
   margin-right: 0.2em;
 }
+.blog-content-subheading {
+  font-family: var(--main-type);
+  font-size: clamp(1.15rem, 1.6vw, 1.45rem);
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  font-weight: var(--main-weight-big);
+  color: var(--white);
+  margin: 1.8rem 0 0.6rem;
+  text-wrap: balance;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
+}
 .blog-content-list {
   list-style: none;
   margin: 0 0 1.4rem;
@@ -2845,6 +2858,10 @@ html.lenis body {
 .blog-content strong {
   font-weight: 600;
   color: var(--white);
+}
+.blog-content-green {
+  color: var(--green);
+  font-weight: 400;
 }
 .blog-content em {
   font-family: "PT Serif", serif;
