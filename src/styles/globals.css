@@ -4768,6 +4768,13 @@ html.lenis body {
   .home-stage {
     padding-top: clamp(170px, 15vh, 240px);
   }
+
+  /* The reel row's bottom padding is rem/vh sized and inflates to ~96px here,
+     leaving a ~100px blank band between the reels and the divider line above
+     "My work process" — nearly 5x what phones get. Match phone rhythm in px. */
+  .home-media {
+    padding-bottom: 32px;
+  }
 }
 @media (max-width: 639px) {
   .home-logo-reel-divider {
