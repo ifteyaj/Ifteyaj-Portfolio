@@ -3533,6 +3533,16 @@ html.lenis body {
     padding-bottom: 0;
     margin: 0;
   }
+
+  /* The touch block keeps a 44px tap box on .menu-link but leaves the text
+     at its top, so bottom-aligning the rows lifts the social glyphs ~14px
+     above the © line. Pin the label to the bottom of the tap box so all four
+     texts share one visual baseline. */
+  .case-bottom-nav .menu-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
 }
 
 /* ── LANDSCAPE PHONE ──────────────────────────────────────────────────────── */
@@ -4756,6 +4766,13 @@ html.lenis body {
      root font instead of a hard px. */
   .home-contact-intro {
     max-width: min(60%, 13em);
+  }
+
+  /* The stage's rem/vh padding inflates to ~19vh + ~250px of top space on
+     tall wide phones, dropping the intro lower than phones (15vh) render it.
+     Trim it in px/vh so the intro sits higher on the first screen. */
+  .home-stage {
+    padding-top: clamp(170px, 15vh, 240px);
   }
 }
 @media (max-width: 639px) {
