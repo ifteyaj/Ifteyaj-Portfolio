@@ -219,9 +219,7 @@ export default function Navbar(props: NavbarProps) {
 
           <div className="nav-mobile-bottom">
             <div className="nav-mobile-social">
-              {siteConfig.socials
-                .filter((social) => social.label.toLowerCase() !== "behance")
-                .map((social) => (
+              {siteConfig.socials.map((social) => (
                 <a
                   key={social.label}
                   href={social.href}
@@ -232,10 +230,6 @@ export default function Navbar(props: NavbarProps) {
                   {social.label}
                 </a>
               ))}
-            </div>
-            <div className="nav-mobile-meta">
-              <span>Web Designer</span>
-              <span>Brand Designer</span>
             </div>
           </div>
         </div>
