@@ -3056,7 +3056,7 @@ html.lenis body {
      the header row above it — logo and Menu/Close stay reachable on top. */
   .nav-bar             { min-height: 56px; width: 100%; overflow: visible; position: relative; z-index: 1000; }
   /* Start the menu links below the fixed header instead of behind it. */
-  .nav-mobile-inner    { padding-top: calc(56px + 1.5rem); }
+  .nav-mobile-inner    { padding-top: calc(56px + clamp(3.5rem, 12vh, 120px)); }
   .nav-logo            { height: 2.2rem; margin-left: 0; }
 
   /* Keep the compact desktop links out of the phone header. */
@@ -3509,6 +3509,32 @@ html.lenis body {
   }
 }
 
+/* ── Phone-wide range (640–767px): bottom-align the footer credit row ──
+   The phone normalization above only fires under (hover:none/pointer:coarse),
+   and the base row aligns items top with clipped 1.05rem link boxes — so
+   ©2026 and the social links render at slightly different heights. Force the
+   phone treatment on all devices in this width range, pointer type aside. */
+@media (min-width: 640px) and (max-width: 767px) {
+  .case-bottom-nav {
+    align-items: flex-end;
+  }
+
+  .case-bottom-copy,
+  .case-bottom-nav .menu-link,
+  .case-bottom-nav .menu-text,
+  .case-bottom-nav .menu-big-text {
+    height: auto;
+    overflow: visible;
+    line-height: var(--small-discriptor-line);
+  }
+
+  .case-bottom-nav .menu-text {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+  }
+}
+
 /* ── LANDSCAPE PHONE ──────────────────────────────────────────────────────── */
 @media (max-width: 767px) and (orientation: landscape) {
   .about-hero          { height: 60dvh; }
@@ -3733,6 +3759,18 @@ html.lenis body {
   /* px-based so the phone-scale root font doesn't inflate the tablet size. */
   .home-headline {
     font-size: clamp(40px, 7vw, 76px);
+  }
+}
+
+/* ── In-between range (tablets + phones that render wider than 639 CSS px): ──
+   The root font here is vw-scaled (up to ~27px), so rem-based values inflate
+   and 85% reads nearly full-width on a 740px screen. Lock the measure and
+   the text size in px/em instead: noticeably larger copy, much shorter line. */
+@media (min-width: 640px) and (max-width: 1024px) {
+  .home-intro {
+    font-size: clamp(14px, 1.1vw + 9px, 16px);
+    max-width: min(85%, 24em);
+    text-wrap: wrap;
   }
 }
 
@@ -4322,7 +4360,7 @@ html.lenis body {
   }
 
   .nav-mobile-inner {
-    padding-top: calc(56px + 1.5rem);
+    padding-top: calc(56px + clamp(3.5rem, 12vh, 120px));
   }
 }
 
@@ -4694,9 +4732,31 @@ html.lenis body {
   }
 }
 
-/* ── Spacing after home logo reel (desktop) ── */
+/* ── Spacing after home logo reel ──
+   px/vh, not rem: phones that render wider than 639 CSS px get a vw-scaled
+   root font (~27px), which ballooned the old 6rem into a ~170px blank band. */
 .home-logo-reel-divider {
-  margin-top: 6rem;
+  margin-top: clamp(40px, 10vh, 96px);
+}
+
+/* Phone-wide range (640–767px): tall narrow screens where vh-based spacing
+   still balloons. Match the rhythm phones get below 640px. */
+@media (min-width: 640px) and (max-width: 767px) {
+  .home-logo-reel-divider {
+    margin-top: 40px;
+  }
+
+  .home-contact {
+    margin-top: 42px;
+  }
+
+  /* The intro row cap `max-width: 48%` only exists below 640px, so wide
+     phones render the intro at ~64% of the row while its inflated root font
+     makes the line feel stretched. Cap it in em so it scales with the phone
+     root font instead of a hard px. */
+  .home-contact-intro {
+    max-width: min(60%, 13em);
+  }
 }
 @media (max-width: 639px) {
   .home-logo-reel-divider {
@@ -4797,6 +4857,19 @@ html.lenis body {
   .home-process-icon {
     width: 80px;
     height: 80px;
+  }
+}
+
+/* Phone-wide range (640–767px): the vw-scaled root font (~28px/rem) inflated
+   the column rhythm — number→icon was ~70px and icon→heading ~56px. Tone it
+   down in px so "My Work process" reads compact on tall narrow screens. */
+@media (min-width: 640px) and (max-width: 767px) {
+  .home-process-num {
+    margin-bottom: 24px;
+  }
+
+  .home-process-icon {
+    margin-bottom: 20px;
   }
 }
 
