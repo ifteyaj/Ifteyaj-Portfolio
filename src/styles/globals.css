@@ -3716,7 +3716,6 @@ html.lenis body {
 .home-media-video {
   position: relative;
   aspect-ratio: 16 / 9;
-  max-height: 360px;
   overflow: hidden;
   background-color: var(--lightblack);
 }
