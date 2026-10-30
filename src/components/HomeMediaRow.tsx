@@ -93,7 +93,6 @@ export default function HomeMediaRow() {
           fill
           sizes="(max-width: 639px) 100vw, 36vw"
           loading="eager"
-          fetchPriority="high"
           className="home-featured-img"
         />
       </Link>

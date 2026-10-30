@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useLayoutEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import type { MoodboardItem } from "@/types";
 
@@ -39,9 +39,9 @@ function distribute(items: MoodboardItem[], cols: number): MoodboardItem[][] {
 }
 
 export default function MoodboardGrid({ items }: { items: MoodboardItem[] }) {
-  const [cols, setCols] = useState(0);
+  const [cols, setCols] = useState(3);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const update = () => setCols(columnsFor(window.innerWidth));
     update();
     window.addEventListener("resize", update);

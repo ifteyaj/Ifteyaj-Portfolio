@@ -521,6 +521,7 @@ export default function LiquidImage(props) {
             loop
             playsInline
             autoPlay
+            preload="metadata"
             style={{ width: "100%", height: "100%", objectFit: fit, display: "block", borderRadius }}
           />
         ) : (
