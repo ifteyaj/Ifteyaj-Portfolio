@@ -44,9 +44,6 @@ export const metadata: Metadata = {
     template: `%s — Ifteyaj Ahmed`,
   },
   description: siteConfig.description,
-  alternates: {
-    canonical: "/",
-  },
   icons: {
     icon: [
       { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
