@@ -4,29 +4,54 @@ import { siteConfig, SITE_URL, DEFAULT_OG_IMAGE } from "@/data/site";
 import PageTransition from "@/components/PageTransition";
 
 /* ── Structured Data (JSON-LD) ──────────────────────────────────────────────── */
-const personJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  name: "Ifteyaj Ahmed",
-  url: SITE_URL,
-  image: `${SITE_URL}/og-image.png`,
-  jobTitle: "Brand Identity Designer & AI Web Developer",
-  description: siteConfig.description,
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Dhaka",
-    addressCountry: "BD",
-  },
-  sameAs: siteConfig.socials.map((s) => s.href),
+const PERSON_ID = `${SITE_URL}/#person`;
+const WEBSITE_ID = `${SITE_URL}/#website`;
+
+const address = {
+  "@type": "PostalAddress",
+  addressLocality: "Dhaka",
+  addressCountry: "BD",
 };
 
-const websiteJsonLd = {
+const structuredData = {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: siteConfig.name,
-  url: SITE_URL,
-  description: siteConfig.description,
-  author: { "@type": "Person", name: "Ifteyaj Ahmed" },
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": PERSON_ID,
+      name: "Ifteyaj Ahmed",
+      givenName: "Ifteyaj",
+      familyName: "Ahmed",
+      alternateName: ["Ifteyaj"],
+      url: SITE_URL,
+      image: `${SITE_URL}/og-image.png`,
+      jobTitle: "Brand Identity Designer & AI Web Developer",
+      description: siteConfig.description,
+      email: siteConfig.email,
+      address,
+      workLocation: {
+        "@type": "Place",
+        address,
+      },
+      sameAs: [...siteConfig.socials.map((s) => s.href), "https://github.com/ifteyaj"],
+      knowsAbout: [
+        "Brand identity design",
+        "Logo design",
+        "Web design",
+        "Vibe coding",
+        "AI-assisted web development",
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": WEBSITE_ID,
+      name: siteConfig.name,
+      url: SITE_URL,
+      publisher: { "@id": PERSON_ID },
+      author: { "@id": PERSON_ID },
+      inLanguage: "en",
+    },
+  ],
 };
 
 /* ── Viewport ───────────────────────────────────────────────────────────────── */
@@ -95,11 +120,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Structured Data */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
+          }}
         />
       </head>
       {/* The host shell / browser extensions can add inline styles to <body> before
