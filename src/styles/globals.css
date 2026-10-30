@@ -4361,11 +4361,11 @@ html.lenis body {
   background-color: var(--black);
   color: var(--white);
   font-family: var(--main-type);
-  min-height: 100dvh;
+  min-height: auto;
 }
 
 .contact-body {
-  padding: var(--content-page-top-margin) var(--page-margin) 0;
+  padding: calc(var(--content-page-top-margin) + 2.5rem) var(--page-margin) 2rem;
   min-height: auto;
 }
 
@@ -4551,7 +4551,7 @@ html.lenis body {
 /* ── Mobile: unified with wide-phone stacked layout (consolidated block below) ── */
 @media (max-width: 639px) {
   .contact-body {
-    padding: var(--content-page-top-margin) var(--page-margin) var(--page-margin);
+    padding: calc(var(--content-page-top-margin) + 2.5rem) var(--page-margin) 2rem;
   }
   .contact-social-link {
     padding: 0.15rem 0.5rem;
@@ -4978,7 +4978,7 @@ html.lenis body {
    with widths that scale with type instead of fixed px chips. */
 @media (max-width: 1023px) {
   .contact-body {
-    padding: var(--content-page-top-margin) var(--page-margin) var(--page-margin);
+    padding: calc(var(--content-page-top-margin) + 2.5rem) var(--page-margin) 2rem;
   }
   .contact-grid {
     grid-template-columns: 1fr;
