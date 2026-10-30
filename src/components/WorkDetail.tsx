@@ -35,7 +35,8 @@ export default function WorkDetail({ project }: WorkDetailProps) {
       Array.from(root.querySelectorAll<T>(sel));
 
     // Smooth scroll — lerp 0.1 is the recommended balance between feel and performance
-    const lenis = new Lenis({ lerp: 0.1, smoothWheel: true });
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const lenis = new Lenis({ lerp: prefersReducedMotion ? 1 : 0.1, smoothWheel: !prefersReducedMotion });
     let rafId: number;
     const raf = (time: number) => {
       lenis.raf(time);

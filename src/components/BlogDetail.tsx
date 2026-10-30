@@ -84,7 +84,8 @@ export default function BlogDetail({ post }: BlogDetailProps) {
 
     registerEases();
 
-    const lenis = new Lenis({ lerp: 0.1, smoothWheel: true });
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const lenis = new Lenis({ lerp: prefersReducedMotion ? 1 : 0.1, smoothWheel: !prefersReducedMotion });
     let rafId: number;
     const raf = (time: number) => {
       lenis.raf(time);

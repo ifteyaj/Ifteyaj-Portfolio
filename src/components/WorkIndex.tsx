@@ -96,7 +96,8 @@ export default function WorkIndex() {
     const qs = <T extends Element = HTMLElement>(sel: string): T[] =>
       Array.from(root.querySelectorAll<T>(sel));
 
-    const lenis = new Lenis({ lerp: 0.1, smoothWheel: true });
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const lenis = new Lenis({ lerp: prefersReducedMotion ? 1 : 0.1, smoothWheel: !prefersReducedMotion });
     let rafId: number;
     const raf = (time: number) => {
       lenis.raf(time);
