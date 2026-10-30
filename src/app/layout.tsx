@@ -69,6 +69,9 @@ export const metadata: Metadata = {
     template: `%s — Ifteyaj Ahmed`,
   },
   description: siteConfig.description,
+  applicationName: siteConfig.name,
+  authors: [{ name: "Ifteyaj Ahmed", url: SITE_URL }],
+  creator: "Ifteyaj Ahmed",
   icons: {
     icon: [
       { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
