@@ -1,6 +1,6 @@
 # Current status
 
-Last updated: 2026-10-30 — full SEO/a11y branch merged into `main`.
+Last updated: 2026-10-30 — full SEO/a11y branch merged into `main`; perf pass: removed `unoptimized` from all `<Image>` tags, extended `content-visibility: auto` to case study blocks; no image files modified.
 
 ## Live on production
 - URL: https://ifteyaj-portfolio.vercel.app

@@ -174,7 +174,6 @@ export default function WorkIndex() {
                       alt={`${project.title} ${i + 1}`}
                       fill
                       sizes="(max-width: 768px) 100vw, 50vw"
-                      unoptimized
                       loading="lazy"
                       decoding="async"
                       className="index-entry-img"

@@ -80,7 +80,6 @@ export default function Hero({ gridView, onToggleGridView }: HeroProps) {
                             fill
                             sizes="100vw"
                             priority={i === 0}
-                            unoptimized
                             fetchPriority={i === 0 ? "high" : "low"}
                             loading={i === 0 ? "eager" : "lazy"}
                             decoding="async"

@@ -5,7 +5,7 @@ import Image from "next/image";
 import type { MoodboardItem } from "@/types";
 
 const SIZES =
-  "(max-width: 479px) 33vw, (max-width: 767px) 25vw, (max-width: 1023px) 20vw, (max-width: 1439px) 17vw, 14vw";
+  "(max-width: 767px) 33vw, (max-width: 1023px) 20vw, 14vw";
 
 function columnsFor(width: number): number {
   if (width >= 1440) return 7;
@@ -70,7 +70,6 @@ export default function MoodboardGrid({ items }: { items: MoodboardItem[] }) {
                 alt={item.title}
                 fill
                 sizes={SIZES}
-                unoptimized
                 loading={eager.has(item.image) ? "eager" : "lazy"}
                 decoding="async"
                 className="mb-tile-img"

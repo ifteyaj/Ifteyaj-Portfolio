@@ -1,0 +1,104 @@
+/* ══════════════════════════════════════════════════════════════════════════════
+   RESPONSIVE BREAKPOINT CONTRACT
+   ══════════════════════════════════════════════════════════════════════════════
+   Exactly three layout tiers. Screens inside a tier only scale, never rearrange.
+
+   ┌──────────┬──────────────────────────────┬──────────────────────────────────┐
+   │  Tier    │  Media query                 │  Viewport width                 │
+   ├──────────┼──────────────────────────────┼──────────────────────────────────┤
+   │  Mobile  │  (max-width: 767px)          │  320 – 767 px                   │
+   │  Tablet  │  (min-width: 768px)          │  768 – 1023 px                  │
+   │          │  (max-width: 1023px)         │                                 │
+   │  Desktop │  (min-width: 1024px)         │  1024 px  and above             │
+   └──────────┴──────────────────────────────┴──────────────────────────────────┘
+
+   Boundary rules:
+   - At 767px: ONLY mobile rules apply.
+   - At 768px: ONLY tablet rules apply.
+   - At 1023px: ONLY tablet rules apply.
+   - At 1024px: ONLY desktop rules apply.
+   - No sub-breakpoints (no 400, 480, 639, 640, 1025 edges).
+   - Use fluid sizing (clamp, min, max, auto-fit) for within-tier variation.
+
+   Root font-size depends on viewport WIDTH ONLY (no vh):
+   - Mobile:  clamp(12px, 3.85vw, 17px)     → 390px ≈ 15.02px (ref match)
+   - Tablet:  clamp(13px, 1.8vw, 18px)      → 820px ≈ 14.76px (ref match)
+   - Desktop: clamp(10px, 0.93vw, 20px)     → 1440px ≈ 13.39px (ref match)
+
+   Reference viewports (pixel-identical tolerance ≤ 1%):
+   - Mobile:  390 × 844
+   - Tablet:  820 × 1180
+   - Desktop: 1440 × 900
+   ══════════════════════════════════════════════════════════════════════════════ */
+
+/* ── Design Tokens ────────────────────────────────────────────────────────────
+   Shared spacing, typography, and colour tokens used across all tiers.
+   Imported by globals.css. Component-specific values stay in globals.css. */
+
+:root {
+   /* Colors */
+   --black: #1a1a1a;
+   --lightblack: #212121;
+   --darkgrey: #272727;
+   --white: white;
+   --body-text: #d4d4d4;
+   --grey: #a3a3a3;
+   --mid-grey: #7a7771;
+   --naturalgrey: #a8a59c;
+   --offwhite: #f8f3ed;
+   --border-white: #ffffff4d;
+   --green: #4ade80;
+   --transparent: transparent;
+   --color: white;
+   --main-dark: black;
+   --main-light: white;
+
+   /* Typography */
+   --main-type: var(--font-ppnn, PPNeueMontrealTT, sans-serif);
+   --serif-type: var(--font-serif, "PT Serif", serif);
+   --mono-type: var(--font-mono, "JetBrains Mono", monospace);
+   --main-weight: 500;
+   --main-weight-big: 400;
+   --small-discriptor-text: 0.9rem;
+   --small-discriptor-line: 120%;
+   --small-discriptor-space: 0.025rem;
+   --small-nav-text: 1.05rem;
+   --small-number: 0.8rem;
+   --small-menu-number-space: 0.06rem;
+   --small-text-block-devider: 0.15rem;
+   --big-text: 10.8rem;
+   --big-text-space: -0.35rem;
+   --big-text-line: 80%;
+   --mobile-bix-text: 2.6rem;
+   --mobile-big-text-space: -0.02rem;
+   --body-copy: 1rem;
+   --body-copy-space: 0.04rem;
+   --body-copy-line: 1.4rem;
+   --small-high-text: 1.8rem;
+   --small-high-text-line: 2.6rem;
+   --mid-high-text: 3.2rem;
+   --mid-high-text-line: 3.2rem;
+   --mid-high-text-space: 0rem;
+   --big-high-text: 4.5rem;
+   --big-high-text-line: 82%;
+   --big-number: 6.4rem;
+   --big-number-space: -0.15rem;
+   --big-number-bottom-margin: 0.8rem;
+   --normal-text-line: 86%;
+   --btn-icon-text: 1.4rem;
+   --btn-icon-text-line: 0;
+
+   /* Spacing */
+   --page-margin: 0.7rem;
+   --page-top-margin: 0.7rem;
+   --header-left-space: 4.5rem;
+   --section-break: 160px;
+   --mid-section-break: 100px;
+   --x-small-section-break: 15px;
+   --content-page-top-margin: 12rem;
+   --top-header-margin-top: 6rem;
+   --top-header-margin-bottom: 2.6rem;
+   --case-section-top-margin: 0.8rem;
+   --row-margin: 1rem;
+   --small-number-margin-left: 0.3rem;
+}

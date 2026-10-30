@@ -93,3 +93,18 @@ configured (only fires if `NEXT_PUBLIC_SITE_URL` names a non-vercel host — see
 ### Known quota note
 Search Console "Request Indexing" caps at ~10 URLs per day per property. Quota
 resets nightly. Sitemap submission and verification itself do not count.
+
+## 2026-10-30 — Enable Next.js Image Optimization (remove `unoptimized`)
+
+### Context
+Every `<Image>` component carried the `unoptimized` flag, so the browser
+downloaded the full-size source files (up to ~7 MB each) and Lighthouse flagged
+~8 MB of avoidable transfer per case study page.
+
+### Decision
+Removed `unoptimized` from all `<Image>` tags, so Next.js serves responsive
+AVIF/WebP variants through `/_next/image` using the existing `images.formats`,
+`imageSizes`, and cache TTL config in `next.config.ts`. Original files in
+`/public` remain byte-identical; only derived (optimized) variants are served.
+Extended `content-visibility: auto` to `.case-gallery-grid`, `.case-selected-work`,
+and `.case-footer-block`.

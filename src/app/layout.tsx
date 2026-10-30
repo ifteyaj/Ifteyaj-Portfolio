@@ -1,7 +1,36 @@
 import type { Metadata, Viewport } from "next";
+import localFont from "next/font/local";
 import "@/styles/globals.css";
 import { siteConfig, SITE_URL, DEFAULT_OG_IMAGE } from "@/data/site";
 import PageTransition from "@/components/PageTransition";
+
+const fontMain = localFont({
+  src: [
+    { path: "../../public/fonts/PPNeueMontrealTT-Regular.woff2", weight: "400", style: "normal" },
+    { path: "../../public/fonts/PPNeueMontrealTT-Medium.woff2", weight: "500", style: "normal" },
+  ],
+  variable: "--font-ppnn",
+  display: "swap",
+  preload: true,
+});
+
+const fontSerif = localFont({
+  src: [
+    { path: "../../public/fonts/PTSerif-Regular.woff2", weight: "400", style: "normal" },
+    { path: "../../public/fonts/PTSerif-Bold.woff2", weight: "700", style: "normal" },
+    { path: "../../public/fonts/PTSerif-Italic.woff2", weight: "400", style: "italic" },
+  ],
+  variable: "--font-serif",
+  display: "swap",
+  preload: false,
+});
+
+const fontMono = localFont({
+  src: [{ path: "../../public/fonts/JetBrainsMono-Regular.woff2", weight: "400", style: "normal" }],
+  variable: "--font-mono",
+  display: "swap",
+  preload: false,
+});
 
 /* ── Structured Data (JSON-LD) ──────────────────────────────────────────────── */
 const PERSON_ID = `${SITE_URL}/#person`;
@@ -112,22 +141,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" dir="ltr" className="h-full">
+    <html lang="en" dir="ltr" className={`${fontMain.variable} ${fontSerif.variable} ${fontMono.variable} h-full`}>
       <head>
-        <link
-          rel="preload"
-          href="/fonts/PPNeueMontrealTT-Medium.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/PPNeueMontrealTT-Regular.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
         {/* Structured Data */}
         <script
           type="application/ld+json"

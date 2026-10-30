@@ -51,7 +51,6 @@ export default function IllustrationMarquee({ images }: { images: MarqueeImage[]
                         alt={isRepeat ? "" : img.alt}
                         fill
                         sizes="240px"
-                        unoptimized
                         loading="lazy"
                         decoding="async"
                         className="illustration-marquee-img"

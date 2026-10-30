@@ -99,7 +99,6 @@ export default function AboutClient({ carouselImages = [] }: { carouselImages?: 
             fill
             sizes="100vw"
             priority
-            unoptimized
             fetchPriority="high"
             decoding="async"
             style={{ objectFit: "cover" }}
