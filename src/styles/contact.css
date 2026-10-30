@@ -17,7 +17,6 @@
   /* 20px at 390, never under 16px at 320. */
   --contact-pad: clamp(16px, 5.13vw, 24px);
   --contact-form-gap: 24px;
-  --contact-submit-h: 0px;
 
   background-color: var(--black);
   color: var(--white);
@@ -414,7 +413,6 @@
   .contact-page {
     --contact-pad: clamp(24px, 6.9vw, 60px);
     --contact-form-gap: 24px;
-    --contact-submit-h: 0px;
   }
 
   .contact-grid {

@@ -120,7 +120,7 @@ export default function ContactContent() {
         <div className="contact-submit-row">
           {status === "success" ? (
             <p
-              className="contact-form-status contact-form-status--success"
+              className="contact-form-status"
               ref={statusRef}
               tabIndex={-1}
               aria-live="polite"
