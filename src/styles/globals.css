@@ -2742,6 +2742,12 @@ html.lenis body {
   color: var(--grey);
   margin-top: 1.5rem;
 }
+.blog-detail-dates {
+  font-size: var(--small-descriptor-text);
+  line-height: var(--small-discriptor-line);
+  color: var(--grey);
+  margin-top: 0.75rem;
+}
 
 /* Blog article content */
 .blog-content {

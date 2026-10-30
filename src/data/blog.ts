@@ -5,6 +5,8 @@ export const blogPosts: BlogPost[] = [
     slug: "how-to-make-a-small-brand-feel-more-established",
     title: "How to Make a Small Brand Feel More Established",
     seoTitle: "How to Make a Small Brand Look More Professional",
+    publishedAt: "2026-10-26T00:04:34+06:00",
+    updatedAt: "2026-10-26T00:17:28+06:00",
     tag: "Branding",
     image: "/images/blogs/small-brand-established.webp",
     description:
@@ -59,6 +61,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "designer-new-toolbox",
     title: "The Designer's New Toolbox: From Figma to Prompted Interfaces",
+    publishedAt: "2026-08-08T07:15:56+06:00",
     tag: "AI",
     image: "/images/blogs/designer-new-toolbox.webp",
     description:
@@ -73,6 +76,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "vibe-coding-seriously",
     title: "Vibe Coding, Seriously: What Happens When Anyone Can Build",
+    publishedAt: "2026-08-08T07:15:56+06:00",
     tag: "Vibe Coding",
     image: "/images/blogs/vibe-coding-seriously.webp",
     description:
@@ -87,6 +91,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "design-to-dev-handoff",
     title: "Design-to-Dev Handoff Is Disappearing and That's Not All Good",
+    publishedAt: "2026-08-08T07:15:56+06:00",
     tag: "Process",
     image: "/images/blogs/design-to-dev-handoff.webp",
     description:
@@ -101,6 +106,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "the-job-didnt-disappear",
     title: "The Job Didn't Disappear. It Moved.",
+    publishedAt: "2026-08-08T07:15:56+06:00",
     tag: "Industry",
     image: "/images/blogs/the-job-didnt-disappear.webp",
     description:
@@ -116,6 +122,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "who-owns-an-ai-design",
     title: "Who Owns a Design an AI Helped You Make?",
+    publishedAt: "2026-08-08T07:15:56+06:00",
     tag: "Ownership",
     image: "/images/blogs/who-owns-an-ai-design.webp",
     description:
@@ -130,6 +137,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "i-built-my-own-ai-dev-stack-to-make-ai-coding-more-structured",
     title: "I Built My Own AI Dev Stack to Make AI Coding More Structured",
+    publishedAt: "2026-10-26T23:38:29+06:00",
     tag: "AI",
     image: "/images/blogs/i-built-my-own-ai-dev-stack-to-make-ai-coding-more-structured.webp",
     description:

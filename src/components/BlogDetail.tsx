@@ -17,6 +17,17 @@ interface BlogDetailProps {
 
 const INLINE_PATTERN = /(\*\*[^*]+\*\*|\*[^*]+\*|\[[^\]]+\]\([^)]+\)|==[^=]+==)/g;
 
+const DATE_FORMATTER = new Intl.DateTimeFormat("en-US", {
+  day: "numeric",
+  month: "short",
+  year: "numeric",
+  timeZone: "Asia/Dhaka",
+});
+
+function formatDate(value: string) {
+  return DATE_FORMATTER.format(new Date(value));
+}
+
 /** Renders light inline markdown: **bold**, *italic* and [links](/path). */
 function InlineText({ text }: { text: string }) {
   const nodes: ReactNode[] = [];
@@ -133,6 +144,19 @@ export default function BlogDetail({ post }: BlogDetailProps) {
           <div className="moodboard-detail-info">
             <span className="moodboard-pin-tag">{post.tag}</span>
             <h1 className="moodboard-detail-title">{post.title}</h1>
+            <p className="blog-detail-dates">
+              <time dateTime={post.publishedAt}>
+                Published {formatDate(post.publishedAt)}
+              </time>
+              {post.updatedAt && post.updatedAt !== post.publishedAt ? (
+                <>
+                  {" · "}
+                  <time dateTime={post.updatedAt}>
+                    Updated {formatDate(post.updatedAt)}
+                  </time>
+                </>
+              ) : null}
+            </p>
             <p className="moodboard-detail-desc">{post.description}</p>
           </div>
         </div>
