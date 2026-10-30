@@ -3016,8 +3016,8 @@ html.lenis body {
   /* The full-screen overlay is a sibling of .nav-bar inside .navbar, so lift
      the header row above it — logo and Menu/Close stay reachable on top. */
   .nav-bar             { min-height: 56px; width: 100%; overflow: visible; position: relative; z-index: 1000; }
-  /* Start the menu links just below the fixed header with a consistent gap. */
-  .nav-mobile-inner    { padding-top: calc(56px + 0.75rem); }
+  /* Start the menu links just below the fixed header with a compact gap. */
+  .nav-mobile-inner    { padding-top: calc(56px + 0.4rem); }
   .nav-logo            { height: 2.2rem; margin-left: 0; }
 
   /* Keep the compact desktop links out of the phone header. */
@@ -3509,7 +3509,7 @@ html.lenis body {
 /* ── LANDSCAPE PHONE ──────────────────────────────────────────────────────── */
 @media (max-width: 767px) and (orientation: landscape) {
   .about-hero          { height: 60dvh; }
-  .nav-mobile-inner    { padding: calc(56px + 0.75rem) var(--page-margin) 2rem; }
+  .nav-mobile-inner    { padding: calc(56px + 0.4rem) var(--page-margin) 2rem; }
 }
 
 /* ══ DESKTOP SHARED GRID: nav stacks ↔ case metadata ═════════════════════════
@@ -4340,7 +4340,7 @@ html.lenis body {
   }
 
   .nav-mobile-inner {
-    padding-top: calc(56px + clamp(3.5rem, 12vh, 120px));
+    padding-top: calc(56px + 0.4rem);
   }
 }
 
