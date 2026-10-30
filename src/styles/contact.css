@@ -1,0 +1,562 @@
+/* ══ CONTACT PAGE ══════════════════════════════════════════════════════════════
+   Editorial contact layout: headline + email on the left, a borderless,
+   underline-only form on the right, an info row and a submit row sharing a
+   baseline at the bottom. No cards, boxes, images, shadows or radii.
+   Tiers: mobile ≤767 · tablet 768–1023 · desktop ≥1024 (these are the only
+   edges this file uses). No vh units: the only viewport height unit is svh,
+   and only inside the min-heights.
+   ──────────────────────────────────────────────────────────────────────────── */
+
+.contact-page {
+  /* Exposed so the underline can be turned off entirely: set this to
+     `transparent` for a fully invisible idle state. */
+  --contact-line-idle: rgba(255, 255, 255, 0.5);
+  --contact-line-hover: rgba(255, 255, 255, 0.8);
+  /* Muted red: 5.6:1 on #1a1a1a (see tests/contact.spec.ts contrast report). */
+  --contact-error: #ff6b5e;
+  /* 20px at 390, never under 16px at 320. */
+  --contact-pad: clamp(16px, 5.13vw, 24px);
+  --contact-form-gap: 24px;
+  --contact-submit-h: 0px;
+
+  background-color: var(--black);
+  color: var(--white);
+  font-family: var(--main-type);
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+.contact-body {
+  padding: var(--content-page-top-margin) var(--contact-pad) 56px;
+}
+
+.contact-grid {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  width: 100%;
+  margin-inline: auto;
+  min-width: 0;
+}
+
+/* ── Baseline 1: headline ─────────────────────────────────────────────────── */
+
+.contact-lead {
+  min-width: 0;
+}
+
+.contact-headline {
+  margin: 0;
+  font-family: var(--main-type);
+  font-weight: 400; /* PPNeueMontrealTT Regular — the lightest weight loaded */
+  font-size: clamp(2.375rem, 8.1vw + 12.4px, 3.25rem);
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+  color: var(--white);
+  text-wrap: balance;
+}
+
+.contact-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--grey);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  min-height: 44px;
+  transition: color 180ms ease;
+}
+
+.contact-email:hover,
+.contact-email:focus-visible {
+  color: var(--white);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.contact-email:focus-visible {
+  outline: 1px solid var(--white);
+  outline-offset: 4px;
+}
+
+.contact-copied {
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--grey);
+}
+
+/* ── Form ─────────────────────────────────────────────────────────────────── */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  min-width: 0;
+  max-width: 100%;
+  margin-top: 40px;
+}
+
+.contact-subheading {
+  margin: 0;
+  font-family: var(--main-type);
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--white);
+}
+
+.contact-fields {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  column-gap: var(--contact-form-gap);
+  row-gap: 28px;
+  min-width: 0;
+}
+
+.contact-field {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.contact-field--message {
+  grid-column: 1 / -1;
+}
+
+.contact-label {
+  margin-bottom: 8px;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.contact-input,
+.contact-select,
+.contact-textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  margin: 0;
+  padding: 0 0 10px;
+  font-family: var(--main-type);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--white);
+  background: none;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--contact-line-idle);
+  border-radius: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  outline: none;
+  transition: border-color 180ms ease;
+}
+
+.contact-textarea {
+  resize: none;
+  overflow: hidden;
+  min-height: calc(2em + 10px);
+  padding-bottom: 10px;
+}
+
+.contact-input::placeholder,
+.contact-textarea::placeholder {
+  color: var(--grey);
+  opacity: 1;
+}
+
+.contact-input:hover,
+.contact-select:hover,
+.contact-textarea:hover {
+  border-bottom-color: var(--contact-line-hover);
+}
+
+.contact-input:focus,
+.contact-select:focus,
+.contact-textarea:focus {
+  border-bottom: 2px solid var(--white);
+  padding-bottom: 9px;
+}
+
+.contact-input:focus-visible,
+.contact-select:focus-visible,
+.contact-textarea:focus-visible {
+  outline: 1px solid var(--white);
+  outline-offset: 4px;
+}
+
+/* The empty placeholder option keeps the select grey until a real choice. */
+.contact-select:invalid {
+  color: var(--grey);
+}
+
+.contact-select-wrap {
+  position: relative;
+  display: block;
+  min-width: 0;
+}
+
+.contact-select-chevron {
+  position: absolute;
+  right: 1px;
+  bottom: 16px;
+  width: 10px;
+  height: 6px;
+  color: var(--white);
+  pointer-events: none;
+}
+
+/* No browser autofill tint; keep typed text white. */
+.contact-input:-webkit-autofill,
+.contact-input:-webkit-autofill:hover,
+.contact-input:-webkit-autofill:focus,
+.contact-select:-webkit-autofill,
+.contact-textarea:-webkit-autofill {
+  -webkit-text-fill-color: var(--white);
+  -webkit-box-shadow: 0 0 0 1000px var(--black) inset;
+  caret-color: var(--white);
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+/* ── Errors ───────────────────────────────────────────────────────────────── */
+
+.contact-field[data-invalid="true"] .contact-input,
+.contact-field[data-invalid="true"] .contact-select,
+.contact-field[data-invalid="true"] .contact-textarea {
+  border-bottom-color: var(--contact-error);
+}
+
+.contact-error {
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--contact-error);
+}
+
+.contact-counter {
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--grey);
+  text-align: right;
+}
+
+/* ── Submit row ───────────────────────────────────────────────────────────── */
+
+.contact-submit-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  min-width: 0;
+  margin-top: 28px;
+}
+
+.contact-submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  margin: 0;
+  padding: 0;
+  font-family: var(--main-type);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--white);
+  background: none;
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.contact-submit:focus-visible {
+  outline: 1px solid var(--white);
+  outline-offset: 4px;
+}
+
+.contact-submit:disabled {
+  color: var(--grey);
+  cursor: default;
+}
+
+.contact-submit-arrow {
+  width: 2.4em;
+  height: 1em;
+  flex: none;
+  color: currentColor;
+  transition: transform 200ms ease;
+}
+
+.contact-submit:hover .contact-submit-arrow,
+.contact-submit:focus-visible .contact-submit-arrow {
+  transform: translateX(4px);
+}
+
+.contact-privacy {
+  margin: 0;
+  max-width: 34ch;
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--grey);
+}
+
+.contact-form-status {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--white);
+}
+
+.contact-form-status a {
+  color: var(--white);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+/* ── Info row ─────────────────────────────────────────────────────────────── */
+
+/* Mobile stacks the two blocks; tablet and desktop sit them side by side. */
+.contact-info {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  column-gap: 24px;
+  row-gap: 28px;
+  min-width: 0;
+  margin-top: 40px;
+}
+
+.contact-info-col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.contact-info-label {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--white);
+  overflow-wrap: anywhere;
+}
+
+.contact-info-values {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 1rem;
+  row-gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--grey);
+  min-width: 0;
+}
+
+.contact-info-values > li {
+  min-width: 0;
+}
+
+.contact-info-values a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: inherit;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  transition: color 160ms ease;
+}
+
+.contact-info-values a:hover,
+.contact-info-values a:focus-visible {
+  color: var(--white);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.contact-info-values a:focus-visible {
+  outline: 1px solid var(--white);
+  outline-offset: 4px;
+}
+
+/* Honeypot: present for bots, invisible to people. */
+.contact-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* ── Tablet (768–1023): one column, field pairs stay side by side ─────────── */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .contact-page {
+    --contact-pad: clamp(24px, 6.9vw, 60px);
+    --contact-form-gap: 24px;
+    --contact-submit-h: 0px;
+  }
+
+  .contact-grid {
+    row-gap: 0;
+    align-items: start;
+  }
+
+  .contact-headline {
+    font-size: clamp(52px, 0.75vw + 49.85px, 58px);
+  }
+
+  .contact-email {
+    margin-top: 40px;
+    font-size: 14px;
+  }
+
+  .contact-form {
+    gap: 40px;
+    max-width: 634px;
+    margin-top: 72px;
+  }
+
+  .contact-subheading {
+    font-size: 24px;
+  }
+
+  .contact-fields {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contact-submit-row {
+    margin-top: 40px;
+    padding-left: 0;
+  }
+
+  .contact-submit {
+    font-size: 16px;
+  }
+
+  .contact-info {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 72px;
+  }
+}
+
+/* ── Desktop (≥1024): two columns, shared baselines, vertically centred ────── */
+
+@media (min-width: 1024px) {
+  .contact-page {
+    --contact-pad: clamp(48px, 8.2vw, 132px);
+    --contact-form-gap: 16px;
+    /* The submit text sits on the info *values* line, so the button's 44px
+       tap area is offset by the info label line + its 8px gap. */
+    --contact-submit-h: 16px;
+  }
+
+  .contact-grid {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    column-gap: clamp(32px, 3vw, 64px);
+    row-gap: clamp(48px, 5.6vw, 88px);
+    align-items: baseline;
+    align-content: center;
+    max-width: 1344px;
+    min-height: calc(100svh - var(--content-page-top-margin));
+    padding-block: 32px;
+  }
+
+  .contact-body {
+    padding-bottom: 0;
+  }
+
+  .contact-headline {
+    font-size: clamp(48px, 2.43vw + 28px, 76px);
+  }
+
+  .contact-email {
+    margin-top: 90px;
+    font-size: 13px;
+    min-height: 0;
+  }
+
+  .contact-form {
+    grid-column: 2;
+    grid-row: 1;
+    gap: 48px;
+    margin-top: 0;
+  }
+
+  .contact-lead {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .contact-fields {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contact-subheading {
+    font-size: 22px;
+  }
+
+  .contact-input,
+  .contact-select,
+  .contact-textarea {
+    font-size: 15px;
+    min-height: 0;
+  }
+
+  .contact-submit-row {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: start;
+    margin-top: 0;
+    /* Row 2 starts both cells on the same top edge; the offset puts the
+       Submit text on the info *values* line rather than the label line. */
+    padding-top: var(--contact-submit-h);
+  }
+
+  .contact-submit {
+    font-size: 15px;
+  }
+
+  .contact-select-chevron {
+    bottom: 11px;
+  }
+
+  .contact-info {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: start;
+    margin-top: 0;
+  }
+
+  .contact-info-label {
+    font-size: 13px;
+  }
+
+  .contact-info-values {
+    font-size: 13px;
+  }
+
+  .contact-info-values a {
+    min-height: 0;
+  }
+}

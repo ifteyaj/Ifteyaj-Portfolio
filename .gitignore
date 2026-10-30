@@ -82,3 +82,7 @@ CLAUDE.md
 # OS / editor / logs
 .vscode/
 *.log
+
+# browser + screenshot tooling (generated locally, never committed)
+/.cache/
+/contact-redesign/
