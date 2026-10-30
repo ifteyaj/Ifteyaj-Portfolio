@@ -1,17 +1,21 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import ContactContent from "@/components/ContactContent";
+import "@/styles/contact.css";
 import { DEFAULT_OG_IMAGE, SITE_URL, siteConfig } from "@/data/site";
 
+const description =
+  "Get in touch with Ifteyaj Ahmed to discuss brand identity, logo, and web design work.";
+
 export const metadata: Metadata = {
+  // An absolute title keeps the result exactly "Contact — Ifteyaj Ahmed"
+  // whether or not the root layout's template applies.
   title: { absolute: "Contact — Ifteyaj Ahmed" },
-  description:
-    "Get in touch with Ifteyaj Ahmed to discuss brand identity, logo, and web design work.",
+  description,
   alternates: { canonical: "/contact" },
   openGraph: {
     title: "Contact — Ifteyaj Ahmed",
-    description:
-      "Get in touch with Ifteyaj Ahmed to discuss brand identity, logo, and web design work.",
+    description,
     url: `${SITE_URL}/contact`,
     siteName: siteConfig.name,
     locale: "en_US",
@@ -21,8 +25,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Contact — Ifteyaj Ahmed",
-    description:
-      "Get in touch with Ifteyaj Ahmed to discuss brand identity, logo, and web design work.",
+    description,
     images: [DEFAULT_OG_IMAGE.url],
   },
 };

@@ -1,24 +1,33 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { gsap } from "@/lib/gsap";
 import { contactContent, contactSocials } from "@/data/contact";
+import { siteConfig } from "@/data/site";
+import ContactForm, { type ContactStatus } from "@/components/ContactForm";
+
+const RESUME_HREF =
+  "https://drive.google.com/file/d/1FrO_WGZ_RXZvE894trR2sm_1kpdQR6wC/view?usp=sharing";
+
+const PHONE_HREF = `tel:+880${siteConfig.phone.replace(/^0/, "")}`;
 
 export default function ContactContent() {
   const rootRef = useRef<HTMLElement>(null);
-  const [copiedHref, setCopiedHref] = useState<string | null>(null);
+  const statusRef = useRef<HTMLParagraphElement>(null);
+  const [copied, setCopied] = useState(false);
+  const [status, setStatus] = useState<ContactStatus>("idle");
   const copyTimerRef = useRef<number | null>(null);
 
-  const handleEmailClick = (href: string, text: string) => {
-    if (!href.startsWith("mailto:")) return;
+  const handleEmailClick = useCallback(() => {
     try {
-      navigator.clipboard?.writeText(text);
-    } catch {}
-    setCopiedHref(href);
+      navigator.clipboard?.writeText(siteConfig.email);
+    } catch {
+      /* Clipboard can be blocked; the mailto: link still works. */
+    }
+    setCopied(true);
     if (copyTimerRef.current) window.clearTimeout(copyTimerRef.current);
-    copyTimerRef.current = window.setTimeout(() => setCopiedHref(null), 1200);
-  };
+    copyTimerRef.current = window.setTimeout(() => setCopied(false), 1200);
+  }, []);
 
   useEffect(() => {
     return () => {
@@ -26,34 +35,58 @@ export default function ContactContent() {
     };
   }, []);
 
+  // Move focus to the confirmation so keyboard and screen-reader users land on it.
+  useEffect(() => {
+    if (status === "success") statusRef.current?.focus();
+  }, [status]);
+
   useEffect(() => {
     const root = rootRef.current;
     if (!root) return;
-    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
     const headline = root.querySelector<HTMLElement>(".contact-headline");
-    const intro = root.querySelector<HTMLElement>(".contact-intro");
-    const info = root.querySelectorAll<HTMLElement>(".contact-info-block");
-    const image = root.querySelector<HTMLElement>(".contact-image-wrap");
-    const socials = root.querySelectorAll<HTMLElement>(".contact-socials a");
+    const email = root.querySelector<HTMLElement>(".contact-email");
+    const subheading = root.querySelector<HTMLElement>(".contact-subheading");
+    const fields = root.querySelectorAll<HTMLElement>(".contact-field");
+    const submit = root.querySelector<HTMLElement>(".contact-submit-row");
+    const info = root.querySelectorAll<HTMLElement>(".contact-info-col");
+
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     if (reduced) {
-      [headline, intro, image].forEach((el) => el && gsap.set(el, { opacity: 1, y: 0 }));
+      [headline, email, subheading, submit].forEach((el) => el && gsap.set(el, { opacity: 1, y: 0 }));
+      gsap.set(fields, { opacity: 1, y: 0 });
       gsap.set(info, { opacity: 1, y: 0 });
-      gsap.set(socials, { opacity: 1, y: 0 });
       return;
     }
 
     const ctx = gsap.context(() => {
-      if (headline)
-        gsap.fromTo(headline, { y: 28, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "texttshow" });
-      if (intro)
-        gsap.fromTo(intro, { y: 16, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, delay: 0.12, ease: "texttshow" });
-      if (info.length)
-        gsap.fromTo(info, { y: 16, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, stagger: 0.06, delay: 0.22, ease: "texttshow" });
-      if (image)
-        gsap.fromTo(image, { y: 22, opacity: 0 }, { y: 0, opacity: 1, duration: 0.55, delay: 0.46, ease: "texttshow" });
-      if (socials.length)
-        gsap.fromTo(socials, { y: 12, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, stagger: 0.06, delay: 0.58, ease: "texttshow" });
+      const reveal = (
+        target: Element | Element[] | NodeListOf<HTMLElement> | null,
+        delay: number,
+        stagger = 0
+      ) => {
+        if (!target) return;
+        gsap.fromTo(
+          target,
+          { y: 16, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.55,
+            delay,
+            ease: "texttshow",
+            ...(stagger ? { stagger } : {}),
+          }
+        );
+      };
+
+      reveal(headline, 0);
+      reveal(email, 0.1);
+      reveal(subheading, 0.18);
+      reveal(fields, 0.26, 0.06);
+      reveal(submit, 0.5);
+      reveal(info, 0.58, 0.06);
     }, root);
 
     return () => ctx.revert();
@@ -61,97 +94,106 @@ export default function ContactContent() {
 
   return (
     <section ref={rootRef} className="contact-body" aria-labelledby="contact-heading">
-      <div className="contact-container">
-        <div className="contact-grid">
-          <div className="contact-left">
-            <h1 id="contact-heading" className="contact-headline">
-              {contactContent.headline}
-            </h1>
-            <p className="contact-intro">{contactContent.intro}</p>
+      <div className="contact-grid">
+        <div className="contact-lead">
+          <h1 id="contact-heading" className="contact-headline">
+            {contactContent.headline}
+          </h1>
+          <a
+            className="contact-email"
+            href={`mailto:${siteConfig.email}`}
+            onClick={handleEmailClick}
+          >
+            {siteConfig.email}
+            {copied && (
+              <span className="contact-copied" aria-live="polite">
+                copied
+              </span>
+            )}
+          </a>
+        </div>
 
-            <nav className="contact-socials" aria-label="Social links">
-              {contactSocials.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="contact-social-link contact-top-social"
-                >
-                  {social.label}
-                </a>
-              ))}
-              <a
-                href="https://drive.google.com/file/d/1FrO_WGZ_RXZvE894trR2sm_1kpdQR6wC/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="contact-social-link contact-resume-link"
+        {status !== "success" && (
+          <ContactForm status={status} onStatusChange={setStatus} />
+        )}
+
+        <div className="contact-submit-row">
+          {status === "success" ? (
+            <p
+              className="contact-form-status"
+              ref={statusRef}
+              tabIndex={-1}
+              aria-live="polite"
+            >
+              Thank you. I&apos;ll reply soon.
+            </p>
+          ) : (
+            <>
+              <button
+                className="contact-submit"
+                type="submit"
+                form="contact-form"
+                disabled={status === "sending"}
               >
-                Resume
-              </a>
-            </nav>
+                {status === "sending" ? "Sending…" : "Submit"}
+                <svg
+                  className="contact-submit-arrow"
+                  viewBox="0 0 40 16"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M0 8h37M31 2l7 6-7 6" strokeLinecap="square" />
+                </svg>
+              </button>
+              <p className="contact-privacy">
+                By sending this form you agree that I use your details only to reply to you.
+              </p>
+              <p
+                className="contact-form-status"
+                ref={statusRef}
+                tabIndex={-1}
+                aria-live="polite"
+              >
+                {status === "error" && (
+                  <>
+                    Something went wrong. Please try again or email me directly at{" "}
+                    <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>.
+                  </>
+                )}
+              </p>
+            </>
+          )}
+        </div>
 
-            <div className="contact-monogram-wrap" aria-hidden="true">
-              <div className="contact-role-stack">
-                <span>Web Designer</span>
-                <span>Brand Designer</span>
-              </div>
-              <Image
-                src="/monogram.svg"
-                alt=""
-                width={320}
-                height={320}
-                className="contact-monogram"
-              />
-            </div>
+        <div className="contact-info">
+          <div className="contact-info-col">
+            <p className="contact-info-label">Find us</p>
+            <ul className="contact-info-values">
+              {contactSocials.map((social) => (
+                <li key={social.label}>
+                  <a href={social.href} target="_blank" rel="noopener noreferrer">
+                    {social.label}
+                  </a>
+                </li>
+              ))}
+              <li>
+                <a href={RESUME_HREF} target="_blank" rel="noopener noreferrer">
+                  Resume
+                </a>
+              </li>
+            </ul>
           </div>
 
-          <div className="contact-right">
-            <div className="contact-info-grid">
-              {contactContent.infoBlocks.map((block) => (
-                <div key={block.label} className="contact-info-block">
-                  <span className="contact-info-label">{block.label}</span>
-                  <div className="contact-info-values">
-                    {block.values.map((value, i) => {
-                      const key = `${block.label}-${i}`;
-                      const href = "href" in value ? value.href : undefined;
-                      if (href) {
-                        return (
-                          <a
-                            key={key}
-                            href={href}
-                            className="contact-info-link"
-                            onClick={() => handleEmailClick(href, value.text)}
-                            {...(href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                          >
-                            {value.text}
-                            {copiedHref === href && (
-                              <span className="contact-copied" aria-live="polite">copied</span>
-                            )}
-                          </a>
-                        );
-                      }
-                      return (
-                        <span key={key} className="contact-info-value">
-                          {value.text}
-                        </span>
-                      );
-                    })}
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="contact-image-wrap">
-              <Image
-                src={contactContent.image.src}
-                alt={contactContent.image.alt}
-                fill
-                sizes="(max-width: 639px) 100vw, (max-width: 1023px) 66vw, 66vw"
-                priority
-                className="contact-image"
-              />
-            </div>
+          <div className="contact-info-col">
+            <p className="contact-info-label">{siteConfig.location}</p>
+            <ul className="contact-info-values">
+              <li>
+                <a href={PHONE_HREF}>{siteConfig.phone}</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
