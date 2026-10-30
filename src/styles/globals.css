@@ -3519,7 +3519,7 @@ html.lenis body {
 
   /* Start the menu links just below the fixed header with a comfortable gap. */
   .nav-mobile-inner {
-    padding-top: calc(56px + clamp(3.5rem, 12vh, 120px));
+    padding-top: calc(56px + clamp(3rem, 10vh, 100px));
   }
 
   .nav-logo {
@@ -4482,7 +4482,7 @@ html.lenis body {
   }
 
   .nav-mobile-inner {
-    padding: calc(56px + clamp(3.5rem, 12vh, 120px)) var(--page-margin) 2rem;
+    padding: calc(56px + clamp(3rem, 10vh, 100px)) var(--page-margin) 2rem;
   }
 }
 
@@ -5341,7 +5341,7 @@ html.lenis body {
   }
 
   .nav-mobile-inner {
-    padding-top: calc(56px + clamp(3.5rem, 12vh, 120px));
+    padding-top: calc(56px + clamp(3rem, 10vh, 100px));
   }
 }
 
