@@ -92,8 +92,6 @@ export interface BlogPost {
   seoTitle?: string;
   /** ISO 8601 date/time when the post was first published. */
   publishedAt: string;
-  /** ISO 8601 date/time of the last content update, when it differs. */
-  updatedAt?: string;
   tag: string;
   image: string;
   description: string;

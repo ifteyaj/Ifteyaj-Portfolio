@@ -72,7 +72,6 @@ export default async function BlogDetailPage({ params }: Props) {
     },
     image: post.image ? `${SITE_URL}${post.image}` : `${SITE_URL}${DEFAULT_OG_IMAGE.url}`,
     datePublished: post.publishedAt,
-    dateModified: post.updatedAt ?? post.publishedAt,
     author: { "@id": `${SITE_URL}/#person` },
     publisher: { "@id": `${SITE_URL}/#person` },
   };

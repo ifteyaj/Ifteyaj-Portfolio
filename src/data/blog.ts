@@ -6,7 +6,6 @@ export const blogPosts: BlogPost[] = [
     title: "How to Make a Small Brand Feel More Established",
     seoTitle: "How to Make a Small Brand Look More Professional",
     publishedAt: "2026-10-26T00:04:34+06:00",
-    updatedAt: "2026-10-26T00:17:28+06:00",
     tag: "Branding",
     image: "/images/blogs/small-brand-established.webp",
     description:

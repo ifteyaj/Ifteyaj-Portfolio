@@ -148,14 +148,6 @@ export default function BlogDetail({ post }: BlogDetailProps) {
               <time dateTime={post.publishedAt}>
                 Published {formatDate(post.publishedAt)}
               </time>
-              {post.updatedAt && post.updatedAt !== post.publishedAt ? (
-                <>
-                  {" · "}
-                  <time dateTime={post.updatedAt}>
-                    Updated {formatDate(post.updatedAt)}
-                  </time>
-                </>
-              ) : null}
             </p>
             <p className="moodboard-detail-desc">{post.description}</p>
           </div>
