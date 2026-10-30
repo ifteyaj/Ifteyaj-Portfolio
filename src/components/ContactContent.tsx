@@ -4,7 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { gsap } from "@/lib/gsap";
 import { contactContent, contactSocials } from "@/data/contact";
 import { siteConfig } from "@/data/site";
-import ContactForm from "@/components/ContactForm";
+import ContactForm, { type ContactStatus } from "@/components/ContactForm";
 
 const RESUME_HREF =
   "https://drive.google.com/file/d/1FrO_WGZ_RXZvE894trR2sm_1kpdQR6wC/view?usp=sharing";
@@ -13,7 +13,9 @@ const PHONE_HREF = `tel:+880${siteConfig.phone.replace(/^0/, "")}`;
 
 export default function ContactContent() {
   const rootRef = useRef<HTMLElement>(null);
+  const statusRef = useRef<HTMLParagraphElement>(null);
   const [copied, setCopied] = useState(false);
+  const [status, setStatus] = useState<ContactStatus>("idle");
   const copyTimerRef = useRef<number | null>(null);
 
   const handleEmailClick = useCallback(() => {
@@ -32,6 +34,11 @@ export default function ContactContent() {
       if (copyTimerRef.current) window.clearTimeout(copyTimerRef.current);
     };
   }, []);
+
+  // Move focus to the confirmation so keyboard and screen-reader users land on it.
+  useEffect(() => {
+    if (status === "success") statusRef.current?.focus();
+  }, [status]);
 
   useEffect(() => {
     const root = rootRef.current;
@@ -106,27 +113,59 @@ export default function ContactContent() {
           </a>
         </div>
 
-        <ContactForm email={siteConfig.email} />
+        {status !== "success" && (
+          <ContactForm status={status} onStatusChange={setStatus} />
+        )}
 
         <div className="contact-submit-row">
-          <button className="contact-submit" type="submit" form="contact-form">
-            Submit
-            <svg
-              className="contact-submit-arrow"
-              viewBox="0 0 40 16"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1"
-              aria-hidden="true"
-              focusable="false"
+          {status === "success" ? (
+            <p
+              className="contact-form-status contact-form-status--success"
+              ref={statusRef}
+              tabIndex={-1}
+              aria-live="polite"
             >
-              <path d="M0 8h37M31 2l7 6-7 6" strokeLinecap="square" />
-            </svg>
-          </button>
-          <p className="contact-privacy">
-            By sending this form you agree that I use your details only to reply to you.
-          </p>
-          <p className="contact-form-status" aria-live="polite" />
+              Thank you. I&apos;ll reply soon.
+            </p>
+          ) : (
+            <>
+              <button
+                className="contact-submit"
+                type="submit"
+                form="contact-form"
+                disabled={status === "sending"}
+              >
+                {status === "sending" ? "Sending…" : "Submit"}
+                <svg
+                  className="contact-submit-arrow"
+                  viewBox="0 0 40 16"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M0 8h37M31 2l7 6-7 6" strokeLinecap="square" />
+                </svg>
+              </button>
+              <p className="contact-privacy">
+                By sending this form you agree that I use your details only to reply to you.
+              </p>
+              <p
+                className="contact-form-status"
+                ref={statusRef}
+                tabIndex={-1}
+                aria-live="polite"
+              >
+                {status === "error" && (
+                  <>
+                    Something went wrong. Please try again or email me directly at{" "}
+                    <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>.
+                  </>
+                )}
+              </p>
+            </>
+          )}
         </div>
 
         <div className="contact-info">

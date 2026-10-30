@@ -44,6 +44,20 @@ export const contactContent = {
   },
 } as const;
 
+/**
+ * The only accepted values for the Subject field — shared by the form and the
+ * /api/contact route so the server can reject anything else.
+ */
+export const contactSubjects = [
+  "Brand identity",
+  "Logo design",
+  "Web design",
+  "Vibe coding / AI web development",
+  "Something else",
+] as const;
+
+export type ContactSubject = (typeof contactSubjects)[number];
+
 export const contactSocials = contactContent.socialLabels
   .map((label) => siteConfig.socials.find((s) => s.label.toLowerCase() === label.toLowerCase()))
   .filter((s): s is (typeof siteConfig.socials)[number] => Boolean(s));
