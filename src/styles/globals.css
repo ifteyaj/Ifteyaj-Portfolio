@@ -5029,7 +5029,9 @@ html.lenis body {
   text-transform: none;
   color: var(--grey);
   line-height: 1.2;
-  padding-bottom: 0.5rem;
+  /* No bottom padding: the labels' glyphs sit on the monogram's bottom edge,
+     which the monogram artwork reaches flush with. */
+  padding-bottom: 0;
 }
 
 
