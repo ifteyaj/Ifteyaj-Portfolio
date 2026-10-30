@@ -5,7 +5,6 @@ import { notFound } from "next/navigation";
 import BlogDetail from "@/components/BlogDetail";
 import { blogPosts } from "@/data/blog";
 import { DEFAULT_OG_IMAGE, SITE_URL, siteConfig } from "@/data/site";
-import Head from "next/head";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -63,30 +62,27 @@ export default async function BlogDetailPage({ params }: Props) {
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": post.title,
-    "description": post.description,
-    "url": `${SITE_URL}/blog/${slug}`,
-    "image": post.image ? `${SITE_URL}${post.image}` : `${SITE_URL}${DEFAULT_OG_IMAGE.url}`,
-    "author": {
-      "@type": "Person",
-      "name": "Ifteyaj Ahmed",
+    "@type": "BlogPosting",
+    "@id": `${SITE_URL}/blog/${slug}/#article`,
+    headline: post.title,
+    description: post.description,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${SITE_URL}/blog/${slug}`,
     },
-    "publisher": {
-      "@type": "Organization",
-      "name": siteConfig.name,
-      "logo": {
-        "@type": "ImageObject",
-        "url": `${SITE_URL}${DEFAULT_OG_IMAGE.url}`,
-      },
-    },
+    image: post.image ? `${SITE_URL}${post.image}` : `${SITE_URL}${DEFAULT_OG_IMAGE.url}`,
+    author: { "@id": `${SITE_URL}/#person` },
+    publisher: { "@id": `${SITE_URL}/#person` },
   };
 
   return (
     <>
-      <Head>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      </Head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
       <BlogDetail post={post} />
     </>
   );
