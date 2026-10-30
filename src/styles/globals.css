@@ -22,49 +22,9 @@
   --color-ring: var(--border-white);
 }
 
-/* ── Self-hosted fonts ─────────────────────────────────────────────────────── */
-@font-face {
-  font-family: "PPNeueMontrealTT";
-  src: url("/fonts/PPNeueMontrealTT-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "PPNeueMontrealTT";
-  src: url("/fonts/PPNeueMontrealTT-Medium.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "PT Serif";
-  src: url("/fonts/PTSerif-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "PT Serif";
-  src: url("/fonts/PTSerif-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "PT Serif";
-  src: url("/fonts/PTSerif-Italic.woff2") format("woff2");
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: "JetBrains Mono";
-  src: url("/fonts/JetBrainsMono-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
+/* ── Fonts are loaded via next/font/local in src/app/layout.tsx. ───────────── */
+/* Tokens below point at the variables emitted by that loader and fall back to  */
+/* the legacy font names so the CSS still resolves before hydration.           */
 
 /* ── Design tokens (verbatim from RECON rootVariables) ─────────────────────── */
 :root {
@@ -87,8 +47,9 @@
   --main-light:       white;
 
   /* Typography */
-  --main-type:              PPNeueMontrealTT, sans-serif;
-  --mono-type:              "JetBrains Mono", monospace;
+  --main-type:              var(--font-ppnn, PPNeueMontrealTT, sans-serif);
+  --serif-type:            var(--font-serif, "PT Serif", serif);
+  --mono-type:              var(--font-mono, "JetBrains Mono", monospace);
   --main-weight:            500;
   --main-weight-big:        400;
   --small-discriptor-text:  0.9rem;
@@ -2830,7 +2791,7 @@ html.lenis body {
   color: var(--grey);
 }
 .blog-content-lead {
-  font-family: "PT Serif", serif;
+  font-family: var(--serif-type);
   font-style: italic;
   font-size: 1.5rem;
   line-height: 1.5;
@@ -2838,7 +2799,7 @@ html.lenis body {
   margin-bottom: 2rem;
 }
 .blog-content-callout {
-  font-family: "PT Serif", serif;
+  font-family: var(--serif-type);
   font-style: italic;
   font-size: 1.55rem;
   line-height: 1.45;
@@ -2848,7 +2809,7 @@ html.lenis body {
   margin: 2.2rem 0;
 }
 .blog-content-note {
-  font-family: "PT Serif", serif;
+  font-family: var(--serif-type);
   font-style: italic;
   font-size: 1.2rem;
   line-height: 1.55;
@@ -2864,7 +2825,7 @@ html.lenis body {
   font-weight: 400;
 }
 .blog-content em {
-  font-family: "PT Serif", serif;
+  font-family: var(--serif-type);
 }
 .blog-content a {
   color: var(--white);
@@ -3055,8 +3016,8 @@ html.lenis body {
   /* The full-screen overlay is a sibling of .nav-bar inside .navbar, so lift
      the header row above it — logo and Menu/Close stay reachable on top. */
   .nav-bar             { min-height: 56px; width: 100%; overflow: visible; position: relative; z-index: 1000; }
-  /* Start the menu links below the fixed header instead of behind it. */
-  .nav-mobile-inner    { padding-top: calc(56px + clamp(3.5rem, 12vh, 120px)); }
+  /* Start the menu links just below the fixed header with a consistent gap. */
+  .nav-mobile-inner    { padding-top: calc(56px + 0.75rem); }
   .nav-logo            { height: 2.2rem; margin-left: 0; }
 
   /* Keep the compact desktop links out of the phone header. */
@@ -4587,71 +4548,21 @@ html.lenis body {
   .contact-headline { font-size: clamp(3rem, 6vw, 4.5rem); }
 }
 
-/* ── Mobile ── */
+/* ── Mobile: unified with wide-phone stacked layout (consolidated block below) ── */
 @media (max-width: 639px) {
   .contact-body {
     padding: clamp(6rem, 14vh, 8rem) var(--page-margin) var(--page-margin);
-  }
-  .contact-grid {
-    grid-template-columns: 1fr;
-    row-gap: 1rem;
-    column-gap: 2.5rem;
-    min-height: auto;
-  }
-  .contact-left,
-  .contact-right {
-    display: contents;
-  }
-  .contact-headline { order: 1; }
-  .contact-intro { order: 2; }
-  .contact-info-grid { order: 3; }
-  .contact-socials {
-    order: 4;
-    margin-top: 1.5rem;
-    padding-top: 0;
   }
   .contact-social-link {
     padding: 0.15rem 0.5rem;
     min-height: 28px;
     font-size: 0.9rem;
-    width: 88px;
     justify-content: center;
     box-sizing: border-box;
     text-align: center;
   }
-  .contact-image-wrap {
-    order: 5;
-    margin-top: 0;
-    aspect-ratio: 4 / 3;
-  }
-  .contact-left {
-    justify-content: flex-start;
-    gap: 1rem;
-  }
-  .contact-headline {
-    font-size: clamp(2.5rem, 12vw, 4rem);
-    line-height: 1;
-  }
-  .contact-intro {
-    max-width: 100%;
-    margin-top: 0.5rem;
-  }
-  .contact-socials {
-    margin-top: 1.75rem;
-    gap: 1rem 1rem;
-  }
-  .contact-info-grid {
-    grid-template-columns: 1fr;
-    row-gap: 1.5rem;
-  }
-  .contact-image-wrap {
-    aspect-ratio: 4 / 3;
-  }
   .contact-image-wrap:hover .contact-image {
     transform: none;
-  }
-  .contact-social-link {
-    min-height: 28px;
   }
 }
 
@@ -5061,20 +4972,17 @@ html.lenis body {
   }
 }
 
-/* ── Contact: wide phones (640–767px) keep the stacked phone layout ────
-   The contact page only had a single-column layout below 640px, so phones
-   that report a viewport in the 640–767 range fell into the tablet grid:
-   1fr + 1.6fr columns meant the headline sat in a ~324px column with its
-   px-clamped type, the social chips kept their fixed 324px-derived widths
-   (labels overflowed the pills), the info blocks were squeezed to ~130px
-   and broke e-mail addresses mid-word, while `margin-top: 9.25rem` plus
-   `justify-content: space-between` opened a large blank block and pinned
-   the image to the bottom of a forced min-height. Stack the same way the
-   phone layout does, with widths that scale with the type instead. */
-@media (min-width: 640px) and (max-width: 767px) {
+/* ── Contact: stacked layout for all mobile/tablet viewports (≤1023px) ─────
+   Unifies phone and tablet so every viewport below desktop uses the same
+   arrangement (headline → intro → socials → info → monogram → image)
+   with widths that scale with type instead of fixed px chips. */
+@media (max-width: 1023px) {
+  .contact-body {
+    padding: clamp(6rem, 14vh, 8rem) var(--page-margin) var(--page-margin);
+  }
   .contact-grid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1.25rem;
     min-height: auto;
     align-items: start;
   }
@@ -5106,6 +5014,14 @@ html.lenis body {
     width: auto;
     grid-column: 1 / -1;
   }
+  .contact-social-link {
+    padding: 0.15rem 0.5rem;
+    min-height: 28px;
+    font-size: 0.9rem;
+    justify-content: center;
+    box-sizing: border-box;
+    text-align: center;
+  }
   .contact-info-grid {
     order: 4;
     grid-template-columns: repeat(2, 1fr);
@@ -5122,11 +5038,12 @@ html.lenis body {
   .contact-monogram {
     height: clamp(8rem, 34vw, 12rem);
   }
-  /* The grid's 1.5rem row gap left a ~42px band under the monogram. Pull the
-     image up so it sits close under the monogram instead. */
   .contact-image-wrap {
     order: 6;
     margin-top: -1rem;
     aspect-ratio: 16 / 9;
+  }
+  .contact-image-wrap:hover .contact-image {
+    transform: none;
   }
 }
