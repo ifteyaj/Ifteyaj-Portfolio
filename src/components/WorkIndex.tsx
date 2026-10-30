@@ -9,7 +9,7 @@ import { gsap, registerEases } from "@/lib/gsap";
 import { setupMenuLinkHovers } from "@/lib/menuHover";
 import Navbar from "@/components/Navbar";
 import SiteFooter from "@/components/SiteFooter";
-import IllustrationMarquee from "@/components/IllustrationMarquee";
+const IllustrationMarquee = dynamic(() => import("@/components/IllustrationMarquee").then((m) => m.default));
 import { projects } from "@/data/projects";
 import { thumb } from "@/lib/thumbs";
 

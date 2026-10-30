@@ -6,7 +6,8 @@ import { gsap, registerEases } from "@/lib/gsap";
 import { setupMenuLinkHovers } from "@/lib/menuHover";
 import Navbar from "@/components/Navbar";
 import SiteFooter from "@/components/SiteFooter";
-import MoodboardGrid from "@/components/MoodboardGrid";
+import dynamic from "next/dynamic";
+const MoodboardGrid = dynamic(() => import("@/components/MoodboardGrid").then((m) => m.default));
 import { moodboardItems } from "@/data/moodboard";
 
 export default function MoodboardIndex() {

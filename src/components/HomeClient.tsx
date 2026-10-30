@@ -9,9 +9,11 @@ import SiteFooter from "@/components/SiteFooter";
 import HomeIntro from "@/components/HomeIntro";
 import HomeMediaRow from "@/components/HomeMediaRow";
 import HomeFeaturedWork from "@/components/HomeFeaturedWork";
-import HomeProcess from "@/components/HomeProcess";
-import HomeContact from "@/components/HomeContact";
-import HomePanorama from "@/components/HomePanorama";
+import dynamic from "next/dynamic";
+
+const HomeProcess = dynamic(() => import("@/components/HomeProcess"));
+const HomeContact = dynamic(() => import("@/components/HomeContact"));
+const HomePanorama = dynamic(() => import("@/components/HomePanorama"));
 import { hasSiteBooted } from "@/lib/navSession";
 import { closingImages } from "@/data/home";
 import { logoImages } from "@/data/logos";
