@@ -3,38 +3,49 @@ import { SITE_URL } from "@/data/site";
 import { projects } from "@/data/projects";
 import { blogPosts } from "@/data/blog";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date().toISOString();
+/**
+ * Fixed content date for pages without a per-page publish/update field.
+ * Change this when the static pages are edited so the sitemap stays honest
+ * without changing on every build.
+ */
+const SITE_LAST_MODIFIED = new Date("2026-10-30");
 
+export default function sitemap(): MetadataRoute.Sitemap {
   // Core pages
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: SITE_URL,
-      lastModified: now,
+      lastModified: SITE_LAST_MODIFIED,
       changeFrequency: "monthly",
       priority: 1.0,
     },
     {
       url: `${SITE_URL}/work`,
-      lastModified: now,
+      lastModified: SITE_LAST_MODIFIED,
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
       url: `${SITE_URL}/about`,
-      lastModified: now,
+      lastModified: SITE_LAST_MODIFIED,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${SITE_URL}/contact`,
+      lastModified: SITE_LAST_MODIFIED,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: `${SITE_URL}/blog`,
-      lastModified: now,
+      lastModified: SITE_LAST_MODIFIED,
       changeFrequency: "weekly",
       priority: 0.7,
     },
     {
       url: `${SITE_URL}/moodboard`,
-      lastModified: now,
+      lastModified: SITE_LAST_MODIFIED,
       changeFrequency: "monthly",
       priority: 0.4,
     },
@@ -45,15 +56,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .filter((p) => p.short !== "Coming Soon") // Exclude placeholder projects
     .map((p) => ({
       url: `${SITE_URL}${p.href}`,
-      lastModified: now,
+      lastModified: SITE_LAST_MODIFIED,
       changeFrequency: "monthly" as const,
       priority: 0.8,
     }));
 
-  // Blog post pages
+  // Blog post pages: no publish date exists in BlogPost yet, so no
+  // lastModified is emitted rather than fabricating one.
   const blogPages: MetadataRoute.Sitemap = blogPosts.map((p) => ({
     url: `${SITE_URL}/blog/${p.slug}`,
-    lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.6,
   }));
