@@ -3658,7 +3658,7 @@ html.lenis body {
      and the work section whenever the content is shorter than the screen —
      which happens on any viewport wider than 639 CSS px (some phones render
      wider than that), tablets and landscape. */
-  padding: clamp(9rem, 19vh, 13rem) var(--page-margin) 0;
+  padding: clamp(8.5rem, 17.5vh, 12rem) var(--page-margin) 0;
 }
 
 /* ── Intro paragraph ─────────────────────────────────────────────────────────
@@ -3684,7 +3684,7 @@ html.lenis body {
 
 /* ── Headline ──────────────────────────────────────────────────────────────── */
 .home-headline {
-  margin-top: clamp(2.25rem, 8vh, 5rem);
+  margin-top: clamp(2.25rem, 7vh, 4.25rem);
   font-family: var(--main-type);
   font-size: clamp(2.5rem, 12vw, 3.75rem);
   font-weight: var(--main-weight);
@@ -3817,7 +3817,7 @@ html.lenis body {
 /* ── Phones: half-width intro, headline, then the reel and cover in one row ── */
 @media (max-width: 639px) {
   .home-stage {
-    padding-top: clamp(6rem, 15vh, 8rem);
+    padding-top: clamp(5.75rem, 14vh, 7.5rem);
   }
 
   .home-intro {
@@ -4775,7 +4775,7 @@ html.lenis body {
      tall wide phones, dropping the intro lower than phones (15vh) render it.
      Trim it in px/vh so the intro sits higher on the first screen. */
   .home-stage {
-    padding-top: clamp(170px, 15vh, 240px);
+    padding-top: clamp(160px, 13.5vh, 225px);
   }
 
   /* The reel row's bottom padding is rem/vh sized and inflates to ~96px here,
