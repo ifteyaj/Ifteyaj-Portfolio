@@ -7,7 +7,7 @@ export default function Loader() {
         {/* Top left: Name */}
         <div className="loader-corner loader-corner--top-left">
           <div className="loader-header-one">
-            <h3 className="loader-header">Ifteyaj Ahmed</h3>
+            <p className="loader-header">Ifteyaj Ahmed</p>
           </div>
         </div>
 
@@ -23,7 +23,7 @@ export default function Loader() {
         {/* Middle left: Web Designer */}
         <div className="loader-corner loader-corner--middle-left">
           <div className="loader-header-one">
-            <h3 className="loader-header">Web Designer</h3>
+            <p className="loader-header">Web Designer</p>
           </div>
         </div>
 
@@ -119,21 +119,21 @@ export default function Loader() {
         {/* Middle right: Brand Designer */}
         <div className="loader-corner loader-corner--middle-right">
           <div className="loader-header-one text-aling-right">
-            <h3 className="loader-header text-aling-right">Brand Designer</h3>
+            <p className="loader-header text-aling-right">Brand Designer</p>
           </div>
         </div>
 
         {/* Bottom left: Portfolio */}
         <div className="loader-corner loader-corner--bottom-left">
           <div className="loader-header-one">
-            <h3 className="loader-header grey-header">Portfolio</h3>
+            <p className="loader-header grey-header">Portfolio</p>
           </div>
         </div>
 
         {/* Bottom right: Copyright */}
         <div className="loader-corner loader-corner--bottom-right">
           <div className="loader-header-one text-aling-right">
-            <h3 className="loader-header grey-header text-aling-right">{siteConfig.copyright}!</h3>
+            <p className="loader-header grey-header text-aling-right">{siteConfig.copyright}!</p>
           </div>
         </div>
       </div>

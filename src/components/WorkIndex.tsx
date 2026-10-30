@@ -146,10 +146,10 @@ export default function WorkIndex() {
 
       <main className="index-main">
         <header className="index-header">
-          <div className="index-page-title">
+          <h1 className="index-page-title">
             <span className="index-title-text">All Works</span>
             <span className="index-title-count">({String(projects.length).padStart(2, "0")})</span>
-          </div>
+          </h1>
         </header>
 
         <div className="index-entries">

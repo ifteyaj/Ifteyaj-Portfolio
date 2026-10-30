@@ -110,7 +110,7 @@ export default function BlogIndex() {
               </div>
               <div className="moodboard-pin-body">
                 <span className="moodboard-pin-tag">{pin.tag}</span>
-                <h3 className="moodboard-pin-title">{pin.title}</h3>
+                <h2 className="moodboard-pin-title">{pin.title}</h2>
                 <p className="moodboard-pin-desc">{pin.description}</p>
               </div>
             </Link>
