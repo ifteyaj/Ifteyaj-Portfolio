@@ -11,7 +11,7 @@ import HomeMediaRow from "@/components/HomeMediaRow";
 import HomeFeaturedWork from "@/components/HomeFeaturedWork";
 import dynamic from "next/dynamic";
 
-const HomeProcess = dynamic(() => import("@/components/HomeProcess"));
+import HomeProcess from "@/components/HomeProcess";
 const HomeContact = dynamic(() => import("@/components/HomeContact"));
 const HomePanorama = dynamic(() => import("@/components/HomePanorama"));
 import { hasSiteBooted } from "@/lib/navSession";
