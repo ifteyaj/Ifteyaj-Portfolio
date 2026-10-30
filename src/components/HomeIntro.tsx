@@ -15,6 +15,8 @@ export default function HomeIntro() {
       </div>
 
       <h1 className="home-headline">
+        {/* Name for search engines and screen readers without changing the hero. */}
+        <span className="sr-only">Ifteyaj Ahmed</span>
         {homeContent.headline.map((line, lineIndex) => (
           <span className="home-headline-line" key={lineIndex}>
             {line}
