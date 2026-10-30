@@ -61,10 +61,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     }));
 
-  // Blog post pages: no publish date exists in BlogPost yet, so no
-  // lastModified is emitted rather than fabricating one.
+  // Blog post pages use the real publish date, or the last content update.
   const blogPages: MetadataRoute.Sitemap = blogPosts.map((p) => ({
     url: `${SITE_URL}/blog/${p.slug}`,
+    lastModified: new Date(p.updatedAt ?? p.publishedAt),
     changeFrequency: "monthly" as const,
     priority: 0.6,
   }));
