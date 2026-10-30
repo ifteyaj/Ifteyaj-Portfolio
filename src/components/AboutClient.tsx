@@ -98,6 +98,7 @@ export default function AboutClient({ carouselImages = [] }: { carouselImages?: 
             alt={about.heroName}
             fill
             sizes="100vw"
+            quality={100}
             priority
             fetchPriority="high"
             decoding="async"
