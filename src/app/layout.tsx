@@ -75,6 +75,14 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  // Search Console URL-prefix verification via meta tag. The token is public
+  // by design (it ships in the HTML), so a literal default keeps verification
+  // working on every deploy without extra configuration.
+  verification: {
+    google:
+      process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ??
+      "yuVkm9tdUD8QGlgq_fm4tYW6uiH2Z-SYicrxXJUTLfE",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
