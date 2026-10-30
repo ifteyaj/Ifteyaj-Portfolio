@@ -46,6 +46,28 @@ const nextConfig: NextConfig = {
       ...HOST_REDIRECTS,
     ];
   },
+  async headers() {
+    return [
+      {
+        source: "/fonts/:path*",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=31536000, stale-while-revalidate=86400" },
+        ],
+      },
+      {
+        source: "/images/:path*",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=31536000, stale-while-revalidate=86400" },
+        ],
+      },
+      {
+        source: "/_next/static/:path*",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+        ],
+      },
+    ];
+  },
   images: {
     // Serve AVIF first (smallest), fall back to WebP. Next generates
     // responsive variants automatically, fixing the Lighthouse
