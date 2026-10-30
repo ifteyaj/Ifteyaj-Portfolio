@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { LazyMotion, domAnimation } from "framer-motion";
 import GooeyNavbar from "@/components/ui/GooeyNavbar";
 import { siteConfig } from "@/data/site";
 import { markSiteBooted } from "@/lib/navSession";
@@ -137,8 +138,9 @@ export default function Navbar(props: NavbarProps) {
         </div>
 
         <div className="nav-gooey">
-          <GooeyNavbar
-            items={NAV_ITEMS}
+          <LazyMotion features={domAnimation} strict>
+            <GooeyNavbar
+              items={NAV_ITEMS}
             pillColor="#212121"
             hoverPillColor="#4ade80"
             textColor="#ffffff"
@@ -157,6 +159,7 @@ export default function Navbar(props: NavbarProps) {
             activeFrom="page"
             onSelect={handleNavSelect}
           />
+          </LazyMotion>
         </div>
 
         <button
