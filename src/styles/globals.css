@@ -5104,9 +5104,11 @@ html.lenis body {
   .contact-monogram {
     height: clamp(8rem, 34vw, 12rem);
   }
+  /* The grid's 1.5rem row gap left a ~42px band under the monogram. Pull the
+     image up so it sits close under the monogram instead. */
   .contact-image-wrap {
     order: 6;
-    margin-top: 0;
+    margin-top: -1rem;
     aspect-ratio: 16 / 9;
   }
 }
