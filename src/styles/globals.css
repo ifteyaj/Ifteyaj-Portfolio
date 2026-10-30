@@ -3777,6 +3777,16 @@ html.lenis body {
   }
 }
 
+/* ── Wide phones (Narzo range): let the intro run further to the right ──────
+   The 21em cap keeps a short measure on tablets; on these screens there is
+   room for a longer line, so widen it (in em, so it still tracks the type)
+   without touching the tablet or desktop measure. */
+@media (min-width: 640px) and (max-width: 767px) {
+  .home-intro {
+    max-width: min(100%, 27em);
+  }
+}
+
 /* ── Desktop: intro lands on the header's About-Me column ─────────────────── */
 @media (min-width: 1025px) {
   /* Exactly the header's grid: same full-viewport width, same page padding,
