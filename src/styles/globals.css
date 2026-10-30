@@ -3664,7 +3664,7 @@ html.lenis body {
      and the work section whenever the content is shorter than the screen —
      which happens on any viewport wider than 639 CSS px (some phones render
      wider than that), tablets and landscape. */
-  padding: clamp(9rem, 19vh, 13rem) var(--page-margin) 0;
+  padding: clamp(8.5rem, 17.5vh, 12rem) var(--page-margin) 0;
 }
 
 /* ── Intro paragraph ─────────────────────────────────────────────────────────
@@ -3678,7 +3678,7 @@ html.lenis body {
   max-width: none;
   text-wrap: wrap;
   font-family: var(--main-type);
-  font-size: clamp(12px, 0.55vw + 6px, 15px);
+  font-size: clamp(14px, 0.62vw + 7px, 17px);
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.002em;
@@ -3690,9 +3690,9 @@ html.lenis body {
 
 /* ── Headline ──────────────────────────────────────────────────────────────── */
 .home-headline {
-  margin-top: clamp(2.25rem, 8vh, 5rem);
+  margin-top: clamp(2.25rem, 7vh, 4.25rem);
   font-family: var(--main-type);
-  font-size: clamp(2.25rem, 11vw, 3.5rem);
+  font-size: clamp(2.5rem, 12vw, 3.75rem);
   font-weight: var(--main-weight);
   line-height: 0.95;
   letter-spacing: -0.04em;
@@ -3767,7 +3767,7 @@ html.lenis body {
 
   /* px-based so the phone-scale root font doesn't inflate the tablet size. */
   .home-headline {
-    font-size: clamp(40px, 7vw, 76px);
+    font-size: clamp(48px, 8.4vw, 88px);
   }
 }
 
@@ -3777,9 +3777,19 @@ html.lenis body {
    the text size in px/em instead: noticeably larger copy, much shorter line. */
 @media (min-width: 640px) and (max-width: 1024px) {
   .home-intro {
-    font-size: clamp(14px, 1.1vw + 9px, 16px);
-    max-width: min(85%, 24em);
+    font-size: clamp(17px, 1.3vw + 11px, 20px);
+    max-width: min(85%, 21em);
     text-wrap: wrap;
+  }
+}
+
+/* ── Wide phones (Narzo range): let the intro run further to the right ──────
+   The 21em cap keeps a short measure on tablets; on these screens there is
+   room for a longer line, so widen it (in em, so it still tracks the type)
+   without touching the tablet or desktop measure. */
+@media (min-width: 640px) and (max-width: 767px) {
+  .home-intro {
+    max-width: min(100%, 27em);
   }
 }
 
@@ -3806,14 +3816,14 @@ html.lenis body {
   }
 
   .home-headline {
-    font-size: clamp(2.75rem, 7vw, 7.5rem);
+    font-size: clamp(3rem, 7.5vw, 8rem);
   }
 }
 
 /* ── Phones: half-width intro, headline, then the reel and cover in one row ── */
 @media (max-width: 639px) {
   .home-stage {
-    padding-top: clamp(6rem, 15vh, 8rem);
+    padding-top: clamp(5.75rem, 14vh, 7.5rem);
   }
 
   .home-intro {
@@ -4771,7 +4781,7 @@ html.lenis body {
      tall wide phones, dropping the intro lower than phones (15vh) render it.
      Trim it in px/vh so the intro sits higher on the first screen. */
   .home-stage {
-    padding-top: clamp(170px, 15vh, 240px);
+    padding-top: clamp(160px, 13.5vh, 225px);
   }
 
   /* The reel row's bottom padding is rem/vh sized and inflates to ~96px here,
@@ -5035,7 +5045,9 @@ html.lenis body {
   text-transform: none;
   color: var(--grey);
   line-height: 1.2;
-  padding-bottom: 0.5rem;
+  /* No bottom padding: the labels' glyphs sit on the monogram's bottom edge,
+     which the monogram artwork reaches flush with. */
+  padding-bottom: 0;
 }
 
 
@@ -5110,9 +5122,11 @@ html.lenis body {
   .contact-monogram {
     height: clamp(8rem, 34vw, 12rem);
   }
+  /* The grid's 1.5rem row gap left a ~42px band under the monogram. Pull the
+     image up so it sits close under the monogram instead. */
   .contact-image-wrap {
     order: 6;
-    margin-top: 0;
+    margin-top: -1rem;
     aspect-ratio: 16 / 9;
   }
 }
