@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     canonical: "/moodboard",
   },
   openGraph: {
-    title: "Moodboard — Visual Inspiration",
+    title: "Moodboard — Visual Inspiration — Ifteyaj Ahmed",
     description:
       "A running visual library of color studies, type sketches, and design inspiration by Ifteyaj Ahmed.",
     url: `${SITE_URL}/moodboard`,
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Moodboard — Visual Inspiration",
+    title: "Moodboard — Visual Inspiration — Ifteyaj Ahmed",
     description:
       "A running visual library of color studies, type sketches, and design inspiration by Ifteyaj Ahmed.",
     images: [DEFAULT_OG_IMAGE.url],

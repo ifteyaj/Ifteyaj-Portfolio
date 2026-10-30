@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import ContactContent from "@/components/ContactContent";
-import { DEFAULT_OG_IMAGE, SITE_URL } from "@/data/site";
+import { DEFAULT_OG_IMAGE, SITE_URL, siteConfig } from "@/data/site";
 
 export const metadata: Metadata = {
   title: { absolute: "Contact — Ifteyaj Ahmed" },
@@ -12,6 +12,9 @@ export const metadata: Metadata = {
     title: "Contact — Ifteyaj Ahmed",
     description:
       "Get in touch with Ifteyaj Ahmed to discuss brand identity, logo, and web design work.",
+    url: `${SITE_URL}/contact`,
+    siteName: siteConfig.name,
+    locale: "en_US",
     type: "website",
     images: [DEFAULT_OG_IMAGE],
   },
