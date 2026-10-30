@@ -86,3 +86,8 @@ CLAUDE.md
 # browser + screenshot tooling (generated locally, never committed)
 /.cache/
 /contact-redesign/
+
+# Playwright output
+/test-results/
+/playwright-report/
+/blob-report/
