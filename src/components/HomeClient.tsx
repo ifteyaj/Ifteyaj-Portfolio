@@ -159,16 +159,21 @@ export default function HomeClient() {
                     <h2 className="home-logo-reel-title">Worked with 30+ brands, local &amp; global</h2>
                     <div className="home-logo-marquee">
                       <div className="home-logo-marquee-track">
-                        {[...logoImages, ...logoImages].map((src, i) => (
-                          /* eslint-disable-next-line @next/next/no-img-element */
-                          <img
-                            key={`${src}-${i}`}
-                            src={src}
-                            alt=""
-                            className={`home-logo-marquee-img${/salvator/i.test(src) ? " is-salvator" : ""}`}
-                            decoding="async"
-                          />
-                        ))}
+                        {[...logoImages, ...logoImages].map((logo, i) => {
+                          // The second pass only exists for the seamless loop.
+                          const isRepeat = i >= logoImages.length;
+                          return (
+                            /* eslint-disable-next-line @next/next/no-img-element */
+                            <img
+                              key={`${logo.src}-${i}`}
+                              src={logo.src}
+                              alt={isRepeat ? "" : `${logo.name} logo`}
+                              aria-hidden={isRepeat || undefined}
+                              className={`home-logo-marquee-img${/salvator/i.test(logo.src) ? " is-salvator" : ""}`}
+                              decoding="async"
+                            />
+                          );
+                        })}
                       </div>
                     </div>
                   </section>
