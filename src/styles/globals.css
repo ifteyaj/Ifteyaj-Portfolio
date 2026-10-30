@@ -295,7 +295,7 @@ html.lenis body {
   display: block;
   position: relative;
   overflow: hidden;
-  height: 100dvh;
+  height: 100svh;
 }
 
 .container.is-hero {
@@ -305,7 +305,7 @@ html.lenis body {
   justify-content: flex-start;
   align-items: flex-end;
   height: auto;
-  min-height: 100dvh;
+  min-height: 100svh;
   display: flex;
   position: relative;
 }
@@ -769,8 +769,9 @@ html.lenis body {
   /* 100vh is the *large* viewport, so on mobile the bottom row
      (Portfolio / ©2026) lands under the browser chrome. dvh tracks the
      visible viewport instead; vh stays as the fallback. */
+  /* svh = smallest viewport height — stable even when URL bar collapses. */
   height: 100vh;
-  height: 100dvh;
+  height: 100svh;
   position: fixed;
   inset: 0%;
 }
@@ -1272,7 +1273,7 @@ html.lenis body {
   background-color: var(--black);
   color: var(--white);
   font-family: var(--main-type);
-  min-height: 100dvh;
+  min-height: 100svh;
 }
 
 .index-main {
@@ -1619,7 +1620,7 @@ html.lenis body {
   background-color: var(--black);
   color: var(--white);
   font-family: var(--main-type);
-  min-height: 100dvh;
+  min-height: 100svh;
   --case-desc-pad: calc(0.22 * var(--big-text));
 }
 
@@ -1634,7 +1635,7 @@ html.lenis body {
   align-items: flex-end;
   gap: 2rem;
   position: relative;
-  min-height: 24vh;
+  min-height: 24svh;
   padding-bottom: var(--case-desc-pad);
 }
 
@@ -1707,7 +1708,7 @@ html.lenis body {
   overflow: hidden;
   line-height: 0;
   margin: 0;
-  height: calc(100vh - 16rem);
+  height: calc(100svh - 16rem);
   min-height: 28rem;
   max-height: 46rem;
   position: relative;
@@ -2272,7 +2273,7 @@ html.lenis body {
   background-color: var(--black);
   color: var(--white);
   font-family: var(--main-type);
-  min-height: 100dvh;
+  min-height: 100svh;
 }
 
 .about-main {
@@ -2289,7 +2290,7 @@ html.lenis body {
 /* ── Hero ── */
 .about-hero {
   position: relative;
-  height: 80dvh;
+  height: 80svh;
   overflow: hidden;
 }
 
@@ -2892,7 +2893,7 @@ html.lenis body {
   background-color: var(--black);
   color: var(--white);
   font-family: var(--main-type);
-  min-height: 100dvh;
+  min-height: 100svh;
 }
 
 .moodboard-main,
@@ -3538,12 +3539,12 @@ html.lenis body {
      The pieces can never overlap on any phone. */
   .section.is-hero {
     height: 100vh;
-    height: 100dvh;
+    height: 100svh;
   }
 
   .container.is-hero {
     min-height: 100vh;
-    min-height: 100dvh;
+    min-height: 100svh;
   }
 
   /* Stack container: normal flow, anchored as a group at the bottom.
@@ -4477,7 +4478,7 @@ html.lenis body {
 /* ── LANDSCAPE PHONE ──────────────────────────────────────────────────────── */
 @media (max-width: 767px) and (orientation: landscape) {
   .about-hero {
-    height: 60dvh;
+    height: 60svh;
   }
 
   .nav-mobile-inner {
@@ -4556,7 +4557,7 @@ html.lenis body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  min-height: 100dvh;
+  min-height: 100svh;
   background: var(--black, #0a0a0a);
   color: var(--white, #fff);
   padding: 2rem;
@@ -4610,7 +4611,7 @@ html.lenis body {
    continues below it. */
 
 .home-main {
-  min-height: 100dvh;
+  min-height: 100svh;
 }
 
 .home-stage {
