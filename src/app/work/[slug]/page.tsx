@@ -69,5 +69,57 @@ export default async function WorkDetailPage({ params }: Props) {
   const { slug } = await params;
   const project = projects.find((p) => p.slug === slug);
   if (!project) notFound();
-  return <WorkDetail project={{ ...project, images: resolveProjectImages(project) }} />;
+
+  const images = resolveProjectImages(project);
+  // `year` is the only date in project data; no full dateCreated is emitted.
+  const workJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CreativeWork",
+        "@id": `${SITE_URL}/work/${slug}#creativework`,
+        name: project.title,
+        description: project.short,
+        url: `${SITE_URL}/work/${slug}`,
+        image: `${SITE_URL}${images[0] ?? DEFAULT_OG_IMAGE.url}`,
+        creator: { "@id": `${SITE_URL}/#person` },
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${SITE_URL}/work/${slug}#breadcrumb`,
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: SITE_URL,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Work",
+            item: `${SITE_URL}/work`,
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: project.title,
+            item: `${SITE_URL}/work/${slug}`,
+          },
+        ],
+      },
+    ],
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(workJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
+      <WorkDetail project={{ ...project, images }} />
+    </>
+  );
 }

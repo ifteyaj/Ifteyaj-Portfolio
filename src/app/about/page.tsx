@@ -50,6 +50,46 @@ function getCarouselImages(): string[] {
   return [...aboutCarouselImages, ...getFolderImages()];
 }
 
+const profileJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfilePage",
+      "@id": `${SITE_URL}/about#profilepage`,
+      url: `${SITE_URL}/about`,
+      mainEntity: { "@id": `${SITE_URL}/#person` },
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${SITE_URL}/about#breadcrumb`,
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: SITE_URL,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "About",
+          item: `${SITE_URL}/about`,
+        },
+      ],
+    },
+  ],
+};
+
 export default function AboutPage() {
-  return <AboutClient carouselImages={getCarouselImages()} />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(profileJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
+      <AboutClient carouselImages={getCarouselImages()} />
+    </>
+  );
 }

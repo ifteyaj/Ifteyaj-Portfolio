@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import ContactContent from "@/components/ContactContent";
-import { DEFAULT_OG_IMAGE } from "@/data/site";
+import { DEFAULT_OG_IMAGE, SITE_URL } from "@/data/site";
 
 export const metadata: Metadata = {
   title: { absolute: "Contact — Ifteyaj Ahmed" },
@@ -24,9 +24,35 @@ export const metadata: Metadata = {
   },
 };
 
+const contactJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "@id": `${SITE_URL}/contact#breadcrumb`,
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: SITE_URL,
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Contact",
+      item: `${SITE_URL}/contact`,
+    },
+  ],
+};
+
 export default function ContactPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(contactJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
       <Navbar />
       <main className="contact-page">
         <ContactContent />
